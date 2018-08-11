@@ -38,6 +38,64 @@ Route::get('/HRadmin/payroll', function (){
     return view('Admin.HR_Management.payroll') ;
 });
 
+
+//Exam Centre Manager Routes
+
+Route::get('/ECadmin/dashboard', function (){
+    return view('Admin.Exam_Centre_Management.dashboard') ;
+});
+
+Route::get('/ECadmin/viewResults', function (){
+    return view('Admin.Exam_Centre_Management.viewResults') ;
+});
+
+Route::get('/ECadmin/publishResults', function (){
+    return view('Admin.Exam_Centre_Management.publishResults') ;
+});
+
+Route::get('/ECadmin/questionBank', function (){
+    return view('Admin.Exam_Centre_Management.questionBank') ;
+});
+
+
+//Academic Manager Routes
+
+Route::get('/ECadmin/dashboard', function (){
+    return view('Admin.Exam_Centre_Management.dashboard') ;
+});
+
+Route::get('/ECadmin/viewResults', function (){
+    return view('Admin.Exam_Centre_Management.viewResults') ;
+});
+
+Route::get('/ECadmin/publishResults', function (){
+    return view('Admin.Exam_Centre_Management.publishResults') ;
+});
+
+Route::get('/ECadmin/questionBank', function (){
+    return view('Admin.Exam_Centre_Management.questionBank') ;
+});
+
+
+//Non Academic Manager Routes
+
+Route::get('/ECadmin/dashboard', function (){
+    return view('Admin.Exam_Centre_Management.dashboard') ;
+});
+
+Route::get('/ECadmin/viewResults', function (){
+    return view('Admin.Exam_Centre_Management.viewResults') ;
+});
+
+Route::get('/ECadmin/publishResults', function (){
+    return view('Admin.Exam_Centre_Management.publishResults') ;
+});
+
+Route::get('/ECadmin/questionBank', function (){
+    return view('Admin.Exam_Centre_Management.questionBank') ;
+});
+
+
 // Administrator Routes
 
 Route::match(['get','post'],'/admin/addStudents', 'StudentController@addStudent');
