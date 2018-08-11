@@ -9,7 +9,7 @@
                 </li>
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('/HRadmin/nonAcademicStaff')}}" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Non-Academic Staff</span></a>
                 </li>
-                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="charts.html" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu">Payroll</span></a></li>
+                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('/HRadmin/payroll')}}" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu">Payroll</span></a></li>
             </ul>
         </nav>
         <!-- End Sidebar navigation -->

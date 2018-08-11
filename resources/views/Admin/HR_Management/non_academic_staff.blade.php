@@ -42,31 +42,58 @@
 
                         {{--@foreach($students as $student)--}}
 
-                        {{--<tr>--}}
-                        {{--<th>--}}
-                        {{--<label class="customcheckbox">--}}
-                        {{--<input type="checkbox" class="listCheckbox" />--}}
-                        {{--<span class="checkmark"></span>--}}
-                        {{--</label>--}}
-                        {{--</th>--}}
+                        <tr>
+                        <th>
+                        <label class="customcheckbox">
+                        <input type="checkbox" class="listCheckbox" />
+                        <span class="checkmark"></span>
+                        </label>
+                        </th>
 
 
-                        {{--<td style="font-size: 12px">{{$student->sid}}</td>--}}
-                        {{--<td style="font-size: 12px">{{$student->created_at}}</td>--}}
-                        {{--<td style="font-size: 12px">{{$student->first_Name}}</td>--}}
-                        {{--<td style="font-size: 12px">{{$student->middle_Name}}</td>--}}
-                        {{--<td style="font-size: 12px">{{$student->last_Name}}</td>--}}
-                        {{--<td style="font-size: 12px">{{$student->DoB}}</td>--}}
-                        {{--<td style="font-size: 12px">{{$student->Gender}}</td>--}}
-                        {{--<td style="font-size: 12px">{{$student->Address}}</td>--}}
-                        {{--<td style="font-size: 12px">{{$student->Email_Address}}</td>--}}
-                        {{--<td style="font-size: 12px">{{$student->Telephone_No_Mob}}</td>--}}
-                        {{--<td style="font-size: 12px">{{$student->Telephone_No_Res}}</td>--}}
-                        {{--<td style="font-size: 12px">--}}
-                        {{--<a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>--}}
-                        {{--<a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>--}}
-                        {{--</td>--}}
-                        {{--</tr>--}}
+                        <td style="font-size: 12px">S123</td>
+                        <td style="font-size: 12px">2018-05-14</td>
+                        <td style="font-size: 12px">Gihara</td>
+                        <td style="font-size: 12px">Thewara</td>
+                        <td style="font-size: 12px">Gihan</td>
+                        <td style="font-size: 12px">1996-11-08</td>
+                        <td style="font-size: 12px">Male</td>
+                        <td style="font-size: 12px">1/A,Poukna Mw,Disa Wawa</td>
+                        <td style="font-size: 12px">parakumbbb@gmail.com</td>
+                        <td style="font-size: 12px">0711254878</td>
+                        <td style="font-size: 12px">0112879456</td>
+                        <td style="font-size: 12px;background-color:red;color: white" >Absent</td>
+                        <td style="font-size: 12px">
+                        <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
+                        <a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
+                        </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label class="customcheckbox">
+                                    <input type="checkbox" class="listCheckbox" />
+                                    <span class="checkmark"></span>
+                                </label>
+                            </th>
+
+
+                            <td style="font-size: 12px">S123</td>
+                            <td style="font-size: 12px">2018-05-14</td>
+                            <td style="font-size: 12px">Gihara</td>
+                            <td style="font-size: 12px">Thewara</td>
+                            <td style="font-size: 12px">Gihan</td>
+                            <td style="font-size: 12px">1996-11-08</td>
+                            <td style="font-size: 12px">Male</td>
+                            <td style="font-size: 12px">1/A,Poukna Mw,Disa Wawa</td>
+                            <td style="font-size: 12px">parakumbbb@gmail.com</td>
+                            <td style="font-size: 12px">0711254878</td>
+                            <td style="font-size: 12px">0112879456</td>
+                            <td style="font-size: 12px;background-color: green;color: white" >Present</td>
+                            <td style="font-size: 12px">
+                                <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
+                                    <a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
+                            </td>
+                        </tr>
                         {{--@endforeach--}}
 
                         </tbody>

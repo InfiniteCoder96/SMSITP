@@ -34,6 +34,10 @@ Route::get('/HRadmin/nonAcademicStaff', function (){
     return view('Admin.HR_Management.non_academic_staff') ;
 });
 
+Route::get('/HRadmin/payroll', function (){
+    return view('Admin.HR_Management.payroll') ;
+});
+
 // Administrator Routes
 
 Route::match(['get','post'],'/admin/addStudents', 'StudentController@addStudent');
