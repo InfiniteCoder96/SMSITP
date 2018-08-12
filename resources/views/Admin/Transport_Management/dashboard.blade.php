@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('layouts.ExamCentreLayouts.header')
-    @include('layouts.ExamCentreLayouts.sideBar')
+    @include('layouts.TransportHostelLayouts.header')
+    @include('layouts.TransportHostelLayouts.sideBar')
     <!-- ============================================================== -->
     <!-- Page wrapper  -->
     <!-- ============================================================== -->

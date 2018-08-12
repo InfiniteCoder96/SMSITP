@@ -30,10 +30,8 @@
                         <div class="card-header bg-info text-white">
                             <div class="row">
                                 <div class="col-sm-2">
-                                    <h5 class="card-title m-b-0">Vehicle Details</h5>
-                                </div>
-                                <a class="waves-effect waves-dark" href="" data-toggle="modal" data-target="#vehicleRegistrationModal"><button class="btn btn-danger btn-xm">Add New Vehicle</button></a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                <button class="btn btn-danger btn-xm">Deactivate</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <h5 class="card-title m-b-0">Student Route wise report</h5>
+                                </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <div class="col-sm-3">
                                     <input type="text" class="form-control" id="fname" placeholder="Search">
 
@@ -58,13 +56,17 @@
                                             <span class="checkmark"></span>
                                         </label>
                                     </th>
-                                    <th scope="col" style="font-size: 12px">Reg. No</th>
-                                    <th scope="col" style="font-size: 12px">Type</th>
-                                    <th scope="col" style="font-size: 12px">Reg. Owner</th>
-                                    <th scope="col" style="font-size: 12px">Makers Class</th>
-                                    <th scope="col" style="font-size: 12px">Seating Capacity</th>
-                                    <th scope="col" style="font-size: 12px">Hypothicated To</th>
-                                    <th scope="col" style="font-size: 12px">Fitness Validity</th>
+                                    <th scope="col" style="font-size: 12px">SID</th>
+                                    <th scope="col" style="font-size: 12px">Student Name</th>
+                                    <th scope="col" style="font-size: 12px">Gender</th>
+                                    <th scope="col" style="font-size: 12px">Grade</th>
+                                    <th scope="col" style="font-size: 12px">Mobile</th>
+                                    <th scope="col" style="font-size: 12px">Vehicle No</th>
+                                    <th scope="col" style="font-size: 12px">type</th>
+                                    <th scope="col" style="font-size: 12px">Driver Name</th>
+                                    <th scope="col" style="font-size: 12px">Dr. Mobile</th>
+                                    <th scope="col" style="font-size: 12px">Route Name</th>
+                                    <th scope="col" style="font-size: 12px">Stop Name</th>
                                     <th scope="col" style="font-size: 12px">Action</th>
 
                                 </tr>
@@ -90,7 +92,11 @@
                                     <td style="font-size: 12px">Hino School Tag</td>
                                     <td style="font-size: 12px">35</td>
                                     <td style="font-size: 12px">Asok Leyland</td>
-                                    <td style="font-size: 12px">2018-05-07</td>
+                                    <td style="font-size: 12px">FA-3214</td>
+                                    <td style="font-size: 12px">Bus</td>
+                                    <td style="font-size: 12px">Karunadasa D.A.</td>
+                                    <td style="font-size: 12px">Hino School Tag</td>
+                                    <td style="font-size: 12px">35</td>
                                     <td style="font-size: 12px">
                                         <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
                                         </a><a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
@@ -111,7 +117,11 @@
                                     <td style="font-size: 12px">Hino School Tag</td>
                                     <td style="font-size: 12px">35</td>
                                     <td style="font-size: 12px">Asok Leyland</td>
-                                    <td style="font-size: 12px">2018-05-07</td>
+                                    <td style="font-size: 12px">FA-3214</td>
+                                    <td style="font-size: 12px">Bus</td>
+                                    <td style="font-size: 12px">Karunadasa D.A.</td>
+                                    <td style="font-size: 12px">Hino School Tag</td>
+                                    <td style="font-size: 12px">35</td>
                                     <td style="font-size: 12px">
                                         <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
                                         </a><a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
@@ -147,7 +157,7 @@
         </div>
 
 
-</div>
-        @include('layouts.AcademicLayouts.footer')
+    </div>
+    @include('layouts.AcademicLayouts.footer')
 
-        @endsection
+@endsection

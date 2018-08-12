@@ -96,6 +96,27 @@ Route::get('/NAadmin/questionBank', function (){
 });
 
 
+//Transport Manager Routes
+
+Route::get('/Tadmin/dashboard', function (){
+    return view('Admin.Transport_Management.dashboard') ;
+});
+
+Route::get('/Tadmin/manage-vehicles', function (){
+    return view('Admin.Transport_Management.manage_vehicle') ;
+});
+
+Route::get('/Tadmin/manage-routes', function (){
+    return view('Admin.Transport_Management.manage_routes') ;
+});
+
+Route::get('/Tadmin/student-report', function (){
+    return view('Admin.Transport_Management.student_report') ;
+});
+
+Route::get('/Tadmin/staff-report', function (){
+    return view('Admin.Transport_Management.staff_report') ;
+});
 // Administrator Routes
 
 Route::match(['get','post'],'/admin/addStudents', 'StudentController@addStudent');
