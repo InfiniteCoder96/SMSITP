@@ -88,7 +88,7 @@ Route::get('/NAadmin/manage-sports', function (){
 });
 
 Route::get('/NAadmin/manage-sport-students', function (){
-    return view('Admin.N') ;
+    return view('Admin.Non_Academic_Management.manage_sport_students') ;
 });
 
 Route::get('/NAadmin/manage-coaches', function (){
@@ -129,5 +129,8 @@ Route::get('/Tadmin/staff-report', function (){
 });
 // Administrator Routes
 
-Route::match(['get','post'],'/admin/addStudents', 'StudentController@addStudent');
+Route::match(['get','post'],'/admin/manage-students', 'StudentController@addStudent');
 
+Route::get('/admin/', function (){
+
+});

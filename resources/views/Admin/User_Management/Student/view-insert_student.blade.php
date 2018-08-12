@@ -19,7 +19,8 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Library</li>
+                                <li class="breadcrumb-item active" aria-current="page">User Management</li>
+                                <li class="breadcrumb-item active" aria-current="page">Student</li>
                             </ol>
                         </nav>
                     </div>
@@ -36,23 +37,26 @@
             <!-- ============================================================== -->
             <!-- Start Page Content -->
             <!-- ============================================================== -->
-            <div class="card">
+            <div class="card bg-white text-black-50">
                 <div class="card-body wizard-content">
                     <h4 class="card-title">Add A New Student</h4>
                     <h6 class="card-subtitle"></h6>
                     <form id="example-form" action="#" method="get" class="m-t-40">
                         <div>
-                            <h3>Account</h3>
+                            <h3>Personal Details</h3>
                             <section>
-                                <label for="userName">User name *</label>
+                                <label for="userName">Full Name *</label>
                                 <input id="userName" name="userName" type="text" class="required form-control">
-                                <label for="password">Password *</label>
-                                <input id="password" name="password" type="text" class="required form-control">
-                                <label for="confirm">Confirm Password *</label>
+                                <label for="password">Data of Birth *</label>
+                                <input id="password" name="password" type="date" class="required form-control">
+                                <label for="confirm">Gender *</label>
                                 <input id="confirm" name="confirm" type="text" class="required form-control">
+                                <label for="confirm">Address *</label>
+                                <input id="confirm" name="confirm" type="text" class="required form-control">
+
                                 <p>(*) Mandatory</p>
                             </section>
-                            <h3>Profile</h3>
+                            <h3>Contact Details</h3>
                             <section>
                                 <label for="name">First name *</label>
                                 <input id="name" name="name" type="text" class="required form-control">
@@ -64,7 +68,7 @@
                                 <input id="address" name="address" type="text" class=" form-control">
                                 <p>(*) Mandatory</p>
                             </section>
-                            <h3>Hints</h3>
+                            <h3>Parents/Guardian Details</h3>
                             <section>
                                 <ul>
                                     <li>Foo</li>

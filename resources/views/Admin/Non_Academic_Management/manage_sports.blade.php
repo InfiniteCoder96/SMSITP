@@ -2,18 +2,19 @@
 
 @section('content')
 
-    @include('layouts.AcademicLayouts.header')
-    @include('layouts.AcademicLayouts.sideBar')
+    @include('layouts.NonAcademicLayouts.header')
+    @include('layouts.NonAcademicLayouts.sideBar')
     <div class="page-wrapper">
         <div class="page-breadcrumb">
             <div class="row">
                 <div class="col-12 d-flex no-block align-items-center">
-                    <h4 class="page-title">Dashboard</h4>
+                    <h4 class="page-title">Sports Management</h4>
                     <div class="ml-auto text-right">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Manage Classes</li>
+                                <li class="breadcrumb-item active" aria-current="page">Sport Management</li>
+                                <li class="breadcrumb-item active" aria-current="page">Sports</li>
                             </ol>
                         </nav>
                     </div>
@@ -58,7 +59,7 @@
 
 
                         <div class="card bg-dark text-white">
-                            <div class="card-header bg-cyan text-white">
+                            <div class="card-header bg-danger text-white">
                                 <h5 class="card-title m-b-0">Add New Sport</h5>
                             </div>
                             <div class="card-body">
@@ -113,7 +114,7 @@
                 <div class="col-md-8">
                     <div class="card bg-secondary text-white">
                         <div class="card-header bg-cyan text-white">
-                            <h5 class="card-title m-b-0">Class Teachers</h5>
+                            <h5 class="card-title m-b-0">Sports Details</h5>
                         </div>
                         <div class="table-responsive">
                             <table class="table">
@@ -125,10 +126,10 @@
                                             <span class="checkmark"></span>
                                         </label>
                                     </th>
-                                    <th scope="col" style="font-size: 12px">CID</th>
-                                    <th scope="col" style="font-size: 12px">Section</th>
-                                    <th scope="col" style="font-size: 12px">TID</th>
-                                    <th scope="col" style="font-size: 12px">Class Teacher Name</th>
+                                    <th scope="col" style="font-size: 12px">Sport</th>
+                                    <th scope="col" style="font-size: 12px">Sport Id</th>
+                                    <th scope="col" style="font-size: 12px">Coach</th>
+                                    <th scope="col" style="font-size: 12px">Teacher-in-charge</th>
                                     <th scope="col" style="font-size: 12px">Action</th>
 
                                 </tr>
@@ -148,9 +149,9 @@
                                     </th>
 
 
-                                    <td style="font-size: 12px">G1A</td>
-                                    <td style="font-size: 12px">G1</td>
-                                    <td style="font-size: 12px">G51248</td>
+                                    <td style="font-size: 12px">Foot Ball</td>
+                                    <td style="font-size: 12px">FA</td>
+                                    <td style="font-size: 12px">Karunadasa D.A.</td>
                                     <td style="font-size: 12px">Karunadasa D.A.</td>
                                     <td style="font-size: 12px">
                                         <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
@@ -166,9 +167,9 @@
                                     </th>
 
 
-                                    <td style="font-size: 12px">G1A</td>
-                                    <td style="font-size: 12px">G1</td>
-                                    <td style="font-size: 12px">G51248</td>
+                                    <td style="font-size: 12px">Foot Ball</td>
+                                    <td style="font-size: 12px">FA</td>
+                                    <td style="font-size: 12px">Karunadasa D.A.</td>
                                     <td style="font-size: 12px">Karunadasa D.A.</td>
                                     <td style="font-size: 12px">
                                         <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
