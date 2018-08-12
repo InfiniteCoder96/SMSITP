@@ -80,22 +80,32 @@ Route::get('/Aadmin/sections', function (){
 //Non Academic Manager Routes
 
 Route::get('/NAadmin/dashboard', function (){
-    return view('Admin.Exam_Centre_Management.dashboard') ;
+    return view('Admin.Non_Academic_Management.dashboard') ;
 });
 
-Route::get('/NAadmin/viewResults', function (){
-    return view('Admin.Exam_Centre_Management.viewResults') ;
+Route::get('/NAadmin/manage-sports', function (){
+    return view('Admin.Non_Academic_Management.manage_sports') ;
 });
 
-Route::get('/NAadmin/publishResults', function (){
+Route::get('/NAadmin/manage-sport-students', function (){
+    return view('Admin.N') ;
+});
+
+Route::get('/NAadmin/manage-coaches', function (){
+    return view('Admin.Non_Academic_Management.manage_coaches') ;
+});
+
+Route::get('/NAadmin/manage-teacher-in-charge', function (){
+    return view('Admin.Non_Academic_Management.manage_sports') ;
+});
+
+Route::get('/NAadmin/manage-achievements', function (){
     return view('Admin.Exam_Centre_Management.publishResults') ;
 });
 
-Route::get('/NAadmin/questionBank', function (){
+Route::get('/NAadmin/manage-coaches', function (){
     return view('Admin.Exam_Centre_Management.questionBank') ;
 });
-
-
 //Transport Manager Routes
 
 Route::get('/Tadmin/dashboard', function (){
