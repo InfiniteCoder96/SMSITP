@@ -60,38 +60,38 @@ Route::get('/ECadmin/questionBank', function (){
 
 //Academic Manager Routes
 
-Route::get('/ECadmin/dashboard', function (){
+Route::get('/Aadmin/dashboard', function (){
     return view('Admin.Exam_Centre_Management.dashboard') ;
 });
 
-Route::get('/ECadmin/viewResults', function (){
+Route::get('/Aadmin/viewResults', function (){
     return view('Admin.Exam_Centre_Management.viewResults') ;
 });
 
-Route::get('/ECadmin/publishResults', function (){
+Route::get('/Aadmin/publishResults', function (){
     return view('Admin.Exam_Centre_Management.publishResults') ;
 });
 
-Route::get('/ECadmin/questionBank', function (){
+Route::get('/Aadmin/questionBank', function (){
     return view('Admin.Exam_Centre_Management.questionBank') ;
 });
 
 
 //Non Academic Manager Routes
 
-Route::get('/ECadmin/dashboard', function (){
+Route::get('/NAadmin/dashboard', function (){
     return view('Admin.Exam_Centre_Management.dashboard') ;
 });
 
-Route::get('/ECadmin/viewResults', function (){
+Route::get('/NAadmin/viewResults', function (){
     return view('Admin.Exam_Centre_Management.viewResults') ;
 });
 
-Route::get('/ECadmin/publishResults', function (){
+Route::get('/NAadmin/publishResults', function (){
     return view('Admin.Exam_Centre_Management.publishResults') ;
 });
 
-Route::get('/ECadmin/questionBank', function (){
+Route::get('/NAadmin/questionBank', function (){
     return view('Admin.Exam_Centre_Management.questionBank') ;
 });
 
