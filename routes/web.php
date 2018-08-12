@@ -61,19 +61,19 @@ Route::get('/ECadmin/questionBank', function (){
 //Academic Manager Routes
 
 Route::get('/Aadmin/dashboard', function (){
-    return view('Admin.Exam_Centre_Management.dashboard') ;
+    return view('Admin.Academic_Management.dashboard') ;
 });
 
-Route::get('/Aadmin/viewResults', function (){
-    return view('Admin.Exam_Centre_Management.viewResults') ;
+Route::get('/Aadmin/subjects', function (){
+    return view('Admin.Academic_Management.manage_subject') ;
 });
 
-Route::get('/Aadmin/publishResults', function (){
-    return view('Admin.Exam_Centre_Management.publishResults') ;
+Route::get('/Aadmin/classes', function (){
+    return view('Admin.Academic_Management.manage_class') ;
 });
 
-Route::get('/Aadmin/questionBank', function (){
-    return view('Admin.Exam_Centre_Management.questionBank') ;
+Route::get('/Aadmin/sections', function (){
+    return view('Admin.Academic_Management.manage_section') ;
 });
 
 

@@ -167,6 +167,7 @@
 <!-- User Profile Modal -->
 <!-- ============================================================== -->
 @include('layouts.adminLayouts.userProfileModal')
+@include('layouts.AcademicLayouts.updateClassTeacherDetailsModal')
 <!-- ============================================================== -->
 <!-- End User Profile Modal -->
 <!-- ============================================================== -->

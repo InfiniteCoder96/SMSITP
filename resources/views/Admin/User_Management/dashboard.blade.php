@@ -142,5 +142,5 @@
         <!-- ============================================================== -->
     </div>
 
-    @include('layouts.adminLayouts.footer')
+    @include('layouts.AcademicLayouts.footer')
 @endsection
