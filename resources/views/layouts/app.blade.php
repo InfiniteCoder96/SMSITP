@@ -27,6 +27,7 @@
     <!-- Custom CSS -->
     <link href="{{asset('css/backend_css/style.min.css')}}" rel="stylesheet">
     <link href="{{asset('assets/libs/jquery-steps/steps.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/libs/flot/css/float-chart.css')}}" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -127,6 +128,24 @@
 {{--view-insert_student--}}
 <script src="{{asset('assets/libs/jquery-steps/build/jquery.steps.min.js')}}"></script>
 <script src="{{asset('assets/libs/jquery-validation/dist/jquery.validate.min.js')}}"></script>
+
+<script src="{{asset('js/backend_js/jquery.countTo.js')}}"></script>
+<script src="{{asset('js/backend_js/tests.js')}}"></script>
+
+
+<script src="{{asset('assets/libs/chart/matrix.interface.js')}}"></script>
+<script src="{{asset('assets/libs/chart/excanvas.min.js')}}"></script>
+<script src="{{asset('assets/libs/flot/jquery.flot.js')}}"></script>
+<script src="{{asset('assets/libs/flot/jquery.flot.pie.js')}}"></script>
+<script src="{{asset('assets/libs/flot/jquery.flot.time.js')}}"></script>
+<script src="{{asset('assets/libs/flot/jquery.flot.stack.js')}}"></script>
+<script src="{{asset('assets/libs/flot/jquery.flot.crosshair.js')}}"></script>
+<script src="{{asset('assets/libs/chart/jquery.peity.min.js')}}"></script>
+<script src="{{asset('assets/libs/chart/matrix.charts.js')}}"></script>
+<script src="{{asset('assets/libs/chart/jquery.flot.pie.min.js')}}"></script>
+<script src="{{asset('assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js')}}"></script>
+<script src="{{asset('assets/libs/chart/turning-series.js')}}"></script>
+<script src="{{asset('js/backend_js/pages/chart/chart-page-init.js')}}"></script>
 <script>
     /****************************************
      *       Basic Table                   *
@@ -160,6 +179,11 @@
             alert("Submitted!");
         }
     });
+
+
+
+    $('.timer').countTo();
+
 </script>
 
 
