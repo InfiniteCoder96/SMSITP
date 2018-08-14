@@ -54,6 +54,9 @@
                         <span class="d-none d-md-block">Create New <i class="fa fa-angle-down"></i></span>
                         <span class="d-block d-md-none"><i class="fa fa-plus"></i></span>
                     </a>
+                    <div>
+
+                    </div>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">Action</a>
                         <a class="dropdown-item" href="#">Another action</a>
