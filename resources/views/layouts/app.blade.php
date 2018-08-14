@@ -28,13 +28,14 @@
     <link href="{{asset('css/backend_css/style.min.css')}}" rel="stylesheet">
     <link href="{{asset('assets/libs/jquery-steps/steps.css')}}" rel="stylesheet">
     <link href="{{asset('assets/libs/flot/css/float-chart.css')}}" rel="stylesheet">
+    <link href="{{asset('css/backend_css/fabochart.css')}}" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <script src="http://cdn.jsdelivr.net/jquery.flot/0.8.3/jquery.flot.min.js"></script>
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <![endif]-->
 </head>
@@ -146,6 +147,7 @@
 <script src="{{asset('assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js')}}"></script>
 <script src="{{asset('assets/libs/chart/turning-series.js')}}"></script>
 <script src="{{asset('js/backend_js/pages/chart/chart-page-init.js')}}"></script>
+<script src="{{asset('js/backend_js/fabochart.js')}}"></script>
 <script>
     /****************************************
      *       Basic Table                   *
@@ -183,7 +185,32 @@
 
 
     $('.timer').countTo();
+    $(document).ready(function () {
+        data = {
+            '2010' : 300,
+            '2011' : 200,
+            '2012' : 100,
+            '2013' : 500,
+            '2014' : 400,
+            '2015' : 200
+        };
 
+        $("#chart1").faBoChart({
+            time: 500,
+            animate: true,
+            instantAnimate: true,
+            straight: false,
+            data: data,
+            labelTextColor : "#C0392B",
+        });
+        $("#chart2").faBoChart({
+            time: 2500,
+            animate: true,
+            data: data,
+            straight: true,
+            labelTextColor : "#C0392B",
+        });
+    });
 </script>
 
 
