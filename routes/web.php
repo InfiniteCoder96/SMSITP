@@ -131,6 +131,6 @@ Route::get('/Tadmin/staff-report', function (){
 
 Route::match(['get','post'],'/admin/manage-students', 'StudentController@addStudent');
 
-Route::get('/admin/', function (){
-
+Route::get('/admin/dashboard', function (){
+    return view('Admin.User_Management.Admin.admin_view');
 });

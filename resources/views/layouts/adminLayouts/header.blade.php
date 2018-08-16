@@ -18,7 +18,7 @@
                 <!-- Logo text -->
                 <span class="logo-text">
                              <!-- dark Logo text -->
-                    <img src="{{asset('assets/images/logoIcon.png')}}" alt="homepage" class="light-logo"/>
+                    <img src="{{asset('assets/images/logos.png')}}" alt="homepage"/>
                 </span>
                 <!-- Logo icon -->
                 <!-- <b class="logo-icon"> -->
@@ -152,20 +152,31 @@
                 <!-- ============================================================== -->
                 <!-- User profile and search -->
                 <!-- ============================================================== -->
-                <li class="nav-item">
-                    {{--<a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{asset('assets/images/users/1.jpg')}}" alt="user" class="rounded-circle" width="31"></a>--}}
-                    {{--<div class="dropdown-menu dropdown-menu-right user-dd animated">--}}
-                        {{--<a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> </a>--}}
-                        {{--<a class="dropdown-item" href="javascript:void(0)"><i class="ti-wallet m-r-5 m-l-5"></i> My Balance</a>--}}
-                        {{--<a class="dropdown-item" href="javascript:void(0)"><i class="ti-email m-r-5 m-l-5"></i> Inbox</a>--}}
-                        {{--<a class="dropdown-item" href="javascript:void(0)"><i class="ti-settings m-r-5 m-l-5"></i> Account Setting</a>--}}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{asset('assets/images/users/1.jpg')}}" alt="user" class="rounded-circle" width="31"></a>
+                    <div class="dropdown-menu dropdown-menu-right user-dd animated">
+                        <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
+                        <a class="dropdown-item" href="javascript:void(0)"><i class="ti-wallet m-r-5 m-l-5"></i> My Balance</a>
+                        <a class="dropdown-item" href="javascript:void(0)"><i class="ti-email m-r-5 m-l-5"></i> Inbox</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="javascript:void(0)"><i class="ti-settings m-r-5 m-l-5"></i> Account Setting</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();"><i class="fa fa-power-off m-r-5 m-l-5"></i>
+                            {{ __('Logout') }}
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <div class="p-l-30 p-10"><a href="" class="btn btn-sm btn-success btn-rounded">View Profile</a></div>
+                    </div>
+                </li>
+                <li class="nav-item navbar-brand">
 
-
-                    {{--</div>--}}
-
-                    <a class="nav-link"><button class="btn btn-outline-purple" data-toggle="modal" data-target="#loginModal">{{Auth::user()->name}}</button></a>
+                        <p style="font-size: 10px">{{Auth::user()->name}}</p>
+                    <p style="font-size: 10px">{{Auth::user()->type}}</p>
 
                 </li>
+
 
                 <!-- ============================================================== -->
                 <!-- User profile and search -->
