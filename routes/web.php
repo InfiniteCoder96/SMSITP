@@ -134,3 +134,7 @@ Route::match(['get','post'],'/admin/manage-students', 'StudentController@addStud
 Route::get('/admin/dashboard', function (){
     return view('Admin.User_Management.Admin.admin_view');
 });
+
+Route::resource('students','StudentController');
+
+Route::resource('products','ProductController');

@@ -7,22 +7,155 @@ use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function __construct()
     {
         $this->middleware('auth');
     }
 
-    public function addStudent(){
-
-
-        $students = Student::get();
-        return view('Admin.User_Management.Student.view-insert_student')->with(compact('students'));
-
+    public function index()
+    {
+        $students = Student::all();
+        return view('Admin.User_Management.Student.all_students')->with(compact('students'));
     }
 
-//    public function viewStudents(Request $request){
-//
-//
-//        return view('Admin.User_Management.Student.manageStudent')->with(compact('students'));
-//    }
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        return view('Admin.User_Management.Student.admission');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $student = $this->validate(request(), [
+
+
+            'salutation'=> 'required',
+            'first_Name'=> 'required',
+            'middle_Name'=> 'required',
+            'last_Name'=> 'required',
+            'DoB'=> 'required',
+            'NIC'=> 'required',
+            'Gender'=> 'required',
+            'Address'=> 'required',
+            'Email_Address'=> 'required|email',
+            'Telephone_No_Mob'=> 'required',
+            'Telephone_No_Res'=> 'required',
+            'birth_certificate_no'=> 'required',
+            'religion'=> 'required',
+            'race'=> 'required',
+            //'country'=> 'required',
+            'nationality'=> 'required',
+            //'blood_group'=> 'required',
+            'Known_Illnesses'=> 'required',
+            'Known_Allergies'=> 'required',
+        ]);
+
+        Student::create($student);
+
+        return back()->with('success', 'Product has been added');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $sid
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($sid)
+    {
+        $student = Student::find($sid);
+        return view('Admin.User_Management.Student.edit_student',compact('student','sid'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $sid
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $sid)
+    {
+        $student = Student::find($sid);
+        $this->validate(request(), [
+            'salutation'=> 'required',
+            'first_Name'=> 'required',
+            'middle_Name'=> 'required',
+            'last_Name'=> 'required',
+            'DoB'=> 'required',
+            'NIC'=> 'required',
+            'Gender'=> 'required',
+            'Address'=> 'required',
+            'Email_Address'=> 'required|email',
+            'Telephone_No_Mob'=> 'required',
+            'Telephone_No_Res'=> 'required',
+            'birth_certificate_no'=> 'required',
+            'religion'=> 'required',
+            'race'=> 'required',
+            //'country'=> 'required',
+            'nationality'=> 'required',
+            //'blood_group'=> 'required',
+            'Known_Illnesses'=> 'required',
+            'Known_Allergies'=> 'required',
+        ]);
+        $student->salutation = $request->get('salutation');
+        $student->first_Name = $request->get('first_Name');
+        $student->middle_Name = $request->get('middle_Name');
+        $student->last_Name = $request->get('last_Name');
+        $student->DoB = $request->get('DoB');
+        $student->NIC = $request->get('NIC');
+        $student->Gender = $request->get('Gender');
+        $student->Address = $request->get('Address');
+        $student->Email_Address = $request->get('Email_Address');
+        $student->Telephone_No_Mob = $request->get('Telephone_No_Mob');
+        $student->Telephone_No_Res = $request->get('Telephone_No_Res');
+        $student->birth_certificate_no = $request->get('birth_certificate_no');
+        $student->religion = $request->get('religion');
+        $student->race = $request->get('race');
+        $student->nationality = $request->get('nationality');
+        $student->Known_Illnesses = $request->get('Known_Illnesses');
+        $student->Known_Illnesses = $request->get('Known_Allergies');
+
+        $student->save();
+        return redirect('students')->with('success','Product has been updated');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        $student = Student::find($id);
+        $student->delete();
+        return redirect('students')->with('success','Product has been  deleted');
+    }
 }
