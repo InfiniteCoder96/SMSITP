@@ -6,9 +6,9 @@
     @include('layouts.HRLayouts.sideBar')
     <div class="page-wrapper">
         <div class="container-fluid">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title m-b-0">Teaching Staff Details</h5>
+            <div class="card ">
+                <div class="card-body card text-white bg-danger mb-3">
+                    <h5 class="card-title m-b-0">Payroll Info</h5>
                 </div>
                 <div class="table-responsive">
                     <table class="table">
@@ -20,9 +20,11 @@
                                     <span class="checkmark"></span>
                                 </label>
                             </th>
-                            <th scope="col" style="font-size: 12px">ID</th>
-                            <th scope="col" style="font-size: 12px">Section</th>
-                            <th scope="col" style="font-size: 12px">Status</th>
+                            <th scope="col" style="font-size: 12px">User ID</th>
+                            <th scope="col" style="font-size: 12px">User Name</th>
+                            <th scope="col" style="font-size: 12px">Basic Salary</th>
+                            <th scope="col" style="font-size: 12px">Bonus</th>
+                            <th scope="col" style="font-size: 12px">Deduction</th>
                             <th scope="col" style="font-size: 12px">Action</th>
 
                         </tr>
@@ -43,11 +45,13 @@
 
 
                             <td style="font-size: 12px">S123</td>
-                            <td style="font-size: 12px">Academic</td>
-                            <td style="font-size: 12px;background-color:goldenrod;color: white" >Pending</td>
+                            <td style="font-size: 12px">Perera</td>
+                            <td style="font-size: 12px;background-color:goldenrod;color: white" >25,000</td>
+                            <td style="font-size: 12px;background-color:goldenrod;color: white" >15,000</td>
+                            <td style="font-size: 12px;background-color:goldenrod;color: white" >5,000</td>
                             <td style="font-size: 12px">
-                                <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
-                                    <a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
+                                <a class="waves-effect waves-dark" href="" data-toggle="modal" data-target="#updatePlayrollDetailsModal"><i class="mdi mdi-pencil font-20" ></i></a>
+                                <a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i></a>
                             </td>
 
                         </tr>
@@ -61,208 +65,90 @@
 
 
                             <td style="font-size: 12px">S123</td>
-                            <td style="font-size: 12px">Academic</td>
-                            <td style="font-size: 12px;background-color:red;color: white" >Not Paid</td>
+                            <td style="font-size: 12px">Perera</td>
+                            <td style="font-size: 12px;background-color:goldenrod;color: white" >25,000</td>
+                            <td style="font-size: 12px;background-color:goldenrod;color: white" >15,000</td>
+                            <td style="font-size: 12px;background-color:goldenrod;color: white" >5,000</td>
                             <td style="font-size: 12px">
-                                <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
-                                    <a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
+                                <a class="waves-effect waves-dark" href="" data-toggle="modal" data-target="#updatePlayrollDetailsModal"><i class="mdi mdi-pencil font-20" ></i></a>
+                                <a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i></a>
                             </td>
                         </tr>
-                        <tr>
-                            <th>
-                                <label class="customcheckbox">
-                                    <input type="checkbox" class="listCheckbox" />
-                                    <span class="checkmark"></span>
-                                </label>
-                            </th>
-
-
-                            <td style="font-size: 12px">S123</td>
-                            <td style="font-size: 12px">Academic</td>
-                            <td style="font-size: 12px;background-color:green;color: white" >Paid</td>
-                            <td style="font-size: 12px">
-                                <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
-                                    <a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
-                            </td>
-                        </tr>
-                        {{--@endforeach--}}
 
                         </tbody>
                     </table>
                 </div>
             </div>
             <form class="form-horizontal" action="#" method="get">
-    <div class="row">
+                <div class="row">
 
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title m-b-0">Recuit New Teacher</h5>
-                </div>
-                <div class="card-body">
-                    <h4 class="card-title">Personal Info</h4>
-                    <div class="form-group row">
-                        <label for="email1" class="col-sm-3 text-right control-label col-form-label">User Role</label>
-                        <div class="col-sm-9">
-                            <select class="select2 form-control custom-select" style="width: 100%; height:36px;" required>
-                                <option>Select</option>
-                                <optgroup label="Academic">
-                                    <option value="AK">Teacher</option>
-                                    <option value="AK">Academic Manager</option>
+                    <div class="col-md-6 ">
+                        <div class="card ">
 
-                                </optgroup>
-                                <optgroup label="Non Academic">
-                                    <option value="WA">Administrator</option>
-                                    <option value="NV">Coach</option>
-                                    <option value="CA">Finance Manager</option>
-                                    <option value="WA">Non Academic Manager</option>
-                                    <option value="WA">Transport Manager</option>
-                                    <option value="OR">Warden</option>
-                                </optgroup>
+                            <div class="card-body card text-white bg-success mb-3">
+                                <h4 class="card-title ">Calculate Salary</h4>
+                            </div>
+                            <div class="form-group row">
+                                <label for="fname" class="col-sm-3 text-right control-label col-form-label">User ID</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="fname" placeholder="User ID Here" required>
+                                </div>
+                            </div>
 
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="fname" class="col-sm-3 text-right control-label col-form-label">First Name</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="fname" placeholder="First Name Here" required>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="lname" class="col-sm-3 text-right control-label col-form-label">Last Name</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="lname" placeholder="Last Name Here">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="lname" class="col-sm-3 text-right control-label col-form-label">NIC Number</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="id" placeholder="NIC Number here" required>
-                        </div>
-                    </div>
+                            <div class="form-group row">
+                                <label for="fname" class="col-sm-3 text-right control-label col-form-label">User Name</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="fname" placeholder="User Name Here" required>
+                                </div>
+                            </div>
 
-                    <div class="form-group row">
-                        <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Contact No</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="cono1" placeholder="Contact No Here" required>
+
+                            <div class="form-group row">
+                                <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Basic Salary</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="cono1" placeholder="Salary Here" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Bonus</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="cono1" placeholder="Bonus Here" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Deduction</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="cono1" placeholder="Deduction Here" required>
+                                </div>
+                            </div>
+
+                            <div class="border-top">
+                                <div class="card-body">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+
+                            <h5 ><center>Net Salary is ......<center></center></h5>
+
+
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Address</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="cono1" placeholder="Contact No Here" required>
-                        </div>
-                        {{--<div class="col-sm-9">--}}
-                        {{--<textarea class="form-control"></textarea>--}}
-                        {{--</div>--}}
-                    </div>
-                    <div class="form-group row">
-                        <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Message</label>
-                        <div class="col-sm-9">
-                            <textarea class="form-control"></textarea>
-                        </div>
+
+
                     </div>
 
                 </div>
-
-
-            </div>
-
-
-
-
-
-
 
         </div>
-        <div class="col-md-6">
-            <div class="card">
 
-                <div class="card-body">
-                    <h4 class="card-title">Career Info</h4>
-                    <div class="form-group row">
-                        <label for="email1" class="col-sm-3 text-right control-label col-form-label">User Role</label>
-                        <div class="col-sm-9">
-                            <select class="select2 form-control custom-select" style="width: 100%; height:36px;" required>
-                                <option>Select</option>
-                                <optgroup label="Academic">
-                                    <option value="AK">Teacher</option>
-                                    <option value="AK">Academic Manager</option>
-
-                                </optgroup>
-                                <optgroup label="Non Academic">
-                                    <option value="WA">Administrator</option>
-                                    <option value="NV">Coach</option>
-                                    <option value="CA">Finance Manager</option>
-                                    <option value="WA">Non Academic Manager</option>
-                                    <option value="WA">Transport Manager</option>
-                                    <option value="OR">Warden</option>
-                                </optgroup>
-
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="fname" class="col-sm-3 text-right control-label col-form-label">First Name</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="fname" placeholder="First Name Here" required>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="lname" class="col-sm-3 text-right control-label col-form-label">Last Name</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="lname" placeholder="Last Name Here" required>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="lname" class="col-sm-3 text-right control-label col-form-label">ID Number</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="id" placeholder="S458" >
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Contact No</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="cono1" placeholder="Contact No Here">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Address</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="cono1" placeholder="Contact No Here">
-                        </div>
-                        {{--<div class="col-sm-9">--}}
-                        {{--<textarea class="form-control"></textarea>--}}
-                        {{--</div>--}}
-                    </div>
-                </div>
-                <div class="border-top">
-                    <div class="card-body">
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </div>
-                </div>
-
-            </div>
-
-
-
-
-
-
-
-
-        </div>
+        </form>
 
     </div>
-</form>
-
-</div>
-</div>
+    </div>
 
 
 
-@include('layouts.adminLayouts.footer')
+    @include('layouts.adminLayouts.footer')
 
 @endsection
