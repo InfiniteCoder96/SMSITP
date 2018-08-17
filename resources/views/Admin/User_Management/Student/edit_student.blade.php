@@ -51,6 +51,7 @@
                     <p>{{ \Session::get('success') }}</p>
                 </div><br />
             @endif
+            @if($student != null)
             <div class="card bg-success text-dark">
                 <div class="card-body wizard-content">
                     <h4 class="card-title">Add A New Student</h4>
@@ -209,7 +210,7 @@
                     </form>
                 </div>
             </div>
-
+        @endif
             <!-- ============================================================== -->
             <!-- End PAge Content -->
             <!-- ============================================================== -->
