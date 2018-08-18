@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="75c1e791-4ade-41ba-8e33-3bc20d914aa0" name="Default" comment="rebuilding user management">
+    <list default="true" id="75c1e791-4ade-41ba-8e33-3bc20d914aa0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/User_Management/Admin/admin_view.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/User_Management/Admin/admin_view.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/User_Management/Student/edit_student.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/User_Management/Student/edit_student.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/adminLayouts/header.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/adminLayouts/header.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,13 +22,46 @@
       <file leaf-file-name="edit_student.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Admin/User_Management/Student/edit_student.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="580" column="76" lean-forward="false" selection-start-line="580" selection-start-column="76" selection-end-line="580" selection-end-column="76" />
+            <state relative-caret-position="253">
+              <caret line="72" column="14" lean-forward="true" selection-start-line="72" selection-start-column="14" selection-end-line="72" selection-end-column="14" />
               <folding>
-                <element signature="e#3151#3169#0#HTML" expanded="true" />
-                <element signature="e#24240#24258#0#HTML" expanded="true" />
-                <element signature="e#27602#27620#0#HTML" expanded="true" />
-                <element signature="e#31292#31310#0#HTML" expanded="true" />
+                <element signature="e#3186#3204#0#HTML" expanded="true" />
+                <element signature="e#25864#25882#0#HTML" expanded="true" />
+                <element signature="e#29440#29458#0#HTML" expanded="true" />
+                <element signature="e#33347#33365#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Admin/User_Management/dashboard.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="316">
+              <caret line="23" column="26" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin_view.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Admin/User_Management/Admin/admin_view.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/adminLayouts/header.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="177" column="21" lean-forward="true" selection-start-line="177" selection-start-column="21" selection-end-line="177" selection-end-column="21" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#li#3;n#ul#1;n#div#1;n#nav#0;n#header#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#li#3;n#ul#1;n#div#1;n#nav#0;n#header#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,8 +158,6 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/resources/views/Admin/User_Management/Student/manageStudent.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/User_Management/Student/view-insert_student.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/adminLayouts/header.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/User_Management/Admin/admin_view.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_08_11_112945_create_students_table.php" />
         <option value="$PROJECT_DIR$/resources/views/students/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
@@ -146,6 +179,8 @@
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/adminLayouts/sideBar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/adminLayouts/header.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Admin/User_Management/Admin/admin_view.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/User_Management/Student/edit_student.blade.php" />
       </list>
     </option>
@@ -352,7 +387,7 @@
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="User_Management" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Student" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="SMS" type="b2602c69:ProjectViewProjectNode" />
@@ -421,7 +456,7 @@
       <workItem from="1534067016284" duration="205000" />
       <workItem from="1534260954233" duration="5999000" />
       <workItem from="1534405738957" duration="4688000" />
-      <workItem from="1534567142080" duration="6245000" />
+      <workItem from="1534567142080" duration="9202000" />
     </task>
     <task id="LOCAL-00001" summary="user management views rebuild">
       <created>1534193614692</created>
@@ -465,11 +500,18 @@
       <option name="project" value="LOCAL" />
       <updated>1534481521779</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="rebuilding user management">
+      <created>1534574372520</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1534574372520</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49283000" />
+    <option name="totallyTimeSpent" value="52240000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -562,13 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/User_Management/dashboard.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="23" column="26" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/Admin Templates/AdminBSBMaterialDesign-master/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-91037">
@@ -626,13 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/adminLayouts/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="26" column="87" lean-forward="false" selection-start-line="26" selection-start-column="87" selection-end-line="26" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/Admin Templates/web/charts.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="673">
@@ -651,13 +679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="589">
           <caret line="725" column="30" lean-forward="true" selection-start-line="654" selection-start-column="24" selection-end-line="725" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/User_Management/Admin/admin_view.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="123" column="18" lean-forward="false" selection-start-line="123" selection-start-column="18" selection-end-line="123" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -891,15 +912,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/User_Management/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="23" column="26" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/adminLayouts/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="177" column="21" lean-forward="true" selection-start-line="177" selection-start-column="21" selection-end-line="177" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#li#3;n#ul#1;n#div#1;n#nav#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#li#3;n#ul#1;n#div#1;n#nav#0;n#header#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/User_Management/Admin/admin_view.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Admin/User_Management/Student/edit_student.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="580" column="76" lean-forward="false" selection-start-line="580" selection-start-column="76" selection-end-line="580" selection-end-column="76" />
+        <state relative-caret-position="253">
+          <caret line="72" column="14" lean-forward="true" selection-start-line="72" selection-start-column="14" selection-end-line="72" selection-end-column="14" />
           <folding>
-            <element signature="e#3151#3169#0#HTML" expanded="true" />
-            <element signature="e#24240#24258#0#HTML" expanded="true" />
-            <element signature="e#27602#27620#0#HTML" expanded="true" />
-            <element signature="e#31292#31310#0#HTML" expanded="true" />
+            <element signature="e#3186#3204#0#HTML" expanded="true" />
+            <element signature="e#25864#25882#0#HTML" expanded="true" />
+            <element signature="e#29440#29458#0#HTML" expanded="true" />
+            <element signature="e#33347#33365#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

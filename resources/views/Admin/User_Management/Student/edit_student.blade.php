@@ -57,7 +57,7 @@
                         <i class="fas fa-cogs"></i> Update Student Information
                     </div>
                     <div class="card-body bg-info text-white">
-                        <h5>Please enter the information in the designated boxes. Click on the SUBMIT button when completed.
+                        <h5><i class="fas fa-info-circle"></i> Please enter the information in the designated boxes. Click on the SUBMIT button when completed.
                             <Text style="color: red">*</Text>   indicates required field.</h5>
                     </div>
                     <div class="card-body">
@@ -141,8 +141,13 @@
                             <div class="card-title text-purple">
                                 <i class="fas fa-user"></i> Student Information(applicant)
                             </div>
+                            <div class="card-title text-success text-lg-center bg-dark">
+                                <i class="mdi mdi-account-card-details"></i> Personal Information
+                            </div>
                             <div class="form-row">
+
                                 <div class="col-md-3 mb-3">
+
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Salutation</span>
@@ -161,28 +166,40 @@
                                         Please choose a username.
                                     </div>
                                 </div>
-                                <div class="col-md-9 mb-3">
+                                <div class="col-md-3 mb-2">
 
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text" id="inputGroupPrepend">Name with initials</span>
+                                            <span class="input-group-text" id="inputGroupPrepend">First Name</span>
                                         </div>
                                         <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+
                                         <div class="invalid-feedback">
                                             Please choose a username.
                                         </div>
                                     </div>
                                 </div>
-
-                            </div>
-                            <div class="form-row">
-                                <div class="col-md-12 mb-3">
+                                <div class="col-md-3 mb-2">
 
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text" id="inputGroupPrepend">Full Name</span>
+                                            <span class="input-group-text" id="inputGroupPrepend">Middle Name</span>
                                         </div>
                                         <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-2">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Last Name</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+
                                         <div class="invalid-feedback">
                                             Please choose a username.
                                         </div>
@@ -233,6 +250,9 @@
                                     </div>
                                 </div>
 
+                            </div>
+                            <div class="card-title text-success text-center bg-dark">
+                                <i class="mdi mdi-comment-account"></i> Contact Information
                             </div>
                             <div class="form-row">
                                 <div class="col-md-3 mb-3">
@@ -288,6 +308,9 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="card-title text-success text-center bg-dark">
+                                <i class="mdi mdi-information-outline"></i> Other Information
+                            </div>
                             <div class="form-row">
                                 <div class="col-md-4 mb-3">
 
@@ -332,6 +355,9 @@
                             </div>
                             <div class="card-title  text-purple">
                                 <i class="fas fa-users"></i> Father/Mother/Guardian Information
+                            </div>
+                            <div class="card-title text-success text-center bg-dark">
+                                <i class="mdi mdi-account-card-details"></i> Personal Information
                             </div>
                             <div class="form-row">
                                 <div class="col-md-3 mb-2">
@@ -447,6 +473,9 @@
 
 
                             </div>
+                            <div class="card-title text-success text-center bg-dark">
+                                <i class="mdi mdi-information-outline"></i> Work Information
+                            </div>
                             <div class="form-row">
                                 <div class="col-md-3 mb-3">
 
@@ -506,6 +535,9 @@
                                 </div>
 
 
+                            </div>
+                            <div class="card-title text-success text-center bg-dark">
+                                <i class="mdi mdi-information-outline"></i> Contact Information
                             </div>
                             <div class="form-row">
                                 <div class="col-md-3 mb-3">

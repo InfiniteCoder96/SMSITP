@@ -12,7 +12,7 @@
         <div class="page-breadcrumb">
             <div class="row">
                 <div class="col-12 d-flex no-block align-items-center">
-                    <h4 class="page-title">Welcome to Student Management Portal <i class="mdi mdi-face"></i></h4>
+                    <h4 class="page-title">Welcome to Scalar Management Systems <i class="mdi mdi-face"></i></h4>
                     <div class="ml-auto text-right">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
@@ -125,55 +125,137 @@
 
             <div class="row">
                 <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">Daily Attendance Summary</h4>
-                            <div class="m-t-20">
-                                <div class="d-flex no-block align-items-center">
-                                    <span>81% Clicks</span>
-                                    <div class="ml-auto">
-                                        <span>125</span>
+                    <div class="row">
+                        <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Daily Attendance Summary</h4>
+                                <div class="m-t-20">
+                                    <div class="d-flex no-block align-items-center">
+                                        <span>81% Clicks</span>
+                                        <div class="ml-auto">
+                                            <span>125</span>
+                                        </div>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 81%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 81%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="m-t-25">
-                                <div class="d-flex no-block align-items-center m-t-15">
-                                    <span>72% Uniquie Clicks</span>
-                                    <div class="ml-auto">
-                                        <span>120</span>
+                                <div class="m-t-25">
+                                    <div class="d-flex no-block align-items-center m-t-15">
+                                        <span>72% Uniquie Clicks</span>
+                                        <div class="ml-auto">
+                                            <span>120</span>
+                                        </div>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 72%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 72%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="m-t-25">
-                                <div class="d-flex no-block align-items-center m-t-15">
-                                    <span>53% Impressions</span>
-                                    <div class="ml-auto">
-                                        <span>785</span>
+                                <div class="m-t-25">
+                                    <div class="d-flex no-block align-items-center m-t-15">
+                                        <span>53% Impressions</span>
+                                        <div class="ml-auto">
+                                            <span>785</span>
+                                        </div>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 53%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 53%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="m-t-25">
-                                <div class="d-flex no-block align-items-center m-t-15">
-                                    <span>3% Online Users</span>
-                                    <div class="ml-auto">
-                                        <span>8</span>
+                                <div class="m-t-25">
+                                    <div class="d-flex no-block align-items-center m-t-15">
+                                        <span>3% Online Users</span>
+                                        <div class="ml-auto">
+                                            <span>8</span>
+                                        </div>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 3%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 3%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
                             </div>
+                    </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="span12">
+                                <table class="table-condensed table-bordered table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th colspan="7">
+                        <span class="btn-group">
+                            <a class="btn"><i class="icon-chevron-left"></i></a>
+                        	<a class="btn active">February 2012</a>
+                        	<a class="btn"><i class="icon-chevron-right"></i></a>
+                        </span>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>Su</th>
+                                        <th>Mo</th>
+                                        <th>Tu</th>
+                                        <th>We</th>
+                                        <th>Th</th>
+                                        <th>Fr</th>
+                                        <th>Sa</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="muted">29</td>
+                                        <td class="muted">30</td>
+                                        <td class="muted">31</td>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>13</td>
+                                        <td>14</td>
+                                        <td>15</td>
+                                        <td>16</td>
+                                        <td>17</td>
+                                        <td>18</td>
+                                    </tr>
+                                    <tr>
+                                        <td>19</td>
+                                        <td class="btn-primary"><strong>20</strong></td>
+                                        <td>21</td>
+                                        <td>22</td>
+                                        <td>23</td>
+                                        <td>24</td>
+                                        <td>25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>26</td>
+                                        <td>27</td>
+                                        <td>28</td>
+                                        <td>29</td>
+                                        <td class="muted">1</td>
+                                        <td class="muted">2</td>
+                                        <td class="muted">3</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+
+
                 </div>
                 <div class="col-md-6">
                     <div class="card">
