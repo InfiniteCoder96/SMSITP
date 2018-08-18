@@ -51,166 +51,562 @@
                     <p>{{ \Session::get('success') }}</p>
                 </div><br />
             @endif
-            @if($student != null)
-            <div class="card bg-success text-dark">
-                <div class="card-body wizard-content">
-                    <h4 class="card-title">Add A New Student</h4>
-                    <h6 class="card-subtitle"></h6>
-                    <form id="example-form" action="{{action('StudentController@update', $sid)}}" method="get" class="m-t-40">
-                        {{csrf_field()}}
-                        <div>
-                            <h6 class="card-subtitle"></h6>
-                            <section>
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <label for="userName">Salutation *</label>
-                                        <select name="salutation" class="select2 form-control custom-select"  style="width: 100%; height:36px;" required>
+            {{--@if($student != null)--}}
+                <div class="card text-left">
+                    <div class="card-header bg-dark text-orange">
+                        <i class="fas fa-cogs"></i> Update Student Information
+                    </div>
+                    <div class="card-body bg-info text-white">
+                        <h5>Please enter the information in the designated boxes. Click on the SUBMIT button when completed.
+                            <Text style="color: red">*</Text>   indicates required field.</h5>
+                    </div>
+                    <div class="card-body">
 
-                                            <option selected value="{{$student->salutation}}">{{$student->salutation}}</option>
-                                            <option value="AK">Ms</option>
-                                            <option value="WA">Mr</option>
+                        <form class="needs-validation" novalidate>
+                            <div class="card-title text-purple">
+                                <i class="fas fa-building"></i> School Information
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-4 mb-3">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">College / School</span>
+                                        </div>
+                                        <select name="salutation" class="form-control" required>
+                                            <option selected disabled>- Select -</option>
+                                            <option value="Master">Master</option>
+                                            <option value="Ms">Ms</option>
+                                            <option value="Mr">Mr</option>
                                         </select>
                                     </div>
-                                    <div class="col-md-8">
-                                        <label for="userName">Name with Initials *</label>
-                                        <input id="userName" name="nameIni" type="text" class="required form-control">
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please choose a username.
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <label for="userName">First Name *</label>
-                                        <input id="userName" name="first_Name" value="{{$student->first_Name}}" type="text" class="required form-control">
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label for="userName">Middle Name *</label>
-                                        <input id="userName" name="middle_Name" value="{{$student->middle_Name}}" type="text" class="required form-control">
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label for="userName">Last Name *</label>
-                                        <input id="userName" name="last_Name" value="{{$student->last_Name}}" type="text" class="required form-control">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <label for="password">Data of Birth *</label>
-                                        <input id="password" name="DoB" value="{{$student->DoB}}" type="date" class="required form-control">
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label for="confirm">Gender *</label>
-                                        <input id="confirm" name="Gender" value="{{$student->Gender}}" type="text" class="required form-control">
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label for="password">NIC </label>
-                                        <input id="password" name="NIC"  value="{{$student->NIC}}" type="text" class="required form-control">
+                                <div class="col-md-4 mb-3">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Section</span>
+                                        </div>
+                                        <select name="salutation" class="form-control" required>
+                                            <option selected disabled>- Select -</option>
+                                            <option value="Master">Master</option>
+                                            <option value="Ms">Ms</option>
+                                            <option value="Mr">Mr</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <label for="password">Birth cretificate number *</label>
-                                        <input id="password" name="birth_certificate_no" value="{{$student->birth_certificate_no}}" type="text" class="required form-control">
+                                <div class="col-md-2 mb-3">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Grade Applied For   *</span>
+                                        </div>
+                                        <select name="salutation" class="form-control" required>
+                                            <option selected disabled>- Select -</option>
+                                            <option value="Master">Master</option>
+                                            <option value="Ms">Ms</option>
+                                            <option value="Mr">Mr</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
                                     </div>
-                                    <div class="col-md-3">
-                                        <label for="confirm">Religion *</label>
-                                        <input id="confirm" name="religion" type="text" value="{{$student->religion}}" class="required form-control">
-                                    </div>
-                                    <div class="col-md-3">
-                                        <label for="password">Race *</label>
-                                        <input id="password" name="race" type="text" value="{{$student->race}}" class="required form-control">
-                                    </div>
-                                    <div class="col-md-3">
-                                        <label for="password">Nationality *</label>
-                                        <input id="password" name="nationality" type="text" value="{{$student->nationality}}" type="text" class="required form-control">
+                                </div>
+                                <div class="col-md-2 mb-3">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Year Applied For   *</span>
+                                        </div>
+                                        <select name="salutation" class="form-control" required>
+                                            <option selected disabled>- Select -</option>
+                                            <option value="Master">Master</option>
+                                            <option value="Ms">Ms</option>
+                                            <option value="Mr">Mr</option>
+                                        </select><div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
                                     </div>
                                 </div>
 
-                                <p>(*) Mandatory</p>
-                            </section>
-                            <h6 class="card-subtitle"></h6>
-                            <section>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <label for="userName">Address *</label>
-                                        <input id="userName" name="Address" value="{{$student->Address}}" type="text" class="required form-control">
+                            </div>
+                            <div class="card-title text-purple">
+                                <i class="fas fa-user"></i> Student Information(applicant)
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-3 mb-3">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Salutation</span>
+                                        </div>
+                                        <select name="salutation" class="form-control" required>
+                                            <option selected disabled>Select salutation</option>
+                                            <option value="Master">Master</option>
+                                            <option value="Ms">Ms</option>
+                                            <option value="Mr">Mr</option>
+                                        </select>
                                     </div>
-
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <label for="userName">Telephone Number(Mobile) *</label>
-                                        <input id="userName" name="Telephone_No_Mob" value="{{$student->Telephone_No_Mob}}" type="tel" class="required form-control">
+                                    <div class="valid-feedback">
+                                        Looks good!
                                     </div>
-                                    <div class="col-md-4">
-                                        <label for="userName">Telephone Number(Residence) *</label>
-                                        <input id="userName" name="Telephone_No_Res" value="{{$student->Telephone_No_Res}}" type="tel" class="required form-control">
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label for="userName">Email *</label>
-                                        <input id="userName" name="Email_Address" value="{{$student->Email_Address}}" type="email" class="required form-control">
-                                    </div>
-                                </div>
-
-                                <p>(*) Mandatory</p>
-                            </section>
-                            <h6 class="card-subtitle"></h6>
-                            <section>
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <label for="userName">Parent/Guardian Full Name *</label>
-                                        <input id="userName" name="telmob" value="{{$student->telmob}}" type="text" class="required form-control">
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label for="userName">Email *</label>
-                                        <input id="userName" name="telres" value="{{$student->telres}}" type="email" class="required form-control">
-                                    </div>
-
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <label for="userName">Telephone Number(Mobile) *</label>
-                                        <input id="userName" name="telmob" value="{{$student->telmob}}" type="tel" class="required form-control">
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label for="userName">Telephone Number(Residence) *</label>
-                                        <input id="userName" name="telres" value="{{$student->telres}}" type="tel" class="required form-control">
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label for="userName">Telephone Number(Work) *</label>
-                                        <input id="userName" name="stdemail" value="{{$student->stdemail}}" type="email" class="required form-control">
+                                    <div class="invalid-feedback">
+                                        Please choose a username.
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <label for="userName">Address *</label>
-                                        <input id="userName" name="telmob" value="{{$student->telmob}}" type="text" class="required form-control">
+                                <div class="col-md-9 mb-3">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Name with initials</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
                                     </div>
-
                                 </div>
-                            </section>
-                            <h6 class="card-subtitle"></h6>
-                            <section>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <label for="userName">Known illnesses *</label>
-                                        <textarea id="userName" name="Known_Illnesses" value="{{$student->Known_Illnesses}}" class="required form-control"></textarea>
 
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-12 mb-3">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Full Name</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
                                     </div>
-
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <label for="userName">Known Allergies *</label>
-                                        <textarea id="userName" name="Known_Allergies" value="{{$student->Known_Allergies}}" class="required form-control"></textarea>
+
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-4 mb-3">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Date of birth</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
                                     </div>
-
                                 </div>
-                                <button type="submit" class="btn btn-lg btn-block btn-success">Submit</button>
-                            </section>
+                                <div class="col-md-4 mb-2">
 
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Gender</span>
+                                        </div>
+                                        <select name="Gender" class="form-control" required>
+                                            <option selected disabled>Select salutation</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-2">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">NIC / Postal ID</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-3 mb-3">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Address</span>
+                                        </div>
+                                        <textarea class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required></textarea>
+
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-2">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Telephone(Res)</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-2">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Telephone(Mob)</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-2">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Email</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-4 mb-3">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Blood group</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-2">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Known Illnesses </span>
+                                        </div>
+                                        <textarea class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required></textarea>
+
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-2">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Known Allergies</span>
+                                        </div>
+                                        <textarea class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required></textarea>
+
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="card-title  text-purple">
+                                <i class="fas fa-users"></i> Father/Mother/Guardian Information
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-3 mb-2">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Father/Mother/Guardian</span>
+                                        </div>
+                                        <select name="salutation" class="form-control" required>
+                                            <option selected disabled>Select salutation</option>
+                                            <option value="Father">Father</option>
+                                            <option value="Mother">Mother</option>
+                                            <option value="Guardian">Guardian</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-2">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">First Name</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-2">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Middle Name</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-2">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Last Name</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-3 mb-3">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Passport / NIC Number <Text style="color: red">*</Text></span>
+                                        </div>
+                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-2">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Nationality</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-2">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Race</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-2">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Religion</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-3 mb-3">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Working Sector <Text style="color: red">*</Text></span>
+                                        </div>
+                                        <select name="salutation" class="form-control" required>
+                                            <option selected disabled>Select salutation</option>
+                                            <option value="Father">Father</option>
+                                            <option value="Mother">Mother</option>
+                                            <option value="Guardian">Guardian</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-2">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Profession</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-2">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Occupation </span>
+                                        </div>
+                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-2">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Place of Work</span>
+                                        </div>
+                                        <textarea class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required></textarea>
+
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-3 mb-3">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Email Address<Text style="color: red">*</Text></span>
+                                        </div>
+                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-2">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Office Address</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-2">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Office Phone</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-2">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Telephone No(Mob)</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+
+
+                    <div class="card-footer text-white bg-dark">
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                <label class="form-check-label" for="invalidCheck">
+                                    Agree to terms and conditions
+                                </label>
+                                <div class="invalid-feedback">
+                                    You must agree before submitting.
+                                </div>
+                            </div>
                         </div>
-                    </form>
+                        <button class="btn btn-success" type="submit">SUBMIT</button>
+                        <button class="btn btn-warning" type="reset">RESET</button>
+                    </div>
+                        </form>
+                    </div>
                 </div>
-            </div>
-        @endif
+
+
+                <script>
+                    // Example starter JavaScript for disabling form submissions if there are invalid fields
+                    (function() {
+                        'use strict';
+                        window.addEventListener('load', function() {
+                            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                            var forms = document.getElementsByClassName('needs-validation');
+                            // Loop over them and prevent submission
+                            var validation = Array.prototype.filter.call(forms, function(form) {
+                                form.addEventListener('submit', function(event) {
+                                    if (form.checkValidity() === false) {
+                                        event.preventDefault();
+                                        event.stopPropagation();
+                                    }
+                                    form.classList.add('was-validated');
+                                }, false);
+                            });
+                        }, false);
+                    })();
+                </script>
+
             <!-- ============================================================== -->
             <!-- End PAge Content -->
             <!-- ============================================================== -->
