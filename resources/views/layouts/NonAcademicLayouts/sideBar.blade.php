@@ -9,7 +9,7 @@
                     <ul aria-expanded="false" class="collapse  first-level">
                         <li class="sidebar-item"><a href="{{url('/NAadmin/manage-sports')}}" class="sidebar-link"><i class="mdi mdi-human-male-female"></i><span class="hide-menu"> Sports </span></a></li>
                         <li class="sidebar-item"><a href="{{url('/NAadmin/manage-sport-students')}}" class="sidebar-link"><i class="mdi mdi-human-male-female"></i><span class="hide-menu"> Students </span></a></li>
-                        <li class="sidebar-item"><a href="{{url('/NAadmin/manage-coaches')}}" class="sidebar-link"><i class="mdi mdi-human-male-female"></i><span class="hide-menu"> Coaches </span></a></li>
+                        <li class="sidebar-item"><a href="{{url('/NAadmin/manage_coaches')}}" class="sidebar-link"><i class="mdi mdi-human-male-female"></i><span class="hide-menu"> Coaches </span></a></li>
                         <li class="sidebar-item"><a href="{{url('/NAadmin/manage-teachers-in-charge')}}" class="sidebar-link"><i class="mdi mdi-human-male-female"></i><span class="hide-menu"> Teachers-in-Charge </span></a></li>
                         <li class="sidebar-item"><a href="{{url('/NAadmin/manage-sport-achivements')}}" class="sidebar-link"><i class="mdi mdi-human-male-female"></i><span class="hide-menu"> Achievements </span></a></li>
                     </ul>

@@ -91,20 +91,20 @@ Route::get('/NAadmin/manage-sport-students', function (){
     return view('Admin.Non_Academic_Management.manage_sport_students') ;
 });
 
-Route::get('/NAadmin/manage-coaches', function (){
+
+Route::get('/NAadmin/manage-teachers-in-charge', function (){
+    return view('Admin.Non_Academic_Management.manage_teachers_in_charge') ;
+});
+
+Route::get('/NAadmin/manage_achivements', function (){
+     return view('Admin.Non_Academic_Management.manage_achivements') ;
+});
+
+Route::get('/NAadmin/manage_coaches', function (){
     return view('Admin.Non_Academic_Management.manage_coaches') ;
 });
-
-Route::get('/NAadmin/manage-teacher-in-charge', function (){
-    return view('Admin.Non_Academic_Management.manage_sports') ;
-});
-
-Route::get('/NAadmin/manage-achievements', function (){
-    return view('Admin.Exam_Centre_Management.publishResults') ;
-});
-
-Route::get('/NAadmin/manage-coaches', function (){
-    return view('Admin.Exam_Centre_Management.questionBank') ;
+Route::get('/NAadmin/manage_sports_events', function (){
+    return view('Admin.Non_Academic_Management.manage_sports_events') ;
 });
 //Transport Manager Routes
 
