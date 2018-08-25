@@ -8,7 +8,7 @@
         <div class="page-breadcrumb">
             <div class="row">
                 <div class="col-12 d-flex no-block align-items-center">
-                    <h4 class="page-title">Sport Coach Management</h4>
+                    <h4 class="page-title">Sport Management</h4>
                     <div class="ml-auto text-right">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
@@ -64,19 +64,19 @@
                             </div>
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">Sport ID</label>
+                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">Coach ID</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control" id="fname" placeholder="Sport ID Name Here" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">Sport Name</label>
+                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">Coach Name</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control" id="fname" placeholder="Sport Name Here" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">Team</label>
+                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">Sports ID</label>
                                     <div class="col-sm-9">
                                         <select class="select2 form-control custom-select" style="width: 100%; height:36px;" required>
                                             <option selected disabled>Select Team No</option>
@@ -153,10 +153,10 @@
                                                 <span class="checkmark"></span>
                                             </label>
                                         </th>
-                                        <th scope="col" style="font-size: 12px">Sport ID</th>
-                                        <th scope="col" style="font-size: 12px">Sport Name</th>
-                                        <th scope="col" style="font-size: 12px">Team No</th>
-                                        <th scope="col" style="font-size: 12px">Achievement</th>
+                                        <th scope="col" style="font-size: 12px">Coach ID</th>
+                                        <th scope="col" style="font-size: 12px">Coach Name</th>
+                                        <th scope="col" style="font-size: 12px">Sports ID</th>
+                                        <th scope="col" style="font-size: 12px">Details</th>
                                         <th scope="col" style="font-size: 12px">Action</th>
 
                                     </tr>
@@ -176,10 +176,10 @@
                                         </th>
 
 
+                                        <td style="font-size: 12px">C1</td>
+                                        <td style="font-size: 12px">Dharshna Malinda</td>
                                         <td style="font-size: 12px">FA</td>
-                                        <td style="font-size: 12px">Foot Ball</td>
-                                        <td style="font-size: 12px">A</td>
-                                        <td style="font-size: 12px">All Island 2</td>
+                                        <td style="font-size: 12px"></td>
                                         <td style="font-size: 12px">
                                             <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
                                             </a><a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
@@ -194,10 +194,10 @@
                                         </th>
 
 
-                                        <td style="font-size: 12px">FA</td>
-                                        <td style="font-size: 12px">Foot Ball</td>
-                                        <td style="font-size: 12px">A</td>
-                                        <td style="font-size: 12px">All Island 2</td>
+                                        <td style="font-size: 12px">CA1</td>
+                                        <td style="font-size: 12px">Anuruddha Bandara</td>
+                                        <td style="font-size: 12px">HA</td>
+                                        <td style="font-size: 12px"></td>
                                         <td style="font-size: 12px">
                                             <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
                                             </a><a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>

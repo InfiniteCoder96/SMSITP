@@ -91,21 +91,52 @@ Route::get('/NAadmin/manage-sport-students', function (){
     return view('Admin.Non_Academic_Management.manage_sport_students') ;
 });
 
+Route::get('/NAadmin/manage-coaches', function (){
+    return view('Admin.Non_Academic_Management.manage_coaches') ;
+});
 
 Route::get('/NAadmin/manage-teachers-in-charge', function (){
     return view('Admin.Non_Academic_Management.manage_teachers_in_charge') ;
 });
 
-Route::get('/NAadmin/manage_achivements', function (){
-     return view('Admin.Non_Academic_Management.manage_achivements') ;
+Route::get('/NAadmin/manage-achievements', function (){
+    return view('Admin.Non_Academic_Management.manage_achivements') ;
 });
 
-Route::get('/NAadmin/manage_coaches', function (){
+Route::get('/NAadmin/manage-coaches', function (){
     return view('Admin.Non_Academic_Management.manage_coaches') ;
 });
-Route::get('/NAadmin/manage_sports_events', function (){
-    return view('Admin.Non_Academic_Management.manage_sports_events') ;
+Route::get('/NAadmin/manage-sports-events', function () {
+    return view('Admin.Non_Academic_Management.manage_sports_events');
 });
+    Route::get('/NAadmin/sport-event-calender', function (){
+        return view('Admin.Non_Academic_Management.event-calendar') ;
+    });
+
+Route::get('/NAadmin/update_sports', function (){
+    return view('Admin.Non_Academic_Management.update_sports') ;
+
+});
+Route::get('/NAadmin/update_student', function (){
+    return view('Admin.Non_Academic_Management.update_student') ;
+
+});
+Route::get('/NAadmin/update_coaches', function (){
+    return view('Admin.Non_Academic_Management.update_coaches') ;
+
+});
+Route::get('/NAadmin/update_teachers-in-charge', function (){
+    return view('Admin.Non_Academic_Management.update_teachers-in-charge') ;
+
+});
+Route::get('/NAadmin/update_achivements', function (){
+    return view('Admin.Non_Academic_Management.update_achivements') ;
+
+});
+Route::resource('manage_sport_students','manage_sport_studentController');
+
+Route::resource('sports_categories','sports_categoriesController');
+
 //Transport Manager Routes
 
 Route::get('/Tadmin/dashboard', function (){
@@ -131,6 +162,6 @@ Route::get('/Tadmin/staff-report', function (){
 
 Route::match(['get','post'],'/admin/manage-students', 'StudentController@addStudent');
 
-Route::get('/admin/', function (){
-
+Route::get('/admin/dashboard', function (){
+    return view('Admin.User_Management.Admin.admin_view');
 });

@@ -22,6 +22,21 @@
             </div>
         </div>
         <div class="container-fluid">
+            <h2></h2><br  />
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div><br />
+            @endif
+            @if (\Session::has('success'))
+                <div class="alert alert-success">
+                    <p>{{ \Session::get('success') }}</p>
+                </div><br />
+            @endif
             {{--<div class="row">--}}
                 {{--<div class="col-md-4">--}}
                     {{--<div class="card text-white bg-success mb-3" >--}}
@@ -54,8 +69,8 @@
 
             <div class="row">
                 <div class="col-md-4">
-                    <form class="form-horizontal" action="#" method="get">
-
+                    <form class="form-horizontal" action="{{url('sports_categories')}}" method="post">
+                        {{csrf_field()}}
 
 
                         <div class="card bg-dark text-white">
@@ -76,13 +91,13 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">Coach</label>
+                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">Coach ID</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control" id="fname" placeholder="Coach Name Here" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">Teacher-in-charge</label>
+                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">Teacher-in-charge ID</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control" id="fname" placeholder="Teacher-in-charge name Here" required>
                                     </div>
@@ -128,8 +143,8 @@
                                     </th>
                                     <th scope="col" style="font-size: 12px">Sport</th>
                                     <th scope="col" style="font-size: 12px">Sport Id</th>
-                                    <th scope="col" style="font-size: 12px">Coach</th>
-                                    <th scope="col" style="font-size: 12px">Teacher-in-charge</th>
+                                    <th scope="col" style="font-size: 12px">Coach ID</th>
+                                    <th scope="col" style="font-size: 12px">Teacher-in-charge ID</th>
                                     <th scope="col" style="font-size: 12px">Action</th>
 
                                 </tr>

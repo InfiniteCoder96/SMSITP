@@ -8,7 +8,7 @@
         <div class="page-breadcrumb">
             <div class="row">
                 <div class="col-12 d-flex no-block align-items-center">
-                    <h4 class="page-title">Sport Teacher incharge Management</h4>
+                    <h4 class="page-title">Sports Management</h4>
                     <div class="ml-auto text-right">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
@@ -60,7 +60,7 @@
 
                         <div class="card bg-dark text-white">
                             <div class="card-header bg-danger text-white">
-                                <h5 class="card-title m-b-0">Add New Coach</h5>
+                                <h5 class="card-title m-b-0">Add New Teacher IN charge</h5>
                             </div>
                             <div class="card-body">
                                 <div class="form-group row">
@@ -199,7 +199,7 @@
                                         <td style="font-size: 12px">A</td>
                                         <td style="font-size: 12px">All Island 2</td>
                                         <td style="font-size: 12px">
-                                            <a class="waves-effect waves-dark" href="{{url}}"><i class="mdi mdi-pencil font-20"></i>
+                                            <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
                                             </a><a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
                                             </a></td>
                                     </tr>

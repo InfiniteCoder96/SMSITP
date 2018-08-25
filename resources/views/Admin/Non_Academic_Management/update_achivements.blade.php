@@ -15,7 +15,7 @@
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Sports Management</li>
-                                <li class="breadcrumb-item active" aria-current="page">Achievements</li>
+                                <li class="breadcrumb-item active" aria-current="page">Student</li>
                             </ol>
                         </nav>
                     </div>
@@ -183,21 +183,21 @@
                                             </a></td>
                                     </tr>
                                     <tr>
-                                    <th>
-                                        <label class="customcheckbox">
-                                            <input type="checkbox" class="listCheckbox">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </th>
+                                        <th>
+                                            <label class="customcheckbox">
+                                                <input type="checkbox" class="listCheckbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </th>
 
-                                    <td style="font-size: 12px"></td>
-                                    <td style="font-size: 12px"></td>
-                                    <td style="font-size: 12px">A</td>
-                                    <td style="font-size: 12px"></td>
-                                    <td style="font-size: 12px">
-                                        <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
-                                        </a><a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
-                                        </a></td>
+                                        <td style="font-size: 12px"></td>
+                                        <td style="font-size: 12px"></td>
+                                        <td style="font-size: 12px">A</td>
+                                        <td style="font-size: 12px"></td>
+                                        <td style="font-size: 12px">
+                                            <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
+                                            </a><a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
+                                            </a></td>
                                     </tr>
                                     <tr>
                                         <th>
@@ -223,10 +223,10 @@
                             <div class="card-footer">
                                 <div class="row">
                                     <p>Page : 1 of 1</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <button class="btn btn-warning btn-md">First</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <button class="btn btn-warning btn-md">Prev</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <button class="btn btn-warning btn-md">Next</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <button class="btn btn-warning btn-md">Last</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <button class="btn btn-warning btn-md">update</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <button class="btn btn-warning btn-md"></button>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <button class="btn btn-warning btn-md"></button>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <button class="btn btn-warning btn-md"></button>&nbsp;&nbsp;&nbsp;&nbsp;
                                 </div>
 
 
