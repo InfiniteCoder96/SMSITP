@@ -33,6 +33,8 @@ return array(
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
     'App\\Student' => $baseDir . '/app/student.php',
     'App\\User' => $baseDir . '/app/User.php',
+    'App\\books' => $baseDir . '/app/books.php',
+    'App\\student' => $baseDir . '/app/student.php',
     'Carbon\\Carbon' => $vendorDir . '/nesbot/carbon/src/Carbon/Carbon.php',
     'Carbon\\CarbonInterval' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
     'Carbon\\Exceptions\\InvalidDateException' => $vendorDir . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',

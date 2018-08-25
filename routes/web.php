@@ -95,7 +95,17 @@ Route::get('/NAadmin/manage-coaches', function (){
     return view('Admin.Non_Academic_Management.manage_coaches') ;
 });
 
+Route::get('/NAadmin/manage-teacher-in-charge', function (){
+    return view('Admin.Non_Academic_Management.manage_sports') ;
+});
 
+Route::get('/NAadmin/manage-achievements', function (){
+    return view('Admin.Exam_Centre_Management.publishResults') ;
+});
+
+Route::get('/NAadmin/manage-coaches', function (){
+    return view('Admin.Exam_Centre_Management.questionBank') ;
+});
 //Transport Manager Routes
 
 Route::get('/Tadmin/dashboard', function (){
@@ -117,14 +127,33 @@ Route::get('/Tadmin/student-report', function (){
 Route::get('/Tadmin/staff-report', function (){
     return view('Admin.Transport_Management.staff_report') ;
 });
-
-
 // Administrator Routes
 
-Route::get('/admin/dashboard', function (){
-    return view('Admin.User_Management.Admin.admin_view');
-});
+Route::match(['get','post'],'/admin/manage-students', 'StudentController@addStudent');
 
-Route::resource('students','StudentController');
+Route::get('/admin/', function (){
 
 Route::resource('products','ProductController');
+
+//Library Manager Routes
+
+Route::get('/library/dashboard', function (){
+    return view('Admin.Library_Management.dashboard') ;
+});
+
+Route::get('/Library/viewAllMembers', function (){
+    return view('Admin.Library_Management.viewAllMembers') ;
+});
+
+Route::get('/LibraryAdmin/addBookForm', function (){
+    return view('Admin.Library_Management.addBookForm') ;
+});
+
+
+
+Route::get('/LibraryAdmin/nonAcademicStaff', function (){
+    return view('Admin.HR_Management.non_academic_staff') ;
+});
+Route::resource('books','bookController');
+
+Route::get('/LibraryAdmin/viewAllBooksTable','bookController@index');
