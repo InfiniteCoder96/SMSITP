@@ -82,11 +82,11 @@
                     <td style="font-size: 12px">{{$student->Telephone_No_Mob}}</td>
                     <td style="font-size: 12px">{{$student->Telephone_No_Res}}</td>
                     <td style="font-size: 12px">
-                        <a class="waves-effect waves-dark" href="{{action('StudentController@edit', $student['sid'])}}"><i class="mdi mdi-pencil font-20"></i>
+                        <a class="waves-effect waves-dark" href="{{action('StudentController@edit', $student['sid'])}}"><button class="btn btn-info btn-xs" type="button">Edit</button></a>&nbsp;&nbsp;&nbsp;&nbsp;
                             <form action="{{action('StudentController@destroy', $student['sid'])}}" method="post">
                                 {{csrf_field()}}
                                 <input name="_method" type="hidden" value="DELETE">
-                                <button class="btn btn-danger" type="submit">Delete</button>
+                                <button class="btn btn-danger btn-xs" type="submit">Delete</button>
                             </form>
                             {{--<a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>--}}
                     </td>

@@ -51,7 +51,7 @@
                     <p>{{ \Session::get('success') }}</p>
                 </div><br />
             @endif
-            {{--@if($student != null)--}}
+            @if($student != null)
                 <div class="card text-left">
                     <div class="card-header bg-dark text-orange">
                         <i class="fas fa-cogs"></i> Update Student Information
@@ -62,7 +62,8 @@
                     </div>
                     <div class="card-body">
 
-                        <form class="needs-validation" novalidate>
+                        <form class="needs-validation" novalidate action="{{url('students')}}" method="post">
+                            {{csrf_field()}}
                             <div class="card-title text-purple">
                                 <i class="fas fa-building"></i> School Information
                             </div>
@@ -153,10 +154,9 @@
                                             <span class="input-group-text" id="inputGroupPrepend">Salutation</span>
                                         </div>
                                         <select name="salutation" class="form-control" required>
-                                            <option selected disabled>Select salutation</option>
-                                            <option value="Master">Master</option>
-                                            <option value="Ms">Ms</option>
-                                            <option value="Mr">Mr</option>
+                                            <option value="Master" <?php if($student->salutation=="Master") echo 'selected="selected"'; ?> >Master</option>
+                                            <option value="Mr" <?php if($student->salutation=="Mr") echo 'selected="selected"'; ?> >Mr</option>
+                                            <option value="Ms" <?php if($student->salutation=="Ms") echo 'selected="selected"'; ?> >Ms</option>
                                         </select>
                                     </div>
                                     <div class="valid-feedback">
@@ -617,6 +617,63 @@
                     </div>
                 </div>
 
+                @endif
+            @if($student == null)
+
+                    <div class="col-md-12 col-md-offset-3 ">
+                        <form class="form-horizontal" action="#" method="get">
+
+
+
+                            <div class="card bg-dark text-white ">
+                                <div class="card-header bg-cyan text-white">
+                                    <h5 class="card-title m-b-0">Search Student</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group row">
+                                        <label for="fname" class="col-sm-3 text-right control-label col-form-label">Search by</label>
+                                        <div class="col-sm-9">
+                                            <select class="select2 form-control custom-select" style="width: 100%; height:36px;" required>
+                                                <option selected disabled>- Select -</option>
+                                                <option value="AK">G1T1</option>
+                                                <option value="AK">G1T2</option>
+                                                <option value="WA">G1T3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="fname" class="col-sm-3 text-right control-label col-form-label">Keywords</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="fname" placeholder="Keywords" required>
+                                        </div>
+                                    </div>
+
+
+
+
+                                </div>
+                                <div class="border-top">
+                                    <div class="card-footer">
+                                        <button type="submit" class="btn btn-outline-success btn-block">SEARCH</button>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+
+
+                        </form>
+                    </div>
+
+
+            @endif
 
                 <script>
                     // Example starter JavaScript for disabling form submissions if there are invalid fields
