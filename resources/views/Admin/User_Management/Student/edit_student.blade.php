@@ -172,7 +172,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">First Name</span>
                                         </div>
-                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" value="{{$student->first_Name}}" aria-describedby="inputGroupPrepend" required>
 
                                         <div class="invalid-feedback">
                                             Please choose a username.

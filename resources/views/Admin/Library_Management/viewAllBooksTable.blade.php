@@ -1,11 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
+
     @include('layouts.LibraryLayouts.header')
     @include('layouts.LibraryLayouts.sideBar')
     <!-- ============================================================== -->
     <!-- Page wrapper  -->
     <!-- ============================================================== -->
+    <?php $books = null ?>
     <div class="page-wrapper">
         <!-- ============================================================== -->
         <!-- Bread crumb and right sidebar toggle -->
@@ -39,13 +41,23 @@
             <!-- Start Page Content -->
             <!-- ============================================================== -->
             <div class="row">
-                <div class="col-md-4">
-                    <form class="form-horizontal" action="#" method="get">
 
 
-
-                </div>
                 <div class="col-md-12">
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div><br />
+                    @endif
+                    @if (\Session::has('success'))
+                        <div class="alert alert-success">
+                            <p>{{ \Session::get('success') }}</p>
+                        </div><br />
+                    @endif
                     <div class="card bg-secondary text-white">
                         <div class="card-header bg-cyan text-white">
 
@@ -63,7 +75,7 @@
                                 </tr>
                                 </thead>
                                 <tbody class="customtable">
-                                @foreach($books as $book)
+                                @foreach($boooks as $book)
                                     <tr>
                                         <td>{{$book['id']}}</td>
                                         <td>{{$book['isbn']}}</td>
@@ -72,8 +84,17 @@
                                         <td>{{$book['barcode']}}</td>
 
                                         <td style="font-size: 12px">
-                                            <a href="{{action('bookController@edit', $book['id'])}}" ><button class="btn btn-outline-purple" data-toggle="modal" data-target="#editBookModal">Edit</button></a>
-                                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                            <a  ><button class="btn btn-warning btn-xs" data-toggle="modal" data-target="#editBookModal"
+
+                                                         data-id="{{$book['id']}}"
+                                                         data-isbn="{{$book['isbn']}}"
+                                                         data-bookname="{{$book['bookname']}}"
+                                                         data-authorname="{{$book['authorname']}}"
+                                                         data-barcode="{{$book['barcode']}}"
+
+                                                         type="button">Edit</button></a>
+
+                                        <button type="button" class="btn btn-danger btn-xs">Delete</button>
                                     </td>
                                 </tr>
 
@@ -121,7 +142,11 @@
 
 
     @include('layouts.adminLayouts.footer')
-    @if($book != null)
+
+    @if($books == null)
         @include('layouts.LibraryLayouts.editBookModal')
     @endif
+
+
+
 @endsection

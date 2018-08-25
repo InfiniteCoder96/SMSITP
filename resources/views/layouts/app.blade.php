@@ -148,6 +148,7 @@
 <script src="{{asset('assets/libs/chart/turning-series.js')}}"></script>
 <script src="{{asset('js/backend_js/pages/chart/chart-page-init.js')}}"></script>
 <script src="{{asset('js/backend_js/fabochart.js')}}"></script>
+
 <script>
     /****************************************
      *       Basic Table                   *
@@ -211,8 +212,28 @@
             labelTextColor : "#C0392B",
         });
     });
-</script>
 
+
+</script>
+<script>
+    $('#editBookModal').on('show.bs.modal', function(event){
+        var button = $(event.relatedTarget)
+
+        var book_id = button.data('id')
+        var bookname = button.data('bookname')
+        var authorname = button.data('authorname')
+        var isbn = button.data('isbn')
+        var barcode = button.data('barcode')
+
+        var modal = $(this)
+
+
+        modal.find('.modal-body #bookname').val(bookname);
+        modal.find('.modal-body #author').val(authorname);
+        modal.find('.modal-body #isbn').val(isbn);
+        modal.find('.modal-body #barcode').val(barcode);
+    })
+</script>
 
 <!-- ============================================================== -->
 <!-- User Profile Modal -->
