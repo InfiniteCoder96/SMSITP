@@ -134,3 +134,26 @@ Route::match(['get','post'],'/admin/manage-students', 'StudentController@addStud
 Route::get('/admin/', function (){
 
 });
+
+//Library Manager Routes
+
+Route::get('/library/dashboard', function (){
+    return view('Admin.Library_Management.dashboard') ;
+});
+
+Route::get('/Library/viewAllMembers', function (){
+    return view('Admin.Library_Management.viewAllMembers') ;
+});
+
+Route::get('/LibraryAdmin/addBookForm', function (){
+    return view('Admin.Library_Management.addBookForm') ;
+});
+
+
+
+Route::get('/LibraryAdmin/nonAcademicStaff', function (){
+    return view('Admin.HR_Management.non_academic_staff') ;
+});
+Route::resource('books','bookController');
+
+Route::get('/LibraryAdmin/viewAllBooksTable','bookController@index');
