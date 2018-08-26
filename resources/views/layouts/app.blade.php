@@ -27,13 +27,15 @@
     <!-- Custom CSS -->
     <link href="{{asset('css/backend_css/style.min.css')}}" rel="stylesheet">
     <link href="{{asset('assets/libs/jquery-steps/steps.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/libs/flot/css/float-chart.css')}}" rel="stylesheet">
+    <link href="{{asset('css/backend_css/fabochart.css')}}" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <script src="http://cdn.jsdelivr.net/jquery.flot/0.8.3/jquery.flot.min.js"></script>
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <![endif]-->
 </head>
@@ -127,6 +129,26 @@
 {{--view-insert_student--}}
 <script src="{{asset('assets/libs/jquery-steps/build/jquery.steps.min.js')}}"></script>
 <script src="{{asset('assets/libs/jquery-validation/dist/jquery.validate.min.js')}}"></script>
+
+<script src="{{asset('js/backend_js/jquery.countTo.js')}}"></script>
+<script src="{{asset('js/backend_js/tests.js')}}"></script>
+
+
+<script src="{{asset('assets/libs/chart/matrix.interface.js')}}"></script>
+<script src="{{asset('assets/libs/chart/excanvas.min.js')}}"></script>
+<script src="{{asset('assets/libs/flot/jquery.flot.js')}}"></script>
+<script src="{{asset('assets/libs/flot/jquery.flot.pie.js')}}"></script>
+<script src="{{asset('assets/libs/flot/jquery.flot.time.js')}}"></script>
+<script src="{{asset('assets/libs/flot/jquery.flot.stack.js')}}"></script>
+<script src="{{asset('assets/libs/flot/jquery.flot.crosshair.js')}}"></script>
+<script src="{{asset('assets/libs/chart/jquery.peity.min.js')}}"></script>
+<script src="{{asset('assets/libs/chart/matrix.charts.js')}}"></script>
+<script src="{{asset('assets/libs/chart/jquery.flot.pie.min.js')}}"></script>
+<script src="{{asset('assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js')}}"></script>
+<script src="{{asset('assets/libs/chart/turning-series.js')}}"></script>
+<script src="{{asset('js/backend_js/pages/chart/chart-page-init.js')}}"></script>
+<script src="{{asset('js/backend_js/fabochart.js')}}"></script>
+
 <script>
     /****************************************
      *       Basic Table                   *
@@ -160,8 +182,41 @@
             alert("Submitted!");
         }
     });
-</script>
 
+
+
+    $('.timer').countTo();
+
+
+
+</script>
+<script>
+    $('#editBookModal').on('show.bs.modal', function(event){
+        var button = $(event.relatedTarget)
+
+
+        var bookname = button.data('bookname')
+        var authorname = button.data('authorname')
+        var isbn = button.data('isbn')
+        var barcode = button.data('barcode')
+
+        var modal = $(this)
+
+
+        modal.find('.modal-body #bookname').val(bookname);
+        modal.find('.modal-body #author').val(authorname);
+        modal.find('.modal-body #isbn').val(isbn);
+        modal.find('.modal-body #barcode').val(barcode);
+    })
+
+
+    $(document).ready(function(){
+        var sid = $("#sid input").val();
+        var link = "/student/"+sid+"'>Edit";
+
+        document.getElementById("link").setAttribute("href",link);
+    })
+</script>
 
 <!-- ============================================================== -->
 <!-- User Profile Modal -->

@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use App\books;
-use Illuminate\Http\Response;
+
 
 
 class bookController extends Controller
@@ -17,8 +16,8 @@ class bookController extends Controller
      */
     public function index()
     {
-        $books = books::all()->toArray();
-        return view('Admin.Library_Management.viewAllBooksTable', compact('books'));
+        $boooks = books::all()->toArray();
+        return view('Admin.Library_Management.viewAllBooksTable', compact('boooks'));
     }
 
     /**
@@ -28,7 +27,7 @@ class bookController extends Controller
      */
     public function create()
     {
-       // return view('layouts.LibraryLayouts.addNewBookModal');
+       return view('layouts.LibraryLayouts.addNewBookModal');
     }
 
     /**
@@ -65,7 +64,7 @@ class bookController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  string  $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -77,28 +76,44 @@ class bookController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param string $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,$id)
     {
-        $book = books::find($id);
+//        $books = books::find($id);
+//
+//        $this->validate(request(),[
+//            'bookname' => 'required',
+//            'isbn' => 'required',
+//            'authorname' => 'required',
+//            'barcode' => 'required'
+//        ]);
+//        $books->bookname = $request->get('bookname');
+//        $books->isbn = $request->get('isbn');
+//        $books->authorname = $request->get('authorname');
+//        $books->barcode = $request->get('barcode');
+//        $books->save();
 
+        $books = books::find($id);
         $this->validate(request(),[
             'bookname' => 'required',
             'isbn' => 'required',
             'authorname' => 'required',
             'barcode' => 'required'
         ]);
-        $book->bookname = $request->get('bookname');
-        $book->isbn = $request->get('isbn');
-        $book->authorname = $request->get('authorname');
-        $book->barcode = $request->get('barcode');
-        $book->save();
+        $books->bookname = $request->get('bookname');
+        $books->isbn = $request->get('isbn');
+        $books->authorname = $request->get('authorname');
+        $books->barcode = $request->get('barcode');
+        $books->save();
+        return redirect('books')->with('success','ISBN No:'.$books->isbn.' Book has been updated');
 
-        return redirect('books')->with('success','Book has been updated');
+
+
     }
+
 
     /**
      * Remove the specified resource from storage.

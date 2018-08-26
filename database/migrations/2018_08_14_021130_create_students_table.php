@@ -14,8 +14,8 @@ class CreateStudentsTable extends Migration
     public function up()
     {
         Schema::create('students', function (Blueprint $table) {
-            $table->string('sid');
-            $table->string('Salutation');
+
+            $table->string('salutation');
             $table->string('first_Name');
             $table->string('middle_Name');
             $table->string('last_Name');
@@ -36,6 +36,7 @@ class CreateStudentsTable extends Migration
             $table->text('Known_Allergies');
 
             $table->timestamps();
+
         });
     }
 

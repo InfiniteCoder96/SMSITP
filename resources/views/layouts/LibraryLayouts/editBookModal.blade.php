@@ -12,36 +12,35 @@
                     <div class="col-md-12">
                         <div class="card">
 
-@if($book != null)
-                            <form class="form-horizontal" method="post" action="{{url('books')}}">
 
+                            <form  action="{{action('bookController@update',$book['id'])}}" method="post">
+                                {{method_field('patch')}}
                                 {{csrf_field()}}
-                                <input name="_method" type="hidden" value="PATCH">
 
                                 <div class="card-body bg-dark">
                                     <h4 class="card-title">Book Details</h4>
                                     <div class="form-group row">
                                         <label for="bookName" class="col-sm-3 text-right control-label col-form-label">Book Name</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="bookName" name="bookname" value="{{$book->name}}">
+                                            <input type="text" class="form-control" id="bookname" name="bookname" value="" >
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="isbn" class="col-sm-3 text-right control-label col-form-label">ISBN </label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="isbn" name="isbn" value="{{$book->isbn}}">
+                                            <input type="text" class="form-control" id="isbn" name="isbn" value="">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="author" class="col-sm-3 text-right control-label col-form-label">Author</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="author" name="authorname" value="{{$book->authorname}}">
+                                            <input type="text" class="form-control" id="author" name="authorname" value="">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="barcode" class="col-sm-3 text-right control-label col-form-label">Barcode</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="barcode" name="barcode" value="{{$book->barcode}}">
+                                            <input type="text" class="form-control" id="barcode" name="barcode" >
                                         </div>
                                     </div>
 
@@ -49,11 +48,12 @@
                                 </div>
                                 <div class="border-top">
                                     <div class="card-body">
+
                                         <button type="submit" class="btn btn-primary">Update</button>
                                     </div>
                                 </div>
                             </form>
-    @endif
+
                         </div>
 
 
