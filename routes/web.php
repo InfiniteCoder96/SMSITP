@@ -131,6 +131,16 @@ Route::get('/Tadmin/staff-report', function (){
 
 Route::match(['get','post'],'/admin/manage-students', 'StudentController@addStudent');
 
-Route::get('/admin/', function (){
+// Finance Manager Routes
 
+Route::get('/NAadmin/dashboard', function (){
+    return view( 'Admin.Finance_Management.dashboard');
+});
+
+Route::get('/NAadmin/pendingpayments', function (){
+    return view('Admin.Finance_Management.pendingpayments');
+});
+
+Route::get('/NAadmin/onlinePayment', function (){
+    return view('Admin.Finance_Management.onlinePayment');
 });
