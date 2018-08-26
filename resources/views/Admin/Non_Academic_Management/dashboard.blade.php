@@ -3,6 +3,7 @@
 @section('content')
     @include('layouts.NonAcademicLayouts.header')
     @include('layouts.NonAcademicLayouts.sideBar')
+
     <!-- ============================================================== -->
     <!-- Page wrapper  -->
     <!-- ============================================================== -->
