@@ -5,9 +5,9 @@
     @include('layouts.ExamCentreLayouts.header')
     @include('layouts.ExamCentreLayouts.sideBar')
     <div class="page-wrapper">
-        <div class="container-fluid">
-            <div class="card">
-                <div class="card-body">
+        <div class="container-fluid ">
+            <div class="card card bg-dark text-white ">
+                <div class="card-body card text-white bg-success mb-3">
                     <div class="row">
                         <div class="col-sm-8">
                             <h5 class="card-title m-b-0">Results Overview</h5>
@@ -66,12 +66,11 @@
                             </th>
                             <th scope="col" style="font-size: 12px">ID</th>
                             <th scope="col" style="font-size: 12px">First Name</th>
-                            <th scope="col" style="font-size: 12px">Middle name</th>
                             <th scope="col" style="font-size: 12px">Last Name</th>
+                            <th scope="col" style="font-size: 12px">Exam ID</th>
                             <th scope="col" style="font-size: 12px">Subjects</th>
                             <th scope="col" style="font-size: 12px">Total</th>
                             <th scope="col" style="font-size: 12px">Average</th>
-                            <th scope="col" style="font-size: 12px">Position</th>
                             <th scope="col" style="font-size: 12px;">Status</th>
                             <th scope="col" style="font-size: 12px">Remark</th>
                             <th scope="col" style="font-size: 12px">Action</th>
@@ -82,57 +81,42 @@
 
                         {{--code for view data from databse--}}
 
-                        {{--@foreach($students as $student)--}}
+                        @foreach($Results as $result)
 
                         <tr>
-                            <th>
-                                <label class="customcheckbox">
-                                    <input type="checkbox" class="listCheckbox" />
-                                    <span class="checkmark"></span>
-                                </label>
-                            </th>
+                             <th>
+                                 <label class="customcheckbox">
+                                     <input type="checkbox" class="listCheckbox" />
+                                     <span class="checkmark"></span>
+                                 </label>
+                             </th>
 
+                            <td style="font-size: 12px">{{$result['sId']}}</td>
+                            <td style="font-size: 12px">null</td>
+                            <td style="font-size: 12px">null</td>
+                            <td style="font-size: 12px">{{$result['examId']}}</td>
+                            <td style="font-size: 12px">{{$result['subject']}}</td>
+                            <td style="font-size: 12px">{{$result['marks']}}</td>
+                            <td style="font-size: 12px">null</td>
+                            <td style="font-size: 12px">null</td>
+                            <td style="font-size: 12px">null</td>
 
-                            <td style="font-size: 12px">S123</td>
-                            <td style="font-size: 12px">Gihara</td>
-                            <td style="font-size: 12px">Thewara</td>
-                            <td style="font-size: 12px">Gihan</td>
-                            <td style="font-size: 12px"></td>
-                            <td style="font-size: 12px">360</td>
-                            <td style="font-size: 12px">40.0</td>
-                            <td style="font-size: 12px">40</td>
-                            <td style="font-size: 12px;background-color:red;color: white">Bad</td>
-                            <td style="font-size: 12px;" >Keep it up</td>
-                            <td style="font-size: 12px">
-                                <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
-                                    <a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <label class="customcheckbox">
-                                    <input type="checkbox" class="listCheckbox" />
-                                    <span class="checkmark"></span>
-                                </label>
-                            </th>
+                                 <td><a class="waves-effect waves-dark" href="{{action('ResultController@edit', $result['id'])}}" data-toggle="modal" data-target="#updateResultsModal"><i class="mdi mdi-pencil font-20" ></i></a>
 
+                                     <form action="{{action('ResultController@destroy', $result['id'] )}}" method="post">
+                                         {{csrf_field()}}
+                                         <input name="_method" type="hidden" value="DELETE">
 
-                            <td style="font-size: 12px">S123</td>
-                            <td style="font-size: 12px">Gihara</td>
-                            <td style="font-size: 12px">Thewara</td>
-                            <td style="font-size: 12px">Gihan</td>
-                            <td style="font-size: 12px"></td>
-                            <td style="font-size: 12px">560</td>
-                            <td style="font-size: 12px">63.2</td>
-                            <td style="font-size: 12px">13</td>
-                            <td style="font-size: 12px;background-color:orange;color: white">Average</td>
-                            <td style="font-size: 12px;" >Keep it up</td>
-                            <td style="font-size: 12px">
-                                <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
-                                    <a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
-                            </td>
-                        </tr>
-                        {{--@endforeach--}}
+                                         <button class="btn btn-danger btn-xs" type="submit">Delete</button>
+                                     </form>
+                                 </td>
+
+                                     <!--a class="waves-effect waves-dark" href="{{--url('results')--}}" data-method="delete">
+                                         <i class="mdi mdi-delete font-20"></i></a></td>-->
+
+                         </tr>
+
+                        @endforeach
 
                         </tbody>
                     </table>

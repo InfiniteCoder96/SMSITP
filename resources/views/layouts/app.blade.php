@@ -172,5 +172,9 @@
 <!-- End User Profile Modal -->
 <!-- ============================================================== -->
 
+@include('layouts.ExamCentreLayouts.updateResultsmodal');
+@include('layouts.ExamCentreLayouts.updateQuestionpapers');
+
+
 </body>
 </html>

@@ -57,6 +57,17 @@ Route::get('/ECadmin/questionBank', function (){
     return view('Admin.Exam_Centre_Management.questionBank') ;
 });
 
+//new routes
+
+Route::resource('results','ResultController');
+
+Route::get('/ECadmin/viewResults','ResultController@index') ;
+
+//Route::get('/ECadmin/viewResults','ResultController@destroy');
+
+
+
+
 
 //Academic Manager Routes
 
@@ -99,9 +110,7 @@ Route::get('/NAadmin/manage-teacher-in-charge', function (){
     return view('Admin.Non_Academic_Management.manage_sports') ;
 });
 
-Route::get('/NAadmin/manage-achievements', function (){
-    return view('Admin.Exam_Centre_Management.publishResults') ;
-});
+
 
 Route::get('/NAadmin/manage-coaches', function (){
     return view('Admin.Exam_Centre_Management.questionBank') ;

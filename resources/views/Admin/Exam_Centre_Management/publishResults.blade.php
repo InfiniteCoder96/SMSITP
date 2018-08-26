@@ -7,245 +7,138 @@
     <div class="page-wrapper">
         <div class="container-fluid">
             <div class="row">
-            <div class="col-md-4">
-                <form class="form-horizontal" action="#" method="get">
+                <div class="col-md-4">
+
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div><br />
+                    @endif
+                    @if (\Session::has('success'))
+                        <div class="alert alert-success">
+                            <p>{{ \Session::get('success') }}</p>
+                        </div><br />
+                    @endif
+
+                    <form class="form-horizontal" action="{{url('results')}}" method="post">
+                        {{csrf_field()}}
 
 
-
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title m-b-0">Publish Results</h5>
-                                </div>
-                                <div class="card-body">
-                                    <div class="form-group row">
-                                        <label for="fname" class="col-sm-3 text-right control-label col-form-label">SID</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="fname" placeholder="Student ID Name Here" required>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="fname" class="col-sm-3 text-right control-label col-form-label">EID</label>
-                                        <div class="col-sm-9">
-                                            <select class="select2 form-control custom-select" style="width: 100%; height:36px;" required>
-                                                <option selected disabled>Select Exam ID</option>
-                                                <option value="AK">G1T1</option>
-                                                <option value="AK">G1T2</option>
-                                                <option value="WA">G1T3</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="email1" class="col-sm-3 text-right control-label col-form-label">Class</label>
-                                        <div class="col-sm-9">
-                                            <select class="select2 form-control custom-select" style="width: 100%; height:36px;" required>
-                                                <option selected disabled>Select Class</option>
-                                                <option value="AK">A</option>
-                                                <option value="AK">B</option>
-                                                <option value="WA">C</option>
-                                                <option value="NV">D</option>
-                                                <option value="CA">E</option>
-                                                <option value="WA">F</option>
-
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="fname" class="col-sm-3 text-right control-label col-form-label">Subject</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="fname" placeholder="Subject Name Here" required>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="lname" class="col-sm-3 text-right control-label col-form-label">Marks</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="id" placeholder="Final Marks Number here" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Final Grade</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="cono1" placeholder="Final Grade No Here" required>
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                                <div class="border-top">
-                                    <div class="card-body">
-                                        <button type="submit" class="btn btn-outline-success">Submit</button>
-                                        <button type="reset" class="btn btn-outline-warning">Reset</button>
+                        <div class="card bg-dark text-white">
+                            <div class="card-body card text-white bg-success mb-3">
+                                <h5 class="card-title card text-white bg-success mb-3">Publish Results</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group row">
+                                    <label for="sId" class="col-sm-3 text-right control-label col-form-label">Student ID</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" name="sId" class="form-control" id="sId" placeholder="Student ID Name Here" required>
                                     </div>
                                 </div>
+                                <div class="form-group row">
+                                    <label for="examId" class="col-sm-3 text-right control-label col-form-label">Exam ID</label>
+                                    <div class="col-sm-9">
+                                        <select class="select2 form-control custom-select" style="width: 100%; height:36px;" name="examId" required>
+                                            <option selected disabled>Select Exam ID</option>
+                                            <option value="G1T1">G1T1</option>
+                                            <option value="G1T2">G1T2</option>
+                                            <option value="G1T3">G1T3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="subject" class="col-sm-3 text-right control-label col-form-label">Subject</label>
+                                    <div class="col-sm-9">
+                                        <select class="select2 form-control custom-select" style="width: 100%; height:36px;" name="subject" required>
+                                            <option selected disabled>Select Subject</option>
+                                            <option value="Mathematics">Mathematics</option>
+                                            <option value="Science">Science</option>
+                                            <option value="History">History</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="marks" class="col-sm-3 text-right control-label col-form-label">Marks</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="marks" placeholder="Subject Marks Here" name="marks" required>
+                                    </div>
+                                </div>
+
 
                             </div>
+                            <div class="border-top">
+                                <div class="card-body">
+                                    <button type="submit" class="btn btn-outline-success">Save</button>
+                                    <button type="reset" class="btn btn-outline-warning">Reset</button>
+                                </div>
+                            </div>
+
+                        </div>
 
 
+                    </form>
+                </div>
+                <div class="col-md-8">
+                    <div class="card bg-secondary text-white">
+                        <div class="card-body card text-white bg-danger mb-3">
+                            <h5 class="card-title m-b-0">Results</h5>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class="thead-dark">
+                                <tr>
+                                    <th>
+                                        <label class="customcheckbox">
+                                            <input type="checkbox" class="listCheckbox" />
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </th>
+                                    <th scope="col" style="font-size: 12px">Student ID</th>
+                                    <th scope="col" style="font-size: 12px">Exam ID</th>
+                                    <th scope="col" style="font-size: 12px">Subject</th>
+                                    <th scope="col" style="font-size: 12px">Marks</th>
+                                    <th scope="col" style="font-size: 12px">Action</th>
 
+                                </tr>
+                                </thead>
+                                <tbody class="customtable">
+@if($Results == null)
+                              @foreach($Results as $result)
 
+                               <tr>
+                                    <th>
+                                        <label class="customcheckbox">
+                                            <input type="checkbox" class="listCheckbox" />
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </th>
 
+                                    <td style="font-size: 12px">{{$result['sId']}}</td>
+                                    <td style="font-size: 12px">{{$result['examId']}}</td>
+                                    <td style="font-size: 12px">{{$result['subject']}}</td>
+                                    <td style="font-size: 12px">{{$result['marks']}}</td>
 
+                                        <a class="waves-effect waves-dark" href="" data-toggle="modal" data-target="#updateResultsModal"><i class="mdi mdi-pencil font-20" ></i></a>
+                                        <a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i></a>
 
+                                </tr>
 
-
-                </form>
-            </div>
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title m-b-0">Published Results</h5>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table">
-                            <thead class="thead-dark">
-                            <tr>
-                                <th>
-                                    <label class="customcheckbox m-b-20">
-                                        <input type="checkbox" id="mainCheckbox" />
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </th>
-                                <th scope="col" style="font-size: 12px">SID</th>
-                                <th scope="col" style="font-size: 12px">Class</th>
-                                <th scope="col" style="font-size: 12px">EID</th>
-                                <th scope="col" style="font-size: 12px">Subject</th>
-                                <th scope="col" style="font-size: 12px">Results</th>
-                                <th scope="col" style="font-size: 12px">Action</th>
-
-                            </tr>
-                            </thead>
-                            <tbody class="customtable">
-
-                            {{--code for view data from databse--}}
-
-                            {{--@foreach($students as $student)--}}
-
-                            <tr>
-                                <th>
-                                    <label class="customcheckbox">
-                                        <input type="checkbox" class="listCheckbox" />
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </th>
-
-
-                                <td style="font-size: 12px">S123</td>
-                                <td style="font-size: 12px">A</td>
-                                <td style="font-size: 12px">G1T1</td>
-                                <td style="font-size: 12px">English</td>
-                                <td style="font-size: 12px">98</td>
-                                <td style="font-size: 12px">
-                                    <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
-                                        <a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <label class="customcheckbox">
-                                        <input type="checkbox" class="listCheckbox" />
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </th>
-
-
-                                <td style="font-size: 12px">S123</td>
-                                <td style="font-size: 12px">A</td>
-                                <td style="font-size: 12px">G1T1</td>
-                                <td style="font-size: 12px">English</td>
-                                <td style="font-size: 12px">98</td>
-                                <td style="font-size: 12px">
-                                    <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
-                                        <a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
-                                </td>
-                            </tr>
-                            {{--@endforeach--}}
-
-                            </tbody>
-                        </table>
+                                @endforeach
+@endif
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- ============================================================== -->
-            <!-- Start Page Content -->
-            <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
 
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title m-b-0">Published Results</h5>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table">
-                            <thead class="thead-dark">
-                            <tr>
-                                <th>
-                                    <label class="customcheckbox m-b-20">
-                                        <input type="checkbox" id="mainCheckbox" />
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </th>
-                                <th scope="col" style="font-size: 12px">SID</th>
-                                <th scope="col" style="font-size: 12px">Class</th>
-                                <th scope="col" style="font-size: 12px">EID</th>
-                                <th scope="col" style="font-size: 12px">Subject</th>
-                                <th scope="col" style="font-size: 12px">Results</th>
-                                <th scope="col" style="font-size: 12px">Action</th>
-
-                            </tr>
-                            </thead>
-                            <tbody class="customtable">
-
-                            {{--code for view data from databse--}}
-
-                            {{--@foreach($students as $student)--}}
-
-                            <tr>
-                                <th>
-                                    <label class="customcheckbox">
-                                        <input type="checkbox" class="listCheckbox" />
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </th>
-
-
-                                <td style="font-size: 12px">S123</td>
-                                <td style="font-size: 12px">A</td>
-                                <td style="font-size: 12px">G1T1</td>
-                                <td style="font-size: 12px">English</td>
-                                <td style="font-size: 12px">98</td>
-                                <td style="font-size: 12px">
-                                    <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
-                                        <a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <label class="customcheckbox">
-                                        <input type="checkbox" class="listCheckbox" />
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </th>
-
-
-                                <td style="font-size: 12px">S123</td>
-                                <td style="font-size: 12px">A</td>
-                                <td style="font-size: 12px">G1T1</td>
-                                <td style="font-size: 12px">English</td>
-                                <td style="font-size: 12px">98</td>
-                                <td style="font-size: 12px">
-                                    <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
-                                        <a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
-                                </td>
-                            </tr>
-                            {{--@endforeach--}}
-
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
             </div>
 
         </div>
