@@ -144,3 +144,15 @@ Route::get('/NAadmin/pendingpayments', function (){
 Route::get('/NAadmin/onlinePayment', function (){
     return view('Admin.Finance_Management.onlinePayment');
 });
+
+Route::get('/NAadmin/addExpences', function (){
+    return view('Admin.Finance_Management.addExpences');
+});
+
+Route::get('/NAadmin/expenceReport', function (){
+    return view('Admin.Finance_Management.expenceReport');
+});
+
+Route::get('/NAadmin/profit', function (){
+    return view('Admin.Finance_Management.profit');
+});
