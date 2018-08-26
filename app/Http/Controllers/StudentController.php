@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Parent_Guardian;
 use App\Student;
 use Illuminate\Http\Request;
 
@@ -58,14 +59,34 @@ class StudentController extends Controller
             'birth_certificate_no'=> 'required',
             'religion'=> 'required',
             'race'=> 'required',
-            //'country'=> 'required',
             'nationality'=> 'required',
-            //'blood_group'=> 'required',
+            'blood_group'=> 'required',
             'Known_Illnesses'=> 'required',
             'Known_Allergies'=> 'required',
         ]);
 
+        $parent_guardian = $this->validate(request(), [
+            'role'=> 'required',
+            'first_name'=> 'required',
+            'middle_name'=> 'required',
+            'last_name'=> 'required',
+            'NIC_Passport'=> 'required',
+            'nationality'=> 'required',
+            'race'=> 'required',
+            'religion'=> 'required',
+            'working_sector'=> 'required',
+            'profession'=> 'required',
+            'profession'=> 'required',
+            'occupation'=> 'required',
+            'work_place'=> 'required',
+            'email'=> 'required',
+            'work_address'=> 'required',
+            'work_telephone'=> 'required',
+            'telephone_mob'=> 'required',
+        ]);
+
         Student::create($student);
+        Parent_Guardian::create($parent_guardian);
 
         return back()->with('success', 'Product has been added');
     }

@@ -74,10 +74,9 @@
                                             <span class="input-group-text" id="inputGroupPrepend">College / School</span>
                                         </div>
                                         <select name="salutation" class="form-control" required>
-                                            <option selected disabled>- Select -</option>
-                                            <option value="Master">Master</option>
-                                            <option value="Ms">Ms</option>
-                                            <option value="Mr">Mr</option>
+                                            <option value="Master" <?php if($student->salutation=="Master") echo 'selected="selected"'; ?> >Master</option>
+                                            <option value="Mr" <?php if($student->salutation=="Mr") echo 'selected="selected"'; ?> >Mr</option>
+                                            <option value="Ms" <?php if($student->salutation=="Ms") echo 'selected="selected"'; ?> >Ms</option>
                                         </select>
                                     </div>
                                     <div class="valid-feedback">

@@ -59,6 +59,7 @@
             </tr>
             </thead>
             <tbody class="customtable">
+
             @foreach($students as $student)
 
                 <tr>
@@ -81,8 +82,8 @@
                     <td style="font-size: 12px">{{$student->Email_Address}}</td>
                     <td style="font-size: 12px">{{$student->Telephone_No_Mob}}</td>
                     <td style="font-size: 12px">{{$student->Telephone_No_Res}}</td>
-                    <td style="font-size: 12px">
-                        <a class="waves-effect waves-dark" href="{{action('StudentController@edit', $student['sid'])}}"><button class="btn btn-info btn-xs" type="button">Edit</button></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <td style="font-size: 12px" >
+                        <div  id="sid"> <a  class="waves-effect waves-dark" href="{{action('StudentController@edit', $student['sid'])}}"><button class="btn btn-info btn-xs" type="button">Edit</button></a></div>&nbsp;&nbsp;&nbsp;&nbsp;
                             <form action="{{action('StudentController@destroy', $student['sid'])}}" method="post">
                                 {{csrf_field()}}
                                 <input name="_method" type="hidden" value="DELETE">
@@ -91,6 +92,7 @@
                             {{--<a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>--}}
                     </td>
                 </tr>
+
             @endforeach
 
             </tbody>

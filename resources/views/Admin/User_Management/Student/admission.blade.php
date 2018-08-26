@@ -73,11 +73,10 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">College / School</span>
                                         </div>
-                                        <select name="salutation" class="form-control" required>
+                                        <select name="school" class="form-control" required>
                                             <option selected disabled>- Select -</option>
-                                            <option value="Master">Master</option>
-                                            <option value="Ms">Ms</option>
-                                            <option value="Mr">Mr</option>
+                                            <option value="Master">Royal Institute,Kurunegala</option>
+
                                         </select>
                                     </div>
                                     <div class="valid-feedback">
@@ -87,51 +86,60 @@
                                         Please choose a username.
                                     </div>
                                 </div>
-                                <div class="col-md-4 mb-3">
+                                <div class="col-md-2 mb-3">
 
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Section</span>
                                         </div>
-                                        <select name="salutation" class="form-control" required>
+                                        <select name="section" class="form-control" required>
                                             <option selected disabled>- Select -</option>
-                                            <option value="Master">Master</option>
-                                            <option value="Ms">Ms</option>
-                                            <option value="Mr">Mr</option>
+                                            <option value="Master">Primary</option>
+                                            <option value="Ms">Secondary</option>
+
                                         </select>
                                         <div class="invalid-feedback">
                                             Please choose a username.
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-2 mb-3">
+                                <div class="col-md-3 mb-3">
 
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Grade Applied For   *</span>
                                         </div>
-                                        <select name="salutation" class="form-control" required>
+                                        <select name="grade" class="form-control" required>
                                             <option selected disabled>- Select -</option>
-                                            <option value="Master">Master</option>
-                                            <option value="Ms">Ms</option>
-                                            <option value="Mr">Mr</option>
+                                            <option value="Master">Grade 1</option>
+                                            <option value="Ms">Grade 2</option>
+                                            <option value="Mr">Grade 3</option>
+                                            <option value="Mr">Grade 4</option>
+                                            <option value="Mr">Grade 5</option>
+                                            <option value="Mr">Grade 6</option>
+                                            <option value="Mr">Grade 7</option>
+                                            <option value="Mr">Grade 8</option>
+                                            <option value="Mr">Grade 9</option>
+                                            <option value="Mr">Grade 10</option>
+                                            <option value="Mr">Grade 12</option>
+
                                         </select>
                                         <div class="invalid-feedback">
                                             Please choose a username.
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-2 mb-3">
+                                <div class="col-md-3 mb-3">
 
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Year Applied For   *</span>
                                         </div>
-                                        <select name="salutation" class="form-control" required>
+                                        <select name="year_applied" class="form-control" required>
                                             <option selected disabled>- Select -</option>
-                                            <option value="Master">Master</option>
-                                            <option value="Ms">Ms</option>
-                                            <option value="Mr">Mr</option>
+                                            <option value="Master">2018/2019</option>
+                                            <option value="Ms">2019/2020</option>
+
                                         </select><div class="invalid-feedback">
                                             Please choose a username.
                                         </div>
@@ -199,7 +207,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Last Name</span>
                                         </div>
-                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <input type="text" name="last_Name" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                         <div class="invalid-feedback">
                                             Please choose a username.
@@ -215,7 +223,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Date of birth</span>
                                         </div>
-                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <input type="date" name="DoB" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
                                         <div class="invalid-feedback">
                                             Please choose a username.
                                         </div>
@@ -243,7 +251,60 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">NIC / Postal ID<Text style="color: red">*</Text></span>
                                         </div>
-                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <input type="text" name="NIC" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-3 mb-3">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Birth Certificate No</span>
+                                        </div>
+                                        <input type="text" name="birth_certificate_no" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-2">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Religion<Text style="color: red">*</Text></span>
+                                        </div>
+                                        <input type="text" name="religion" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-2">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Race<Text style="color: red">*</Text></span>
+                                        </div>
+                                        <input type="text" name="race" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-2">
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Nationality<Text style="color: red">*</Text></span>
+                                        </div>
+                                        <input type="text" name="nationality" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                         <div class="invalid-feedback">
                                             Please choose a username.
@@ -262,7 +323,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Address<Text style="color: red">*</Text></span>
                                         </div>
-                                        <textarea class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required></textarea>
+                                        <textarea class="form-control" name="Address" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required></textarea>
 
                                         <div class="invalid-feedback">
                                             Please choose a username.
@@ -275,7 +336,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Telephone(Res)<Text style="color: red">*</Text></span>
                                         </div>
-                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <input type="text" name="Telephone_No_Res" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                         <div class="invalid-feedback">
                                             Please choose a username.
@@ -288,7 +349,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Telephone(Mob)<Text style="color: red">*</Text></span>
                                         </div>
-                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <input type="text" name="Telephone_No_Mob" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                         <div class="invalid-feedback">
                                             Please choose a username.
@@ -301,7 +362,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Email<Text style="color: red">*</Text></span>
                                         </div>
-                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <input type="text" name="Email_Address" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                         <div class="invalid-feedback">
                                             Please choose a username.
@@ -319,7 +380,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Blood group</span>
                                         </div>
-                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <input type="text" name="blood_group" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                         <div class="invalid-feedback">
                                             Please choose a username.
@@ -332,7 +393,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Known Illnesses </span>
                                         </div>
-                                        <textarea class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required></textarea>
+                                        <textarea class="form-control" name="Known_Illnesses" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required></textarea>
 
                                         <div class="invalid-feedback">
                                             Please choose a username.
@@ -345,7 +406,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Known Allergies</span>
                                         </div>
-                                        <textarea class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required></textarea>
+                                        <textarea class="form-control" name="Known_Allergies" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required></textarea>
 
                                         <div class="invalid-feedback">
                                             Please choose a username.
@@ -367,7 +428,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Father/Mother/Guardian<Text style="color: red">*</Text></span>
                                         </div>
-                                        <select name="salutation" class="form-control" required>
+                                        <select name="role" class="form-control" required>
                                             <option selected disabled>Select salutation</option>
                                             <option value="Father">Father</option>
                                             <option value="Mother">Mother</option>
@@ -384,7 +445,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">First Name<Text style="color: red">*</Text></span>
                                         </div>
-                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <input type="text" name="first_name" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                         <div class="invalid-feedback">
                                             Please choose a username.
@@ -397,7 +458,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Middle Name<Text style="color: red">*</Text></span>
                                         </div>
-                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <input type="text" name="middle_name" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                         <div class="invalid-feedback">
                                             Please choose a username.
@@ -410,7 +471,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Last Name<Text style="color: red">*</Text></span>
                                         </div>
-                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <input type="text" name="last_name" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                         <div class="invalid-feedback">
                                             Please choose a username.
@@ -426,7 +487,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Passport / NIC Number <Text style="color: red">*</Text></span>
                                         </div>
-                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <input type="text" name="NIC_Passport" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
                                         <div class="invalid-feedback">
                                             Please choose a username.
                                         </div>
@@ -438,7 +499,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Nationality<Text style="color: red">*</Text></span>
                                         </div>
-                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <input type="text" name="nationality" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                         <div class="invalid-feedback">
                                             Please choose a username.
@@ -451,7 +512,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Race<Text style="color: red">*</Text></span>
                                         </div>
-                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <input type="text" name="race" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                         <div class="invalid-feedback">
                                             Please choose a username.
@@ -464,7 +525,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Religion<Text style="color: red">*</Text></span>
                                         </div>
-                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <input type="text" name="religion" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                         <div class="invalid-feedback">
                                             Please choose a username.
@@ -484,11 +545,14 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Working Sector <Text style="color: red">*</Text></span>
                                         </div>
-                                        <select name="salutation" class="form-control" required>
+                                        <select name="working_sector" class="form-control" required>
                                             <option selected disabled>Select salutation</option>
-                                            <option value="Father">Father</option>
-                                            <option value="Mother">Mother</option>
-                                            <option value="Guardian">Guardian</option>
+                                            <option value="Goverment">Goverment</option>
+                                            <option value="Semi Goverment">Semi Goverment</option>
+                                            <option value="NGO">NGO</option>
+                                            <option value="Private">Private</option>
+                                            <option value="Other">Other</option>
+                                            <option value="House Wife">House Wife</option>
                                         </select>
                                         <div class="invalid-feedback">
                                             Please choose a username.
@@ -501,7 +565,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Profession<Text style="color: red">*</Text></span>
                                         </div>
-                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <input type="text" name="profession" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                         <div class="invalid-feedback">
                                             Please choose a username.
@@ -514,7 +578,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Occupation<Text style="color: red">*</Text></span>
                                         </div>
-                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <input type="text" name="occupation" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                         <div class="invalid-feedback">
                                             Please choose a username.
@@ -527,7 +591,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Place of Work<Text style="color: red">*</Text></span>
                                         </div>
-                                        <textarea class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required></textarea>
+                                        <textarea class="form-control" name="work_place" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required></textarea>
 
                                         <div class="invalid-feedback">
                                             Please choose a username.
@@ -547,7 +611,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Email Address<Text style="color: red">*</Text></span>
                                         </div>
-                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <input type="text" name="email" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
                                         <div class="invalid-feedback">
                                             Please choose a username.
                                         </div>
@@ -559,7 +623,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Office Address<Text style="color: red">*</Text></span>
                                         </div>
-                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <input type="text" name="work_address" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                         <div class="invalid-feedback">
                                             Please choose a username.
@@ -572,7 +636,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Office Phone<Text style="color: red">*</Text></span>
                                         </div>
-                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <input type="text" name="work_telephone" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                         <div class="invalid-feedback">
                                             Please choose a username.
@@ -585,7 +649,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Telephone No(Mob)<Text style="color: red">*</Text></span>
                                         </div>
-                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <input type="text" name="telephone_mob" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                         <div class="invalid-feedback">
                                             Please choose a username.

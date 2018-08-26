@@ -14,4 +14,14 @@ class Student extends Model
         'Telephone_No_Mob','Telephone_No_Res','birth_certificate_no','religion','race',
         'country','nationality','blood_group','Known_Illnesses','Known_Allergies'
     ];
+
+    public function Parent_Guardian()
+    {
+        return $this->hasOne('App\Parent__Guardian');
+    }
+
+    public function Clasz()
+    {
+        return $this->hasOne('App\Clasz');
+    }
 }

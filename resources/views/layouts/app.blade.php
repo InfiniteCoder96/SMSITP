@@ -186,32 +186,7 @@
 
 
     $('.timer').countTo();
-    $(document).ready(function () {
-        data = {
-            '2010' : 300,
-            '2011' : 200,
-            '2012' : 100,
-            '2013' : 500,
-            '2014' : 400,
-            '2015' : 200
-        };
 
-        $("#chart1").faBoChart({
-            time: 500,
-            animate: true,
-            instantAnimate: true,
-            straight: false,
-            data: data,
-            labelTextColor : "#C0392B",
-        });
-        $("#chart2").faBoChart({
-            time: 2500,
-            animate: true,
-            data: data,
-            straight: true,
-            labelTextColor : "#C0392B",
-        });
-    });
 
 
 </script>
@@ -219,7 +194,7 @@
     $('#editBookModal').on('show.bs.modal', function(event){
         var button = $(event.relatedTarget)
 
-        var book_id = button.data('id')
+
         var bookname = button.data('bookname')
         var authorname = button.data('authorname')
         var isbn = button.data('isbn')
@@ -232,6 +207,14 @@
         modal.find('.modal-body #author').val(authorname);
         modal.find('.modal-body #isbn').val(isbn);
         modal.find('.modal-body #barcode').val(barcode);
+    })
+
+
+    $(document).ready(function(){
+        var sid = $("#sid input").val();
+        var link = "/student/"+sid+"'>Edit";
+
+        document.getElementById("link").setAttribute("href",link);
     })
 </script>
 

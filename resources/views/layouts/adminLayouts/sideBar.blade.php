@@ -11,7 +11,7 @@
                         <ul aria-expanded="false" class="collapse  first-level">
                             <li class="sidebar-item"><a href="{{url('/students/create')}}" class="sidebar-link"><i class="mdi mdi-account-plus"></i><span class="hide-menu"> Entroll New Student </span></a></li>
                             <li class="sidebar-item"><a href="{{url('/students')}}" class="sidebar-link"><i class="mdi mdi-human-child"></i><span class="hide-menu"> All Students </span></a></li>
-                            <li class="sidebar-item"><a href="{{url('/students/{id}/edit')}}" class="sidebar-link"><i class="mdi mdi-details"></i><span class="hide-menu"> Student Details </span></a></li>
+                            <li class="sidebar-item"><a href="{{url('/students/{sid}/edit')}}" class="sidebar-link"><i class="mdi mdi-details"></i><span class="hide-menu"> Student Details </span></a></li>
 
 
                         </ul>

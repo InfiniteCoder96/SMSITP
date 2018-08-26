@@ -36,6 +36,7 @@ class CreateStudentsTable extends Migration
             $table->text('Known_Allergies');
 
             $table->timestamps();
+
         });
     }
 
