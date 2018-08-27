@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class UpdateDropSidInStudentsTable extends Migration
+class CreateQBanksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class UpdateDropSidInStudentsTable extends Migration
      */
     public function up()
     {
-        Schema::table('students', function (Blueprint $table) {
-
-            $table->increments('sid');
+        Schema::create('qBanks', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('examId');
+            $table->string('subject');
+            $table->string('content');
+            $table->timestamps();
         });
     }
 
@@ -26,8 +29,6 @@ class UpdateDropSidInStudentsTable extends Migration
      */
     public function down()
     {
-        Schema::table('students', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('qBanks');
     }
 }

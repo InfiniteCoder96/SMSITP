@@ -7,6 +7,7 @@ use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
 use App\Result;
 
+
 class ResultController extends Controller
 {
     /**
@@ -18,6 +19,12 @@ class ResultController extends Controller
     {
         $Results = Result::all()->toArray();                                        //$results array
         return view('Admin.Exam_Centre_Management.viewResults',compact('Results'));
+    }
+
+    public function index1()
+    {
+        $Results1 = Result::all()->toArray();                                        //$results array
+        return view('Admin.Exam_Centre_Management.publishResults',compact('Results1'));
     }
 
     /**
@@ -67,10 +74,10 @@ class ResultController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($sId)
+    public function edit($id)
     {
-        $result = Result::find($sId);
-        return view('layouts.ExamCentreLayouts.updateResultsmodal',compact('result','sId'));
+        $result = Result::find($id);
+        return view('layouts.ExamCentreLayouts.updateResultsmodal',compact('result','id'));
     }
 
     /**
@@ -80,9 +87,11 @@ class ResultController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $sId)
+    public function update(Request $request, $id)
     {
-        $result = Result::find($sId);
+        $result = Result::find($request->get('id'));
+
+        $result = Result::find($id);
         $this->validate(request(),[
             'sId' => 'required',
             'marks' => 'required|numeric',
@@ -109,6 +118,5 @@ class ResultController extends Controller
         $result = Result::find($id);
         $result->delete();
         return redirect('results')->with('success','Record has been  deleted');
-        //return back()->with('success', 'Record has been  deleted');
     }
 }

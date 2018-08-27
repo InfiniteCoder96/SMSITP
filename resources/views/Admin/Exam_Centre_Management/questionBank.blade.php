@@ -8,23 +8,36 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-4">
-                    <form class="form-horizontal" action="#" method="get">
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div><br />
+                    @endif
+                    @if (\Session::has('success'))
+                        <div class="alert alert-success">
+                            <p>{{ \Session::get('success') }}</p>
+                        </div><br />
+                    @endif
 
-
-
+                    <form class="form-horizontal" action="{{url('qBanks')}}" enctype="multipart/form-data" method="post">
+                        {{csrf_field()}}
                         <div class="card card bg-secondary text-white">
                             <div class="card-body card text-white bg-success mb-3">
                                 <h5 class="card-title m-b-0">Publish Questions</h5>
                             </div>
                             <div class="card-body ">
                                 <div class="form-group row">
-                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">Year and term</label>
+                                    <label for="examId" class="col-sm-3 text-right control-label col-form-label">Year and term</label>
                                     <div class="col-sm-9">
-                                        <select class="select2 form-control custom-select" style="width: 100%; height:36px;" required>
-                                            <option selected disabled>Year and term </option>
-                                            <option value="AK">G1T1</option>
-                                            <option value="AK">G1T2</option>
-                                            <option value="WA">G1T3</option>
+                                        <select class="select2 form-control custom-select" style="width: 100%; height:36px;" name="examId" required>
+                                            <option selected disabled>Select Exam ID</option>
+                                            <option value="G1T1">G1T1</option>
+                                            <option value="G1T2">G1T2</option>
+                                            <option value="G1T3">G1T3</option>
                                         </select>
                                     </div>
                                 </div>
@@ -32,20 +45,19 @@
                                 <div class="form-group row">
                                     <label for="email1" class="col-sm-3 text-right control-label col-form-label">Subject</label>
                                     <div class="col-sm-9">
-                                        <select class="select2 form-control custom-select" style="width: 100%; height:36px;" required>
-                                            <option selected disabled>Subject</option>
-                                            <option value="AK">Mathematics</option>
-                                            <option value="AK">Science</option>
-                                            <option value="WA">English</option>
-
+                                        <select class="select2 form-control custom-select" style="width: 100%; height:36px;" name="subject" required>
+                                            <option selected disabled>Select Subject</option>
+                                            <option value="Mathematics">Mathematics</option>
+                                            <option value="Science">Science</option>
+                                            <option value="History">History</option>
                                         </select>
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Upload Papers</label>
+                                    <label for="file" class="col-sm-3 text-right control-label col-form-label">Upload Papers</label>
                                     <div class="col-sm-9">
-                                        <input type="file" class="form-control" id="cono1" required>
+                                        <input type="file" class="form-control" id="file" name="file" required>
                                     </div>
                                 </div>
 
@@ -59,15 +71,6 @@
                             </div>
 
                         </div>
-
-
-
-
-
-
-
-
-
                     </form>
                 </div>
                 <div class="col-md-8">
@@ -109,27 +112,15 @@
 
                                     <td style="font-size: 12px">S123</td>
                                     <td style="font-size: 12px">English</td>
-                                    <td style="font-size: 12px">E:\G1T2.xlsx</td>
-                                    <td style="font-size: 12px">
-                                        <a class="waves-effect waves-dark" href="" data-toggle="modal" data-target="#updateQuestionPapersModal"><i class="mdi mdi-pencil font-20" ></i></a>
-                                        <a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <label class="customcheckbox">
-                                            <input type="checkbox" class="listCheckbox" />
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </th>
-
-
-                                    <td style="font-size: 12px">S123</td>
-                                    <td style="font-size: 12px">English</td>
                                     <td style="font-size: 12px">E:\G1T1.xlsx</td>
                                     <td style="font-size: 12px">
                                         <a class="waves-effect waves-dark" href="" data-toggle="modal" data-target="#updateQuestionPapersModal"><i class="mdi mdi-pencil font-20" ></i></a>
-                                        <a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i></a>
+                                        <form action="{{--action('QBankController@destroy', $Questions['id'] )--}}" method="post">
+                                            {{csrf_field()}}
+                                            <input name="_method" type="hidden" value="DELETE">
+
+                                            <button class="btn btn-danger btn-xs" type="submit">Delete</button>
+                                        </form>
                                     </td>
                                 </tr>
                                 {{--@endforeach--}}
@@ -148,7 +139,7 @@
 
         </div>
 
-
+    </div>
 
     @include('layouts.adminLayouts.footer')
 

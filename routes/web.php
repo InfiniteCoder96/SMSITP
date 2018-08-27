@@ -63,9 +63,11 @@ Route::resource('results','ResultController');
 
 Route::get('/ECadmin/viewResults','ResultController@index') ;
 
+Route::get('/ECadmin/publishResults','ResultController@index1') ;
+
 //Route::get('/ECadmin/viewResults','ResultController@destroy');
 
-
+Route::resource('qBanks','QBankController');
 
 
 

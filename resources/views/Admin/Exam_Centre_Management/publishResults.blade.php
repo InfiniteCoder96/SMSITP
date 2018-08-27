@@ -101,13 +101,12 @@
                                     <th scope="col" style="font-size: 12px">Exam ID</th>
                                     <th scope="col" style="font-size: 12px">Subject</th>
                                     <th scope="col" style="font-size: 12px">Marks</th>
-                                    <th scope="col" style="font-size: 12px">Action</th>
 
                                 </tr>
                                 </thead>
                                 <tbody class="customtable">
-@if($Results == null)
-                              @foreach($Results as $result)
+@if($Results1 != null)
+                              @foreach($Results1 as $result1)
 
                                <tr>
                                     <th>
@@ -117,13 +116,10 @@
                                         </label>
                                     </th>
 
-                                    <td style="font-size: 12px">{{$result['sId']}}</td>
-                                    <td style="font-size: 12px">{{$result['examId']}}</td>
-                                    <td style="font-size: 12px">{{$result['subject']}}</td>
-                                    <td style="font-size: 12px">{{$result['marks']}}</td>
-
-                                        <a class="waves-effect waves-dark" href="" data-toggle="modal" data-target="#updateResultsModal"><i class="mdi mdi-pencil font-20" ></i></a>
-                                        <a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i></a>
+                                    <td style="font-size: 12px">{{$result1['sId']}}</td>
+                                    <td style="font-size: 12px">{{$result1['examId']}}</td>
+                                    <td style="font-size: 12px">{{$result1['subject']}}</td>
+                                    <td style="font-size: 12px">{{$result1['marks']}}</td>
 
                                 </tr>
 
