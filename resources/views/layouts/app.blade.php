@@ -199,6 +199,7 @@
         var authorname = button.data('authorname')
         var isbn = button.data('isbn')
         var barcode = button.data('barcode')
+        var bookId = button.data('id')
 
         var modal = $(this)
 
@@ -207,6 +208,7 @@
         modal.find('.modal-body #author').val(authorname);
         modal.find('.modal-body #isbn').val(isbn);
         modal.find('.modal-body #barcode').val(barcode);
+        modal.find('.modal-body #book_id').val(bookId);
     })
 
 

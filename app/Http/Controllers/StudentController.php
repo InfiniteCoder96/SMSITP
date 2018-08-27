@@ -76,7 +76,6 @@ class StudentController extends Controller
             'religion'=> 'required',
             'working_sector'=> 'required',
             'profession'=> 'required',
-            'profession'=> 'required',
             'occupation'=> 'required',
             'work_place'=> 'required',
             'email'=> 'required',
@@ -177,6 +176,6 @@ class StudentController extends Controller
     {
         $student = Student::find($id);
         $student->delete();
-        return redirect('students')->with('success','Product has been  deleted');
+        return redirect('students')->with('success','Student has been deleted successfully');
     }
 }

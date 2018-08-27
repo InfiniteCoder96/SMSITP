@@ -34,11 +34,11 @@
         <!-- ============================================================== -->
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-sm-3 col-md-4 col-lg-4">
                     <div class="card text-white bg-dark mb-3 card-hover" style="height: 90px">
                         <div class="row">
-                            <div class="col-md-4 card-body bg-orange">
-                                <center><i class="fa-3x fas fa-users"></i></center>
+                            <div class="col-md-4 col-sm-3 col-lg-4 card-body bg-orange">
+                                <center><i class="fa-2x fas fa-users"></i></center>
                                 <center><h5 class="card-title">Students</h5></center>
                             </div>
                             <div class="card-body">
@@ -49,11 +49,11 @@
 
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-sm-3 col-md-4 col-lg-4">
                     <div class="card text-white bg-dark mb-3 card-hover" style="height: 90px">
                         <div class="row">
-                            <div class="col-md-4 card-body bg-success ">
-                                <center><i class="fa-3x fas fa-users"></i></center>
+                            <div class="col-md-4 col-sm-3 col-lg-4 card-body bg-success ">
+                                <center><i class="fa-2x fas fa-users"></i></center>
                                 <center><h5 class="card-title">Teachers</h5></center>
                             </div>
                             <div class="card-body">
@@ -64,12 +64,12 @@
 
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-sm-3 col-md-4 col-lg-4">
                     <div class="card text-white bg-dark mb-3 card-hover" style="height: 90px">
                         <div class="row">
-                            <div class="col-md-4 card-body bg-purple">
-                                <center><i class="fa-3x far fa-money-bill-alt"></i></center>
-                                <center><h5 class="card-title">Profit</h5></center>
+                            <div class="col-md-4 col-sm-3 col-lg-4 card-body bg-purple">
+                                <center><i class="fa-2x far fa-money-bill-alt"></i></center>
+                                <center><h5 class="card-title">Profit Rs.</h5></center>
                             </div>
                             <div class="card-body">
                                 <center><h5 style="font-size:36px;vertical-align: bottom" class="card-title timer" data-from="0" data-to="5000000" data-speed="2000" data-fresh-interval="20">Rs.500,0000</h5></center>
@@ -84,7 +84,7 @@
 
             <div class="row">
                 <!-- Column -->
-                <div class="col-md-6 col-lg-3">
+                <div class="col-sm-3 col-md-3 col-lg-3">
                     <div class="card card-hover">
                         <div class="box bg-info text-center">
                             <h1 class="font-light text-white"><i class="mdi mdi-account-plus"></i></h1>
@@ -93,7 +93,7 @@
                     </div>
                 </div>
                 <!-- Column -->
-                <div class="col-md-6 col-lg-3">
+                <div class="col-sm-3 col-md-3 col-lg-3">
                     <div class="card card-hover">
                         <div class="box bg-warning text-center">
                             <h1 class="font-light text-white"><i class="mdi mdi-message-alert"></i></h1>
@@ -102,7 +102,7 @@
                     </div>
                 </div>
                 <!-- Column -->
-                <div class="col-md-6 col-lg-3">
+                <div class="col-sm-3 col-md-3 col-lg-3">
                     <div class="card card-hover">
                         <div class="box bg-danger text-center">
                             <h1 class="font-light text-white"><i class="mdi mdi-message-bulleted"></i></h1>
@@ -112,7 +112,7 @@
                 </div>
 
                 <!-- Column -->
-                <div class="col-md-6 col-lg-3">
+                <div class="col-sm-3 col-md-3 col-lg-3">
                     <div class="card card-hover">
                         <div class="box bg-secondary text-center">
                             <h1 class="font-light text-white"><i class="fas fa-clipboard-list"></i></h1>
@@ -120,6 +120,7 @@
                         </div>
                     </div>
                 </div>
+
 
             </div>
 
@@ -335,7 +336,7 @@
 
 
         </div>
-    </div>
+
 
 
     @include('layouts.adminLayouts.footer')
