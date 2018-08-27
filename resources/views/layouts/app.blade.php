@@ -163,12 +163,37 @@
 </script>
 
 
+<script>
+    $('#updateAcademicStaffDetailsModal').on('show.bs.modal', function(event){
+        var button = $(event.relatedTarget)
+
+
+        var id = button.data('id')
+        var rid = button.data('rid')
+        var name = button.data('name')
+        var category = button.data('category')
+        var contact_number = button.data('contact_number')
+
+        var modal = $(this)
+
+
+        modal.find('.modal-body #id').val(id);
+        modal.find('.modal-body #rid').val(rid);
+        modal.find('.modal-body #name').val(name);
+        modal.find('.modal-body #category').val(category);
+        modal.find('.modal-body #contact_number').val(contact_number);
+    })
+
+</script>
+
+
+
 <!-- ============================================================== -->
 <!-- User Profile Modal -->
 <!-- ============================================================== -->
 @include('layouts.adminLayouts.userProfileModal')
 @include('layouts.HRLayouts.updatePlayrollDetailsModal')
-@include('layouts.HRLayouts.updateAcademicStaffDetailsModal')
+
 @include('layouts.HRLayouts.updateNonAcademicStaffDetailsModal')
 <!-- ============================================================== -->
 <!-- End User Profile Modal -->

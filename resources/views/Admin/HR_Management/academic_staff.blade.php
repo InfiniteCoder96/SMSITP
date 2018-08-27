@@ -22,54 +22,50 @@
                             </th>
                             <th scope="col" style="font-size: 12px">User ID</th>
                             <th scope="col" style="font-size: 12px">User Name</th>
-                            <th scope="col" style="font-size: 12px">Category</th>
                             <th scope="col" style="font-size: 12px">Contact No</th>
+                            <th scope="col" style="font-size: 12px">Category</th>
                             <th scope="col" style="font-size: 12px">Action</th>
 
                         </tr>
                         </thead>
                         <tbody class="customtable">
 
-                        {{--code for view data from databse--}}
+                        @foreach($recruits as $recruit)
+                            <tr>
+                                <th>
+                                    <label class="customcheckbox m-b-20">
+                                        <input type="checkbox" id="mainCheckbox" />
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </th>
+                                <td>{{$recruit['rid']}}</td>
+                                <td>{{$recruit['name']}}</td>
+                                <td>{{$recruit['contact_number']}}
+                                <td>{{$recruit['category']}}</td>
 
-                        {{--@foreach($students as $student)--}}
+                                <td style="font-size: 12px">
+                                    <a  ><button class="btn btn-warning btn-xs" data-toggle="modal" data-target="#updateAcademicStaffDetailsModal"
 
-                        <tr>
-                            <th>
-                                <label class="customcheckbox">
-                                    <input type="checkbox" class="listCheckbox" />
-                                    <span class="checkmark"></span>
-                                </label>
-                            </th>
+                                                 data-id="{{$recruit['rid']}}"
+                                                 data-name="{{$recruit['name']}}"
+                                                 data-category="{{$recruit['category']}}"
+                                                 data-contact_number="{{$recruit['contact_number']}}"
 
+                                                 type="button">Edit</button></a>
 
-                            <td style="font-size: 12px">S123</td>
-                            <td style="font-size: 12px">Perera</td>
-                            <td style="font-size: 12px">Teacher</td>
-                            <td style="font-size: 12px">0718787671</td>
-                            <td style="font-size: 12px">
-                                <a class="waves-effect waves-dark" href="" data-toggle="modal" data-target="#updateAcademicStaffDetailsModal"><i class="mdi mdi-pencil font-20" ></i></a>
-                                <a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <label class="customcheckbox">
-                                    <input type="checkbox" class="listCheckbox" />
-                                    <span class="checkmark"></span>
-                                </label>
-                            </th>
+                                    <form action="{{action('recruitController@destroy', $recruit['id'])}}" method="post">
+                                        {{csrf_field()}}
+                                        <input name="_method" type="hidden" value="DELETE">
+                                         <button class="btn btn-danger" type="submit">Delete</button>
+                                    </form>
+                                    @include('layouts.HRLayouts.updateAcademicStaffDetailsModal')
+                                </td>
 
 
-                            <td style="font-size: 12px">S123</td>
-                            <td style="font-size: 12px">Perera</td>
-                            <td style="font-size: 12px">Teacher</td>
-                            <td style="font-size: 12px">0718787671</td>
-                            <td style="font-size: 12px">
-                                <a class="waves-effect waves-dark" href="" data-toggle="modal" data-target="#updateAcademicStaffDetailsModal"><i class="mdi mdi-pencil font-20" ></i></a>
-                                <a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i></a>
-                            </td>
-                        </tr>
+                            </tr>
+
+                        @endforeach
+
                         {{--@endforeach--}}
 
                         </tbody>
@@ -79,7 +75,24 @@
             <!-- ============================================================== -->
             <!-- Start Page Content -->
             <!-- ============================================================== -->
-            <form class="form-horizontal" action="#" method="get">
+
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div><br />
+            @endif
+            @if (\Session::has('success'))
+                <div class="alert alert-success">
+                    <p>{{ \Session::get('success') }}</p>
+                </div><br />
+            @endif
+
+            <form class="form-horizontal" action="{{url('recruits')}}" method="post">
+                {{csrf_field()}}
                 <div class="row">
 
                     <div class="col-md-6">
@@ -90,37 +103,35 @@
                             <div class="card-body">
                                 <h4 class="card-title">Personal Info</h4>
                                 <div class="form-group row">
-                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">User ID</label>
+                                    <label for="id" class="col-sm-3 text-right control-label col-form-label">User ID</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="fname" placeholder="User ID Here" required>
+                                        <input type="text" class="form-control" id="id" name="rid" placeholder="User ID Here" required>
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">User Name</label>
+                                    <label for="name" class="col-sm-3 text-right control-label col-form-label">User Name</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="fname" placeholder="User Name Here" required>
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="User Name Here" required>
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="email1" class="col-sm-3 text-right control-label col-form-label">Category</label>
+                                    <label for="category" class="col-sm-3 text-right control-label col-form-label">Category</label>
                                     <div class="col-sm-9">
-                                        <select class="select2 form-control custom-select" style="width: 100%; height:36px;" required>
-                                            <option>Select</option>
-                                            <optgroup label="Academic">
-                                                <option value="AK">Teacher</option>
-                                                <option value="AK">Academic Manager</option>
+                                        <select class="select2 form-control custom-select" style="width: 100%; height:36px;" name="category"required>
+                                            <option selected disabled>Select</option>
 
-                                            </optgroup>
+                                                <option value="Teacher">Teacher</option>
+
                                         </select>
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Contact No</label>
+                                    <label for="contact_number" class="col-sm-3 text-right control-label col-form-label">Contact No</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="cono1" placeholder="Contact No Here" required>
+                                        <input type="text" class="form-control" id="contact_number" name="contact_number" placeholder="Contact No Here" required>
                                     </div>
                                 </div>
 

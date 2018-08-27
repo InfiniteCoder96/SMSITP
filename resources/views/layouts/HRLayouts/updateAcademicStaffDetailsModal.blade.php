@@ -8,40 +8,40 @@
             </div>
             <div class="modal-body bg-dark">
 
-                    <form class="form-horizontal" action="#" method="get">
+                <form  action="{{action('recruitController@update',$recruit['id'])}}" method="post">
+                    {{method_field('patch')}}
+                    {{csrf_field()}}
+                    <input type="hidden" id="id" name="id">
+
 
                         <div class="form-group row">
-                            <label for="fname" class="col-sm-3 text-right control-label col-form-label">User ID</label>
+                            <label for="rid" class="col-sm-3 text-right control-label col-form-label">User ID</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="fname" placeholder="User ID Here" required>
+                                <input type="text" class="form-control" id="rid" name="rid" required>
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="fname" class="col-sm-3 text-right control-label col-form-label">User Name</label>
+                            <label for="name" class="col-sm-3 text-right control-label col-form-label">User Name</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="fname" placeholder="User Name Here" required>
+                                <input type="text" class="form-control" id="name" name="name" required>
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="email1" class="col-sm-3 text-right control-label col-form-label">Category</label>
+                            <label for="category" class="col-sm-3 text-right control-label col-form-label">Category</label>
                             <div class="col-sm-9">
-                                <select class="select2 form-control custom-select" style="width: 100%; height:36px;" required>
+                                <select class="select2 form-control custom-select" style="width: 100%; height:36px;" name="category" required>
                                     <option>Select</option>
-                                    <optgroup label="Academic">
-                                        <option value="AK">Teacher</option>
-                                        <option value="AK">Academic Manager</option>
-
-                                    </optgroup>
+                                        <option value="Teacher">Teacher</option>
                                 </select>
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Contact No</label>
+                            <label for="contact_number" class="col-sm-3 text-right control-label col-form-label">Contact No</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="cono1" placeholder="Contact No Here" required>
+                                <input type="text" class="form-control" id="contact_number" name="contact_number" required>
                             </div>
                         </div>
 

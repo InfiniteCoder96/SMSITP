@@ -38,6 +38,9 @@ Route::get('/HRadmin/payroll', function (){
     return view('Admin.HR_Management.payroll') ;
 });
 
+Route::resource('recruits','recruitController');
+
+Route::resource('nonacademics','nonacademicController');
 
 //Exam Centre Manager Routes
 
