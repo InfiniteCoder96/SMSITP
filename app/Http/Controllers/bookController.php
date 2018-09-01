@@ -96,7 +96,7 @@ class bookController extends Controller
 //        $books->barcode = $request->get('barcode');
 //        $books->save();
 
-        $books = books::find($id);
+        $books = books::find($request->get('bookID'));
         $this->validate(request(),[
             'bookname' => 'required',
             'isbn' => 'required',
@@ -123,6 +123,8 @@ class bookController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $books = books::find($id);
+        $books->delete();
+        return redirect('books')->with('success','Book has been  deleted');
     }
 }

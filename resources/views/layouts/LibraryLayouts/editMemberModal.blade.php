@@ -1,9 +1,9 @@
-<div class="modal" id="editBookModal">
+<div class="modal" id="editMemberModal">
     <div class="modal-dialog modal-lg">
         <div class="modal-content bg-dark text-white">
             <div class="modal-header bg-cyan">
 
-                <h5 class="card-title m-b-0">Edit The Book</h5>
+                <h5 class="card-title m-b-0">Edit The Member</h5>
 
             </div>
             <div class="modal-body bg-dark">
@@ -13,7 +13,7 @@
                         <div class="card">
 
 
-                            <form  action="{{action('bookController@update',$book['id'])}}" method="post">
+                            <form  action="{{action('MemberController@update',$['id'])}}" method="post">
                                 {{method_field('patch')}}
                                 {{csrf_field()}}
                                 <input type="hidden" id="bookID" name="bookID">

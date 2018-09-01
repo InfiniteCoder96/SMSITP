@@ -153,7 +153,17 @@ Route::get('/LibraryAdmin/addBookForm', function (){
 
 
 
-Route::get('/LibraryAdmin/nonAcademicStaff', function (){
-    return view('Admin.HR_Management.non_academic_staff') ;
+Route::get('/Library/addNewMember', function (){
+    return view('Admin.Library_Management.addNewMemberForm') ;
 });
 Route::resource('books','bookController');
+
+
+Route::resource('members', 'MemberController');
+Route::get('memberslist', 'MemberController@getMembers');
+
+//Route::get('/Library/returnBook', function (){
+//    return view('Admin.Library_Management.returnBook');
+//})
+
+Route::resource('issue_books','issueBookController');

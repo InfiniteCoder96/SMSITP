@@ -40,8 +40,8 @@
             <!-- ============================================================== -->
             <div class="row">
                 <div class="col-md-4">
-                    <form class="form-horizontal" action="#" method="get">
-
+                    <!--<form class="form-horizontal" action="#" method="get">
+                        -->
 
 
                 </div>
@@ -54,22 +54,24 @@
                             <table class="table">
                                 <thead class="thead-light">
                                 <tr>
-                                    <th scope="col" style="font-size: 12px">Book ID</th>
-                                    <th scope="col" style="font-size: 12px">ISBN</th>
-                                    <th scope="col" style="font-size: 12px">Book Name</th>
-                                    <th scope="col" style="font-size: 12px">Author</th>
-                                    <th scope="col" style="font-size: 12px">Barcode</th>
+                                    <th scope="col" style="font-size: 12px">ID</th>
+                                    <th scope="col" style="font-size: 12px">First Name</th>
+                                    <th scope="col" style="font-size: 12px">Last Name</th>
+                                    <th scope="col" style="font-size: 12px">Member ID</th>
+                                    <th scope="col" style="font-size: 12px">Phone Number</th>
+                                    <th scope="col" style="font-size: 12px">Email</th>
                                     <th scope="col" style="font-size: 12px">Action</th>
                                 </tr>
                                 </thead>
                                 <tbody class="customtable">
-                            <!--    @foreach($books as $book)
+                                @foreach($members as $member)
                                     <tr>
-                                        <td>{{$book['id']}}</td>
-                                        <td>{{$book['isbn']}}</td>
-                                        <td>{{$book['bookname']}}</td>
-                                        <td>{{$book['authorname']}}</td>
-                                        <td>{{$book['barcode']}}</td>
+                                        <td>{{$member['id']}}</td>
+                                        <td>{{$member['firstname']}}</td>
+                                        <td>{{$member['lastname']}}</td>
+                                        <td>{{$member['memberid']}}</td>
+                                        <td>{{$member['memberphone']}}</td>
+                                        <td>{{$member['memberemail']}}</td>
 
                                         <td style="font-size: 12px">
                                             <button type="button" class="btn btn-success btn-sm">Edit</button>
@@ -77,7 +79,7 @@
                                         </td>
                                     </tr>
 
-                                @endforeach  -->
+                                @endforeach
                                 </tbody>
                             </table>
                         </div>

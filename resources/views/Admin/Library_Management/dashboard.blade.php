@@ -80,6 +80,26 @@
                                 </div>
                             </div>
 
+                            <div class="col-md-4">
+                                <div class="card text-white bg-dark mb-3 card-hover" style="height: 90px">
+                                    <div class="row">
+                                        <div class="col-md-4 card-body bg-purple">
+                                            <center><i class="fa-3x far fa-money-bill-alt"></i></center>
+                                            <center><h5 class="card-title">Profit</h5></center>
+                                        </div>
+                                        <div class="card-body">
+                                            <center><h5 style="font-size:36px;vertical-align: bottom" class="card-title timer" data-from="0" data-to="5000000" data-speed="2000" data-fresh-interval="20">Rs.500,0000</h5></center>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
                             <div class="col-lg-12">
                                 <div class="row">
                                     <div class="col-6">

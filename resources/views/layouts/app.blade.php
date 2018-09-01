@@ -148,6 +148,7 @@
 <script src="{{asset('assets/libs/chart/turning-series.js')}}"></script>
 <script src="{{asset('js/backend_js/pages/chart/chart-page-init.js')}}"></script>
 <script src="{{asset('js/backend_js/fabochart.js')}}"></script>
+<script src="{{asset('js/ajax.js')}}"></script>
 
 <script>
     /****************************************
@@ -199,14 +200,16 @@
         var authorname = button.data('authorname')
         var isbn = button.data('isbn')
         var barcode = button.data('barcode')
+        var id = button.data('id')
 
         var modal = $(this)
-
 
         modal.find('.modal-body #bookname').val(bookname);
         modal.find('.modal-body #author').val(authorname);
         modal.find('.modal-body #isbn').val(isbn);
         modal.find('.modal-body #barcode').val(barcode);
+        modal.find('.modal-body #bookID').val(id);
+
     })
 
 

@@ -8,7 +8,7 @@
     <!-- ============================================================== -->
     <!-- Start Page Content -->
     <!-- ============================================================== -->
-    <div class="row">a
+    <div class="row">
         <div class="col-md-12">
             <div class="card">
                 <form class="form-horizontal">
@@ -43,7 +43,7 @@
                     </div>
                     <div class="border-top">
                         <div class="card-body">
-                            <button type="button" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
                     </div>
                 </form>

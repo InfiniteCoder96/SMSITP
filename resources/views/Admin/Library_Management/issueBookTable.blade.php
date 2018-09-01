@@ -1,13 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-
     @include('layouts.LibraryLayouts.header')
     @include('layouts.LibraryLayouts.sideBar')
     <!-- ============================================================== -->
     <!-- Page wrapper  -->
     <!-- ============================================================== -->
-    <?php $books = null ?>
     <div class="page-wrapper">
         <!-- ============================================================== -->
         <!-- Bread crumb and right sidebar toggle -->
@@ -15,12 +13,12 @@
         <div class="page-breadcrumb">
             <div class="row">
                 <div class="col-12 d-flex no-block align-items-center">
-                    <h4 class="page-title">View All Books</h4>
+                    <h4 class="page-title">All Issued Books</h4>
                     <div class="ml-auto text-right">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="{{url('/')}}">Library</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">View All Books</li>
+                                <li class="breadcrumb-item active" aria-current="page">View All Issued Books</li>
                             </ol>
                         </nav>
                     </div>
@@ -41,23 +39,13 @@
             <!-- Start Page Content -->
             <!-- ============================================================== -->
             <div class="row">
+                <div class="col-md-4">
+                    <!--<form class="form-horizontal" action="#" method="get">
+                        -->
 
 
+                </div>
                 <div class="col-md-12">
-                    @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div><br />
-                    @endif
-                    @if (\Session::has('success'))
-                        <div class="alert alert-success">
-                            <p>{{ \Session::get('success') }}</p>
-                        </div><br />
-                    @endif
                     <div class="card bg-secondary text-white">
                         <div class="card-header bg-cyan text-white">
 
@@ -66,43 +54,30 @@
                             <table class="table">
                                 <thead class="thead-light">
                                 <tr>
+                                    <th scope="col" style="font-size: 12px">ID</th>
                                     <th scope="col" style="font-size: 12px">Book ID</th>
-                                    <th scope="col" style="font-size: 12px">ISBN</th>
-                                    <th scope="col" style="font-size: 12px">Book Name</th>
-                                    <th scope="col" style="font-size: 12px">Author</th>
-                                    <th scope="col" style="font-size: 12px">Barcode</th>
+
+                                    <th scope="col" style="font-size: 12px">Member ID</th>
+                                    <th scope="col" style="font-size: 12px">Issued Date</th>
                                     <th scope="col" style="font-size: 12px">Action</th>
-                                    <th scope="col" style="font-size: 12px"></th>
                                 </tr>
                                 </thead>
                                 <tbody class="customtable">
-                                @foreach($boooks as $book)
+                                @foreach($issue_books as $issueBook)
                                     <tr>
-                                        <td>{{$book['id']}}</td>
-                                        <td>{{$book['isbn']}}</td>
-                                        <td>{{$book['bookname']}}</td>
-                                        <td>{{$book['authorname']}}</td>
-                                        <td>{{$book['barcode']}}</td>
+                                        <td>{{$issueBook['id']}}</td>
+                                        <td>{{$issueBook['bookbarcode']}}</td>
 
-                                        <td>
-                                            <a  ><button class="btn btn-warning btn-xs" data-toggle="modal" data-target="#editBookModal"
+                                        <td>{{$issueBook['issuememberid']}}</td>
 
-                                                         data-id="{{$book['id']}}"
-                                                         data-isbn="{{$book['isbn']}}"
-                                                         data-bookname="{{$book['bookname']}}"
-                                                         data-authorname="{{$book['authorname']}}"
-                                                         data-barcode="{{$book['barcode']}}"
+                                        <td>{{$issueBook['created_at']}}</td>
 
-                                                         type="button">Edit</button></a>
+                                        <td style="font-size: 12px">
+                                            <button type="button" class="btn btn-success btn-sm">Edit</button>
+                                            <button type="button" class="btn btn-danger btn-sm">Delete</button>
                                         </td>
-                                        <td>
-                                            <form action="{{action('bookController@destroy', $book['id'])}}" method="post">
-                                                {{csrf_field()}}
-                                                <input name="_method" type="hidden" value="DELETE">
-                                                <button class="btn btn-danger" type="submit">Delete</button>
-                                            </form>
-                                        </td>
-                                </tr>
+                                    </tr>
+
                                 @endforeach
                                 </tbody>
                             </table>
@@ -122,24 +97,24 @@
             </div>
 
         </div>
-            <!-- ============================================================== -->
-            <!-- End PAge Content -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- Right sidebar -->
-            <!-- ============================================================== -->
-            <!-- .right-sidebar -->
-            <!-- ============================================================== -->
-            <!-- End Right sidebar -->
-            <!-- ============================================================== -->
-        </div>
         <!-- ============================================================== -->
-        <!-- Sales chart -->
+        <!-- End PAge Content -->
         <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Right sidebar -->
+        <!-- ============================================================== -->
+        <!-- .right-sidebar -->
+        <!-- ============================================================== -->
+        <!-- End Right sidebar -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- Sales chart -->
+    <!-- ============================================================== -->
 
-        <!-- ============================================================== -->
-        <!-- Recent comment and chats -->
-        <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Recent comment and chats -->
+    <!-- ============================================================== -->
     </div>
     <!-- ============================================================== -->
     <!-- End Container fluid  -->
@@ -147,11 +122,4 @@
 
 
     @include('layouts.adminLayouts.footer')
-
-    @if($books == null)
-        @include('layouts.LibraryLayouts.editBookModal')
-    @endif
-
-
-
 @endsection
