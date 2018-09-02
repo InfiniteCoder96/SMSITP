@@ -62,32 +62,11 @@
                             <div class="card-body">
                                 <div class="card-title">Return Details</div>
                                 <div class="form-group row">
-                                    <label for="returnbookname" class="col-sm-3 text-right control-label col-form-label">Return Book Name</label>
+                                    <label for="returnbookbarcode" class="col-sm-3 text-right control-label col-form-label">Book Barcode</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="returnbookname" name="returnbookname" placeholder="Book Name Here">
+                                        <input type="text" class="form-control" id="returnbookbarcode" name="returnbookbarcode" placeholder="Book Barcode Here">
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <label for="isbnnumber" class="col-sm-3 text-right control-label col-form-label">ISBN Number </label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="isbnnumber" name="isbnnumber" placeholder="ISBN Here ">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="membername" class="col-sm-3 text-right control-label col-form-label">Member Name</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="membername" name="membername" placeholder="Member Name Here">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="memberid" class="col-sm-3 text-right control-label col-form-label">Member ID</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="memberid" name="memberid" placeholder="Member ID Here">
-                                    </div>
-                                </div>
-
-
-
                             </div>
                             <div class="border-top">
 

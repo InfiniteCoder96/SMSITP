@@ -162,8 +162,8 @@ Route::resource('books','bookController');
 Route::resource('members', 'MemberController');
 Route::get('memberslist', 'MemberController@getMembers');
 
-//Route::get('/Library/returnBook', function (){
-//    return view('Admin.Library_Management.returnBook');
-//})
+Route::get('/Library/returnBook', function (){
+    return view('Admin.Library_Management.returnBook');
+});
 
 Route::resource('issue_books','issueBookController');
