@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\IssueBook;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 
 class IssueBookController extends Controller
 {
@@ -13,6 +14,8 @@ class IssueBookController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+     public $IssueBooks = null;
+
     public function index()
     {
         $issue_books = IssueBook::all()->toArray();
@@ -68,7 +71,43 @@ class IssueBookController extends Controller
      */
     public function edit($id)
     {
-        //
+
+    }
+
+    public function return(Request $request)
+    {
+        $id = $this->validate(request(), [
+            'returnbookbarcode' => 'required|min:8',
+
+        ]);
+
+        $id = $request->get('returnbookbarcode');
+
+        //return $id;
+        $current_time = Carbon::now()->toDateTimeString();
+        $this->IssueBooks = IssueBook::find($id);
+        $IssueTime = $this->IssueBooks-> created_at;
+
+        $timestamp = strtotime($IssueTime);
+     //   return $timestamp;
+
+        $current_time = strtotime($current_time);
+       // return $current_time;
+
+      //  return $current_time-$timestamp;
+
+        if($current_time-$timestamp < 604800){
+            $fine = 0;
+        }
+        else{
+            $fine = 100;
+        }
+        $IssueBooks = $this->IssueBooks;
+        //return $current_time;
+        return view('Admin.Library_Management.returnBookConfirmation',compact('IssueBooks','fine','id'));
+      //  return $IssueTime;
+       // return $fine;
+
     }
 
     /**
@@ -97,8 +136,18 @@ class IssueBookController extends Controller
 
     /**
      * get member list by first name
+     * @param Request $request
+     * @return null
      */
-    public function getMembers(){
-        die('hit');
+    public function addReturnTable(Request $request){
+
+        $IssueBooks = $request->get('issueBooks');
+        $Book = IssueBook::find($IssueBooks);
+        $confirmReturnBook = $Book;
+        //$confirmReturnBook = IssueBook::all()->toArray();
+       //return $confirmReturnBook;
+        return view('Admin.Library_Management.viewAllReturnBooks',compact('confirmReturnBook'));
     }
+
+
 }

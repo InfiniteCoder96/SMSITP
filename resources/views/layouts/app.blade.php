@@ -228,6 +228,7 @@
 @include('layouts.AcademicLayouts.updateClassTeacherDetailsModal')
 @include('layouts.LibraryLayouts.addNewBookModal')
 
+
 <!-- ============================================================== -->
 <!-- End User Profile Modal -->
 <!-- ============================================================== -->

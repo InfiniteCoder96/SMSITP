@@ -167,3 +167,12 @@ Route::get('/Library/returnBook', function (){
 });
 
 Route::resource('issue_books','issueBookController');
+
+//Route::get('return/{id}', 'IssueBookController@return');
+Route::post('return', 'IssueBookController@return');
+
+Route::get('/Library/viewReturn', function () {
+    return view('Admin.Library_Management.viewAllReturnBooks');
+});
+
+Route::post('confirmReturn', 'IssueBookController@addReturnTable');

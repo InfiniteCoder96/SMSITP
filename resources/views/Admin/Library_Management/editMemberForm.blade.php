@@ -11,12 +11,12 @@
         <div class="page-breadcrumb">
             <div class="row">
                 <div class="col-12 d-flex no-block align-items-center">
-                    <h4 class="page-title">Issue A Book</h4>
+                    <h4 class="page-title">Edit Member</h4>
                     <div class="ml-auto text-right">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="{{url('/')}}">Library</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Issue a book</li>
+                                <li class="breadcrumb-item active" aria-current="page">Edit Member</li>
                             </ol>
                         </nav>
                     </div>
@@ -55,32 +55,50 @@
                             </div><br />
                         @endif
 
-                      <form class="" method="post" action="{{url('issue_books')}}">
+                        <form class="" method="post" action="{{action('MemberController@update', $id)}}">
 
-                        {{csrf_field()}}
-
-                        <div class="card-body">
-                            <div class="card-title">Issue Details</div>
-                            <div class="form-group row">
-                                <label for="bookbarcode" class="col-sm-3 text-right control-label col-form-label">Book Barcode </label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="bookbarcode" name="bookbarcode" placeholder="Barcode Here " autofocus>
+                            {{csrf_field()}}
+                            <input name="_method" type="hidden" value="PATCH">
+                            <div class="card-body">
+                                <div class="card-title">Member Details</div>
+                                <div class="form-group row">
+                                    <label for="memberFirstName" class="col-sm-3 text-right control-label col-form-label">Member First Name</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="firstname" name="firstname" value="{{$members->firstname}}">
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="issuememberid" class="col-sm-3 text-right control-label col-form-label">Member ID</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="issuememberid" name="issuememberid" placeholder="Member ID Here">
+                                <div class="form-group row">
+                                    <label for="memberLastName" class="col-sm-3 text-right control-label col-form-label">Member Last Name </label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="lastname" name="lastname" value="{{$members->lastname}}">
+                                    </div>
                                 </div>
+                                <div class="form-group row">
+                                    <label for="memberId" class="col-sm-3 text-right control-label col-form-label">Member ID</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="memberid" name="memberid" value="{{$members->memberid}}">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="memberPhone" class="col-sm-3 text-right control-label col-form-label">Phone No</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="memberPhone" name="memberphone" value="{{$members->memberphone}}">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="memberEmail" class="col-sm-3 text-right control-label col-form-label">Member Email</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="memberemail"name="memberemail" value="{{$members->memberemail}}">
+                                    </div>
+                                </div>
+
+
                             </div>
+                            <div class="border-top">
 
-                        </div>
-                        <div class="border-top">
+                                <button type="submit" class="btn btn-primary btn-warning">Submit</button>
 
-                            <button type="submit" class="btn btn-primary btn-warning">Submit</button>
-
-                        </div>
+                            </div>
                         </form>
                     </div>
 

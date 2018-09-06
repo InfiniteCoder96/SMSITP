@@ -67,9 +67,10 @@ class MemberController extends Controller
      * @param  \App\Member  $member
      * @return \Illuminate\Http\Response
      */
-    public function edit(Member $member)
+    public function edit($id)
     {
-        //
+        $members = Member::find($id);
+        return view('Admin.Library_Management.editMemberForm',compact('members','id'));
     }
 
     /**
@@ -79,23 +80,23 @@ class MemberController extends Controller
      * @param  \App\Member  $member
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Member $member)
+    public function update(Request $request, $id)
     {
-//        $members = Member::find($request->get('memberID'));
-//        $this->validate(request(),[
-//            'firstname' => 'required',
-//            'lastname' => 'required',
-//            'memberid' => 'required',
-//            'memberphone' => 'required'
-//            'memberemail' => 'required'
-//        ]);
-//        $members->firstname = $request->get('firstname');
-//        $members->lastname = $request->get('lastname');
-//        $members->memberid = $request->get('memberid');
-//        $members->memberphone = $request->get('memberphone');
-//        $members->memberemail = $request->get('memberemail');
-//        $members->save();
-//        return redirect('books')->with('success','ISBN No:'.$books->isbn.' Book has been updated');
+       $members = Member::find($id);
+        $this->validate(request(),[
+            'firstname' => 'required',
+            'lastname' => 'required',
+            'memberid' => 'required',
+            'memberphone' => 'required',
+            'memberemail' => 'required'
+        ]);
+        $members->firstname = $request->get('firstname');
+        $members->lastname = $request->get('lastname');
+        $members->memberid = $request->get('memberid');
+        $members->memberphone = $request->get('memberphone');
+        $members->memberemail = $request->get('memberemail');
+        $members->save();
+        return redirect('members')->with('success','Member No:'.$members->membername.' Member has been updated');
     }
 
     /**
@@ -104,9 +105,11 @@ class MemberController extends Controller
      * @param  \App\Member  $member
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Member $member)
+    public function destroy($id)
     {
-        //
+        $member = Member::find($id);
+        $member->delete();
+        return redirect('members')->with('success','Member has been  deleted');
     }
 
     /**

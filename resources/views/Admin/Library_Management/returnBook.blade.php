@@ -55,7 +55,7 @@
                             </div><br />
                         @endif
 
-                      <!--  <form class="" method="post" action="{{url('members')}}">   -->
+                        <form class="" method="post" action="{{url('return')}}">
 
                             {{csrf_field()}}
 
@@ -64,7 +64,7 @@
                                 <div class="form-group row">
                                     <label for="returnbookbarcode" class="col-sm-3 text-right control-label col-form-label">Book Barcode</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="returnbookbarcode" name="returnbookbarcode" placeholder="Book Barcode Here">
+                                        <input type="text" class="form-control" id="returnbookbarcode" name="returnbookbarcode" placeholder="Book Barcode Here" autofocus>
                                     </div>
                                 </div>
                             </div>

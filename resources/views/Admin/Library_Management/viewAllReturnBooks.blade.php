@@ -13,12 +13,12 @@
         <div class="page-breadcrumb">
             <div class="row">
                 <div class="col-12 d-flex no-block align-items-center">
-                    <h4 class="page-title">All Members</h4>
+                    <h4 class="page-title">All Return Books</h4>
                     <div class="ml-auto text-right">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="{{url('/')}}">Library</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">View All Members</li>
+                                <li class="breadcrumb-item active" aria-current="page">View All Return Books</li>
                             </ol>
                         </nav>
                     </div>
@@ -54,41 +54,39 @@
                             <table class="table">
                                 <thead class="thead-light">
                                 <tr>
-                                    <th scope="col" style="font-size: 12px">ID</th>
-                                    <th scope="col" style="font-size: 12px">First Name</th>
-                                    <th scope="col" style="font-size: 12px">Last Name</th>
+
+                                    <th scope="col" style="font-size: 12px">Book Name</th>
+                                    <th scope="col" style="font-size: 12px">Member Name</th>
                                     <th scope="col" style="font-size: 12px">Member ID</th>
-                                    <th scope="col" style="font-size: 12px">Phone Number</th>
-                                    <th scope="col" style="font-size: 12px">Email</th>
-                                    <th scope="col" style="font-size: 12px">Action</th>
-                                    <th scope="col" style="font-size: 12px"></th>
+                                    <th scope="col" style="font-size: 12px">Late Fine</th>
+                                    {{--<th scope="col" style="font-size: 12px"></th>--}}
                                 </tr>
                                 </thead>
                                 <tbody class="customtable">
-                                @foreach($members as $member)
+                                {{--@foreach($members as $member)--}}
                                     <tr>
-                                        <td>{{$member['id']}}</td>
-                                        <td>{{$member['firstname']}}</td>
-                                        <td>{{$member['lastname']}}</td>
-                                        <td>{{$member['memberid']}}</td>
-                                        <td>{{$member['memberphone']}}</td>
-                                        <td>{{$member['memberemail']}}</td>
+                                        <td>{{$confirmReturnBook ->bookbarcode}}</td>
+                                        {{--<td>{{$member['firstname']}}</td>--}}
+                                        {{--<td>{{$member['lastname']}}</td>--}}
+                                        {{--<td>{{$member['memberid']}}</td>--}}
+                                        {{--<td>{{$member['memberphone']}}</td>--}}
+                                        {{--<td>{{$member['memberemail']}}</td>--}}
 
-                                        <td><a href="{{action('MemberController@edit', $member['id'])}}" class="btn btn-warning">Edit</a></td>
+                                        {{--<td><a href="{{action('MemberController@edit', $member['id'])}}" class="btn btn-warning">Edit</a></td>--}}
                                         {{--<td style="font-size: 12px">--}}
-                                            {{--<button type="button" class="btn btn-success btn-sm">Edit</button>--}}
-                                            {{--<button type="button" class="btn btn-danger btn-sm">Delete</button>--}}
+                                        {{--<button type="button" class="btn btn-success btn-sm">Edit</button>--}}
+                                        {{--<button type="button" class="btn btn-danger btn-sm">Delete</button>--}}
                                         {{--</td>--}}
-                                        <td>
-                                            <form action="{{action('MemberController@destroy', $member['id'])}}" method="post">
-                                                {{csrf_field()}}
-                                                <input name="_method" type="hidden" value="DELETE">
-                                                <button class="btn btn-danger" type="submit">Delete</button>
-                                            </form>
-                                        </td>
+                                        {{--<td>--}}
+                                            {{--<form action="{{action('MemberController@destroy', $member['id'])}}" method="post">--}}
+                                                {{--{{csrf_field()}}--}}
+                                                {{--<input name="_method" type="hidden" value="DELETE">--}}
+                                                {{--<button class="btn btn-danger" type="submit">Delete</button>--}}
+                                            {{--</form>--}}
+                                        {{--</td>--}}
                                     </tr>
 
-                                @endforeach
+                                {{--@endforeach--}}
                                 </tbody>
                             </table>
                         </div>

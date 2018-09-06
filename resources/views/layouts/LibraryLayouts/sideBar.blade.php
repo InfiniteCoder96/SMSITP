@@ -12,6 +12,7 @@
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('members')}}" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu">Members</span></a></li>
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('/Library/addNewMember')}}" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu">Add New Members</span></a></li>
                 <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('/issue_books')}}" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu">View Issued Books</span></a></li>
+                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('/confirmReturn')}}" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu">View All Returned Books</span></a></li>
 
             </ul>
         </nav>

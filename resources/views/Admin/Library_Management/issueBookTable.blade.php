@@ -54,22 +54,24 @@
                             <table class="table">
                                 <thead class="thead-light">
                                 <tr>
-                                    <th scope="col" style="font-size: 12px">ID</th>
-                                    <th scope="col" style="font-size: 12px">Book ID</th>
+                                    {{--<th scope="col" style="font-size: 12px">ID</th>--}}
+                                    <th scope="col" style="font-size: 12px">Book Barcode</th>
 
                                     <th scope="col" style="font-size: 12px">Member ID</th>
                                     <th scope="col" style="font-size: 12px">Issued Date</th>
+                                    <th scope="col" style="font-size: 12px">Return Date</th>
                                     <th scope="col" style="font-size: 12px">Action</th>
                                 </tr>
                                 </thead>
                                 <tbody class="customtable">
                                 @foreach($issue_books as $issueBook)
                                     <tr>
-                                        <td>{{$issueBook['id']}}</td>
+                                        {{--<td>{{$issueBook['id']}}</td>--}}
                                         <td>{{$issueBook['bookbarcode']}}</td>
 
                                         <td>{{$issueBook['issuememberid']}}</td>
 
+                                        <td>{{$issueBook['issuememberid']}}</td>
                                         <td>{{$issueBook['created_at']}}</td>
 
                                         <td style="font-size: 12px">
