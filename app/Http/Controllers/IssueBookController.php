@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\IssueBook;
+use App\Member;
+use App\ReturnBook;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
+use function MongoDB\BSON\toJSON;
 
 class IssueBookController extends Controller
 {
@@ -15,6 +18,8 @@ class IssueBookController extends Controller
      * @return \Illuminate\Http\Response
      */
      public $IssueBooks = null;
+    // public $currentTime = null;
+     public $fine = null;
 
     public function index()
     {
@@ -96,8 +101,9 @@ class IssueBookController extends Controller
 
       //  return $current_time-$timestamp;
 
+
         if($current_time-$timestamp < 604800){
-            $fine = 0;
+            $fine = 10;
         }
         else{
             $fine = 100;
@@ -107,6 +113,8 @@ class IssueBookController extends Controller
         return view('Admin.Library_Management.returnBookConfirmation',compact('IssueBooks','fine','id'));
       //  return $IssueTime;
        // return $fine;
+
+
 
     }
 
@@ -140,13 +148,32 @@ class IssueBookController extends Controller
      * @return null
      */
     public function addReturnTable(Request $request){
-
+        //echo "SDggsgdsgs";
         $IssueBooks = $request->get('issueBooks');
         $Book = IssueBook::find($IssueBooks);
         $confirmReturnBook = $Book;
+        $fine = $request->get('fine');
+        //dd($confirmReturnBook);
         //$confirmReturnBook = IssueBook::all()->toArray();
-       //return $confirmReturnBook;
-        return view('Admin.Library_Management.viewAllReturnBooks',compact('confirmReturnBook'));
+      //  return $confirmReturnBook;
+       // return view('Admin.Library_Management.viewAllReturnBooks',compact('confirmReturnBook'));
+//        ReturnBook::create($confirmReturnBook);
+//
+//        return back() ->with('success','Book has been returned');
+
+        $memberId = $confirmReturnBook -> issuememberid;
+        //$overallFine =
+        //dd($confirmReturnBook);
+        //dd($memberId);
+       // return ($memberId);
+        //$dataFromMembers = Member::find($memberId);
+        $dataFromMembers = Member::where('memberid', $memberId)->first();
+       // dd($dataFromMembers);
+       // return $dataFromMembers;
+        $returnCurrentTime = Carbon::now()->toDateTimeString();
+        $returnCurrentTime = strtotime($returnCurrentTime);
+       // dd($returnCurrentTime);
+
     }
 
 
