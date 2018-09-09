@@ -43,86 +43,77 @@
                     <p>{{ \Session::get('success') }}</p>
                 </div><br />
             @endif
-    <div class="card">
-    <div class="card-body">
-        <h5 class="card-title m-b-0">Student Details</h5>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title m-b-0">Student Details</h5>
+                </div>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="thead-dark">
+                        <tr>
+
+                            <th scope="col" style="font-size: 12px"></th>
+                            <th scope="col" style="font-size: 12px">SID</th>
+                            <th scope="col" style="font-size: 12px">First Name</th>
+                            <th scope="col" style="font-size: 12px">Middle name</th>
+                            <th scope="col" style="font-size: 12px">Last Name</th>
+                            <th scope="col" style="font-size: 12px">DoB</th>
+                            <th scope="col" style="font-size: 12px">Gender</th>
+                            <th scope="col" style="font-size: 12px">Address</th>
+                            <th scope="col" style="font-size: 12px">Email</th>
+                            <th scope="col" style="font-size: 12px">Telephone (Res)</th>
+                            <th scope="col" style="font-size: 12px">Telephone (Mob)</th>
+                            <th scope="col" style="font-size: 12px">Action</th>
+
+                        </tr>
+                        </thead>
+                        <tbody class="customtable">
+
+                        @foreach($students as $student)
+
+                            <tr>
+
+
+                                <td style="font-size: 12px">
+                                    <a data-toggle="modal" data-target="#loginModal"> <img src="{{asset('/storage/StudentImages/small/'.$student->image)}}" class="rounded-circle" style="width:50px;height: 50px;border: 2px solid black" ></a>
+                                </td>
+                                <td style="font-size: 12px">{{$student->sid}}</td>
+                                <td style="font-size: 12px">{{$student->first_Name}}</td>
+                                <td style="font-size: 12px">{{$student->middle_Name}}</td>
+                                <td style="font-size: 12px">{{$student->last_Name}}</td>
+                                <td style="font-size: 12px">{{$student->DoB}}</td>
+                                <td style="font-size: 12px">{{$student->Gender}}</td>
+                                <td style="font-size: 12px">{{$student->Address}}</td>
+                                <td style="font-size: 12px">{{$student->Email_Address}}</td>
+                                <td style="font-size: 12px">{{$student->Telephone_No_Mob}}</td>
+                                <td style="font-size: 12px">{{$student->Telephone_No_Res}}</td>
+                                <td style="font-size: 12px" >
+                                    <div  id="sid"> <a  class="waves-effect waves-dark" href="{{action('StudentController@edit', $student['sid'])}}"><button class="btn btn-info btn-xs" type="button">Edit</button></a></div>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <form action="{{action('StudentController@destroy', $student['sid'])}}" method="post">
+                                        {{csrf_field()}}
+                                        <input name="_method" type="hidden" value="DELETE">
+                                        <button class="btn btn-danger btn-xs" type="submit">Delete</button>
+                                    </form>
+                                    {{--<a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>--}}
+                                </td>
+                            </tr>
+
+                        @endforeach
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Container fluid  -->
+        <!-- ============================================================== -->
+
     </div>
-    <div class="table-responsive">
-        <table class="table">
-            <thead class="thead-dark">
-            <tr>
-                <th>
-                    <label class="customcheckbox m-b-20">
-                        <input type="checkbox" id="mainCheckbox" />
-                        <span class="checkmark"></span>
-                    </label>
-                </th>
-                <th scope="col" style="font-size: 12px">SID</th>
-                <th scope="col" style="font-size: 12px">DoA</th>
-                <th scope="col" style="font-size: 12px">First Name</th>
-                <th scope="col" style="font-size: 12px">Middle name</th>
-                <th scope="col" style="font-size: 12px">Last Name</th>
-                <th scope="col" style="font-size: 12px">DoB</th>
-                <th scope="col" style="font-size: 12px">Gender</th>
-                <th scope="col" style="font-size: 12px">Address</th>
-                <th scope="col" style="font-size: 12px">Email</th>
-                <th scope="col" style="font-size: 12px">Telephone (Res)</th>
-                <th scope="col" style="font-size: 12px">Telephone (Mob)</th>
-                <th scope="col" style="font-size: 12px">Action</th>
-
-            </tr>
-            </thead>
-            <tbody class="customtable">
-
-            @foreach($students as $student)
-
-                <tr>
-                    <th>
-                        <label class="customcheckbox">
-                            <input type="checkbox" class="listCheckbox" />
-                            <span class="checkmark"></span>
-                        </label>
-                    </th>
-
-
-                    <td style="font-size: 12px">{{$student->sid}}</td>
-                    <td style="font-size: 12px">{{$student->created_at}}</td>
-                    <td style="font-size: 12px">{{$student->first_Name}}</td>
-                    <td style="font-size: 12px">{{$student->middle_Name}}</td>
-                    <td style="font-size: 12px">{{$student->last_Name}}</td>
-                    <td style="font-size: 12px">{{$student->DoB}}</td>
-                    <td style="font-size: 12px">{{$student->Gender}}</td>
-                    <td style="font-size: 12px">{{$student->Address}}</td>
-                    <td style="font-size: 12px">{{$student->Email_Address}}</td>
-                    <td style="font-size: 12px">{{$student->Telephone_No_Mob}}</td>
-                    <td style="font-size: 12px">{{$student->Telephone_No_Res}}</td>
-                    <td style="font-size: 12px" >
-                        <div  id="sid"> <a  class="waves-effect waves-dark" href="{{action('StudentController@edit', $student['sid'])}}"><button class="btn btn-info btn-xs" type="button">Edit</button></a></div>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <form action="{{action('StudentController@destroy', $student['sid'])}}" method="post">
-                                {{csrf_field()}}
-                                <input name="_method" type="hidden" value="DELETE">
-                                <button class="btn btn-danger btn-xs" type="submit">Delete</button>
-                            </form>
-                            {{--<a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>--}}
-                    </td>
-                </tr>
-
-            @endforeach
-
-            </tbody>
-        </table>
-    </div>
-</div>
-
-</div>
-<!-- ============================================================== -->
-<!-- End Container fluid  -->
-<!-- ============================================================== -->
-
-</div>
-<!-- ============================================================== -->
-<!-- End Page wrapper  -->
-<!-- ============================================================== -->
-`@include('layouts.adminLayouts.footer')
+    <!-- ============================================================== -->
+    <!-- End Page wrapper  -->
+    <!-- ============================================================== -->
+    `@include('layouts.adminLayouts.footer')
 
 @endsection

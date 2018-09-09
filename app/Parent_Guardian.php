@@ -19,6 +19,6 @@ class Parent_Guardian extends Model
 
     public function student()
     {
-        return $this->hasMany('App\student','NIC','child_id');
+        return $this->hasMany('App\student','sid','child_id');
     }
 }

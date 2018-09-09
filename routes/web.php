@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -127,15 +129,25 @@ Route::get('/Tadmin/student-report', function (){
 Route::get('/Tadmin/staff-report', function (){
     return view('Admin.Transport_Management.staff_report') ;
 });
-// Administrator Routes
 
+// Authentication Routes
+Route::get('/login_user','customAuthController@showLoginForm')->name('showLoginForm');
+Route::post('/login_user','customAuthController@login')->name('login');
+
+Route::get('/register_admin','customAuthController@showRegisterForm')->name('showRegisterForm');
+Route::post('/register_admin','customAuthController@register')->name('register');
+
+Route::post('/logout_user','customAuthController@logout')->name('logout');
+Route::resource('students','StudentController');
+
+// Administrator Routes
 Route::match(['get','post'],'/admin/manage-students', 'StudentController@addStudent');
 
-Route::get('/admin/dashboard', function (){
- return view('Admin.User_Management.Admin.admin_view');
-});
+Route::get('/admin/dashboard', 'AdminController@showAdminDashboard');
 
-Route::resource('students','StudentController');
+Route::get('search_student', 'StudentController@search')->name('search');
+Route::get('search','StudentController@showSearchView')->name('showSearchView');
+
 
 //Library Manager Routes
 

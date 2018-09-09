@@ -3,9 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Scout\Searchable;
 
 class Student extends Model
 {
+    use Searchable;
+
     protected $primaryKey = 'sid';
 
     protected $fillable = [
@@ -17,7 +20,7 @@ class Student extends Model
 
     public function Parent_Guardian()
     {
-        return $this->hasOne('App\Parent__Guardian');
+        return $this->hasOne(Parent_Guardian::class,'child_id','sid');
     }
 
     public function Clasz()
