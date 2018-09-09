@@ -76,8 +76,8 @@
                             {{csrf_field()}}
                         </form>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
+                        <a href="{{ url('login_user') }}">Login</a>
+                        <a href="{{ url('register_admin') }}">Register</a>
                     @endif
                 </div>
             @endif
