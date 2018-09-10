@@ -46,9 +46,11 @@ class customAuthController extends Controller
         ]);
 
         if(Auth::guard('admin')->attempt(['email' => $request->email,'password' => $request ->password, 'role' => 'Admin'])){
-            return redirect('/dashboard')->with('Status','You have registered successfully');
+            return redirect('/admin/dashboard');
         }
-        elseif(Auth::guard('admin')->attempt(['email' => $request->email,'password' => $request ->password, 'role' => 'Admin']))
+        elseif(Auth::guard('admin')->attempt(['email' => $request->email,'password' => $request ->password, 'role' => 'LibraryMgr'])){
+            return redirect('/library/dashboard');
+        }
 
             return 'failed';
 

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class AdminController extends Controller
+class LibraryMgrController extends Controller
 {
     public function __construct()
     {
@@ -13,9 +13,9 @@ class AdminController extends Controller
     }
 
     public function showAdminDashboard(){
-        if(Auth::user()->role == 'Admin')
-            return view('Admin.User_Management.Admin.admin_view');
+        if(Auth::user()->role == 'LibraryMgr')
+            return view('Admin.Library_Management.dashboard');
         else
-            return redirect('/login_user')->with('Status','Access Denied');
+            return redirect('/access_denied');
     }
 }

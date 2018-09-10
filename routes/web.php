@@ -140,6 +140,10 @@ Route::post('/register_admin','customAuthController@register')->name('register')
 Route::post('/logout_user','customAuthController@logout')->name('logout');
 Route::resource('students','StudentController');
 
+Route::get('/access_denied',function (){
+    return view('auth.access_denied');
+});
+
 // Administrator Routes
 Route::match(['get','post'],'/admin/manage-students', 'StudentController@addStudent');
 
@@ -148,12 +152,18 @@ Route::get('/admin/dashboard', 'AdminController@showAdminDashboard');
 Route::get('search_student', 'StudentController@search')->name('search');
 Route::get('search','StudentController@showSearchView')->name('showSearchView');
 
+// front end Routes
+Route::get('/events',function(){
+    return view('Frontend.events');
+});
+
+Route::get('/home',function(){
+    return view('Frontend.index');
+});
 
 //Library Manager Routes
 
-Route::get('/library/dashboard', function (){
-    return view('Admin.Library_Management.dashboard') ;
-});
+Route::get('/library/dashboard', 'LibraryMgrController@showAdminDashboard');
 
 Route::get('/Library/viewAllMembers', function (){
     return view('Admin.Library_Management.viewAllMembers') ;
