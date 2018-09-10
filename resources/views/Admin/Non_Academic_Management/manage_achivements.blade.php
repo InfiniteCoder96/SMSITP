@@ -4,7 +4,6 @@
 
     @include('layouts.NonAcademicLayouts.header')
     @include('layouts.NonAcademicLayouts.sideBar')
-
     <div class="page-wrapper">
         <div class="page-breadcrumb">
             <div class="row">
@@ -14,7 +13,7 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Sports Management</li>
+                                <li class="breadcrumb-item active" aria-current="page">Sport Management</li>
                                 <li class="breadcrumb-item active" aria-current="page">Achievements</li>
                             </ol>
                         </nav>
@@ -23,43 +22,84 @@
             </div>
         </div>
         <div class="container-fluid">
-            {{--<div class="row">--}}
-            {{--<div class="col-md-4">--}}
-            {{--<div class="card text-white bg-success mb-3" >--}}
-            {{--<div class="card-header bg-dark">Class Teachers</div>--}}
-            {{--<div class="card-body">--}}
-            {{--<h5 class="card-title">Everything Fine</h5>--}}
-
-            {{--</div>--}}
-            {{--</div>--}}
-            {{--</div>--}}
-            {{--<div class="col-md-4">--}}
-            {{--<div class="card text-white bg-danger mb-3" >--}}
-            {{--<div class="card-header bg-dark">Class Students Amount</div>--}}
-            {{--<div class="card-body">--}}
-            {{--<h5 class="card-title">Something Wrong in Class 8A</h5>--}}
-
-            {{--</div>--}}
-            {{--</div>--}}
-            {{--</div>--}}
-            {{--<div class="col-md-4">--}}
-            {{--<div class="card text-white bg-warning mb-3" >--}}
-            {{--<div class="card-header bg-dark">Absent Teachers</div>--}}
-            {{--<div class="card-body">--}}
-            {{--<h5 class="card-title">5 class teachers absent</h5>--}}
-
-            {{--</div>--}}
-            {{--</div>--}}
-            {{--</div>--}}
+            <h2></h2><br  />
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div><br />
+            @endif
+            @if (\Session::has('success'))
+                <div class="alert alert-success">
+                    <p>{{ \Session::get('success') }}</p>
+                </div><br />
+            @endif
 
 
-            <div class="row-md-4">
+            <div class="row">
                 <div class="col-md-4">
+                    <form class="form-horizontal" action="{{url('/achivements')}}" method="post">
+                        {{csrf_field()}}
+
+
+                        <div class="card bg-dark text-white">
+                            <div class="card-header bg-danger text-white">
+                                <h5 class="card-title m-b-0">Add New Achievements</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group row">
+                                    <label for="sport_id" class="col-sm-3 text-right control-label col-form-label">Sport ID</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" name="sport_id" placeholder="Sport ID Name Here" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="sport_name" class="col-sm-3 text-right control-label col-form-label">Sport Name</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" name="sport_name" placeholder="Coach Name Here" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="coach_id" class="col-sm-3 text-right control-label col-form-label">Coach ID</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" name="coach_id" placeholder="Coach ID Name Here" required>
+
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="achivement" class="col-sm-3 text-right control-label col-form-label">Achievements</label>
+                                    <div class="col-sm-9">
+                                        <input type="file" class="form-control" name="achivement" placeholder="Achievement name Here" required>
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+                            <div class="border-top">
+                                <div class="card-body">
+                                    <button type="submit" class="btn btn-outline-success">Submit</button>
+                                    <button type="reset" class="btn btn-outline-warning">Reset</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+
 
 
                     </form>
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-8">
 
 
                     <div class="col-md-12">
@@ -69,28 +109,28 @@
                             <div class="card-header bg-info text-white">
                                 <div class="row">
                                     <div class="col-sm-2">
-                                        <h5 class="card-title m-b-0">Acheivements</h5>
+                                        <h5 class="card-title m-b-0">Sport Achievement Details</h5>
                                     </div>
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <div class="col-sm-3">
-                                        <input type="text" class="form-control" id="fname" placeholder="Search">
+
 
                                     </div>
-                                    <button class="btn btn-danger btn-xm">Search</button>
-                                    <div class="col-sm-2">
-                                        <input type="text" class="form-control" id="fname" value="">
+
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" id="fname" placeholder="Search">
                                     </div>
-                                    <button class="btn btn-danger btn-xm">Go</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <button class="btn btn-danger btn-xm">Export</button>
+
+                                        <button class="btn btn-danger btn-xm">Search</button>
+
+
                                 </div>
 
 
                             </div>
                             <div class="table-responsive">
-
                                 <table class="table">
                                     <thead class="thead-dark">
-
                                     <tr>
                                         <th>
                                             <label class="customcheckbox m-b-20">
@@ -98,124 +138,47 @@
                                                 <span class="checkmark"></span>
                                             </label>
                                         </th>
-                                        <th scope="col" style="font-size: 12px">Event ID</th>
-                                        <th scope="col" style="font-size: 12px">Event Name</th>
-                                        <th scope="col" style="font-size: 12px">Teacher-IN-Charge ID</th>
-                                        <th scope="col" style="font-size: 12px">Achievments</th>
+                                        <th scope="col" style="font-size: 12px">Sport ID</th>
+                                        <th scope="col" style="font-size: 12px">Sport Name</th>
+                                        <th scope="col" style="font-size: 12px">Coach ID</th>
+                                        <th scope="col" style="font-size: 12px">Achievements</th>
                                         <th scope="col" style="font-size: 12px">Action</th>
 
                                     </tr>
                                     </thead>
-
-
                                     <tbody class="customtable">
+                                    @foreach($categories as $achivement)
 
 
-                                    <tr>
-                                        <th>
-                                            <label class="customcheckbox">
-                                                <input type="checkbox" class="listCheckbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </th>
 
 
-                                        <td style="font-size: 12px">FA</td>
-                                        <td style="font-size: 12px">Hocky</td>
-                                        <td style="font-size: 12px">C</td>
-                                        <td style="font-size: 12px">ALL Island 2</td>
-                                        <td style="font-size: 12px">
 
-                                            <a class="waves-effect waves-light" href=""><i class="mdi mdi-pencil font-20"></i>
-                                            </a><a class="waves-effect waves-light" href=""><i class="mdi mdi-delete font-20"></i>
-                                            </a></td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <label class="customcheckbox">
-                                                <input type="checkbox" class="listCheckbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </th>
+                                        <tr>
+                                            <th>
+                                                <label class="customcheckbox">
+                                                    <input type="checkbox" class="listCheckbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </th>
 
-                                        <td style="font-size: 12px">FA</td>
-                                        <td style="font-size: 12px">Foot Ball</td>
-                                        <td style="font-size: 12px">A</td>
-                                        <td style="font-size: 12px">All Island 2</td>
-                                        <td style="font-size: 12px">
-                                            <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
-                                            </a><a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
-                                            </a></td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <label class="customcheckbox">
-                                                <input type="checkbox" class="listCheckbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </th>
 
-                                        <td style="font-size: 12px"></td>
-                                        <td style="font-size: 12px"></td>
-                                        <td style="font-size: 12px">A</td>
-                                        <td style="font-size: 12px"></td>
-                                        <td style="font-size: 12px">
-                                            <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
-                                            </a><a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
-                                            </a></td>
-                                    </tr>
+                                            <td style="font-size: 12px">{{$achivement['sport_id']}}</td>
+                                            <td style="font-size: 12px">{{$achivement['sport_name']}}</td>
+                                            <td style="font-size: 12px">{{$achivement['coach_id']}}</td>
+                                            <td style="font-size: 12px">{{$achivement['achivement']}}</td>
+                                            <td style="font-size: 12px">
+                                                <a class="waves-effect waves-dark" href="{{action('achivementController@edit',$achivement['sport_id'])}}"><i class="mdi mdi-pencil font-20"></i></a>
 
-                                    <tr>
-                                        <th>
-                                            <label class="customcheckbox">
-                                                <input type="checkbox" class="listCheckbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </th>
+                                                <form action="{{action('achivementController@destroy', $achivement['sport_id'])}}" method="post">
 
-                                        <td style="font-size: 12px"></td>
-                                        <td style="font-size: 12px"></td>
-                                        <td style="font-size: 12px">A</td>
-                                        <td style="font-size: 12px"></td>
-                                        <td style="font-size: 12px">
-                                            <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
-                                            </a><a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
-                                            </a></td>
-                                    </tr>
-                                    <tr>
-                                    <th>
-                                        <label class="customcheckbox">
-                                            <input type="checkbox" class="listCheckbox">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </th>
+                                                    {{csrf_field()}}
+                                                    <input name="_method" type="hidden" value="DELETE">
+                                                    <button class="btn btn-danger" type="submit">Delete</button>
+                                                </form>
+                                            </td>
+                                        </tr>
 
-                                    <td style="font-size: 12px"></td>
-                                    <td style="font-size: 12px"></td>
-                                    <td style="font-size: 12px">A</td>
-                                    <td style="font-size: 12px"></td>
-                                    <td style="font-size: 12px">
-                                        <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
-                                        </a><a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
-                                        </a></td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <label class="customcheckbox">
-                                                <input type="checkbox" class="listCheckbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </th>
-
-                                        <td style="font-size: 12px"></td>
-                                        <td style="font-size: 12px"></td>
-                                        <td style="font-size: 12px">A</td>
-                                        <td style="font-size: 12px"></td>
-                                        <td style="font-size: 12px">
-                                            <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
-                                            </a><a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
-                                            </a></td>
-                                    </tr>
+                                    @endforeach
                                     </tbody>
 
                                 </table>
@@ -232,25 +195,17 @@
 
                             </div>
                         </div>
-
                     </div>
 
-                    <!-- ============================================================== -->
-                    <!-- Start Page Content -->
-                    <!-- ============================================================== -->
-
-
-
-
-                    <!-- ============================================================== -->
-                    <!-- Start Page Content -->
-                    <!-- ============================================================== -->
 
                 </div>
 
             </div>
-
+        </div>
+    </div>
 
 
     @include('layouts.AcademicLayouts.footer')
 
+
+@endsection

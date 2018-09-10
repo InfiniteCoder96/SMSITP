@@ -22,6 +22,21 @@
             </div>
         </div>
         <div class="container-fluid">
+            <h2></h2><br  />
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div><br />
+            @endif
+            @if (\Session::has('success'))
+                <div class="alert alert-success">
+                    <p>{{ \Session::get('success') }}</p>
+                </div><br />
+            @endif
             {{--<div class="row">--}}
             {{--<div class="col-md-4">--}}
             {{--<div class="card text-white bg-success mb-3" >--}}
@@ -54,8 +69,8 @@
 
             <div class="row">
                 <div class="col-md-4">
-                    <form class="form-horizontal" action="#" method="get">
-
+                    <form class="form-horizontal" action="{{url('t_incharges')}}" method="post">
+                        {{csrf_field()}}
 
 
                         <div class="card bg-dark text-white">
@@ -64,32 +79,27 @@
                             </div>
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">Teacher Incharge ID</label>
+                                    <label for="teacher_id" class="col-sm-3 text-right control-label col-form-label">Teacher Incharge ID</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="fname" placeholder="Sport ID Name Here" required>
+                                        <input type="text" class="form-control" name="teacher_id" placeholder="teacher ID Name Here" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">Sports ID</label>
+                                    <label for="teacher_name" class="col-sm-3 text-right control-label col-form-label">Teacher In charge Name</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="fname" placeholder="Sport Name Here" required>
+                                        <input type="text" class="form-control" name="teacher_name" placeholder="Teacher Name Here" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label"></label>
+                                    <label for="sport_id" class="col-sm-3 text-right control-label col-form-label">Sports ID </label>
                                     <div class="col-sm-9">
-                                        <select class="select2 form-control custom-select" style="width: 100%; height:36px;" required>
-                                            <option selected disabled>Select Team No</option>
-                                            <option value="AK">G1T1</option>
-                                            <option value="AK">G1T2</option>
-                                            <option value="WA">G1T3</option>
-                                        </select>
+                                        <input type="text" class="form-control" name="sport_id" placeholder="Sport ID Name Here" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">Approval Letter</label>
+                                    <label for="o_docs" class="col-sm-3 text-right control-label col-form-label">Other Documents</label>
                                     <div class="col-sm-9">
-                                        <input type="file" class="form-control" id="fname" placeholder="Teacher-in-charge name Here" required>
+                                        <input type="file" class="form-control" name="o_docs" placeholder="Other Documents Here" required>
                                     </div>
                                 </div>
 
@@ -130,15 +140,14 @@
                                     </div>
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <div class="col-sm-3">
-                                        <input type="text" class="form-control" id="fname" placeholder="Search">
+
 
                                     </div>
-                                    <button class="btn btn-danger btn-xm">Search</button>
-                                    <div class="col-sm-2">
-                                        <input type="text" class="form-control" id="fname" value="10">
+
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" id="fname" placeholder="Search">
                                     </div>
-                                    <button class="btn btn-danger btn-xm">Go</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <button class="btn btn-danger btn-xm">Export</button>
+                                    <button class="btn btn-danger btn-xm">Search</button>
                                 </div>
 
 
@@ -153,15 +162,16 @@
                                                 <span class="checkmark"></span>
                                             </label>
                                         </th>
+                                        <th scope="col" style="font-size: 12px">Teacher Incharge ID</th>
                                         <th scope="col" style="font-size: 12px">Teacher Incharge Name</th>
                                         <th scope="col" style="font-size: 12px">Sport ID</th>
-                                        <th scope="col" style="font-size: 12px">Team No</th>
-                                        <th scope="col" style="font-size: 12px">Achievement</th>
+                                        <th scope="col" style="font-size: 12px">Other Documents</th>
                                         <th scope="col" style="font-size: 12px">Action</th>
 
                                     </tr>
                                     </thead>
                                     <tbody class="customtable">
+                                    @foreach($t_incharges as $t_incharge)
 
 
 
@@ -176,33 +186,27 @@
                                         </th>
 
 
-                                        <td style="font-size: 12px">FA</td>
-                                        <td style="font-size: 12px">Foot Ball</td>
-                                        <td style="font-size: 12px">A</td>
-                                        <td style="font-size: 12px">All Island 2</td>
+
+                                        <td style="font-size: 12px">{{$t_incharge['teacher_id']}}</td>
+                                        <td style="font-size: 12px">{{$t_incharge['teacher_name']}}</td>
+                                        <td style="font-size: 12px">{{$t_incharge['sport_id']}}</td>
+                                        <td style="font-size: 12px">{{$t_incharge['o_docs']}}</td>
                                         <td style="font-size: 12px">
-                                            <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
-                                            </a><a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
-                                            </a></td>
+                                            <a class="waves-effect waves-dark" href="{{action('t_inchargeController@edit', $t_incharge['teacher_id'])}}"><i class="mdi mdi-pencil font-20"></i></a>
+
+                                            <form action="{{action('t_inchargeController@destroy', $t_incharge['teacher_id'])}}" method="post">
+
+                                                {{csrf_field()}}
+                                                <input name="_method" type="hidden" value="DELETE">
+                                                <button class="btn btn-danger" type="submit">Delete</button>
+                                            </form>
+                                        </td>
                                     </tr>
-                                    <tr>
-                                        <th>
-                                            <label class="customcheckbox">
-                                                <input type="checkbox" class="listCheckbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </th>
+
+                                    @endforeach
 
 
-                                        <td style="font-size: 12px">FA</td>
-                                        <td style="font-size: 12px">Foot Ball</td>
-                                        <td style="font-size: 12px">A</td>
-                                        <td style="font-size: 12px">All Island 2</td>
-                                        <td style="font-size: 12px">
-                                            <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
-                                            </a><a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
-                                            </a></td>
-                                    </tr>
+
 
 
                                     </tbody>
@@ -238,8 +242,10 @@
                 </div>
 
             </div>
-
+        </div>
+    </div>
 
 
     @include('layouts.AcademicLayouts.footer')
 
+@endsection

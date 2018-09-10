@@ -133,9 +133,19 @@ Route::get('/NAadmin/update_achivements', function (){
     return view('Admin.Non_Academic_Management.update_achivements') ;
 
 });
-Route::resource('manage_sport_students','manage_sport_studentController');
+
+Route::get('search', 's_studentController@search');
 
 Route::resource('sports_categories','sports_categoriesController');
+
+Route::resource('s_students','s_studentController');
+
+Route::resource('coaches','coachController');
+
+Route::resource('t_incharges','t_inchargeController');
+
+Route::resource('achivements','achivementController');
+
 
 //Transport Manager Routes
 

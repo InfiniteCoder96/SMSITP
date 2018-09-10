@@ -37,34 +37,6 @@
                     <p>{{ \Session::get('success') }}</p>
                 </div><br />
             @endif
-            {{--<div class="row">--}}
-                {{--<div class="col-md-4">--}}
-                    {{--<div class="card text-white bg-success mb-3" >--}}
-                        {{--<div class="card-header bg-dark">Class Teachers</div>--}}
-                        {{--<div class="card-body">--}}
-                            {{--<h5 class="card-title">Everything Fine</h5>--}}
-
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="col-md-4">--}}
-                    {{--<div class="card text-white bg-danger mb-3" >--}}
-                        {{--<div class="card-header bg-dark">Class Students Amount</div>--}}
-                        {{--<div class="card-body">--}}
-                            {{--<h5 class="card-title">Something Wrong in Class 8A</h5>--}}
-
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="col-md-4">--}}
-                    {{--<div class="card text-white bg-warning mb-3" >--}}
-                        {{--<div class="card-header bg-dark">Absent Teachers</div>--}}
-                        {{--<div class="card-body">--}}
-                            {{--<h5 class="card-title">5 class teachers absent</h5>--}}
-
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
 
 
             <div class="row">
@@ -79,27 +51,27 @@
                             </div>
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">Sport ID</label>
+                                    <label for="sports_id" class="col-sm-3 text-right control-label col-form-label">Sport ID</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="fname" placeholder="Sport ID Name Here" required>
+                                        <input type="text" class="form-control" name="sports_id" placeholder="Sport ID Name Here" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">Sport Name</label>
+                                    <label for="sports_name" class="col-sm-3 text-right control-label col-form-label">Sport Name</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="fname" placeholder="Sport Name Here" required>
+                                        <input type="text" class="form-control" name="sports_name" placeholder="Sport Name Here" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">Coach ID</label>
+                                    <label for="coach_id" class="col-sm-3 text-right control-label col-form-label">Coach ID</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="fname" placeholder="Coach Name Here" required>
+                                        <input type="text" class="form-control" name="coach_id" placeholder="Coach ID Here" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">Teacher-in-charge ID</label>
+                                    <label for="teacher_in_charge_id" class="col-sm-3 text-right control-label col-form-label">Teacher-in-charge ID</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="fname" placeholder="Teacher-in-charge name Here" required>
+                                        <input type="text" class="form-control" name="teacher_in_charge_id" placeholder="Teacher-in-charge ID Here" required>
                                     </div>
                                 </div>
 
@@ -150,6 +122,7 @@
                                 </tr>
                                 </thead>
                                 <tbody class="customtable">
+                                @foreach($categories as $sport_categorie)
 
                                 {{--code for view data from databse--}}
 
@@ -164,34 +137,23 @@
                                     </th>
 
 
-                                    <td style="font-size: 12px">Foot Ball</td>
-                                    <td style="font-size: 12px">FA</td>
-                                    <td style="font-size: 12px">Karunadasa D.A.</td>
-                                    <td style="font-size: 12px">Karunadasa D.A.</td>
+                                    <td style="font-size: 12px">{{$sport_categorie['sports_id']}}</td>
+                                    <td style="font-size: 12px">{{$sport_categorie['sports_name']}}</td>
+                                    <td style="font-size: 12px">{{$sport_categorie['coach_id']}}</td>
+                                    <td style="font-size: 12px">{{$sport_categorie['teacher_in_charge_id']}}</td>
                                     <td style="font-size: 12px">
-                                        <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
-                                            <a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
+                                        <a class="waves-effect waves-dark" href="{{action('sports_categoriesController@edit', $sport_categorie['sports_id'])}}"><i class="mdi mdi-pencil font-20"></i></a>
+
+                                            <form action="{{action('sports_categoriesController@destroy', $sport_categorie['sports_id'])}}" method="post">
+
+                                            {{csrf_field()}}
+                                            <input name="_method" type="hidden" value="DELETE">
+                                            <button class="btn btn-danger" type="submit">Delete</button>
+                                        </form>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <th>
-                                        <label class="customcheckbox">
-                                            <input type="checkbox" class="listCheckbox" />
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </th>
 
-
-                                    <td style="font-size: 12px">Foot Ball</td>
-                                    <td style="font-size: 12px">FA</td>
-                                    <td style="font-size: 12px">Karunadasa D.A.</td>
-                                    <td style="font-size: 12px">Karunadasa D.A.</td>
-                                    <td style="font-size: 12px">
-                                        <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
-                                            <a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
-                                    </td>
-                                </tr>
-                                {{--@endforeach--}}
+                                @endforeach
 
                                 </tbody>
                             </table>

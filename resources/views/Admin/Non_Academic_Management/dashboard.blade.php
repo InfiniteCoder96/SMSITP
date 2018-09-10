@@ -19,7 +19,7 @@
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">NON Academic management</li>
                                 <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-                                <bu
+
                             </ol>
                         </nav>
                     </div>
@@ -34,91 +34,61 @@
         <!-- ============================================================== -->
         <div class="container-fluid">
             <div class="row">
-            <div class="col-md-6 col-lg-3">
+            <div class="col-md-3 col-lg-3">
                 <div class="card card-hover">
-                    <div class="box bg-info text-center">
-                        <h1 class="font-light text-white">
-                        <h6 class="text-white">Student </h6>
+                    <div class="box bg-orange text-center">
+                        <a href="{{url('/s_students')}}"> <h1 class="font-light text-white"><i class="fa-2x fas fa-users"></i></h1>
+                            <h6 class="text-white">Student </h6></a>
 
                     </div>
                 </div>
             </div>
             <!-- Column -->
-            <div class="col-md-6 col-lg-3">
+            <div class="col-md-3 col-lg-3">
                 <div class="card card-hover">
                     <div class="box bg-secondary text-center">
-                        <h1 class="font-light text-white"><i class=></i></h1>
+                        <a href="{{url('/t_incharges')}}"> <h1 class="font-light text-white"><i class="fa-2x fas fa-users"></i></h1>
                         <h6 class="text-white">Teachers-IN-Charge</h6>
                     </div>
+
                 </div>
             </div>
             <!-- Column -->
-            <div class="col-md-6 col-lg-3" style="height = 40px">
+                <div class="col-md-3 col-lg-3" style="height: 40px">
                 <div class="card card-hover">
                     <div class="box bg-info text-center">
-                        <h1 class="font-light text-white"><i class=></i></h1>
-                        <h6 class="text-white">Coaches</h6>
+                        <a href="{{url('/coaches')}}"><h1 class="font-light text-white"><i class="fa-2x fas fa-users"></i></h1>
+                            <h6 class="text-white">Coaches</h6></a>
                     </div>
-                </div>
-            </div>
+                </div></div>
+
 
             <!-- Column -->
-            <div class="col-md-6 col-lg-3">
+            <div class="col-md-3 col-lg-3">
                 <div class="card card-hover">
-                    <div class="box bg-secondary text-center">
-                        <h1 class="font-light text-white"><i class=""></i></h1>
-                        <h6 class="text-white">Sports Categories</h6>
+                    <div class="box bg-success text-center">
+                        <a href="{{url('/sports_categories')}}"><h1 class="font-light text-white"><i class="fa-2x fas fa-baseball-ball"></i></h1>
+                            <h6 class="text-white">Sports Categories</h6></a>
                     </div>
                 </div>
             </div>
 
-        </div>
-            <div class="row">
-                <!-- Column -->
-                <div class="col-md-6 col-lg-3 ">
-
-                    <div class="card card-hover ">
-                        <div class="box bg-secondary text-center">
-                            <h1 class="font-light text-white"><i class=""></i></h1>
-                            <h6 class="text-white">Sports Events</h6>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Column -->
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-3 col-lg-3">
                     <div class="card card-hover">
-                        <div class="box bg-info text-center">
-                            <h1 class="font-light text-white"><i class=""></i></h1>
-                            <h6 class="text-white">Achievements</h6>
-                        </div>
-                    </div>
-                </div>
-                <!-- Column -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="card card-hover">
-                        <div class="box bg-secondary text-center">
-                            <h1 class="font-light text-white"><i class=""></i></h1>
-                            <h6 class="text-white">Time Table</h6>
+                        <div class="box bg-purple text-center">
+                            <a href="{{url('/achivements')}}"><h1 class="font-light text-white"><i class="fa-2x fas fa-baseball-ball"></i></h1>
+                                <h6 class="text-white">Achievements</h6></a>
                         </div>
                     </div>
                 </div>
 
-
-                <!-- Column -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="card card-hover">
-                        <div class="box bg-info text-center">
-                            <h1 class="font-light text-white"><i class="w-30px"></i></h1>
-                            <h6 class="text-white">Noticeboard</h6>
-                        </div>
-                    </div>
-                </div>
 
             </div>
 
+
+
             <div class="row">
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-3 col-lg-3">
                     <div class="span12">
                         <table class="table-condensed table-bordered table-striped">
                             <thead>
@@ -196,11 +166,12 @@
                                 </table>
                             </div>
                         </div>
+            </div>
+            </div>
+        </div>
 
-                    </div>
 
 
-                </div>
 
 
     @include('layouts.adminLayouts.footer')

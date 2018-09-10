@@ -3,9 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Scout\Searchable;
 
 class Student extends Model
 {
+    use Searchable;
+
     protected $primaryKey = 'sid';
 
     protected $fillable = [
@@ -14,4 +17,5 @@ class Student extends Model
         'Telephone_No_Mob','Telephone_No_Res','birth_certificate_no','religion','race',
         'country','nationality','blood_group','Known_Illnesses','Known_Allergies'
     ];
+
 }

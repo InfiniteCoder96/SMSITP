@@ -17,7 +17,7 @@ class CreateSportCategoriesTable extends Migration
             $table->increments('sports_id');
             $table->string('sports_name');
             $table->integer('coach_id');
-            $table->integer('teacher_in_charge_id ');
+            $table->integer('teacher_in_charge_id');
 
             $table->timestamps();
         });

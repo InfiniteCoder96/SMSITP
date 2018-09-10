@@ -15,8 +15,8 @@ class sports_categoriesController extends Controller
      */
     public function index()
     {
-        $sports_categories = sport_categories::all()->toArray();
-        return view('sports_categories.index', compact('sports_categories'));
+        $categories = sport_categories::all()->toArray();
+        return view('Admin.Non_Academic_Management.manage_sports', compact('categories'));
         //
     }
 
@@ -38,11 +38,11 @@ class sports_categoriesController extends Controller
      */
     public function store(Request $request)
     {
-        $sport_categories = $this->validate(request(), [
-            'sports_id' => 'required|numeric',
+        $sport_categories = $this->validate(request(),[
+            'sports_id' => 'required|numeric|min:1|max:200',
             'sports_name' => 'required',
-            'coach_id'=>'required|numeric',
-            'teacher_in_charge_id'=>'required|numeric'
+            'coach_id'=>'required|numeric|min:1|max:100',
+            'teacher_in_charge_id'=>'required|numeric|min:1|max:400'
         ]);
        sport_categories::create($sport_categories);
         return back()->with('success', 'sports has been added');
@@ -64,8 +64,10 @@ class sports_categoriesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($sports_id)
     {
+        $sport_categories = sport_categories::find($sports_id);
+        return view('Admin.Non_Academic_Management.update_sports',compact('sport_categories','sports_id'));
         //
     }
 
@@ -76,8 +78,21 @@ class sports_categoriesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $sports_id)
     {
+        $sport_categories = sport_categories::find($sports_id);
+        $this->validate(request(), [
+            'sports_id' => 'required|numeric|min:1|max:200',
+            'sports_name' => 'required',
+            'coach_id'=>'required|numeric|min:1|max:100',
+            'teacher_in_charge_id'=>'required|numeric|min:1|max:400'
+        ]);
+        $sport_categories->sports_id = $request->get('sports_id');
+        $sport_categories->sports_name = $request->get('sports_name');
+        $sport_categories->coach_id = $request->get('coach_id');
+        $sport_categories->teacher_in_charge_id = $request->get('teacher_in_charge_id');
+        $sport_categories->save();
+        return redirect('sports_categories')->with('success','sport has been updated');
         //
     }
 
@@ -87,8 +102,12 @@ class sports_categoriesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($sports_id)
     {
+
+        $sport_categories = sport_categories::find($sports_id);
+        $sport_categories->delete();
+        return redirect('sports_categories')->with('success','sport has been  deleted');
         //
     }
 }
