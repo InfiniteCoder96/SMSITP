@@ -114,6 +114,6 @@
     <!-- ============================================================== -->
     <!-- End Page wrapper  -->
     <!-- ============================================================== -->
-    `@include('layouts.adminLayouts.footer')
+    @include('layouts.adminLayouts.footer')
 
 @endsection

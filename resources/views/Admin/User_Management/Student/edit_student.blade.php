@@ -164,7 +164,7 @@
 
                                             <div class="input-group">
 
-                                                <input type="file" name="image" class="form-control" id="image" placeholder="Username" aria-describedby="inputGroupPrepend" style="display: none" required>
+                                                <input type="file" name="image" value="{{asset('storage/StudentImages/Large/'.$student->image)}}" class="form-control" id="image" placeholder="Username" aria-describedby="inputGroupPrepend" style="display: none" required>
                                                 <input type="button" value="Browse" id="browse_image" class="btn btn-info form-control">
 
                                                 <div class="invalid-feedback">
@@ -554,7 +554,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Nationality<Text style="color: red">*</Text></span>
                                         </div>
-                                        <input type="text" name="nationality" value="{{$student->Parent_Guardian->nationality}}" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <input type="text" name="pr_nationality" value="{{$student->Parent_Guardian->nationality}}" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                         <div class="invalid-feedback">
                                             Please choose a username.
@@ -567,7 +567,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Race<Text style="color: red">*</Text></span>
                                         </div>
-                                        <input type="text" name="race" value="{{$student->Parent_Guardian->race}}" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <input type="text" name="pr_race" value="{{$student->Parent_Guardian->race}}" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                         <div class="invalid-feedback">
                                             Please choose a username.
@@ -580,7 +580,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Religion<Text style="color: red">*</Text></span>
                                         </div>
-                                        <input type="text" name="religion" value="{{$student->Parent_Guardian->religion}}" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <input type="text" name="pr_religion" value="{{$student->Parent_Guardian->religion}}" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                         <div class="invalid-feedback">
                                             Please choose a username.
@@ -600,14 +600,15 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Working Sector <Text style="color: red">*</Text></span>
                                         </div>
+
                                         <select name="working_sector" class="form-control" required>
                                             <option selected disabled>Select salutation</option>
-                                            <option value="Goverment">Goverment</option>
-                                            <option value="Semi Goverment">Semi Goverment</option>
-                                            <option value="NGO">NGO</option>
-                                            <option value="Private">Private</option>
-                                            <option value="Other">Other</option>
-                                            <option value="House Wife">House Wife</option>
+                                            <option value="Goverment" <?php if($student->Parent_Guardian->working_sector=="Goverment") echo 'selected="selected"'; ?> >Goverment</option>
+                                            <option value="Semi Goverment" <?php if($student->Parent_Guardian->working_sector=="Semi Goverment") echo 'selected="selected"'; ?> >Semi Goverment</option>
+                                            <option value="NGO" <?php if($student->Parent_Guardian->working_sector=="NGO") echo 'selected="selected"'; ?> >NGO</option>
+                                            <option value="Private" <?php if($student->Parent_Guardian->working_sector=="Private") echo 'selected="selected"'; ?> >Private</option>
+                                            <option value="Other" <?php if($student->Parent_Guardian->working_sector=="Other") echo 'selected="selected"'; ?> >Other</option>
+                                            <option value="House Wife" <?php if($student->Parent_Guardian->working_sector=="House Wife") echo 'selected="selected"'; ?> >House Wife</option>
                                         </select>
                                         <div class="invalid-feedback">
                                             Please choose a username.
@@ -646,7 +647,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Place of Work<Text style="color: red">*</Text></span>
                                         </div>
-                                        <textarea class="form-control" name="work_place" value="{{$student->Parent_Guardian->work_place}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required></textarea>
+                                        <textarea class="form-control" name="work_place" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>{{$student->Parent_Guardian->work_place}}</textarea>
 
                                         <div class="invalid-feedback">
                                             Please choose a username.
@@ -678,8 +679,8 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Office Address<Text style="color: red">*</Text></span>
                                         </div>
-                                        <input type="text" name="work_address" value="{{$student->Parent_Guardian->work_address}}" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
+                                        <textarea class="form-control" name="work_address"  id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>{{$student->Parent_Guardian->work_address}}</textarea>
                                         <div class="invalid-feedback">
                                             Please choose a username.
                                         </div>
@@ -761,7 +762,21 @@
                     }, false);
                 })();
             </script>
-
+            <script type="text/javascript">
+                $('#browse_image').on('click', function(e){
+                    $('#image').click();
+                })
+                $('#image').on('change', function(e){
+                    var fileInput = this;
+                    if(fileInput.files[0]){
+                        var reader = new FileReader();
+                        reader.onload = function(e){
+                            $('#img').attr('src', e.target.result);
+                        }
+                        reader.readAsDataURL(fileInput.files[0]);
+                    }
+                })
+            </script>
             <!-- ============================================================== -->
             <!-- End PAge Content -->
             <!-- ============================================================== -->

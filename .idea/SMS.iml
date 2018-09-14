@@ -261,5 +261,6 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="library" name="jquery-1.11.1" level="application" />
   </component>
 </module>

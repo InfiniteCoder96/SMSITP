@@ -238,7 +238,7 @@ a:hover {
 }
 
 .divider {
-	background: #2c4167 url(../images/bg_white_arrow.png) no-repeat 50% 0;
+	background: #2c4167 url(/public/assets/images/frontend_images/bg_white_arrow.png) no-repeat 50% 0;
 	height: 80px;
 	position: relative;
 	margin-top: 3px;
@@ -246,7 +246,7 @@ a:hover {
 }
 
 .divider:after {
-	background: url(../images/bg_white.png) no-repeat 50% 0;
+	background: url(/public/assets/images/frontend_images/bg_white.png) no-repeat 50% 0;
 	height: 30px;
 	position: absolute;
 	content: "";
@@ -291,7 +291,7 @@ a:hover {
 	text-indent: -999em;
 	height: 17px;
 	display: block;
-	background: url(../images/bg_slider_nav_2.png) no-repeat;
+	background: url(/public/assets/images/frontend_images/bg_slider_nav_2.png) no-repeat;
 }
 
 .slider-con .bx-pager-item a.active,
@@ -331,13 +331,13 @@ a:hover {
 
 .posts-con .info-line .time {
 	padding: 0 20px 0 25px;
-	background: url(../images/ico_time.png) no-repeat 0 3px;
+	background: url(/public/assets/images/frontend_images/ico_time.png) no-repeat 0 3px;
 	display: inline-block;
 }
 
 .posts-con .info-line .place {
 	padding: 0 20px 0 25px;
-	background: url(../images/ico_place.png) no-repeat 0 3px;
+	background: url(/public/assets/images/frontend_images/ico_place.png) no-repeat 0 3px;
 	display: inline-block;
 }
 
@@ -444,7 +444,7 @@ h1.single{
 
 #sidebar .calendar .head .next,
 #sidebar .calendar .head .prev {
-	background: url(../images/bg_arrow_nav.png) no-repeat;
+	background: url(/public/assets/images/frontend_images/bg_arrow_nav.png) no-repeat;
 	height: 17px;
 	width: 26px;
 	display: block;
@@ -568,13 +568,13 @@ h1.single{
 
 #sidebar .calendar .tooltip .time {
 	padding: 0 29px 0 23px;
-	background: url(../images/ico_time_2.png) no-repeat 0 3px;
+	background: url(/public/assets/images/frontend_images/ico_time_2.png) no-repeat 0 3px;
 	display: inline-block;
 }
 
 #sidebar .calendar .tooltip .place {
 	padding: 0 20px 0 22px;
-	background: url(../images/ico_place_2.png) no-repeat 0 3px;
+	background: url(/public/assets/images/frontend_images/ico_place_2.png) no-repeat 0 3px;
 	display: inline-block;
 }
 
@@ -639,7 +639,7 @@ h1.single{
 }
 
 .slider .bxslider li {
-	background: url(../images/pic_slide.jpg) no-repeat 50% 50%;
+	background: url("/public/assets/images/frontend_images/z_p23-antonian-girls1.jpg") no-repeat 50% 50%;
 	background-size: cover;
 	height: 600px;
 }
@@ -683,12 +683,12 @@ h1.single{
 	line-height: 48px;
 	font-weight: 300;
 	padding-right: 63px;
-	background: url(../images/bg_arrow.png) no-repeat 100% 50%;
+	background: url("/public/assets/images/frontend_images/bg_arrow.png") no-repeat 100% 50%;
 }
 
 .slider:after {
 	position: absolute;
-	background: url(../images/bg_white_arrow.png) no-repeat;
+	background: url('/public/assets/images/frontend_images/bg_white_arrow.png') no-repeat;
 	height: 30px;
 	width: 117px;
 	top: 0;
@@ -699,7 +699,7 @@ h1.single{
 
 .slider .bg-bottom {
 	position: absolute;
-	background: url(../images/bg_white.png) no-repeat;
+	background: url('/public/assets/images/frontend_images/bg_white.png') no-repeat;
 	height: 30px;
 	width: 1920px;
 	bottom: 0;
@@ -728,7 +728,7 @@ h1.single{
 
 .slider .bx-pager-item a {
 	display: block;
-	background: url(../images/bg_slider_nav.png) no-repeat;
+	background : url('/public/assets/images/frontend_images/bg_slider_nav.png') no-repeat;
 	height: 13px;
 	width: 12px;
 	text-indent: -999em;
@@ -845,13 +845,13 @@ h1 {
 
 .news .more {
 	padding-right: 23px;
-	background: url(../images/bg_arrow_blue.png) no-repeat 100% 50%;
+	background: url(/public/assets/images/frontend_images/bg_arrow_blue.png) no-repeat 100% 50%;
 	color: #8ed3ef;
 }
 
 .more {
 	padding-right: 23px;
-	background: url(../images/bg_arrow_blue_dark.png) no-repeat 100% 50%;
+	background: url(/public/assets/images/frontend_images/bg_arrow_blue_dark.png) no-repeat 100% 50%;
 	color: #008bc4;
 }
 
@@ -934,7 +934,7 @@ a.btn.blue,
 
 .info-request {
 	border-radius: 4px;
-	background: #2b4167 url(../images/ico_information.png) no-repeat 35px 35px;
+	background: #2b4167 url(/public/assets/images/frontend_images/ico_information.png) no-repeat 35px 35px;
 	display: block;
 	padding: 0 0 0 138px;
 	margin: 0 15px 100px 15px;
@@ -957,7 +957,7 @@ a.btn.blue,
 	display: block;
 	float: right;
 	height: 100%;
-	background: #008bc4 url(../images/bg_arrow_information.png) no-repeat 50% 50%;
+	background: #008bc4 url(/public/assets/images/frontend_images/bg_arrow_information.png) no-repeat 50% 50%;
 }
 
 .info-request .title {
@@ -993,7 +993,7 @@ a.btn.blue,
 
 #footer {
 	clear: both;
-	background: #2c4167 url(../images/bg_white_arrow.png) no-repeat 50% 0;
+	background: #2c4167 url(/public/assets/images/frontend_images/bg_white_arrow.png) no-repeat 50% 0;
 	overflow: hidden;
 	padding: 91px 0 0 0;
 	font-size: 14px;
@@ -1035,7 +1035,7 @@ a.btn.blue,
 }
 
 #footer .col-1 li a:after {
-	background: url(../images/ico_contacts.png) no-repeat;
+	background: url(/public/assets/images/frontend_images/ico_contacts.png) no-repeat;
 	width: 32px;
 	height: 32px;
 	position: absolute;
@@ -1050,13 +1050,13 @@ a.btn.blue,
 }
 
 #footer .col-1 .mail a:after {
-	background: url(../images/ico_contacts.png) no-repeat 0 -32px;
+	background: url(/public/assets/images/frontend_images/ico_contacts.png) no-repeat 0 -32px;
 	height: 22px;
 	top: -1px;
 }
 
 #footer .col-1 .phone a:after {
-	background: url(../images/ico_contacts.png) no-repeat 0 -54px;
+	background: url(/public/assets/images/frontend_images/ico_contacts.png) no-repeat 0 -54px;
 	height: 32px;
 	top: -6px;
 }
@@ -1073,7 +1073,7 @@ a.btn.blue,
 
 #footer .col-2 li a {
 	padding-left: 20px;
-	background: url(../images/bg_arrow_blue.png) no-repeat 0 50%;
+	background: url(/public/assets/images/frontend_images/bg_arrow_blue.png) no-repeat 0 50%;
 }
 
 #footer .col-2 li.last{
@@ -1105,7 +1105,7 @@ a.btn.blue,
 }
 
 #footer .col-3 li a:after {
-	background: #81c6e2 url(../images/ico_social.png) no-repeat 9px 8px;
+	background: #81c6e2 url(/public/assets/images/frontend_images/ico_social.png) no-repeat 9px 8px;
 	position: absolute;
 	content: "";
 	top: 0;
@@ -1247,7 +1247,7 @@ a.btn.blue,
 	height: 50px;
 	cursor: pointer;
 	z-index: 8040;
-	background: url(../images/ico_close.png) no-repeat;
+	background: url(/public/assets/images/frontend_images/ico_close.png) no-repeat;
 }
 
 .fancybox-tmp {
@@ -1273,7 +1273,7 @@ a.btn.blue,
 	overflow: hidden;
 	display: none;
 	z-index: 8010;
-	background: url(../images/bg_blue.png);
+	background: url(/public/assets/images/frontend_images/bg_blue.png);
 }
 
 .fancybox-overlay-fixed {
@@ -1310,7 +1310,7 @@ a.btn.blue,
 
 #fancy fieldset {
 	width: 370px;
-	background: #e6e8ec url(../images/ico_form.png) no-repeat 21px 19px;
+	background: #e6e8ec url(/public/assets/images/frontend_images/ico_form.png) no-repeat 21px 19px;
 	border-radius: 4px;
 	height: 52px;
 	margin-bottom: 8px;
@@ -1394,7 +1394,7 @@ a.btn.blue,
 	bottom: 0;
 	width: 52px;
 	border-left: 1px solid #d0d2d5;
-	background: url(../images/bg_arrow_select.png) no-repeat 19px 23px;
+	background: url(/public/assets/images/frontend_images/bg_arrow_select.png) no-repeat 19px 23px;
 }
 
 .crf-sm li {
@@ -1684,129 +1684,129 @@ a.btn.blue,
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 	
 	#logo {
-		background-image: url(../images/logo@2x.png);
+		background-image: url(/public/assets/images/frontend_images/logo@2x.png);
 		background-size: 121px 134px;
 	}
 
 	.slider .info a {
-		background-image: url(../images/bg_arrow@2x.png);
+		background-image: url(/public/assets/images/frontend_images/bg_arrow@2x.png);
 		background-size: 36px 19px;
 	}
 
 	.slider .bx-pager-item a {
-		background-image: url(../images/bg_slider_nav@2x.png);
+		background-image: url(/public/assets/images/frontend_images/bg_slider_nav@2x.png);
 		background-size: 24px 13px;
 	}
 
 	.news .more {
-		background-image: url(../images/bg_arrow_blue@2x.png);
+		background-image: url(/public/assets/images/frontend_images/bg_arrow_blue@2x.png);
 		background-size: 10px 7px;
 	}
 
 	.more {
-		background-image: url(../images/bg_arrow_blue_dark@2x.png);
+		background-image: url(/public/assets/images/frontend_images/bg_arrow_blue_dark@2x.png);
 		background-size: 10px 7px;
 	}
 
 	.info-request {
-		background-image: url(../images/ico_information@2x.png);
+		background-image: url(/public/assets/images/frontend_images/ico_information@2x.png);
 		background-size: 65px 64px;
 
 	}
 
 	.info-request .arrow {
-		background-image: url(../images/bg_arrow_information@2x.png);
+		background-image: url(/public/assets/images/frontend_images/bg_arrow_information@2x.png);
 		background-size: 180px 57px;
 	}
 
 
 	#footer .col-1 li a:after {
-		background-image: url(../images/ico_contacts@2x.png) !important;
+		background-image: url(/public/assets/images/frontend_images/ico_contacts@2x.png) !important;
 		background-size: 32px 86px !important;
 	}
 
 	#footer .col-2 li a {
-		background-image: url(../images/bg_arrow_blue_dark@2x.png);
+		background-image: url(/public/assets/images/frontend_images/bg_arrow_blue_dark@2x.png);
 		background-size: 10px 7px;
 	}
 
 	#footer .col-3 li a:after {
-		background-image: url(../images/ico_social@2x.png) !important;
+		background-image: url(/public/assets/images/frontend_images/ico_social@2x.png) !important;
 		background-size: 52px 53px !important;
 	}
 	
 	#footer {
-		background-image: url(../images/bg_white_arrow@2x.png);
+		background-image: url(/public/assets/images/frontend_images/bg_white_arrow@2x.png);
 		background-size: 117px 30px;
 	}
 
 	.slider:after {
-		background-image: url(../images/bg_white_arrow@2x.png);
+		background-image: url(/public/assets/images/frontend_images/bg_white_arrow@2x.png);
 		background-size: 117px 30px;
 	}
 	
 	.slider .bg-bottom {
-		background-image: url(../images/bg_white@2x.png);
+		background-image: url(/public/assets/images/frontend_images/bg_white@2x.png);
 		background-size: 1920px 30px;
 	}	
 	
 	.fancybox-close {
-		background-image: url(../images/ico_close@2x.png);
+		background-image: url(/public/assets/images/frontend_images/ico_close@2x.png);
 		background-size: 50px 50px;
 	}	
 	
 	#fancy fieldset {
-		background-image: url(../images/ico_form@2x.png);
+		background-image: url(/public/assets/images/frontend_images/ico_form@2x.png);
 		background-size: 19px 173px;
 	}	
 	
 	.crf-s:after {
-		background-image: url(../images/bg_arrow_select@2x.png);
+		background-image: url(/public/assets/images/frontend_images/bg_arrow_select@2x.png);
 		background-size: 15px 7px;
 	}	
 	
 	.posts-con .info-line .time {
-		background-image: url(../images/ico_time@2x.png);
+		background-image: url(/public/assets/images/frontend_images/ico_time@2x.png);
 		background-size: 17px 16px;
 	}	
 	
 	.posts-con .info-line .place {
-		background-image: url(../images/ico_place@2x.png);
+		background-image: url(/public/assets/images/frontend_images/ico_place@2x.png);
 		background-size: 13px 16px;
 	}	
 	
 	#sidebar .calendar .head .next, #sidebar .calendar .head .prev {
-		background-image: url(../images/bg_arrow_nav@2x.png);
+		background-image: url(/public/assets/images/frontend_images/bg_arrow_nav@2x.png);
 		background-size: 52px 17px;
 	}	
 	
 	#sidebar .calendar .tooltip .time {
-		background-image: url(../images/ico_time_2@2x.png);
+		background-image: url(/public/assets/images/frontend_images/ico_time_2@2x.png);
 		background-size: 17px 16px;
 	}
 	
 	#sidebar .calendar .tooltip .place {
-		background-image: url(../images/ico_place_2@2x.png);
+		background-image: url(/public/assets/images/frontend_images/ico_place_2@2x.png);
 		background-size: 13px 16px;
 	}
 	
 	.slider-con .bx-pager-item a {
-		background-image: url(../images/bg_slider_nav_2@2x.png);
+		background-image: url(/public/assets/images/frontend_images/bg_slider_nav_2@2x.png);
 		background-size: 32px 17px;
 	}
 
 	.divider {
-		background-image: url(../images/bg_white_arrow@2x.png);
+		background-image: url(/public/assets/images/frontend_images/bg_white_arrow@2x.png);
 		background-size: 117px 30px;
 	}
 	
 	.divider:after {
-		background-image: url(../images/bg_white@2x.png);
+		background-image: url(/public/assets/images/frontend_images/bg_white@2x.png);
 		background-size: 1920px 30px;
 	}	
 
 	.menu-trigger {
-		background-image: url(../images/bg_menu_trigger@2x.png) !important;
+		background-image: url(/public/assets/images/frontend_images/bg_menu_trigger@2x.png) !important;
 		background-size: 30px 30px !important;
 	}
 	
@@ -1846,7 +1846,7 @@ a.btn.blue,
 	}
 
 	.menu-trigger {
-		background: url(../images/bg_menu_trigger.png) no-repeat;
+		background: url(/public/assets/images/frontend_images/bg_menu_trigger.png) no-repeat;
 		height: 30px;
 		width: 30px;
 		display: block;
@@ -2013,7 +2013,7 @@ a.btn.blue,
 	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 	
 		#logo {
-			background-image: url(../images/logo@2x.png);
+			background-image: url(/public/assets/images/frontend_images/logo@2x.png);
 			background-size: 90px 100px;
 		}
 	}

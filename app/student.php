@@ -15,7 +15,7 @@ class Student extends Model
         'sid','salutation','first_Name',
         'middle_Name','last_Name','DoB','NIC','Gender','Address','Email_Address',
         'Telephone_No_Mob','Telephone_No_Res','birth_certificate_no','religion','race',
-        'country','nationality','blood_group','Known_Illnesses','Known_Allergies'
+        'country','nationality','blood_group','Known_Illnesses','Known_Allergies','blood_group'
     ];
 
     public function Parent_Guardian()

@@ -55,11 +55,11 @@ class StudentController extends Controller
             'first_Name'=> 'required',
             'middle_Name'=> 'required',
             'last_Name'=> 'required',
-            'DoB'=> 'required',
-            'NIC'=> 'required',
+            'DoB'=> 'required|before:-18 years',
+            'NIC'=> 'required|min:10|max:10|unique:students',
             'Gender'=> 'required',
             'Address'=> 'required',
-            'Email_Address'=> 'required|email',
+            'Email_Address'=> 'required|email|unique:students',
             'Telephone_No_Mob'=> 'required',
             'Telephone_No_Res'=> 'required',
             'birth_certificate_no'=> 'required',
@@ -75,7 +75,7 @@ class StudentController extends Controller
             'first_name'=> 'required',
             'middle_name'=> 'required',
             'last_name'=> 'required',
-            'NIC_Passport'=> 'required',
+            'NIC_Passport'=> 'required|min:10|max:10|unique:parent__guardians',
             'pr_nationality'=> 'required',
             'pr_race'=> 'required',
             'pr_religion'=> 'required',
@@ -110,6 +110,7 @@ class StudentController extends Controller
         $student->nationality = $request->get('nationality');
         $student->Known_Illnesses = $request->get('Known_Illnesses');
         $student->Known_Allergies = $request->get('Known_Allergies');
+        $student->blood_group = $request->get('blood_group');
 
         $parent_guardian->role = $request->get('role');
         $parent_guardian->first_name = $request->get('first_name');
@@ -130,6 +131,7 @@ class StudentController extends Controller
         $parent_guardian->child_id = $stdID;
 
         if($request->hasFile('image')){
+
             $image_path = Input::file('image');
 
             if($image_path){
@@ -149,13 +151,14 @@ class StudentController extends Controller
             }
 
         }
+
         $student->save();
         $parent_guardian->save();
 
 //        Student::create($student);
 //        Parent_Guardian::create($parent_guardian);
 
-        return back()->with('success', 'Student has been added to the System Successfully');
+        return redirect('students')->with('success', 'Student has been added to the System Successfully');
     }
 
     /**
@@ -193,7 +196,7 @@ class StudentController extends Controller
     public function update(Request $request, $sid)
     {
         $student = Student::find($sid);
-
+        $parent_guardian = Parent_Guardian::find($sid);
 
         $this->validate(request(), [
             'salutation'=> 'required',
@@ -214,7 +217,25 @@ class StudentController extends Controller
             'blood_group'=> 'required',
             'Known_Illnesses'=> 'required',
             'Known_Allergies'=> 'required',
+
+            'role'=> 'required',
+            'first_name'=> 'required',
+            'middle_name'=> 'required',
+            'last_name'=> 'required',
+            'NIC_Passport'=> 'required|min:10|max:10',
+            'pr_nationality'=> 'required',
+            'pr_race'=> 'required',
+            'pr_religion'=> 'required',
+            'working_sector'=> 'required',
+            'profession'=> 'required',
+            'occupation'=> 'required',
+            'work_place'=> 'required',
+            'email'=> 'required',
+            'work_address'=> 'required',
+            'work_telephone'=> 'required',
+            'telephone_mob'=> 'required',
         ]);
+
         $student->salutation = $request->get('salutation');
         $student->first_Name = $request->get('first_Name');
         $student->middle_Name = $request->get('middle_Name');
@@ -232,9 +253,53 @@ class StudentController extends Controller
         $student->nationality = $request->get('nationality');
         $student->Known_Illnesses = $request->get('Known_Illnesses');
         $student->Known_Allergies = $request->get('Known_Allergies');
+        $student->blood_group = $request->get('blood_group');
+
+        $parent_guardian->role = $request->get('role');
+        $parent_guardian->first_name = $request->get('first_name');
+        $parent_guardian->middle_name = $request->get('middle_name');
+        $parent_guardian->last_name = $request->get('last_name');
+        $parent_guardian->NIC_Passport = $request->get('NIC_Passport');
+        $parent_guardian->nationality = $request->get('pr_nationality');
+        $parent_guardian->race = $request->get('pr_race');
+        $parent_guardian->religion = $request->get('pr_religion');
+        $parent_guardian->working_sector = $request->get('working_sector');
+        $parent_guardian->profession = $request->get('profession');
+        $parent_guardian->occupation = $request->get('occupation');
+        $parent_guardian->work_place = $request->get('work_place');
+        $parent_guardian->email = $request->get('email');
+        $parent_guardian->work_address = $request->get('work_address');
+        $parent_guardian->work_telephone = $request->get('work_telephone');
+        $parent_guardian->telephone_mob = $request->get('telephone_mob');
+        $parent_guardian->child_id = $sid;
+
+        if($request->hasFile('image')){
+            $image_path = Input::file('image');
+
+            if($image_path){
+                $extension = $image_path->getClientOriginalExtension();
+
+                $filename = $sid.'.'.$extension;
+                $exists = Storage::exists('file.jpg');
+                $large_image_path = 'storage/StudentImages/Large/'.$filename;
+                $medium_image_path = 'storage/StudentImages/Medium/'.$filename;
+                $small_image_path = 'storage/StudentImages/Small/'.$filename;
+
+                Image::make($image_path)->save($large_image_path);
+                Image::make($image_path)->resize(600,600)->save($medium_image_path);
+                Image::make($image_path)->resize(300,300)->save($small_image_path);
+
+                $student->image = $filename;
+
+                return $exists;
+            }
+
+        }
 
         $student->save();
-        return redirect('students')->with('success','Student No.'.$sid.' has been updated');
+        $parent_guardian->save();
+
+        return redirect('students')->with('success', 'Student has been added to the System Successfully');
     }
 
     /**
@@ -245,7 +310,6 @@ class StudentController extends Controller
      */
     public function destroy($sid)
     {
-
         $student = Student::find($sid);
         $student->Parent_Guardian->delete();
         $student->delete();
@@ -334,43 +398,43 @@ class StudentController extends Controller
             case 'gender':$students = Student::with('Parent_Guardian')->where('Gender', 'LIKE', '%'. $query. '%')->get();
 
                         break;
-            case 'pfname':$parents = Parent_Guardian::with('Student')->where('first_name', 'LIKE', '%'. $query. '%')->get();
+            case 'pfname':$parents = Parent_Guardian::with('student')->where('first_name', 'LIKE', '%'. $query. '%')->get();
 
                         break;
-            case 'pmname':$parents = Parent_Guardian::with('Student')->where('middle_name', 'LIKE', '%'. $query. '%')->get();
+            case 'pmname':$parents = Parent_Guardian::with('student')->where('middle_name', 'LIKE', '%'. $query. '%')->get();
 
                         break;
-            case 'plname':$parents = Parent_Guardian::with('Student')->where('last_name', 'LIKE', '%'. $query. '%')->get();
+            case 'plname':$parents = Parent_Guardian::with('student')->where('last_name', 'LIKE', '%'. $query. '%')->get();
 
                         break;
-            case 'poccupation':$parents = Parent_Guardian::with('Student')->where('occupation', 'LIKE', '%'. $query. '%')->get();
+            case 'poccupation':$parents = Parent_Guardian::with('student')->where('occupation', 'LIKE', '%'. $query. '%')->get();
 
                         break;
-            case 'pnic':$parents = Parent_Guardian::with('Student')->where('NIC_Passport', 'LIKE', '%'. $query. '%')->get();
+            case 'pnic':$parents = Parent_Guardian::with('student')->where('NIC_Passport', 'LIKE', '%'. $query. '%')->get();
 
                         break;
-            case 'workSector':$parents = Parent_Guardian::with('Student')->where('working_sector', 'LIKE', '%'. $query. '%')->get();
+            case 'workSector':$parents = Parent_Guardian::with('student')->where('working_sector', 'LIKE', '%'. $query. '%')->get();
 
                         break;
 
 
         }
 
-        if(!$students){
-            $querysuccess = 'The search results for your query'.' <b>$query</b>'.' are:';
+        if($students){
+            $querysuccess = 'The search results for your query '. $query.' are:';
 
             return view('Admin.User_Management.Student.search_student',compact('students','querysuccess','queryunsuccess'));
         }
 
-        elseif (!$parents){
+        elseif ($parents){
             $querysuccess = 'The search results for your query '.$query.' are:';
-            return view('Admin.User_Management.Student.search_student',compact('parents','querysuccess','queryunsuccess'));
+            return view('Admin.User_Management.Student.search_student',compact('students','parents','querysuccess','queryunsuccess'));
         }
 
-        elseif($parents == "" && $students == ""){
-            $queryunsuccess = 'Sorry couldnt find anything for your query '.$query.'.';
-            return view('Admin.User_Management.Student.search_student',compact('queryunsuccess','querysuccess','students','parents'));
-        }
 
+    }
+
+    public function showStudentDashboard(){
+        return view('Student.dashboard');
     }
 }

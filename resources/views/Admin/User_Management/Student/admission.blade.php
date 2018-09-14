@@ -171,7 +171,7 @@
                                         <div class="input-group">
 
 
-                                            <input type="file" name="image" class="form-control" id="image" placeholder="Username" aria-describedby="inputGroupPrepend" style="display: none" required>
+                                            <input type="file" name="image" class="form-control" id="image" placeholder="Username" aria-describedby="inputGroupPrepend" value="{{old('image')}}" style="display: none" required>
                                             <input type="button" value="Browse" id="browse_image" class="btn btn-info form-control">
                                             <div class="invalid-feedback">
                                                 Please choose a username.
@@ -212,7 +212,7 @@
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="inputGroupPrepend">First Name</span>
                                                     </div>
-                                                    <input type="text" name="first_Name" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                                    <input type="text" name="first_Name" class="form-control" id="validationCustomUsername" value="{{old('first_Name')}}" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                                     <div class="invalid-feedback">
                                                         Please choose a username.
@@ -226,7 +226,7 @@
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="inputGroupPrepend">Middle Name</span>
                                                     </div>
-                                                    <input type="text" name="middle_Name" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                                    <input type="text" name="middle_Name" class="form-control" id="validationCustomUsername" value="{{old('middle_Name')}}" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                                     <div class="invalid-feedback">
                                                         Please choose a username.
@@ -239,7 +239,7 @@
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="inputGroupPrepend">Last Name</span>
                                                     </div>
-                                                    <input type="text" name="last_Name" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                                    <input type="text" name="last_Name" class="form-control" id="validationCustomUsername" value="{{old('last_Name')}}" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                                     <div class="invalid-feedback">
                                                         Please choose a username.
@@ -252,7 +252,7 @@
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="inputGroupPrepend">Date of birth</span>
                                                     </div>
-                                                    <input type="date" name="DoB" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                                    <input type="date" name="DoB" class="form-control" id="validationCustomUsername" value="{{old('DoB')}}" placeholder="Username" aria-describedby="inputGroupPrepend" required>
                                                     <div class="invalid-feedback">
                                                         Please choose a username.
                                                     </div>
@@ -286,9 +286,9 @@
                                             <div class="col-md-12 mb-3">
                                                 <div class="input-group">
                                                     <div class="input-group-prepend">
-                                                        <span class="input-group-text" id="inputGroupPrepend">NIC / Postal ID<Text style="color: red">*</Text></span>
+                                                        <span class="input-group-text" id="inputGroupPrepend" >NIC / Postal ID<Text style="color: red">*</Text></span>
                                                     </div>
-                                                    <input type="text" name="NIC" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                                    <input type="text" name="NIC" class="form-control" id="validationCustomUsername" value="{{old('NIC')}}" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                                     <div class="invalid-feedback">
                                                         Please choose a username.
@@ -304,7 +304,7 @@
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="inputGroupPrepend">Birth Certificate No</span>
                                                     </div>
-                                                    <input type="text" name="birth_certificate_no" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                                    <input type="text" name="birth_certificate_no" class="form-control" value="{{old('birth_certificate_no')}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
                                                     <div class="invalid-feedback">
                                                         Please choose a username.
                                                     </div>
@@ -316,7 +316,7 @@
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="inputGroupPrepend">Religion<Text style="color: red">*</Text></span>
                                                     </div>
-                                                    <input type="text" name="religion" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                                    <input type="text" name="religion" class="form-control" id="validationCustomUsername" value="{{old('religion')}}" placeholder="Username" aria-describedby="inputGroupPrepend" required>
                                                     <div class="invalid-feedback">
                                                         Please choose a username.
                                                     </div>
@@ -328,7 +328,7 @@
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="inputGroupPrepend">Race<Text style="color: red">*</Text></span>
                                                     </div>
-                                                    <input type="text" name="race" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                                    <input type="text" name="race" class="form-control" value="{{old('race')}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                                     <div class="invalid-feedback">
                                                         Please choose a username.
@@ -341,7 +341,7 @@
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="inputGroupPrepend">Nationality<Text style="color: red">*</Text></span>
                                                     </div>
-                                                    <input type="text" name="nationality" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                                    <input type="text" name="nationality" class="form-control" value="{{old('nationality')}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                                     <div class="invalid-feedback">
                                                         Please choose a username.
@@ -374,7 +374,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroupPrepend">Address<Text style="color: red">*</Text></span>
                                     </div>
-                                    <textarea class="form-control" name="Address" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required></textarea>
+                                    <textarea class="form-control" name="Address" value="{{old('Address')}}"  id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required></textarea>
 
                                     <div class="invalid-feedback">
                                         Please choose a username.
@@ -387,7 +387,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroupPrepend">Telephone(Res)<Text style="color: red">*</Text></span>
                                     </div>
-                                    <input type="text" name="Telephone_No_Res" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                    <input type="text" name="Telephone_No_Res" class="form-control" value="{{old('Telephone_No_Res')}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                     <div class="invalid-feedback">
                                         Please choose a username.
@@ -400,7 +400,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroupPrepend">Telephone(Mob)<Text style="color: red">*</Text></span>
                                     </div>
-                                    <input type="text" name="Telephone_No_Mob" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                    <input type="text" name="Telephone_No_Mob" class="form-control" value="{{old('Telephone_No_Mob')}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                     <div class="invalid-feedback">
                                         Please choose a username.
@@ -413,7 +413,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroupPrepend">Email<Text style="color: red">*</Text></span>
                                     </div>
-                                    <input type="text" name="Email_Address" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                    <input type="email" name="Email_Address" class="form-control" value="{{old('Email_Address')}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                     <div class="invalid-feedback">
                                         Please choose a username.
@@ -434,7 +434,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroupPrepend">Blood group</span>
                                     </div>
-                                    <input type="text" name="blood_group" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                    <input type="text" name="blood_group" class="form-control" value="{{old('blood_group')}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                     <div class="invalid-feedback">
                                         Please choose a username.
@@ -447,7 +447,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroupPrepend">Known Illnesses </span>
                                     </div>
-                                    <textarea class="form-control" name="Known_Illnesses" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required></textarea>
+                                    <textarea class="form-control" name="Known_Illnesses" value="{{old('Known_Illnesses')}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required></textarea>
 
                                     <div class="invalid-feedback">
                                         Please choose a username.
@@ -460,7 +460,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroupPrepend">Known Allergies</span>
                                     </div>
-                                    <textarea class="form-control" name="Known_Allergies" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required></textarea>
+                                    <textarea class="form-control" name="Known_Allergies" value="{{old('Known_Allergies')}}"  id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required></textarea>
 
                                     <div class="invalid-feedback">
                                         Please choose a username.
@@ -500,7 +500,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroupPrepend">First Name<Text style="color: red">*</Text></span>
                                     </div>
-                                    <input type="text" name="first_name" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                    <input type="text" name="first_name" class="form-control" value="{{old('first_name')}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                     <div class="invalid-feedback">
                                         Please choose a username.
@@ -513,7 +513,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroupPrepend">Middle Name<Text style="color: red">*</Text></span>
                                     </div>
-                                    <input type="text" name="middle_name" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                    <input type="text" name="middle_name" class="form-control" value="{{old('middle_name')}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                     <div class="invalid-feedback">
                                         Please choose a username.
@@ -526,7 +526,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroupPrepend">Last Name<Text style="color: red">*</Text></span>
                                     </div>
-                                    <input type="text" name="last_name" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                    <input type="text" name="last_name" class="form-control" value="{{old('last_name')}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                     <div class="invalid-feedback">
                                         Please choose a username.
@@ -542,7 +542,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroupPrepend">Passport / NIC Number <Text style="color: red">*</Text></span>
                                     </div>
-                                    <input type="text" name="NIC_Passport" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                    <input type="text" name="NIC_Passport" class="form-control" value="{{old('NIC_Passport')}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
                                     <div class="invalid-feedback">
                                         Please choose a username.
                                     </div>
@@ -554,7 +554,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroupPrepend">Nationality<Text style="color: red">*</Text></span>
                                     </div>
-                                    <input type="text" name="pr_nationality" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                    <input type="text" name="pr_nationality" class="form-control" value="{{old('pr_nationality')}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                     <div class="invalid-feedback">
                                         Please choose a username.
@@ -567,7 +567,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroupPrepend">Race<Text style="color: red">*</Text></span>
                                     </div>
-                                    <input type="text" name="pr_race" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                    <input type="text" name="pr_race" class="form-control" value="{{old('pr_race')}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                     <div class="invalid-feedback">
                                         Please choose a username.
@@ -580,7 +580,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroupPrepend">Religion<Text style="color: red">*</Text></span>
                                     </div>
-                                    <input type="text" name="pr_religion" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                    <input type="text" name="pr_religion" class="form-control" value="{{old('pr_religion')}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                     <div class="invalid-feedback">
                                         Please choose a username.
@@ -621,7 +621,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroupPrepend">Profession<Text style="color: red">*</Text></span>
                                     </div>
-                                    <input type="text" name="profession" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                    <input type="text" name="profession" class="form-control" value="{{old('profession')}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                     <div class="invalid-feedback">
                                         Please choose a username.
@@ -634,7 +634,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroupPrepend">Occupation<Text style="color: red">*</Text></span>
                                     </div>
-                                    <input type="text" name="occupation" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                    <input type="text" name="occupation" class="form-control" value="{{old('occupation')}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                     <div class="invalid-feedback">
                                         Please choose a username.
@@ -647,7 +647,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroupPrepend">Place of Work<Text style="color: red">*</Text></span>
                                     </div>
-                                    <textarea class="form-control" name="work_place" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required></textarea>
+                                    <textarea class="form-control" name="work_place" value="{{old('work_place')}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required></textarea>
 
                                     <div class="invalid-feedback">
                                         Please choose a username.
@@ -668,7 +668,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroupPrepend">Email Address<Text style="color: red">*</Text></span>
                                     </div>
-                                    <input type="text" name="email" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                    <input type="email" name="email" class="form-control" value="{{old('email')}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
                                     <div class="invalid-feedback">
                                         Please choose a username.
                                     </div>
@@ -680,7 +680,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroupPrepend">Office Address<Text style="color: red">*</Text></span>
                                     </div>
-                                    <input type="text" name="work_address" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                    <input type="text" name="work_address" class="form-control" value="{{old('work_address')}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                     <div class="invalid-feedback">
                                         Please choose a username.
@@ -693,7 +693,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroupPrepend">Office Phone<Text style="color: red">*</Text></span>
                                     </div>
-                                    <input type="text" name="work_telephone" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                    <input type="text" name="work_telephone" class="form-control" value="{{old('work_telephone')}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                     <div class="invalid-feedback">
                                         Please choose a username.
@@ -706,7 +706,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroupPrepend">Telephone No(Mob)<Text style="color: red">*</Text></span>
                                     </div>
-                                    <input type="text" name="telephone_mob" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                    <input type="text" name="telephone_mob" class="form-control" value="{{old('telephone_mob')}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                     <div class="invalid-feedback">
                                         Please choose a username.
@@ -726,7 +726,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroupPrepend">Child Birth Certificate<Text style="color: red">*</Text></span>
                                     </div>
-                                    <input type="file" name="email" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                    <input type="file" name="email" class="form-control" value="{{old('email')}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
                                     <div class="invalid-feedback">
                                         Please choose a username.
                                     </div>
@@ -738,7 +738,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroupPrepend">Grama Niladhari Cerificate<Text style="color: red">*</Text></span>
                                     </div>
-                                    <input type="file" name="work_address" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                    <input type="file" name="work_address" class="form-control" value="{{old('work_address')}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                     <div class="invalid-feedback">
                                         Please choose a username.
@@ -751,7 +751,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroupPrepend">Parent Marriage Certificate<Text style="color: red">*</Text></span>
                                     </div>
-                                    <input type="file" name="work_telephone" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                    <input type="file" name="work_telephone" class="form-control" value="{{old('work_telephone')}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
 
                                     <div class="invalid-feedback">
                                         Please choose a username.

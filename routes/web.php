@@ -152,6 +152,9 @@ Route::get('/admin/dashboard', 'AdminController@showAdminDashboard');
 Route::get('search_student', 'StudentController@search')->name('search');
 Route::get('search','StudentController@showSearchView')->name('showSearchView');
 
+// students routes
+Route::get('/student/dashboard', 'StudentController@showStudentDashboard');
+
 // front end Routes
 Route::get('/events',function(){
     return view('Frontend.events');

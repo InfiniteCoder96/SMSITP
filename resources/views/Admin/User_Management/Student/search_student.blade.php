@@ -174,13 +174,13 @@
                                             <tr>
 
 
-                                                <td style="font-size: 12px">
-                                                    <a data-toggle="modal" data-target="#loginModal"> <img src="{{asset('/storage/StudentImages/small/'.$student->image)}}" class="rounded-circle" style="width:50px;height: 50px;border: 2px solid black" ></a>
+                                                <td style="font-size: 12px;color: #d39e00">
+                                                    <a > <img src="{{asset('/storage/StudentImages/small/'.$student->image)}}" class="rounded-circle" style="width:50px;height: 50px;border: 2px solid black" ></a>
                                                 </td>
-                                                <td style="font-size: 12px">{{$student->sid}}</td>
-                                                <td style="font-size: 12px">{{$student->first_Name}}</td>
-                                                <td style="font-size: 12px">{{$student->middle_Name}}</td>
-                                                <td style="font-size: 12px">{{$student->last_Name}}</td>
+                                                <td style="font-size: 12px;color: #d39e00">{{$student->sid}}</td>
+                                                <td style="font-size: 12px;color: #d39e00">{{$student->first_Name}}</td>
+                                                <td style="font-size: 12px;color: #d39e00">{{$student->middle_Name}}</td>
+                                                <td style="font-size: 12px;color: #d39e00">{{$student->last_Name}}</td>
 
                                                 <td style="font-size: 12px" >
                                                     <div  id="sid"> <a  class="waves-effect waves-dark" href="{{action('StudentController@edit', $student['sid'])}}"><button class="btn btn-info btn-xs" type="button">Edit</button></a></div>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -202,7 +202,7 @@
 
 
                                                 <td style="font-size: 12px">
-                                                    <a data-toggle="modal" data-target="#loginModal"> <img src="{{asset('/storage/StudentImages/small/'.$student->image)}}" class="rounded-circle" style="width:50px;height: 50px;border: 2px solid black" ></a>
+                                                    <a data-toggle="modal" data-target="#loginModal"> <img src="{{asset('/storage/StudentImages/small/'.$parent->student->image)}}" class="rounded-circle" style="width:50px;height: 50px;border: 2px solid black" ></a>
                                                 </td>
                                                 <td style="font-size: 12px">{{$parent->student->sid}}</td>
                                                 <td style="font-size: 12px">{{$parent->student->first_Name}}</td>

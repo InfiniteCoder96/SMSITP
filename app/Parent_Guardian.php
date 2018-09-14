@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Parent_Guardian extends Model
 {
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'child_id';
 
     protected $fillable = [
         'role','first_name','middle_name',
