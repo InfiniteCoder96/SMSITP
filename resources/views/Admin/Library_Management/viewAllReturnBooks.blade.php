@@ -55,20 +55,29 @@
                                 <thead class="thead-light">
                                 <tr>
 
-                                    <th scope="col" style="font-size: 12px">Book Name</th>
-                                    <th scope="col" style="font-size: 12px">Member Name</th>
+                                    <th scope="col" style="font-size: 12px">Book Barcode</th>
                                     <th scope="col" style="font-size: 12px">Member ID</th>
                                     <th scope="col" style="font-size: 12px">Late Fine</th>
+                                    <th scope="col" style="font-size: 12px">Returned Date</th>
+                                    <th scope="col" style="font-size: 12px">Action</th>
+
                                     {{--<th scope="col" style="font-size: 12px"></th>--}}
                                 </tr>
                                 </thead>
                                 <tbody class="customtable">
-                                {{--@foreach($members as $member)--}}
+                                @foreach($return_books as $returnedbook)
                                     <tr>
-                                        <td>{{$confirmReturnBook ->bookbarcode}}</td>
-                                        {{--<td>{{$member['firstname']}}</td>--}}
-                                        {{--<td>{{$member['lastname']}}</td>--}}
-                                        {{--<td>{{$member['memberid']}}</td>--}}
+                                        <td>{{$returnedbook ['bookbarcode']}}</td>
+                                        <td>{{$returnedbook['issuememberid']}}</td>
+                                        <td>{{$returnedbook['fine']}}</td>
+                                        <td>{{$returnedbook['created_at']}}</td>
+                                        <td>
+                                            <form action="{{action('returnController@destroy', $returnedbook['bookbarcode'])}}" method="post">
+                                                {{csrf_field()}}
+                                                <input name="_method" type="hidden" value="DELETE">
+                                                <button class="btn btn-danger" type="submit">Delete</button>
+                                            </form>
+                                        </td>
                                         {{--<td>{{$member['memberphone']}}</td>--}}
                                         {{--<td>{{$member['memberemail']}}</td>--}}
 
@@ -86,7 +95,7 @@
                                         {{--</td>--}}
                                     </tr>
 
-                                {{--@endforeach--}}
+                                @endforeach
                                 </tbody>
                             </table>
                         </div>
