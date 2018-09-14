@@ -38,6 +38,22 @@
             <!-- ============================================================== -->
             <!-- Start Page Content -->
             <!-- ============================================================== -->
+
+            <form action="{{url('searchMembers')}}" method="post" role="search">
+                {{csrf_field()}}
+                <div class="input-group">
+                    {{--<div class="col-md-6">--}}
+                    <input type="text" class="form-control" name="q" placeholder="Search Members">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+
+                </div>
+            </form>
+            <br>
+            <br>
             <div class="row">
                 <div class="col-md-4">
                     <!--<form class="form-horizontal" action="#" method="get">

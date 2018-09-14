@@ -28,7 +28,7 @@
 
                     {{csrf_field()}}
 
-                    <div class="card-body bg-dark">
+                    <div class="card-body bg-dark text-white"">
                         <h4 class="card-title">Book Details</h4>
                         <div class="form-group row">
                             <label for="bookName" class="col-sm-3 text-right control-label col-form-label">Book Name</label>

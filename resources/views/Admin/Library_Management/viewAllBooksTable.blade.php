@@ -40,6 +40,21 @@
             <!-- ============================================================== -->
             <!-- Start Page Content -->
             <!-- ============================================================== -->
+            <form action="{{url('searchBooks')}}" method="post" role="search">
+                {{csrf_field()}}
+                <div class="input-group">
+                    <input type="text" class="form-control" name="q" placeholder="Search books">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                </div>
+            </form>
+            <br>
+            <br>
+
+
             <div class="row">
 
 
@@ -66,8 +81,8 @@
                             <table class="table">
                                 <thead class="thead-light">
                                 <tr>
-                                    <th scope="col" style="font-size: 12px">Book ID</th>
-                                    <th scope="col" style="font-size: 12px">ISBN</th>
+                                    {{--<th scope="col" style="font-size: 12px">Book ID</th>--}}
+                                    <th scope="col" style="font-size: 12px">Category</th>
                                     <th scope="col" style="font-size: 12px">Book Name</th>
                                     <th scope="col" style="font-size: 12px">Author</th>
                                     <th scope="col" style="font-size: 12px">Barcode</th>
@@ -78,7 +93,7 @@
                                 <tbody class="customtable">
                                 @foreach($boooks as $book)
                                     <tr>
-                                        <td>{{$book['id']}}</td>
+                                        {{--<td>{{$book['id']}}</td>--}}
                                         <td>{{$book['isbn']}}</td>
                                         <td>{{$book['bookname']}}</td>
                                         <td>{{$book['authorname']}}</td>

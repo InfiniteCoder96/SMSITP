@@ -59,7 +59,7 @@
 
                             {{csrf_field()}}
 
-                            <div class="card-body">
+                            <div class="card-body text-white">
                                 <div class="card-title">Return Details</div>
                                 <div class="form-group row">
                                     <label for="returnbookbarcode" class="col-sm-3 text-right control-label col-form-label">Book Barcode</label>

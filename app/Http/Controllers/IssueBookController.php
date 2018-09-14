@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\IssueBook;
+use App\LibrarySettings;
 use App\Member;
 use App\ReturnBook;
 use Illuminate\Http\Request;
@@ -46,7 +47,7 @@ class IssueBookController extends Controller
     public function store(Request $request)
     {
         $issueBook = $this->validate(request(), [
-            'bookbarcode' => 'required',
+            'bookbarcode' => 'required|min:8',
             'issuememberid' => 'required',
 
         ]);
@@ -84,26 +85,26 @@ class IssueBookController extends Controller
         $id = $this->validate(request(), [
             'returnbookbarcode' => 'required|min:8',
 
+
         ]);
 
         $id = $request->get('returnbookbarcode');
+//        if($id != )
 
         //return $id;
         $current_time = Carbon::now()->toDateTimeString();
         $this->IssueBooks = IssueBook::find($id);
         $IssueTime = $this->IssueBooks-> created_at;
-
         $timestamp = strtotime($IssueTime);
-     //   return $timestamp;
-
         $current_time = strtotime($current_time);
+        //$dataForFine = LibrarySettings::where('memberid', $memberId)->first();
        // return $current_time;
 
       //  return $current_time-$timestamp;
 
 
         if($current_time-$timestamp < 604800){
-            $fine = 10;
+            $fine = 0;
         }
         else{
             $fine = 100;
@@ -149,13 +150,16 @@ class IssueBookController extends Controller
      */
     public function addReturnTable(Request $request){
         //echo "SDggsgdsgs";
-        $IssueBooks = $request->get('issueBooks');
-        $Book = IssueBook::find($IssueBooks);
+
+        $IssueBookID = $request->get('issueBooks');
+        $Book = IssueBook::find($IssueBookID);
         $confirmReturnBook = $Book;
         $fine = $request->get('fine');
+       // RetunBook returnBook = new ReturnBook();
         //dd($confirmReturnBook);
+        //dd($fine);
         //$confirmReturnBook = IssueBook::all()->toArray();
-      //  return $confirmReturnBook;
+       // return $confirmReturnBook;
        // return view('Admin.Library_Management.viewAllReturnBooks',compact('confirmReturnBook'));
 //        ReturnBook::create($confirmReturnBook);
 //
@@ -171,8 +175,20 @@ class IssueBookController extends Controller
        // dd($dataFromMembers);
        // return $dataFromMembers;
         $returnCurrentTime = Carbon::now()->toDateTimeString();
-        $returnCurrentTime = strtotime($returnCurrentTime);
+       // $returnCurrentTime = strtotime($returnCurrentTime);
        // dd($returnCurrentTime);
+
+        $return_books = new ReturnBook();
+        $return_books->bookbarcode = $confirmReturnBook->bookbarcode;
+        $return_books->issuememberid = $confirmReturnBook->issuememberid;
+        $return_books->fine = $fine;
+        //$return_books->returndate = $returnCurrentTime;
+        $return_books->save();
+        //dd($return_books);
+
+        $books = IssueBook::find($IssueBookID);
+        $books->delete();
+        return redirect('Library/returnBook')->with('success','Book has been  returned');
 
     }
 

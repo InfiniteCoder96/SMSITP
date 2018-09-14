@@ -26,9 +26,9 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="isbn" class="col-sm-3 text-right control-label col-form-label">ISBN </label>
+                                        <label for="isbn" class="col-sm-3 text-right control-label col-form-label">Category </label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="isbn" name="isbn" placeholder="ISBN Here">
+                                            <input type="text" class="form-control" id="isbn" name="isbn" placeholder="Category Here">
                                         </div>
                                     </div>
                                     <div class="form-group row">

@@ -57,10 +57,11 @@
                                     {{--<th scope="col" style="font-size: 12px">ID</th>--}}
                                     <th scope="col" style="font-size: 12px">Book Barcode</th>
 
+                                    {{--<th scope="col" style="font-size: 12px">Member ID</th>--}}
                                     <th scope="col" style="font-size: 12px">Member ID</th>
                                     <th scope="col" style="font-size: 12px">Issued Date</th>
-                                    <th scope="col" style="font-size: 12px">Return Date</th>
-                                    <th scope="col" style="font-size: 12px">Action</th>
+                                    {{--<th scope="col" style="font-size: 12px">Return Date</th>--}}
+                                    <th scope="col" style="font-size: 12px"></th>
                                 </tr>
                                 </thead>
                                 <tbody class="customtable">
@@ -71,12 +72,12 @@
 
                                         <td>{{$issueBook['issuememberid']}}</td>
 
-                                        <td>{{$issueBook['issuememberid']}}</td>
+                                        {{--<td>{{$issueBook['issuememberid']}}</td>--}}
                                         <td>{{$issueBook['created_at']}}</td>
 
                                         <td style="font-size: 12px">
-                                            <button type="button" class="btn btn-success btn-sm">Edit</button>
-                                            <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                            {{--<button type="button" class="btn btn-success btn-sm">Edit</button>--}}
+                                            {{--<button type="button" class="btn btn-danger btn-sm">Delete</button>--}}
                                         </td>
                                     </tr>
 

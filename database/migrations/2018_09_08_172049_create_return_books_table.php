@@ -14,12 +14,11 @@ class CreateReturnBooksTable extends Migration
     public function up()
     {
         Schema::create('return_books', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('returnbookbarcode');
-            $table->string('returnbookname');
-            $table->string('returnmembername');
-            $table->string('returnmemberid');
-            $table->string('returndate');
+           // $table->increments('id');
+            $table->string('bookbarcode');
+            $table->string('issuememberid');
+            $table->string('fine');
+
             $table->timestamps();
         });
     }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\ReturnBook;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,8 @@ class returnController extends Controller
      */
     public function index()
     {
-        //
+        $return_books = ReturnBook::all()->toArray();
+        return view('Admin.Library_Management.viewAllReturnBooks',compact('return_books'));
     }
 
     /**
@@ -80,6 +82,8 @@ class returnController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $returnedbook = ReturnBook::find($id);
+        $returnedbook->delete();
+        return redirect('return_books')->with('success','Product has been  deleted');
     }
 }

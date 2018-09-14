@@ -59,7 +59,7 @@
 
                         {{csrf_field()}}
 
-                        <div class="card-body">
+                        <div class="card-body text-white"">
                             <div class="card-title">Member Details</div>
                             <div class="form-group row">
                                 <label for="memberFirstName" class="col-sm-3 text-right control-label col-form-label">Member First Name</label>
@@ -88,7 +88,7 @@
                             <div class="form-group row">
                                 <label for="memberEmail" class="col-sm-3 text-right control-label col-form-label">Member Email</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="memberemail"name="memberemail" placeholder="Phone Here">
+                                    <input type="text" class="form-control" id="memberemail"name="memberemail" placeholder="Email Here">
                                 </div>
                             </div>
 

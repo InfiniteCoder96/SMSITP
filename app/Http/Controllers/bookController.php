@@ -127,4 +127,6 @@ class bookController extends Controller
         $books->delete();
         return redirect('books')->with('success','Book has been  deleted');
     }
+
+
 }

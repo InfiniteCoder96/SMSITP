@@ -2,26 +2,370 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75c1e791-4ade-41ba-8e33-3bc20d914aa0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/images/background/Colorful-books.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/images/background/backgroundImageLibrary.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/images/background/imageLibrary.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/images/background/libraryImage.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSans-Bold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSans-BoldOblique.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSans-Oblique.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSans.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSansMono-Bold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSansMono-BoldOblique.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSansMono-Oblique.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSansMono.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSerif-Bold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSerif-BoldItalic.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSerif-Italic.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSerif.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/res/broken_image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/sample-fonts/IntelClear-Light.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/sample-fonts/NotoSansShavian-Regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/libraryDashboardController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/libraryReportController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/librarySettingsController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/LibrarySettings.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2018_09_10_123849_create_library_settings_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2018_09_10_155928_add_id_column_to_library_settings_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/libraryReport.blade.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/searchBookResults.blade.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/searchMemberResults.blade.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/ReturnBook.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2018_09_02_124445_create_return_books_table.php" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/settingsLibrary.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf/config/dompdf.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf/src/Facade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf/src/PDF.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf/src/ServiceProvider.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/LICENSE.LGPL" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/VERSION" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/Cpdf.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/Courier-Bold.afm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/Courier-BoldOblique.afm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/Courier-Oblique.afm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/Courier.afm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSans-Bold.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSans-BoldOblique.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSans-Oblique.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSans.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSansMono-Bold.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSansMono-BoldOblique.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSansMono-Oblique.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSansMono.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSerif-Bold.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSerif-BoldItalic.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSerif-Italic.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSerif.ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/Helvetica-Bold.afm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/Helvetica-BoldOblique.afm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/Helvetica-Oblique.afm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/Helvetica.afm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/Symbol.afm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/Times-Bold.afm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/Times-BoldItalic.afm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/Times-Italic.afm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/Times-Roman.afm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/ZapfDingbats.afm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/dompdf_font_family_cache.dist.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/mustRead.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/html5lib/Data.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/html5lib/InputStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/html5lib/Parser.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/html5lib/Tokenizer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/html5lib/TreeBuilder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/html5lib/named-character-references.ser" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/res/html.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/phpcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Adapter/CPDF.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Adapter/GD.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Adapter/PDFLib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Autoloader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Canvas.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/CanvasFactory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Cellmap.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Css/AttributeTranslator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Css/Color.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Css/Style.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Css/Stylesheet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Dompdf.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Exception.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Exception/ImageException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FontMetrics.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Frame.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Frame/Factory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Frame/FrameList.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Frame/FrameListIterator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Frame/FrameTree.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Frame/FrameTreeIterator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Frame/FrameTreeList.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameDecorator/AbstractFrameDecorator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameDecorator/Block.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameDecorator/Image.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameDecorator/Inline.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameDecorator/ListBullet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameDecorator/ListBulletImage.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameDecorator/NullFrameDecorator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameDecorator/Page.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameDecorator/Table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameDecorator/TableCell.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameDecorator/TableRow.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameDecorator/TableRowGroup.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameDecorator/Text.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameReflower/AbstractFrameReflower.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameReflower/Block.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameReflower/Image.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameReflower/Inline.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameReflower/ListBullet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameReflower/NullFrameReflower.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameReflower/Page.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameReflower/Table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameReflower/TableCell.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameReflower/TableRow.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameReflower/TableRowGroup.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameReflower/Text.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Helpers.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Image/Cache.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/JavascriptEmbedder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/LineBox.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Options.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/PhpEvaluator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Positioner/Absolute.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Positioner/AbstractPositioner.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Positioner/Block.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Positioner/Fixed.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Positioner/Inline.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Positioner/ListBullet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Positioner/NullPositioner.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Positioner/TableCell.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Positioner/TableRow.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Renderer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Renderer/AbstractRenderer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Renderer/Block.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Renderer/Image.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Renderer/Inline.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Renderer/ListBullet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Renderer/TableCell.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Renderer/TableRowGroup.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Renderer/Text.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/.gitattributes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/adobe-standard-encoding.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/cp1250.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/cp1251.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/cp1252.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/cp1253.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/cp1254.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/cp1255.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/cp1257.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/cp1258.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/cp874.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/iso-8859-1.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/iso-8859-11.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/iso-8859-15.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/iso-8859-16.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/iso-8859-2.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/iso-8859-4.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/iso-8859-5.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/iso-8859-7.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/iso-8859-9.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/koi8-r.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/koi8-u.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/phpunit.xml.dist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/AdobeFontMetrics.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Autoloader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/BinaryStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/EOT/File.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/EOT/Header.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/EncodingMap.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Exception/FontNotFoundException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Font.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Glyph/Outline.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Glyph/OutlineComponent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Glyph/OutlineComposite.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Glyph/OutlineSimple.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Header.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/OpenType/File.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/OpenType/TableDirectoryEntry.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Table/DirectoryEntry.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Table/Table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Table/Type/cmap.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Table/Type/glyf.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Table/Type/head.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Table/Type/hhea.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Table/Type/hmtx.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Table/Type/kern.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Table/Type/loca.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Table/Type/maxp.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Table/Type/name.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Table/Type/nameRecord.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Table/Type/os2.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Table/Type/post.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/TrueType/Collection.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/TrueType/File.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/TrueType/Header.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/TrueType/TableDirectoryEntry.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/WOFF/File.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/WOFF/Header.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/WOFF/TableDirectoryEntry.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/tests/FontLib/FontTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/.gitattributes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/COPYING" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/COPYING.GPL" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/phpunit.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/DefaultStyle.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Document.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Gradient/Stop.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Style.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Surface/CPdf.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Surface/SurfaceCpdf.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Surface/SurfaceGmagick.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Surface/SurfaceInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Surface/SurfacePDFLib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/AbstractTag.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/Anchor.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/Circle.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/ClipPath.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/Ellipse.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/Group.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/Image.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/Line.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/LinearGradient.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/Path.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/Polygon.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/Polyline.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/RadialGradient.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/Rect.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/Shape.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/Stop.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/StyleTag.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/Text.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/UseTag.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/autoload.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/tests/Svg/StyleTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/Doxyfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/composer.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/CSSList/AtRuleBlockList.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/CSSList/CSSBlockList.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/CSSList/CSSList.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/CSSList/Document.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/CSSList/KeyFrame.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Comment/Comment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Comment/Commentable.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/OutputFormat.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Parser.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Parsing/OutputException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Parsing/SourceException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Parsing/UnexpectedTokenException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Property/AtRule.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Property/CSSNamespace.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Property/Charset.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Property/Import.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Property/Selector.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Renderable.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Rule/Rule.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/RuleSet/AtRuleSet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/RuleSet/DeclarationBlock.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/RuleSet/RuleSet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Settings.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Value/CSSFunction.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Value/CSSString.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Value/Color.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Value/PrimitiveValue.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Value/RuleValueList.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Value/Size.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Value/URL.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Value/Value.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Value/ValueList.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/phpunit.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/Sabberworm/CSS/CSSList/AtRuleBlockListTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/Sabberworm/CSS/CSSList/DocumentTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/Sabberworm/CSS/OutputFormatTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/Sabberworm/CSS/ParserTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/Sabberworm/CSS/RuleSet/DeclarationBlockTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/Sabberworm/CSS/RuleSet/LenientParsingTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/bootstrap.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/-charset-after-rule.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/-charset-in-block.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/-empty.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/-end-token-2.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/-end-token.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/-fault-tolerance.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/-tobedone.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/1readme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/2readme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/atrules.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/case-insensitivity.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/colortest.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/comments.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/create-shorthands.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/docuwiki.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/expand-shorthands.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/functions.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/ie-hacks.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/ie.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/important.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/inner-color.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/line-numbers.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/namespaces.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/nested.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/slashed.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/specificity.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/unicode.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/url.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/values.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/webkit.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/whitespace.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/phpunit.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/quickdump.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/database/migrations/2018_09_02_124445_create_return_books_table.php" afterPath="$PROJECT_DIR$/database/migrations/2018_09_08_172049_create_return_books_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/SMS.iml" afterPath="$PROJECT_DIR$/.idea/SMS.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/IssueBookController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/IssueBookController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/bookController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/bookController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/returnController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/returnController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/ReturnBook.php" afterPath="$PROJECT_DIR$/app/ReturnBook.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Library_Management/addNewMemberForm.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/addNewMemberForm.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Library_Management/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/dashboard.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Library_Management/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/edit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Library_Management/editMemberForm.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/editMemberForm.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Library_Management/issueBook.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/issueBook.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Library_Management/issueBookTable.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/issueBookTable.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Library_Management/returnBook.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/returnBook.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Library_Management/returnBookConfirmation.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/returnBookConfirmation.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Library_Management/viewAllBooksTable.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/viewAllBooksTable.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Library_Management/viewAllMembers.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/viewAllMembers.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Library_Management/viewAllReturnBooks.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/viewAllReturnBooks.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/addNewBookModal.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/addNewBookModal.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/editBookModal.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/editBookModal.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/header.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/header.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/sideBar.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/sideBar.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,8 +383,8 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="214" column="38" lean-forward="false" selection-start-line="214" selection-start-column="38" selection-end-line="214" selection-end-column="38" />
+            <state relative-caret-position="2751">
+              <caret line="140" column="24" lean-forward="false" selection-start-line="140" selection-start-column="24" selection-end-line="140" selection-end-column="24" />
               <folding>
                 <element signature="e#3701#3738#0#PHP" expanded="true" />
               </folding>
@@ -48,75 +392,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IssueBookController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/IssueBookController.php">
+      <file leaf-file-name="app.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/app.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1356">
-              <caret line="141" column="5" lean-forward="false" selection-start-line="141" selection-start-column="4" selection-end-line="141" selection-end-column="5" />
+            <state relative-caret-position="516">
+              <caret line="164" column="46" lean-forward="false" selection-start-line="164" selection-start-column="46" selection-end-line="164" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="libraryReport.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/libraryReport.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="libraryReportController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/libraryReportController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
               <folding>
-                <element signature="e#40#58#0#PHP" expanded="true" />
+                <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Member.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Member.php">
+      <file leaf-file-name="viewAllMembers.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/viewAllMembers.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="viewAllReturnBooks.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/viewAllReturnBooks.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="60" column="94" lean-forward="true" selection-start-line="60" selection-start-column="94" selection-end-line="60" selection-end-column="94" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReturnBook.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/ReturnBook.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="63" lean-forward="false" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="63" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="returnController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/returnController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
-              <folding>
-                <element signature="e#40#59#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sideBar.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/sideBar.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MemberController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MemberController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+            <state relative-caret-position="-547">
+              <caret line="46" column="49" lean-forward="false" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -161,18 +473,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/Admin/Non_Academic_Management/manage_sports.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/adminLayouts/sideBar.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/User_Management/Student/view-insert_student.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/TransportHostelLayouts/header.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/Transport_Management/staff_report.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/Transport_Management/manage_vehicle.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/adminLayouts/header.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/footer.blade.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_08_20_073042_create_books_table.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/viewAllBooks.blade.php" />
-        <option value="$PROJECT_DIR$/app/books.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/addNewMemberModal.blade.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/database/migrations/2018_08_27_104008_create_members_table.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/addBookForm.blade.php" />
@@ -183,22 +483,15 @@
         <option value="$PROJECT_DIR$/database/migrations/2018_09_01_162748__create_issue_books_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_09_01_164029_create_issue_books_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_09_02_124445_create_return_books_table.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/editMemberForm.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_09_03_110034_add_bookname_to_issue_books.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MemberController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/returnBookModal.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/returnBook.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/issueBook.blade.php" />
         <option value="$PROJECT_DIR$/app/IssueBook.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/addNewBookModal.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/editBookModal.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/issueBookTable.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/returnBookConfirmation.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/addNewMemberForm.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/viewAllBooksTable.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/viewAllMembers.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/searchBookResults.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/searchMemberResults.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_09_07_123647_create_return_books_table.php" />
@@ -206,12 +499,31 @@
         <option value="$PROJECT_DIR$/database/migrations/2018_09_08_170719_create_return_books_table.php" />
         <option value="$PROJECT_DIR$/app/ReturnBook.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_09_08_172049_create_return_books_table.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/IssueBookController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/header.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/returnController.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/librarySettings.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_09_10_104939_create_library_settings_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_09_10_123539_create_library_settings_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_09_10_123849_create_library_settings_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_09_10_155928_add_id_column_to_library_settings_table.php" />
+        <option value="$PROJECT_DIR$/app/LibrarySettings.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/sideBar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/settingsLibrary.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/librarySettingsController.php" />
+        <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/addNewMemberForm.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/editMemberForm.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/issueBook.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/viewAllMembers.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/returnBook.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/returnBookConfirmation.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/IssueBookController.php" />
+        <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/dashboard.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/libraryDashboardController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/returnController.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/viewAllReturnBooks.blade.php" />
+        <option value="$PROJECT_DIR$/config/app.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/libraryReportController.php" />
       </list>
     </option>
   </component>
@@ -304,6 +616,11 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
       <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-cors" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
@@ -330,6 +647,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -512,7 +830,55 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SMSITP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SMSITP" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SMSITP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SMSITP" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="background" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -558,11 +924,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="factories" />
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -623,7 +985,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -635,6 +996,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\SMSITP\public\assets\images\background" />
       <recent name="D:\Applications\xampp\htdocs\SMS\resources\views\layouts\adminLayouts" />
       <recent name="D:\Applications\xampp\htdocs\SMS\resources\views\layouts\AcademicLayouts" />
     </key>
@@ -769,7 +1131,15 @@
       <workItem from="1536285215243" duration="17781000" />
       <workItem from="1536338909955" duration="2246000" />
       <workItem from="1536386734602" duration="28444000" />
-      <workItem from="1536476855917" duration="4329000" />
+      <workItem from="1536476855917" duration="7131000" />
+      <workItem from="1536571587130" duration="10570000" />
+      <workItem from="1536652186273" duration="13991000" />
+      <workItem from="1536738478472" duration="2684000" />
+      <workItem from="1536748328575" duration="5704000" />
+      <workItem from="1536760189934" duration="213000" />
+      <workItem from="1536819644571" duration="9874000" />
+      <workItem from="1536844816898" duration="1742000" />
+      <workItem from="1536888081520" duration="5816000" />
     </task>
     <task id="LOCAL-00001" summary="new admin panel">
       <created>1534087175865</created>
@@ -855,24 +1225,38 @@
       <option name="project" value="LOCAL" />
       <updated>1536390563602</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="initial functions done">
+      <created>1536482683547</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1536482683547</updated>
+    </task>
+    <task id="LOCAL-00014" summary="initial functions done">
+      <created>1536920413497</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1536920413497</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="280017000" />
+    <option name="totallyTimeSpent" value="333413000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1058" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19427083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22447917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23235613" sideWeight="0.5052083" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.49785176" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23127036" sideWeight="0.49479166" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16829532" sideWeight="0.49479166" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -894,11 +1278,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23235613" sideWeight="0.5052083" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.49785176" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23127036" sideWeight="0.49479166" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16829532" sideWeight="0.49479166" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19427083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -974,110 +1358,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_08_14_051542_update_drop_sid_in_students_table.php" />
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/adminLayouts/sideBar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/adminLayouts/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="20" column="15" lean-forward="true" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_08_20_073042_create_books_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="23" column="11" lean-forward="false" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/addBookForm.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="45" column="73" lean-forward="false" selection-start-line="45" selection-start-column="73" selection-end-line="45" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/User_Management/Admin/admin_view.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="76" column="18" lean-forward="false" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_08_27_104008_create_members_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="21" column="42" lean-forward="false" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/ajax.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="25" column="48" lean-forward="false" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_09_01_045720_create_issue_books_table.php" />
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_09_01_162748__create_issue_books_table.php" />
-    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_static.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3278">
-          <caret line="4037" column="21" lean-forward="false" selection-start-line="4037" selection-start-column="21" selection-end-line="4037" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-353">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_09_03_110034_add_bookname_to_issue_books.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/addNewMemberModal.blade.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/editMemberModal.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/books.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/editMemberForm.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="67" column="42" lean-forward="true" selection-start-line="67" selection-start-column="42" selection-end-line="67" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/footer.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3133">
@@ -1091,20 +1371,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/issueBook.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1386">
-          <caret line="66" column="149" lean-forward="false" selection-start-line="66" selection-start-column="149" selection-end-line="66" selection-end-column="149" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/returnBook.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1638">
-          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1123,76 +1389,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/editBookModal.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="28" column="123" lean-forward="false" selection-start-line="28" selection-start-column="123" selection-end-line="28" selection-end-column="123" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2018_09_02_124445_create_return_books_table.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/dashboard.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/addNewMemberForm.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/searchBookResults.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="89" column="23" lean-forward="false" selection-start-line="89" selection-start-column="23" selection-end-line="89" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/searchMemberResults.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1197">
           <caret line="97" column="51" lean-forward="false" selection-start-line="97" selection-start-column="51" selection-end-line="97" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/viewAllBooksTable.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="42" column="44" lean-forward="false" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/issueBookTable.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="40" column="29" lean-forward="true" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/viewAllMembers.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="67" column="49" lean-forward="true" selection-start-line="67" selection-start-column="49" selection-end-line="67" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/returnBookConfirmation.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1533">
-          <caret line="73" column="28" lean-forward="false" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_09_01_164029_create_issue_books_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1205,20 +1406,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Member.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2018_09_08_170719_create_return_books_table.php" />
     <entry file="file://$PROJECT_DIR$/database/migrations/2018_09_08_172049_create_return_books_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1226,7 +1418,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-231">
           <caret line="54" column="84" lean-forward="true" selection-start-line="54" selection-start-column="84" selection-end-line="54" selection-end-column="84" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1240,64 +1431,268 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MemberController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/searchBookResults.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
-          <folding />
+        <state relative-caret-position="461">
+          <caret line="89" column="23" lean-forward="false" selection-start-line="89" selection-start-column="23" selection-end-line="89" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/ReturnBook.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/librarySettings.php" />
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_09_10_104029_create_library_settings_table.php" />
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_09_10_104939_create_library_settings_table.php" />
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_09_01_164029_create_issue_books_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_09_10_123539_create_library_settings_table.php" />
+    <entry file="file://$PROJECT_DIR$/app/Member.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
-          <caret line="9" column="63" lean-forward="false" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="63" />
+          <caret line="9" column="90" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="9" selection-end-column="90" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/returnController.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_09_10_155928_add_id_column_to_library_settings_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
-          <folding>
-            <element signature="e#40#59#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="294">
+          <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MemberController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="31" column="7" lean-forward="true" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_09_10_123849_create_library_settings_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/sideBar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="140" lean-forward="false" selection-start-line="15" selection-start-column="140" selection-end-line="15" selection-end-column="140" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/addBookForm.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-105">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/addNewMemberForm.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="61" column="57" lean-forward="false" selection-start-line="61" selection-start-column="57" selection-end-line="61" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="30" column="61" lean-forward="false" selection-start-line="30" selection-start-column="61" selection-end-line="30" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/editMemberForm.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="40" column="56" lean-forward="false" selection-start-line="40" selection-start-column="56" selection-end-line="40" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/editBookModal.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/User_Management/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1890">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/User_Management/Admin/admin_view.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="103" column="31" lean-forward="true" selection-start-line="103" selection-start-column="31" selection-end-line="103" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/issueBookTable.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="40" column="29" lean-forward="true" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/backend_css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/issueBook.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-673">
+          <caret line="40" column="56" lean-forward="false" selection-start-line="40" selection-start-column="56" selection-end-line="40" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="214" column="38" lean-forward="false" selection-start-line="214" selection-start-column="38" selection-end-line="214" selection-end-column="38" />
+        <state relative-caret-position="2751">
+          <caret line="140" column="24" lean-forward="false" selection-start-line="140" selection-start-column="24" selection-end-line="140" selection-end-column="24" />
           <folding>
             <element signature="e#3701#3738#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/sideBar.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/returnBook.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        <state relative-caret-position="1281">
+          <caret line="61" column="61" lean-forward="false" selection-start-line="61" selection-start-column="61" selection-end-line="61" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/returnBookConfirmation.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="611">
+          <caret line="99" column="26" lean-forward="false" selection-start-line="99" selection-start-column="26" selection-end-line="99" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/IssueBookController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="882">
+          <caret line="49" column="44" lean-forward="false" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/settingsLibrary.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/LibrarySettings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/librarySettingsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="92" column="48" lean-forward="false" selection-start-line="92" selection-start-column="48" selection-end-line="92" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="179" column="166" lean-forward="false" selection-start-line="179" selection-start-column="166" selection-end-line="179" selection-end-column="166" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/libraryDashboardController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="72" column="44" lean-forward="false" selection-start-line="72" selection-start-column="44" selection-end-line="72" selection-end-column="44" />
+          <folding>
+            <element signature="e#40#54#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/viewAllBooksTable.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-651">
+          <caret line="50" column="27" lean-forward="true" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/viewAllMembers.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-547">
+          <caret line="46" column="49" lean-forward="false" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ReturnBook.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/returnController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="84" column="44" lean-forward="false" selection-start-line="84" selection-start-column="44" selection-end-line="84" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/viewAllReturnBooks.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="60" column="94" lean-forward="true" selection-start-line="60" selection-start-column="94" selection-end-line="60" selection-end-column="94" />
+        <state relative-caret-position="105">
+          <caret line="63" column="35" lean-forward="false" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="85" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/IssueBookController.php">
+    <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1356">
-          <caret line="141" column="5" lean-forward="false" selection-start-line="141" selection-start-column="4" selection-end-line="141" selection-end-column="5" />
+        <state relative-caret-position="516">
+          <caret line="164" column="46" lean-forward="false" selection-start-line="164" selection-start-column="46" selection-end-line="164" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/libraryReport.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/libraryReportController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
           <folding>
-            <element signature="e#40#58#0#PHP" expanded="true" />
+            <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

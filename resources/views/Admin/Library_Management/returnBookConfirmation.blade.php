@@ -54,12 +54,13 @@
                                 <p>{{ \Session::get('success') }}</p>
                             </div><br />
                         @endif
-
+                            {{--@if(bookbarcode != null)--}}
                         <form class="" method="post" action="{{url('confirmReturn')}}" >
 
                             {{csrf_field()}}
                             <input type="hidden" value="{{$id}}" name="issueBooks">
-                            <div class="card-body">
+                            <input type="hidden" value="{{$fine}}" name="fine">
+                            <div class="card-body text-white"">
                                 <div class="card-title">Issue Details</div>
                                 <div class="form-group row">
                                     <label for="bookbarcode" class="col-sm-3 text-right control-label col-form-label">Book Barcode </label>
@@ -96,7 +97,7 @@
 
                                     </div>
                                 </div>
-
+                            {{--@endif--}}
 
 
 

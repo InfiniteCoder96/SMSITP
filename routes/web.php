@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -139,9 +140,13 @@ Route::resource('students','StudentController');
 
 //Library Manager Routes
 
-Route::get('/library/dashboard', function (){
-    return view('Admin.Library_Management.dashboard') ;
-});
+use Illuminate\Support\Facades\Input;
+use App\books;
+use App\Member;
+
+//Route::get('/library/dashboard', function (){
+//    return view('Admin.Library_Management.dashboard') ;
+//});
 
 Route::get('/Library/viewAllMembers', function (){
     return view('Admin.Library_Management.viewAllMembers') ;
@@ -176,3 +181,49 @@ Route::get('/Library/viewReturn', function () {
 });
 
 Route::post('confirmReturn', 'IssueBookController@addReturnTable');
+
+Route::post('/searchBooks', function (){
+   $q = Input::get('q');
+   if($q != '') {
+       //dd($q);
+       $searchBookResult = books::where('bookname', 'LIKE', $q . '%')->orWhere('authorname', 'LIKE', $q . '%')->get();
+
+       // dd($searchBookResult);
+       if (count($searchBookResult) > 0)
+           return view('Admin.Library_Management.searchBookResults')->withDetails($searchBookResult)->withQuery($q);
+       //return view('Admin.Library_Management.searchBookResults')->with('details',$searchBookResult);
+       else return view('Admin.Library_Management.searchBookResults')->withMessage("No details Found");
+   }
+  // return('dsds');
+    else return view('Admin.Library_Management.searchBookResults')->withMessage("No details Found");
+});
+
+Route::post('/searchMembers', function (){
+    $q = Input::get('q');
+    //dd($q);
+    if($q != '') {
+        $searchMemberResult = Member::where('firstname', 'LIKE', $q . '%')->orWhere('lastname', 'LIKE', $q . '%')->orWhere('memberid', 'LIKE', $q . '%')->get();
+
+        // dd($searchBookResult);
+        if (count($searchMemberResult) > 0)
+            return view('Admin.Library_Management.searchMemberResults')->withDetails($searchMemberResult)->withQuery($q);
+        //return view('Admin.Library_Management.searchBookResults')->with('details',$searchMemberResult);
+        else return view('Admin.Library_Management.searchMemberResults')->withMessage("No details Found");
+    }
+    else return view('Admin.Library_Management.searchMemberResults')->withMessage("No details Found");
+});
+Route::resource('return_books','returnController');
+
+//Route::get('/Library/librarySettings', function (){
+//    return view('Admin.Library_Management.settingsLibrary') ;
+//});
+Route::resource('library_settings','librarySettingsController');
+
+Route::get('/totalbooks','libraryDashboardController@countofbooks');
+Route::get('/totalmembers','libraryDashboardController@countofmembers');
+//Route::get('librarydash')
+
+//Route::get('/Library/count', function () {
+//    return view('Admin.Library_Management.viewAllReturnBooks');
+//});
+Route::get('/library/dashboard','libraryDashboardController@create');
