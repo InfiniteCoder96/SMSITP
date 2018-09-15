@@ -2,370 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75c1e791-4ade-41ba-8e33-3bc20d914aa0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/images/background/Colorful-books.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/images/background/backgroundImageLibrary.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/images/background/imageLibrary.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/images/background/libraryImage.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSans-Bold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSans-BoldOblique.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSans-Oblique.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSans.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSansMono-Bold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSansMono-BoldOblique.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSansMono-Oblique.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSansMono.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSerif-Bold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSerif-BoldItalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSerif-Italic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSerif.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/res/broken_image.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/sample-fonts/IntelClear-Light.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/sample-fonts/NotoSansShavian-Regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/libraryDashboardController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/libraryReportController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/librarySettingsController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/LibrarySettings.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2018_09_10_123849_create_library_settings_table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2018_09_10_155928_add_id_column_to_library_settings_table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/libraryReport.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/searchBookResults.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/searchMemberResults.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/settingsLibrary.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf/config/dompdf.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf/src/Facade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf/src/PDF.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf/src/ServiceProvider.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/CONTRIBUTING.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/LICENSE.LGPL" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/VERSION" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/Cpdf.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/Courier-Bold.afm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/Courier-BoldOblique.afm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/Courier-Oblique.afm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/Courier.afm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSans-Bold.ufm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSans-BoldOblique.ufm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSans-Oblique.ufm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSans.ufm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSansMono-Bold.ufm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSansMono-BoldOblique.ufm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSansMono-Oblique.ufm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSansMono.ufm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSerif-Bold.ufm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSerif-BoldItalic.ufm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSerif-Italic.ufm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/DejaVuSerif.ufm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/Helvetica-Bold.afm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/Helvetica-BoldOblique.afm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/Helvetica-Oblique.afm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/Helvetica.afm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/Symbol.afm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/Times-Bold.afm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/Times-BoldItalic.afm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/Times-Italic.afm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/Times-Roman.afm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/ZapfDingbats.afm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/dompdf_font_family_cache.dist.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/fonts/mustRead.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/html5lib/Data.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/html5lib/InputStream.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/html5lib/Parser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/html5lib/Tokenizer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/html5lib/TreeBuilder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/html5lib/named-character-references.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/lib/res/html.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/phpcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Adapter/CPDF.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Adapter/GD.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Adapter/PDFLib.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Autoloader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Canvas.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/CanvasFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Cellmap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Css/AttributeTranslator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Css/Color.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Css/Style.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Css/Stylesheet.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Dompdf.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Exception.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Exception/ImageException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FontMetrics.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Frame.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Frame/Factory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Frame/FrameList.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Frame/FrameListIterator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Frame/FrameTree.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Frame/FrameTreeIterator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Frame/FrameTreeList.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameDecorator/AbstractFrameDecorator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameDecorator/Block.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameDecorator/Image.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameDecorator/Inline.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameDecorator/ListBullet.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameDecorator/ListBulletImage.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameDecorator/NullFrameDecorator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameDecorator/Page.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameDecorator/Table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameDecorator/TableCell.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameDecorator/TableRow.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameDecorator/TableRowGroup.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameDecorator/Text.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameReflower/AbstractFrameReflower.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameReflower/Block.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameReflower/Image.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameReflower/Inline.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameReflower/ListBullet.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameReflower/NullFrameReflower.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameReflower/Page.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameReflower/Table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameReflower/TableCell.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameReflower/TableRow.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameReflower/TableRowGroup.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/FrameReflower/Text.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Helpers.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Image/Cache.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/JavascriptEmbedder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/LineBox.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Options.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/PhpEvaluator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Positioner/Absolute.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Positioner/AbstractPositioner.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Positioner/Block.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Positioner/Fixed.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Positioner/Inline.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Positioner/ListBullet.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Positioner/NullPositioner.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Positioner/TableCell.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Positioner/TableRow.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Renderer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Renderer/AbstractRenderer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Renderer/Block.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Renderer/Image.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Renderer/Inline.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Renderer/ListBullet.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Renderer/TableCell.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Renderer/TableRowGroup.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/dompdf/dompdf/src/Renderer/Text.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/.gitattributes" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/.htaccess" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/adobe-standard-encoding.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/cp1250.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/cp1251.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/cp1252.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/cp1253.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/cp1254.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/cp1255.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/cp1257.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/cp1258.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/cp874.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/iso-8859-1.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/iso-8859-11.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/iso-8859-15.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/iso-8859-16.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/iso-8859-2.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/iso-8859-4.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/iso-8859-5.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/iso-8859-7.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/iso-8859-9.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/koi8-r.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/maps/koi8-u.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/phpunit.xml.dist" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/AdobeFontMetrics.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Autoloader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/BinaryStream.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/EOT/File.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/EOT/Header.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/EncodingMap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Exception/FontNotFoundException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Font.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Glyph/Outline.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Glyph/OutlineComponent.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Glyph/OutlineComposite.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Glyph/OutlineSimple.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Header.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/OpenType/File.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/OpenType/TableDirectoryEntry.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Table/DirectoryEntry.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Table/Table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Table/Type/cmap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Table/Type/glyf.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Table/Type/head.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Table/Type/hhea.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Table/Type/hmtx.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Table/Type/kern.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Table/Type/loca.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Table/Type/maxp.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Table/Type/name.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Table/Type/nameRecord.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Table/Type/os2.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/Table/Type/post.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/TrueType/Collection.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/TrueType/File.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/TrueType/Header.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/TrueType/TableDirectoryEntry.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/WOFF/File.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/WOFF/Header.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/src/FontLib/WOFF/TableDirectoryEntry.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-font-lib/tests/FontLib/FontTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/.gitattributes" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/COPYING" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/COPYING.GPL" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/phpunit.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/DefaultStyle.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Document.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Gradient/Stop.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Style.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Surface/CPdf.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Surface/SurfaceCpdf.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Surface/SurfaceGmagick.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Surface/SurfaceInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Surface/SurfacePDFLib.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/AbstractTag.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/Anchor.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/Circle.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/ClipPath.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/Ellipse.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/Group.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/Image.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/Line.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/LinearGradient.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/Path.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/Polygon.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/Polyline.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/RadialGradient.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/Rect.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/Shape.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/Stop.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/StyleTag.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/Text.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/Svg/Tag/UseTag.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/src/autoload.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phenx/php-svg-lib/tests/Svg/StyleTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/CHANGELOG.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/Doxyfile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/composer.lock" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/CSSList/AtRuleBlockList.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/CSSList/CSSBlockList.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/CSSList/CSSList.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/CSSList/Document.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/CSSList/KeyFrame.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Comment/Comment.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Comment/Commentable.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/OutputFormat.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Parser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Parsing/OutputException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Parsing/SourceException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Parsing/UnexpectedTokenException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Property/AtRule.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Property/CSSNamespace.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Property/Charset.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Property/Import.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Property/Selector.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Renderable.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Rule/Rule.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/RuleSet/AtRuleSet.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/RuleSet/DeclarationBlock.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/RuleSet/RuleSet.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Settings.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Value/CSSFunction.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Value/CSSString.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Value/Color.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Value/PrimitiveValue.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Value/RuleValueList.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Value/Size.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Value/URL.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Value/Value.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/lib/Sabberworm/CSS/Value/ValueList.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/phpunit.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/Sabberworm/CSS/CSSList/AtRuleBlockListTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/Sabberworm/CSS/CSSList/DocumentTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/Sabberworm/CSS/OutputFormatTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/Sabberworm/CSS/ParserTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/Sabberworm/CSS/RuleSet/DeclarationBlockTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/Sabberworm/CSS/RuleSet/LenientParsingTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/bootstrap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/-charset-after-rule.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/-charset-in-block.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/-empty.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/-end-token-2.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/-end-token.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/-fault-tolerance.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/-tobedone.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/1readme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/2readme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/atrules.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/case-insensitivity.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/colortest.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/comments.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/create-shorthands.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/docuwiki.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/expand-shorthands.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/functions.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/ie-hacks.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/ie.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/important.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/inner-color.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/line-numbers.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/namespaces.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/nested.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/slashed.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/specificity.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/unicode.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/url.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/values.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/webkit.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/files/whitespace.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/phpunit.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sabberworm/php-css-parser/tests/quickdump.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/database/migrations/2018_09_02_124445_create_return_books_table.php" afterPath="$PROJECT_DIR$/database/migrations/2018_09_08_172049_create_return_books_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/SMS.iml" afterPath="$PROJECT_DIR$/.idea/SMS.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/IssueBookController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/IssueBookController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/bookController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/bookController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/returnController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/returnController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/ReturnBook.php" afterPath="$PROJECT_DIR$/app/ReturnBook.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Library_Management/addNewMemberForm.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/addNewMemberForm.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Library_Management/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/dashboard.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Library_Management/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/edit.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Library_Management/editMemberForm.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/editMemberForm.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Library_Management/issueBook.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/issueBook.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Library_Management/issueBookTable.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/issueBookTable.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Library_Management/returnBook.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/returnBook.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Library_Management/returnBookConfirmation.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/returnBookConfirmation.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Library_Management/viewAllBooksTable.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/viewAllBooksTable.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Library_Management/viewAllMembers.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/viewAllMembers.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/addNewBookModal.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/addNewBookModal.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/editBookModal.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/editBookModal.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/header.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/header.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/sideBar.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/sideBar.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/libraryReportController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/libraryReportController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -395,7 +33,7 @@
       <file leaf-file-name="app.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/app.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
+            <state relative-caret-position="3444">
               <caret line="164" column="46" lean-forward="false" selection-start-line="164" selection-start-column="46" selection-end-line="164" selection-end-column="46" />
               <folding />
             </state>
@@ -415,8 +53,8 @@
       <file leaf-file-name="libraryReportController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/libraryReportController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+            <state relative-caret-position="357">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
@@ -427,7 +65,7 @@
       <file leaf-file-name="viewAllMembers.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/viewAllMembers.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-547">
+            <state relative-caret-position="966">
               <caret line="46" column="49" lean-forward="false" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
               <folding />
             </state>
@@ -647,7 +285,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -985,6 +622,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1139,7 +777,9 @@
       <workItem from="1536760189934" duration="213000" />
       <workItem from="1536819644571" duration="9874000" />
       <workItem from="1536844816898" duration="1742000" />
-      <workItem from="1536888081520" duration="5816000" />
+      <workItem from="1536888081520" duration="6477000" />
+      <workItem from="1536980418523" duration="379000" />
+      <workItem from="1536983738365" duration="186000" />
     </task>
     <task id="LOCAL-00001" summary="new admin panel">
       <created>1534087175865</created>
@@ -1239,26 +879,33 @@
       <option name="project" value="LOCAL" />
       <updated>1536920413497</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="initial functions done">
+      <created>1536922192159</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1536922192159</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="333413000" />
+    <option name="totallyTimeSpent" value="334639000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1058" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22447917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18854167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23235613" sideWeight="0.5052083" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.49785176" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.49785176" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16829532" sideWeight="0.49479166" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1402,7 +1049,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2381">
           <caret line="586" column="11" lean-forward="false" selection-start-line="586" selection-start-column="7" selection-end-line="586" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1570,7 +1216,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1281">
           <caret line="61" column="61" lean-forward="false" selection-start-line="61" selection-start-column="61" selection-end-line="61" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1593,7 +1238,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1617,7 +1261,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
           <caret line="179" column="166" lean-forward="false" selection-start-line="179" selection-start-column="166" selection-end-line="179" selection-end-column="166" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1635,13 +1278,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-651">
           <caret line="50" column="27" lean-forward="true" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/viewAllMembers.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-547">
+        <state relative-caret-position="966">
           <caret line="46" column="49" lean-forward="false" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
           <folding />
         </state>
@@ -1667,15 +1309,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="63" column="35" lean-forward="false" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="164" column="46" lean-forward="false" selection-start-line="164" selection-start-column="46" selection-end-line="164" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1687,10 +1320,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3444">
+          <caret line="164" column="46" lean-forward="false" selection-start-line="164" selection-start-column="46" selection-end-line="164" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/libraryReportController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+        <state relative-caret-position="357">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
