@@ -34,7 +34,13 @@ class customAuthController extends Controller
     }
 
     public function showLoginForm(){
-        return view('auth.login');
+        if(Auth::guard('admin')->user()){
+            return redirect('/admin/dashboard');
+        }
+        else{
+            return view('auth.login');
+        }
+
     }
 
     public function login(Request $request){
@@ -52,7 +58,7 @@ class customAuthController extends Controller
             return redirect('/library/dashboard');
         }
 
-            return 'failed';
+            return back()->with('Status', 'These credentials are not in our records');
 
 
         //return redirect('/')->with('Status','You have registered successfully');

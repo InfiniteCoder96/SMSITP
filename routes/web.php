@@ -160,6 +160,14 @@ Route::get('/events',function(){
     return view('Frontend.events');
 });
 
+Route::get('/join-us',function(){
+    return view('Frontend.joinUs');
+});
+
+Route::get('/join-us/student',function(){
+    return view('Frontend.JoinUsStudents');
+});
+
 Route::get('/home',function(){
     return view('Frontend.index');
 });

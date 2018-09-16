@@ -46,6 +46,8 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
+
+
         $student = new Student();
         $parent_guardian = new Parent_Guardian();
 
@@ -62,7 +64,6 @@ class StudentController extends Controller
             'Email_Address'=> 'required|email|unique:students',
             'Telephone_No_Mob'=> 'required',
             'Telephone_No_Res'=> 'required',
-            'birth_certificate_no'=> 'required',
             'religion'=> 'required',
             'race'=> 'required',
             'nationality'=> 'required',
@@ -75,7 +76,7 @@ class StudentController extends Controller
             'first_name'=> 'required',
             'middle_name'=> 'required',
             'last_name'=> 'required',
-            'NIC_Passport'=> 'required|min:10|max:10|unique:parent__guardians',
+            'Parent_NIC_Passport'=> 'required|min:10|max:10',
             'pr_nationality'=> 'required',
             'pr_race'=> 'required',
             'pr_religion'=> 'required',
@@ -104,7 +105,6 @@ class StudentController extends Controller
         $student->Email_Address = $request->get('Email_Address');
         $student->Telephone_No_Mob = $request->get('Telephone_No_Mob');
         $student->Telephone_No_Res = $request->get('Telephone_No_Res');
-        $student->birth_certificate_no = $request->get('birth_certificate_no');
         $student->religion = $request->get('religion');
         $student->race = $request->get('race');
         $student->nationality = $request->get('nationality');
@@ -116,7 +116,7 @@ class StudentController extends Controller
         $parent_guardian->first_name = $request->get('first_name');
         $parent_guardian->middle_name = $request->get('middle_name');
         $parent_guardian->last_name = $request->get('last_name');
-        $parent_guardian->NIC_Passport = $request->get('NIC_Passport');
+        $parent_guardian->NIC_Passport = $request->get('Parent_NIC_Passport');
         $parent_guardian->nationality = $request->get('pr_nationality');
         $parent_guardian->race = $request->get('pr_race');
         $parent_guardian->religion = $request->get('pr_religion');
@@ -155,10 +155,12 @@ class StudentController extends Controller
         $student->save();
         $parent_guardian->save();
 
-//        Student::create($student);
-//        Parent_Guardian::create($parent_guardian);
-
-        return redirect('students')->with('success', 'Student has been added to the System Successfully');
+        if($request->get('source') == 'admin'){
+            return redirect('students')->with('success', 'Student has been added to the System Successfully');
+        }
+        elseif ($request->get('source') == 'joinUs'){
+            return redirect('/joinUs')->with('success', 'Your Application has been submitted Successfully');
+        }
     }
 
     /**
@@ -210,7 +212,6 @@ class StudentController extends Controller
             'Email_Address'=> 'required|email',
             'Telephone_No_Mob'=> 'required',
             'Telephone_No_Res'=> 'required',
-            'birth_certificate_no'=> 'required',
             'religion'=> 'required',
             'race'=> 'required',
             'nationality'=> 'required',
@@ -247,7 +248,6 @@ class StudentController extends Controller
         $student->Email_Address = $request->get('Email_Address');
         $student->Telephone_No_Mob = $request->get('Telephone_No_Mob');
         $student->Telephone_No_Res = $request->get('Telephone_No_Res');
-        $student->birth_certificate_no = $request->get('birth_certificate_no');
         $student->religion = $request->get('religion');
         $student->race = $request->get('race');
         $student->nationality = $request->get('nationality');
@@ -437,4 +437,5 @@ class StudentController extends Controller
     public function showStudentDashboard(){
         return view('Student.dashboard');
     }
+
 }

@@ -1,94 +1,11 @@
-﻿<!DOCTYPE html>
-<!--[if IE 8]> <html class="ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
-<head>
-	<meta charset="utf-8">
-	<title>HarrisonHighSchool</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-	<link rel="stylesheet" media="all" href="{{asset('css/frontend_css/style.css')}}" type="text/css">
-	<!--[if lt IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-	<link rel="dns-prefetch" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<link href="{{asset('assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css')}}" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" type="text/css" href="{{asset('assets/extra-libs/multicheck/multicheck.css')}}">
-	<!-- Styles -->
-	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+﻿@include('layouts.FrontendLayouts.head')
 
-	<!-- Favicon icon -->
-	<link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/images/favicon.png')}}">
 
-	<!-- Custom CSS -->
-	<link href="{{asset('assets/libs/flot/css/float-chart.css')}}" rel="stylesheet">
-	<!-- Custom CSS -->
-	<link href="{{asset('css/backend_css/style.min.css')}}" rel="stylesheet">
-	<link href="{{asset('assets/libs/jquery-steps/steps.css')}}" rel="stylesheet">
-	<link href="{{asset('assets/libs/flot/css/float-chart.css')}}" rel="stylesheet">
-	<link href="{{asset('css/backend_css/fabochart.css')}}" rel="stylesheet">
-	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <script src="http://cdn.jsdelivr.net/jquery.flot/0.8.3/jquery.flot.min.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<![endif]-->
-</head>
 <body>
 
-	<header id="header">
+@include('layouts.FrontendLayouts.header')
+@include('layouts.FrontendLayouts.navbar')
 
-			<a href="index.html" id="logo" title="HarrisonHighSchool" style="background-image: url({{asset('assets/images/frontend_images/logo_school2.png')}});
-                    width: 223px;
-               height: 220px;
-               display: block;
-               cursor: pointer;
-               margin: 0 auto -82px;
-               text-indent: -9999em;
-               z-index: 3;">HarrisonHighSchool</a>
-			<div class="menu-trigger"></div>
-			<nav id="menu">
-				<ul>
-					<li><a href="events.html">Home</a></li>
-					<li><a href="gallery.html">About Us</a></li>
-					<li><a href="events.html">School Profile</a></li>
-
- 				</ul>
-				<ul>
-					<li><a href="gallery.html">Vision & Mission</a></li>
-					<li><a href="gallery.html">Join Us</a></li>
-					<li><a href="#fancy" class="get-contact">Contact Us</a></li>
-   				</ul>
-			</nav>
-			<!-- / navigation -->
-
-		<!-- / container -->
-	
-	</header>
-	<nav class="navbar bg-dark fixed-bottom text-white">
-		<a class="navbar-brand">Powered By:<img src="{{asset('assets/images/logos.png')}}"></a>
-        <p class="copy">Copyright 2018 St. John College. Designed by <a href="http://www.vandelaydesign.com/" title="Designed by Vandelay Design" target="_blank"><strong>Yakku</strong></a>. All rights reserved.</p>
-		@if(Auth::guard('admin')->check())
-			<p>Hello <Text style="color: gold">{{Auth::guard('admin')->user()->name}}</Text><br>
-			Logged In As: <a href="{{url('/admin/dashboard')}}">{{Auth::guard('admin')->user()->role}}</a></p>
-
-            {{--<a href="{{ url('logout_user') }}"--}}
-               {{--onclick="event.preventDefault();--}}
-                            {{--document.getElementById('logout-form').submit();"><i class="fa fa-power-off m-r-5 m-l-5"></i>--}}
-                {{--{{ __('Logout') }}--}}
-            {{--</a></p>--}}
-
-			@else
-			<form class="form-inline" action="{{route('login')}}" method="post">
-				{{ csrf_field() }}
-				<input class="form-control mr-sm-2" type="email" placeholder="Email" aria-label="Email" name="email">
-				<input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password" name="password">
-				<button class="btn btn-outline-success btn-sm" type="submit">Login</button>
-			</form>
-		@endif
-	</nav>
 	<!-- / header -->
 
 	<div class="col-md-12" >

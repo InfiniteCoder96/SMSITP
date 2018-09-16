@@ -64,7 +64,7 @@
 
                     <form enctype="multipart/form-data" class="needs-validation" novalidate action="{{url('students')}}" method="post">
                         {{csrf_field()}}
-
+                        <input type="hidden" value="admin" name="source">
                         <div class="card-title text-success text-lg-center bg-dark ">
                             <i class="mdi mdi-hospital-building"></i> School Information
                         </div>
@@ -258,23 +258,7 @@
                                                     </div>
                                                 </div></div>
                                         </div>
-                                        <div class="form-row">
-                                            <div class="col-md-12 mb-3">
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text" id="inputGroupPrepend">Gender<Text style="color: red">*</Text></span>
-                                                    </div>
-                                                    <select name="Gender" class="form-control" required>
-                                                        <option selected disabled>Select salutation</option>
-                                                        <option value="Male">Male</option>
-                                                        <option value="Female">Female</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">
-                                                        Please choose a username.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+
                                     </div>
 
 
@@ -302,13 +286,18 @@
                                             <div class="col-md-12 mb-3">
                                                 <div class="input-group">
                                                     <div class="input-group-prepend">
-                                                        <span class="input-group-text" id="inputGroupPrepend">Birth Certificate No</span>
+                                                        <span class="input-group-text" id="inputGroupPrepend">Gender<Text style="color: red">*</Text></span>
                                                     </div>
-                                                    <input type="text" name="birth_certificate_no" class="form-control" value="{{old('birth_certificate_no')}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                                    <select name="Gender" class="form-control" required>
+                                                        <option selected disabled>Select salutation</option>
+                                                        <option value="Male">Male</option>
+                                                        <option value="Female">Female</option>
+                                                    </select>
                                                     <div class="invalid-feedback">
                                                         Please choose a username.
                                                     </div>
-                                                </div></div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="col-md-12 mb-3">
@@ -434,7 +423,21 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroupPrepend">Blood group</span>
                                     </div>
-                                    <input type="text" name="blood_group" class="form-control" value="{{old('blood_group')}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+
+                                    <select name="blood_group" class="form-control" required>
+                                        <option selected disabled>- Select Blood Group -</option>
+                                        <option value="Master">A RhD positive (A+)</option>
+                                        <option value="Ms">A RhD negative (A-)</option>
+                                        <option value="Mr">B RhD positive (B+)</option>
+                                        <option value="Mr">B RhD negative (B-)</option>
+                                        <option value="Mr">O RhD positive (O+)</option>
+                                        <option value="Mr">O RhD negative (O-)</option>
+                                        <option value="Mr">AB RhD positive (AB+)</option>
+                                        <option value="Mr">AB RhD negative (AB-)</option>
+
+
+                                    </select>
+
 
                                     <div class="invalid-feedback">
                                         Please choose a username.
@@ -484,7 +487,7 @@
                                         <span class="input-group-text" id="inputGroupPrepend">Parent/Guardian<Text style="color: red">*</Text></span>
                                     </div>
                                     <select name="role" class="form-control" required>
-                                        <option selected disabled>Select salutation</option>
+                                        <option selected disabled>- Select Role -</option>
                                         <option value="Father">Father</option>
                                         <option value="Mother">Mother</option>
                                         <option value="Guardian">Guardian</option>
@@ -542,7 +545,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroupPrepend">Passport / NIC Number <Text style="color: red">*</Text></span>
                                     </div>
-                                    <input type="text" name="NIC_Passport" class="form-control" value="{{old('NIC_Passport')}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                    <input type="text" name="Parent_NIC_Passport" class="form-control" value="{{old('Parent_NIC_Passport')}}" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
                                     <div class="invalid-feedback">
                                         Please choose a username.
                                     </div>

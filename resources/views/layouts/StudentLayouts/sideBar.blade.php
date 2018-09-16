@@ -26,18 +26,19 @@
                             <li class="sidebar-item"><a href="{{url('/admin/manage-teacher')}}" class="sidebar-link"><i class="mdi mdi-account-key"></i><span class="hide-menu"> Make Payment </span></a></li>
                         </ul>
                     </li>
-                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('')}}" aria-expanded="false"><i class="mdi mdi-contacts"></i><span class="hide-menu"> Notice Board</span></a></li>
-
-                    <hr style="background-color: crimson">
-                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('')}}" aria-expanded="false"><i class="mdi mdi-contacts"></i><span class="hide-menu"> Leaving Requests</span></a></li>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('')}}" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu"> Time Table</span></a></li>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('')}}" aria-expanded="false"><i class="mdi mdi-details"></i><span class="hide-menu"> Attendance</span></a></li>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('')}}" aria-expanded="false"><i class="mdi mdi-hospital"></i><span class="hide-menu"> Hostel</span></a></li>
                     <hr style="background-color: crimson">
                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('')}}" aria-expanded="false"><i class="mdi mdi-contacts"></i><span class="hide-menu">Contact</span></a></li>
                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('')}}" aria-expanded="false"><i class="mdi mdi-message-reply"></i><span class="hide-menu">Messages</span></a></li>
                     <hr style="background-color: crimson">
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('')}}" aria-expanded="false"><i class="mdi mdi-contacts"></i><span class="hide-menu"> Leaving Requests</span></a></li>
+
                     <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-account-network"></i><span class="hide-menu"> My Profile </span></a>
                         <ul aria-expanded="false" class="collapse  first-level">
-                            <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('')}}" aria-expanded="false"><i class="mdi mdi-book"></i><span class="hide-menu">My Academic Summary</span></a></li>
-                            <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('')}}" aria-expanded="false"><i class="mdi mdi-raspberrypi"></i><span class="hide-menu">My Non-Academic Summary</span></a></li>
+                            <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('')}}" aria-expanded="false"><i class="mdi mdi-note"></i><span class="hide-menu">My Academic Summary</span></a></li>
+                            <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('')}}" aria-expanded="false"><i class="mdi mdi-note"></i><span class="hide-menu">My Non-Academic Summary</span></a></li>
                             <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('')}}" aria-expanded="false"><i class="mdi mdi-note"></i><span class="hide-menu">My Finance Summary</span></a></li>
                         </ul>
                     </li>

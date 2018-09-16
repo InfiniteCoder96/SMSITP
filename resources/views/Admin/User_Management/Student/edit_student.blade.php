@@ -479,7 +479,7 @@
                             <div class="form-row">
                                 <div class="col-md-3 mb-2">
 
-                                    <div class="input-group">
+                                    <div class="input-group ">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Parent/Guardian<Text style="color: red">*</Text></span>
                                         </div>
@@ -542,7 +542,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Passport / NIC Number <Text style="color: red">*</Text></span>
                                         </div>
-                                        <input type="text" name="NIC_Passport" value="{{$student->Parent_Guardian->NIC_Passport}}" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <input type="text" name="Parent_NIC_Passport" value="{{$student->Parent_Guardian->NIC_Passport}}" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
                                         <div class="invalid-feedback">
                                             Please choose a username.
                                         </div>
