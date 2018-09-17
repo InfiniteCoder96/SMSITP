@@ -76,7 +76,7 @@
                                 <div class="form-group row">
                                     <label for="memberId" class="col-sm-3 text-right control-label col-form-label">Member ID</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="memberid" name="memberid" value="{{$members->memberid}}">
+                                        <input type="text" class="form-control" id="memberid" name="memberid" value="{{$members->memberid}}" readonly>
                                     </div>
                                 </div>
                                 <div class="form-group row">

@@ -1,8 +1,12 @@
 @extends('layouts.app')
+use App\books;
 
 @section('content')
     @include('layouts.LibraryLayouts.header')
     @include('layouts.LibraryLayouts.sideBar')
+    $books = books::all()->toArray();
+    dd($books);
+
 
 <div class="container-fluid">
     <!-- ============================================================== -->

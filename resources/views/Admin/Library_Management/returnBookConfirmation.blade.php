@@ -1,3 +1,11 @@
+<?php
+$memberId = $IssueBooks->issuememberid;
+
+$issueMemberIDPrfix = substr($memberId,0,3);
+$memberType = ($issueMemberIDPrfix == "STD") ? "student" : "staff";
+//dd($memberType);
+?>
+
 @extends('layouts.app')
 
 @section('content')
@@ -65,25 +73,25 @@
                                 <div class="form-group row">
                                     <label for="bookbarcode" class="col-sm-3 text-right control-label col-form-label">Book Barcode </label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control"  name="bookbarcode" value="{{$IssueBooks->bookbarcode}}" >
+                                        <input type="text" class="form-control"  name="bookbarcode" value="{{$IssueBooks->bookbarcode}}" readonly>
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label for="issuememberid" class="col-sm-3 text-right control-label col-form-label">Member ID</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="issuememberid" name="issuememberid" value="{{$IssueBooks->issuememberid}}">
+                                        <input type="text" class="form-control" id="issuememberid" name="issuememberid" value="{{$IssueBooks->issuememberid}}" readonly>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="issuebookdate" class="col-sm-3 text-right control-label col-form-label">Issue Book Date</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="issuebookdate" name="issuebookdate" value="{{$IssueBooks->created_at}}">
+                                        <input type="text" class="form-control" id="issuebookdate" name="issuebookdate" value="{{$IssueBooks->created_at}}" readonly>
                                     </div>
                                 </div>
 
                                 <div class="col-md-4">
-                                    <div class="card text-white bg-dark mb-3 card-hover" style="height: 90px">
+                                    <div class="card text-white bg-dark mb-3 card-hover" style="height: 180px">
                                         <div class="row">
                                             <div class="col-md-4 card-body bg-purple">
                                                 <center><i class="fa-3x far fa-money-bill-alt"></i></center>
@@ -92,6 +100,9 @@
                                             <div class="card-body">
                                                 <center><h5 style="font-size:36px;vertical-align: bottom" class="card-title timer" data-from="0" data-to="{{$fine}}" data-speed="500" data-fresh-interval="20">50</h5></center>
 
+                                            </div>
+                                            <div class="card-body">
+                                               <p><br><?php if ($memberType == "staff") {echo "* Fine not applicable for staff members";} ?></p>
                                             </div>
                                         </div>
 

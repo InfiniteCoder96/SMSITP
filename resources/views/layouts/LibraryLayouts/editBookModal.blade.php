@@ -40,7 +40,7 @@
                                     <div class="form-group row">
                                         <label for="barcode" class="col-sm-3 text-right control-label col-form-label">Barcode</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="barcode" name="barcode" >
+                                            <input type="text" class="form-control" id="barcode" name="barcode" readonly>
                                         </div>
                                     </div>
 

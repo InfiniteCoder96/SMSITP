@@ -16,6 +16,7 @@ class MemberController extends Controller
     public function index()
     {
         $members = Member::all()->toArray();
+        $members = array_reverse($members,true);
         return view('Admin.Library_Management.viewAllMembers',compact('members'));
     }
 
@@ -41,12 +42,20 @@ class MemberController extends Controller
            'firstname' => 'required',
             'lastname' => 'required',
             'memberid' => 'required',
-            'memberphone' => 'required',
-            'memberemail' => 'required'
+            'memberType' => 'required',
+            'memberphone' => 'required|min:10|numeric',
+            'memberemail' => 'required|email',
         ]);
 
+        $memberType = $request -> get("memberType");
+        if ($memberType == "student") {
+            $newAddMember['memberid'] = "STD".($request ->get("memberid"));
+        } else if ($memberType == "staff") {
+            $newAddMember['memberid'] = "STF".($request ->get("memberid"));
+        }
+        //dd($newAddMember['memberid']);
         Member::create($newAddMember);
-
+        //return redirect('members')->with('success','New Member has been added');
         return back() ->with('success','New Member has been added');
     }
 
@@ -87,8 +96,8 @@ class MemberController extends Controller
             'firstname' => 'required',
             'lastname' => 'required',
             'memberid' => 'required',
-            'memberphone' => 'required',
-            'memberemail' => 'required'
+            'memberphone' => 'required|min:10|numeric',
+            'memberemail' => 'required|email',
         ]);
         $members->firstname = $request->get('firstname');
         $members->lastname = $request->get('lastname');

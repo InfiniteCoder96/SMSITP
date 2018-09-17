@@ -1,3 +1,17 @@
+
+
+<?php
+use App\Member;
+
+$all_members = Member::all() ->toArray();
+$last_member = end($all_members);
+$lastMemberId = $last_member['memberid'];
+$lastMemberIdNumeric = substr($lastMemberId,3,4);
+//dd($lastMemberIdNumeric);
+//dd($last_book["barcode"] + 3);
+?>
+
+
 @extends('layouts.app')
 
 @section('content')
@@ -76,9 +90,18 @@
                             <div class="form-group row">
                                 <label for="memberId" class="col-sm-3 text-right control-label col-form-label">Member ID</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="memberid" name="memberid" placeholder="Member ID Here">
+                                    <input type="text" value="<?php echo $lastMemberIdNumeric + 1 ?>" class="form-control" id="memberid" name="memberid" placeholder="Member ID Here" readonly>
                                 </div>
                             </div>
+                            <div class="form-group row">
+                                <label for="memberType" class="col-sm-3 text-right control-label col-form-label">Member Type</label>
+                                <div class="col-sm-9">
+                                    <input type="radio" name="memberType" value="student"> Student<br>
+                                    <input type="radio" name="memberType" value="staff"> Staff<br>
+                                </div>
+
+                            </div>
+
                             <div class="form-group row">
                                 <label for="memberPhone" class="col-sm-3 text-right control-label col-form-label">Phone No</label>
                                 <div class="col-sm-9">

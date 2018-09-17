@@ -47,7 +47,7 @@ class IssueBookController extends Controller
     public function store(Request $request)
     {
         $issueBook = $this->validate(request(), [
-            'bookbarcode' => 'required|min:8',
+            'bookbarcode' => 'required|min:8|numeric',
             'issuememberid' => 'required',
 
         ]);
@@ -82,8 +82,9 @@ class IssueBookController extends Controller
 
     public function return(Request $request)
     {
+
         $id = $this->validate(request(), [
-            'returnbookbarcode' => 'required|min:8',
+            'returnbookbarcode' => 'required|min:8|numeric',
 
 
         ]);
@@ -94,6 +95,10 @@ class IssueBookController extends Controller
         //return $id;
         $current_time = Carbon::now()->toDateTimeString();
         $this->IssueBooks = IssueBook::find($id);
+
+        if ($this->IssueBooks == null) {
+            return back() ->with('success','No such book found');
+        }
         $IssueTime = $this->IssueBooks-> created_at;
         $timestamp = strtotime($IssueTime);
         $current_time = strtotime($current_time);
@@ -102,13 +107,26 @@ class IssueBookController extends Controller
 
       //  return $current_time-$timestamp;
 
+        $library_settings = LibrarySettings::find(1);
+        $fine_setting = $library_settings->defaultfine;
+        $no_of_days_setting = $library_settings->noofdays;
+        $no_of_seconds = $no_of_days_setting * 24 * 3600;
 
-        if($current_time-$timestamp < 604800){
+        if($current_time-$timestamp < $no_of_seconds){
             $fine = 0;
         }
         else{
-            $fine = 100;
+            $fine = $fine_setting;
         }
+
+        $issueMemberId = $this->IssueBooks-> issuememberid;
+        $issueMemberIDPrfix = substr($issueMemberId,0,3);
+        $memberType = ($issueMemberIDPrfix == "STD") ? "student" : "staff";
+        if ($memberType == "staff") {
+            $fine = 0;
+        }
+        //dd($memberType);
+
         $IssueBooks = $this->IssueBooks;
         //return $current_time;
         return view('Admin.Library_Management.returnBookConfirmation',compact('IssueBooks','fine','id'));

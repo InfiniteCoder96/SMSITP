@@ -182,6 +182,10 @@ Route::get('/Library/viewReturn', function () {
 
 Route::post('confirmReturn', 'IssueBookController@addReturnTable');
 
+Route::post('downloadPDF/{id}', 'bookController@downloadPDF');
+
+Route::get('/library/downloadOverallReport', 'libraryDashboardController@downloadOverallReport');
+
 Route::post('/searchBooks', function (){
    $q = Input::get('q');
    if($q != '') {

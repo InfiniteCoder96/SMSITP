@@ -70,7 +70,7 @@
                             <table class="table">
                                 <thead class="thead-light">
                                 <tr>
-                                    <th scope="col" style="font-size: 12px">ID</th>
+                                    {{--<th scope="col" style="font-size: 12px">ID</th>--}}
                                     <th scope="col" style="font-size: 12px">First Name</th>
                                     <th scope="col" style="font-size: 12px">Last Name</th>
                                     <th scope="col" style="font-size: 12px">Member ID</th>
@@ -83,7 +83,7 @@
                                 <tbody class="customtable">
                                 @foreach($members as $member)
                                     <tr>
-                                        <td>{{$member['id']}}</td>
+                                        {{--<td>{{$member['id']}}</td>--}}
                                         <td>{{$member['firstname']}}</td>
                                         <td>{{$member['lastname']}}</td>
                                         <td>{{$member['memberid']}}</td>

@@ -7,6 +7,7 @@ use App\IssueBook;
 use App\LibrarySettings;
 use App\Member;
 use App\ReturnBook;
+use Barryvdh\DomPDF\Facade;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -78,5 +79,17 @@ class libraryDashboardController extends Controller
     public function calculatefine(){
         $price = ReturnBook::all()->sum('fine');
         return $price;
+    }
+
+    public function downloadOverallReport() {
+        $bookcount = $this->countofbooks();
+        $membercount = $this->countofmembers();
+        $issuecount = $this ->countofissuebooks();
+        $returnbookcount = $this->countreturnbooks();
+        $finrcountdays = $this->nofdays();
+        $totalfine = $this->calculatefine();
+        $pdf = Facade::loadView('Admin.Library_Management.libraryOverallReportPDF', compact('bookcount','membercount','issuecount','returnbookcount','finrcountdays','totalfine'));
+        return $pdf->download('Library-Report.pdf');
+        //return redirect('books')->with('success','Book has been  deleted');
     }
 }
