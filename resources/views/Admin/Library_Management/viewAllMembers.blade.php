@@ -78,6 +78,7 @@
                                     <th scope="col" style="font-size: 12px">Email</th>
                                     <th scope="col" style="font-size: 12px">Action</th>
                                     <th scope="col" style="font-size: 12px"></th>
+                                    <th scope="col" style="font-size: 12px">Print</th>
                                 </tr>
                                 </thead>
                                 <tbody class="customtable">
@@ -100,6 +101,13 @@
                                                 {{csrf_field()}}
                                                 <input name="_method" type="hidden" value="DELETE">
                                                 <button class="btn btn-danger" type="submit">Delete</button>
+                                            </form>
+                                        </td>
+                                        <td>
+                                            <form action="{{url('downloadmemberPDF', $member['id'])}}" method="post">
+                                                {{csrf_field()}}
+
+                                                <button class="btn btn-orange" type="submit">Barcode</button>
                                             </form>
                                         </td>
                                     </tr>

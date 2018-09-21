@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\books;
 use App\IssueBook;
 use App\LibrarySettings;
 use App\Member;
@@ -53,9 +54,14 @@ class IssueBookController extends Controller
         ]);
 
 
-        IssueBook::create($issueBook);
+    if(books::where('barcode','=',$request->bookbarcode)->exists() and Member::where('memberid','=',$request->issuememberid)->exists()) {
 
+        IssueBook::create($issueBook);
         return back()->with('success', 'Book has been issued');;
+    }
+    else{
+        return back()->with('success', 'Book Barcode or Member ID does not matched');;
+    }
     }
 
     /**
@@ -99,6 +105,10 @@ class IssueBookController extends Controller
         if ($this->IssueBooks == null) {
             return back() ->with('success','No such book found');
         }
+//
+//        if ($this->IssueBooks == null) {
+//            return back() ->with('success','No such book found');
+//        }
         $IssueTime = $this->IssueBooks-> created_at;
         $timestamp = strtotime($IssueTime);
         $current_time = strtotime($current_time);

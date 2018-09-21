@@ -161,7 +161,7 @@
                                             </div>
                                             <div class="card-body"><br>
                                                 <center><h5 style="font-size:30px;vertical-align: bottom" class="card-title timer" data-from="0" data-to="{{$finrcountdays }}" data-speed="2000" data-fresh-interval="20">Rs.500,0000</h5></center>
-                                                <center><h5 style="font-size:30px;vertical-align: bottom" class="card-title timer" data-from="0" data-to=" 200" data-speed="2000" data-fresh-interval="20">Rs.500,0000</h5></center>
+                                                <center><h5 style="font-size:30px;vertical-align: bottom" class="card-title timer" data-from="0" data-to="{{$finefordays}}" data-speed="2000" data-fresh-interval="20">Rs.500,0000</h5></center>
 
                                             </div>
                                         </div>

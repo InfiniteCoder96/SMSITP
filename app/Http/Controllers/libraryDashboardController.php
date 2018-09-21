@@ -22,9 +22,10 @@ class libraryDashboardController extends Controller
         $returnbookcount = $this->countreturnbooks();
         $finrcountdays = $this->nofdays();
         $totalfine = $this->calculatefine();
+        $finefordays = $this->finefordays();
 
        // dd($bookcount);
-        return view('Admin.Library_Management.dashboard',compact('bookcount','membercount','issuecount','returnbookcount','finrcountdays','totalfine')) ;
+        return view('Admin.Library_Management.dashboard',compact('bookcount','membercount','issuecount','returnbookcount','finrcountdays','totalfine','finefordays')) ;
     }
 
     public function countofbooks(){
@@ -71,10 +72,27 @@ class libraryDashboardController extends Controller
         return $returnbookcount;
     }
     public function nofdays(){
-        $noofdays = LibrarySettings::all()->get('noofdays');
-        return $noofdays;
+        //$noofdays = new LibrarySettings();
+        $noofdays = LibrarySettings::all();
+        $days = null;
+        foreach ($noofdays as $noofday){
+            $days = $noofday['noofdays'];
+        }
+        //$noofdays = $noofdays->noofdays;
+        return $days;
 
     }
+    public function finefordays(){
+    //$noofdays = new LibrarySettings();
+    $finecounts = LibrarySettings::all();
+    $counts = null;
+    foreach ($finecounts as $finecount){
+        $counts = $finecount['defaultfine'];
+    }
+    //$noofdays = $noofdays->noofdays;
+    return $counts;
+
+}
 
     public function calculatefine(){
         $price = ReturnBook::all()->sum('fine');

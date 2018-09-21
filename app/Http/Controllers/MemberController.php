@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Member;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Barryvdh\DomPDF\Facade;
 
 class MemberController extends Controller
 {
@@ -97,7 +98,7 @@ class MemberController extends Controller
             'lastname' => 'required',
             'memberid' => 'required',
             'memberphone' => 'required|min:10|numeric',
-            'memberemail' => 'required|email',
+            'memberemail' => 'required|email|',
         ]);
         $members->firstname = $request->get('firstname');
         $members->lastname = $request->get('lastname');
@@ -119,6 +120,15 @@ class MemberController extends Controller
         $member = Member::find($id);
         $member->delete();
         return redirect('members')->with('success','Member has been  deleted');
+    }
+    public function downloadPDF(Request $request, $id)
+    {
+
+        $newAddMember = Member::find($id);
+        $memberid = $newAddMember->memberid;
+        $pdf = Facade::loadView('Admin.Library_Management.addMemberPDF', compact('newAddMember'));
+        return $pdf->download('memberid-'.$memberid.'.pdf');
+        //return redirect('books')->with('success','Book has been  deleted');
     }
 
     /**
