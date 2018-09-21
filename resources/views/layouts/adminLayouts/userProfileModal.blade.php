@@ -3,7 +3,7 @@
         <div class="modal-content">
             <div class="modal-header">
 
-                <h4 class="modal-title">Hello {{\Illuminate\Support\Facades\Auth::user()->name}}</h4>
+                <h4 class="modal-title">Hello </h4>
                 <h6></h6>
                 <button class="close" data-dismiss="modal">X</button>
             </div>

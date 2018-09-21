@@ -8,26 +8,21 @@
             <!-- ============================================================== -->
             <a class="navbar-brand" href="{{url('/')}}">
                 <!-- Logo icon -->
-                <b class="logo-icon p-l-10">
-                    <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
-                    <!-- Dark Logo icon -->
-                    <img src="{{asset('assets/images/logo-icon.png')}}" alt="homepage" class="light-logo" />
 
-                </b>
                 <!--End Logo icon -->
                 <!-- Logo text -->
-                <span class="logo-text">
-                             <!-- dark Logo text -->
-                             <img src="{{asset('assets/images/logo-text.png')}}" alt="homepage" class="light-logo" />
+                {{--<span class="logo-text">--}}
+                             {{--<!-- dark Logo text -->--}}
+                             {{--<img src="{{asset('assets/images/logos.png')}}" alt="homepage" class="light-logo" />--}}
 
-                        </span>
+                        {{--</span>--}}
                 <!-- Logo icon -->
-                <!-- <b class="logo-icon"> -->
+                 <b class="logo-icon p-1-10" >
                 <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                 <!-- Dark Logo icon -->
-                <!-- <img src="../../assets/images/logo-text.png" alt="homepage" class="light-logo" /> -->
+                <img src="{{asset('assets/images/logos.png')}}" alt="homepage" class="light-logo" />
 
-                <!-- </b> -->
+                </b>
                 <!--End Logo icon -->
             </a>
             <!-- ============================================================== -->
@@ -164,7 +159,7 @@
 
                     {{--</div>--}}
 
-                    <a class="nav-link"><button class="btn btn-outline-purple" data-toggle="modal" data-target="#loginModal">{{Auth::user()->name}}</button></a>
+                    <a class="nav-link"><button class="btn btn-outline-purple" data-toggle="modal" data-target="#loginModal"></button></a>
 
                 </li>
 

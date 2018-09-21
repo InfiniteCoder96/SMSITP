@@ -83,6 +83,7 @@ Route::get('/NAadmin/dashboard', function (){
     return view('Admin.Non_Academic_Management.dashboard') ;
 });
 
+
 Route::get('/NAadmin/manage-sports', function (){
     return view('Admin.Non_Academic_Management.manage_sports') ;
 });
@@ -133,26 +134,47 @@ Route::match(['get','post'],'/admin/manage-students', 'StudentController@addStud
 
 // Finance Manager Routes
 
-Route::get('/NAadmin/dashboard', function (){
-    return view( 'Admin.Finance_Management.dashboard');
-});
+Route::get('/FMadmin/dashboard', 'financeDashboardController@create');
 
-Route::get('/NAadmin/pendingpayments', function (){
+Route::get('/FMadmin/pendingpayments', function (){
     return view('Admin.Finance_Management.pendingpayments');
 });
 
-Route::get('/NAadmin/onlinePayment', function (){
+Route::get('/FMadmin/onlinePayment', function (){
     return view('Admin.Finance_Management.onlinePayment');
 });
 
-Route::get('/NAadmin/addExpences', function (){
+Route::get('/FMadmin/addExpences', function (){
     return view('Admin.Finance_Management.addExpences');
 });
 
-Route::get('/NAadmin/expenceReport', function (){
+Route::get('/FMadmin/expenceReport', function (){
     return view('Admin.Finance_Management.expenceReport');
 });
 
-Route::get('/NAadmin/profit', function (){
+Route::get('/FMadmin/profit', function (){
     return view('Admin.Finance_Management.profit');
+});
+
+Route::get('/FMadmin/approvedPayment', function (){
+    return view('Admin.Finance_Management.approvedPayment');
+});
+
+Route::get('/FMadmin/paymentOverview', 'pendingApprovalController@showOverview');
+
+Route::resource('payment','PaymentController');
+
+Route::resource('pendingApproval','pendingApprovalController');
+
+Route::resource('Expence','ExpenceController');
+
+Route::resource('pending_approvals','ApprovedPaymentController');
+
+Route::get('approve', 'pendingApprovalController@approve');
+
+Route::get('disapprove', 'pendingApprovalController@disapprove');
+
+Route::post('/searchexpences', function (){
+    $q = Input::get('$q');
+    dd($q);
 });

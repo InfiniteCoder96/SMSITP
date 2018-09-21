@@ -36,20 +36,41 @@
                                   <tr>
                                       <th>#</th>
                                       <th>Admission No</th>
-                                      <th>Name</th>
                                       <th>Amount</th>
                                       <th>Bank</th>
-                                      <th>Type</th>
-                                      <th>Date</th>
+                                      <th>Deposited Date</th>
                                       <th>Remarks</th>
-                                      <th></th>
+                                      <th>Status</th>
                                   </tr>
                               </thead>
 
-                              <tbody id="carlisttable">
-                                  <td>2</td>
-                                  <td>1111</td>
-                                  <td>Para</td>
+                              <tbody id="paymentlisttable">
+                              @foreach($pendingApprovals as $pendingApproval)
+                                  <tr>
+                                      <td>{{$pendingApproval['id']}}</td>
+                                      <td>{{$pendingApproval['AdmissionNo']}}</td>
+                                      <td>{{$pendingApproval['Amount']}}</td>
+                                      <td>{{$pendingApproval['Bank']}}</td>
+                                      <td>{{$pendingApproval['DepositedDate']}}</td>
+                                      <td>{{$pendingApproval['Remark']}}</td>
+                                      <td>
+
+                                          <form action="{{url('approve')}}" method="get">
+                                              {{csrf_field()}}
+                                              <input name="id" type="hidden" value="{{$pendingApproval['id']}}">
+                                              <button class="btn btn-success btn-xs" type="submit">Approve</button>
+                                          </form>
+
+                                          <form action="{{url('disapprove')}}"method="get">
+                                              {{csrf_field()}}
+                                              <input name="id" type="hidden" value="{{$pendingApproval['id']}}">
+                                              <input name="_method" type="hidden" value="DELETE">
+                                              <button class="btn btn-warning btn-xs" type="submit">Disapprove</button>
+                                          </form>
+
+                                      </td>
+                                  </tr>
+                              @endforeach
                               </tbody>
 
                           </table>
