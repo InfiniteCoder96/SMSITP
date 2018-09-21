@@ -422,6 +422,7 @@
             <div style="float:right;">
                 <button class="btn btn-md btn-info" type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
                 <button class="btn btn-md btn-success" type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                <a href="{{url('addDemoData')}}"><button type="button" class="btn btn-md btn-warning">ADD DEMO</button> </a>
             </div>
         </div>
         <!-- Circles which indicates the steps of the form: -->

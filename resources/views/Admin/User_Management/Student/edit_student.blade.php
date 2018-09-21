@@ -63,7 +63,7 @@
                     </div>
                     <div class="card-body">
 
-                        <form class="needs-validation" novalidate action="{{action('StudentController@update', $sid)}}" method="post">
+                        <form enctype="multipart/form-data" class="needs-validation" novalidate action="{{action('StudentController@update', $sid)}}" method="post">
                             {{csrf_field()}}
                             <input name="_method" type="hidden" value="PATCH">
                             <div class="card-title text-purple">
@@ -158,19 +158,18 @@
                             <div class="row">
 
                                 <div class="col-md-3">
-                                    <img src="{{asset('storage/StudentImages/Large/'.$student->image)}}" id="img" style="height:280px;width: 280px;background-color: #ccc;border: 2px solid gray;">
+                                    <img src="{{asset('storage/StudentImages/Small/'.$student['image'])}}" id="img" style="height:280px;width: 280px;background-color: #ccc;border: 2px solid gray;">
                                     <div class="form-row">
                                         <div class="col-md-12 mb-3">
 
                                             <div class="input-group">
 
-                                                <input type="file" name="image" value="{{asset('storage/StudentImages/Large/'.$student->image)}}" class="form-control" id="image" placeholder="Username" aria-describedby="inputGroupPrepend" style="display: none" required>
-                                                <input type="button" value="Browse" id="browse_image" class="btn btn-info form-control">
 
+                                                <input type="file" name="image" class="form-control" id="image" placeholder="Username" aria-describedby="inputGroupPrepend" value="{{old('image')}}" style="display: none" required>
+                                                <input type="button" value="Browse" id="browse_image" class="btn btn-info form-control">
                                                 <div class="invalid-feedback">
                                                     Please choose a username.
                                                 </div>
-
                                             </div>
                                         </div>
                                     </div>
@@ -279,7 +278,7 @@
                                                         </div>
                                                         <select name="Gender" class="form-control" required>
                                                             <option value="Male" <?php if($student->Gender=="Male") echo 'selected="selected"'; ?> >Male</option>
-                                                            <option value="Mr" <?php if($student->Gender=="Female") echo 'selected="selected"'; ?> >Female</option>
+                                                            <option value="Female" <?php if($student->Gender=="Female") echo 'selected="selected"'; ?> >Female</option>
 
                                                         </select>
                                                         <div class="invalid-feedback">
@@ -305,18 +304,6 @@
 
                                             </div>
                                             <div class="form-row">
-                                                <div class="col-md-12 mb-3">
-
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-                                                            <span class="input-group-text" id="inputGroupPrepend">Birth Certificate No</span>
-                                                        </div>
-                                                        <input type="text" name="birth_certificate_no" value="{{$student->birth_certificate_no}}" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
-                                                        <div class="invalid-feedback">
-                                                            Please choose a username.
-                                                        </div>
-                                                    </div>
-                                                </div>
                                                 <div class="form-row">
                                                     <div class="col-md-12 mb-3">
 
@@ -435,7 +422,21 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="inputGroupPrepend">Blood group</span>
                                         </div>
-                                        <input type="text" name="blood_group" value="{{$student->blood_group}}" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+
+                                        <select name="blood_group" class="form-control" required>
+                                            <option selected disabled>- Select Blood Group -</option>
+                                            <option value="A+" <?php if($student->blood_group == 'A+') echo'selected="selected"'; ?> >A RhD positive (A+)</option>
+                                            <option value="A-" <?php if($student->blood_group == 'A-') echo'selected="selected"'; ?>>A RhD negative (A-)</option>
+                                            <option value="B+" <?php if($student->blood_group == 'B+') echo'selected="selected"'; ?>>B RhD positive (B+)</option>
+                                            <option value="B-" <?php if($student->blood_group == 'B-') echo'selected="selected"'; ?>>B RhD negative (B-)</option>
+                                            <option value="O+" <?php if($student->blood_group == 'O+') echo'selected="selected"'; ?>>O RhD positive (O+)</option>
+                                            <option value="O-" <?php if($student->blood_group == 'O-') echo'selected="selected"'; ?>>O RhD negative (O-)</option>
+                                            <option value="AB+" <?php if($student->blood_group == 'AB+') echo'selected="selected"'; ?>>AB RhD positive (AB+)</option>
+                                            <option value="AB-" <?php if($student->blood_group == 'AB-') echo'selected="selected"'; ?>>AB RhD negative (AB-)</option>
+
+
+                                        </select>
+
 
                                         <div class="invalid-feedback">
                                             Please choose a username.

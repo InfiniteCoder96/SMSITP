@@ -75,7 +75,7 @@
 
 
                                 <td style="font-size: 12px">
-                                    <a data-toggle="modal" data-target="#loginModal"> <img src="{{asset('/storage/StudentImages/small/'.$student->image)}}" class="rounded-circle" style="width:50px;height: 50px;border: 2px solid black" ></a>
+                                    <img src="{{asset('storage/StudentImages/Small/'.$student['image'])}}" class="rounded-circle" style="width:50px;height: 50px;border: 2px solid black" >
                                 </td>
                                 <td style="font-size: 12px">{{$student->sid}}</td>
                                 <td style="font-size: 12px">{{$student->first_Name}}</td>

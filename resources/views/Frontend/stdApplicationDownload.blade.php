@@ -1,118 +1,239 @@
+<?php use Carbon\Carbon; ?>
 <!DOCTYPE html>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-@include('layouts.FrontendLayouts.head')
-<style>
-    * {
-        box-sizing: border-box;
-    }
-
-    #regForm {
-        background-color: #ffffff;
-        margin: 100px auto;
-        font-family: Raleway;
-        padding: 40px;
-        width: 70%;
-        min-width: 300px;
-    }
-
-    h1 {
-        text-align: center;
-    }
-
-    input {
-        padding: 10px;
-        width: 100%;
-        font-size: 17px;
-        font-family: Raleway;
-        border: 1px solid #aaaaaa;
-    }
-
-    /* Mark input boxes that gets an error on validation: */
-    input.invalid {
-        background-color: #ffdddd;
-    }
-
-    /* Hide all steps by default: */
-    .tab {
-        display: none;
-    }
-
-    /* Make circles that indicate the steps of the form: */
-    .step {
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #bbbbbb;
-        border: none;
-        border-radius: 50%;
-        display: inline-block;
-        opacity: 0.5;
-    }
-
-    .step.active {
-        opacity: 1;
-    }
-
-    /* Mark the steps that are finished and valid: */
-    .step.finish {
-        background-color: #4CAF50;
-    }
-</style>
-<body style="background-image: url({{asset('assets/images/frontend_images/joinbackground.jpg')}});background-size: cover;">
-@include('layouts.FrontendLayouts.header')
-@include('layouts.FrontendLayouts.navbar')
-
-
-<div class="container">
-    <div class="col-md-12 mb-3" style="margin-left: 500px;margin-top: 20px">
-        <div class="row">
-            @if ($errors->any())
-                <div id="alertBox" class="alert alert-danger">
-                    <a class="close" data-dismiss="alert">&times;</a>
-
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div><br />
-            @endif
-            @if (\Session::has('success'))
-                <div id="alertBox" class="alert alert-success">
-                    <a class="close" data-dismiss="alert">&times;</a>
-
-                    <p>{{ \Session::get('success') }}</p>
-                </div><br />
-            @endif
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="{{asset('css/backend_css/bootstrap.min.css')}}" rel="stylesheet">
+    <style>
+        .page-break {
+            page-break-after: always;
+        }
+    </style>
+</head>
+<body>
+<div class="row">
+    <div class="col-md-12 mb-3">
+        <div class="col-md-6 ">
+            <a href="index.html" id="logo" title="HarrisonHighSchool" style="background-image: url({{asset('assets/images/frontend_images/logo_school2.png')}});
+                    width: 190px;
+                    height: 190px;
+                    display: block;
+                    cursor: pointer;
+                    margin-left: 240px;
+                    text-indent: -9999em;
+                    z-index: 3;">HarrisonHighSchool</a>
+        </div>
+        <div class="col-md-6">
+            <center><h5>St.John College Admission Form 2018/2019</h5></center>
         </div>
 
     </div>
 
-    <div class="row">
-        <div class="col-md-8 mb-3" >
-
-            <div class="row">
-                <h3 style="float: left;color: goldenrod">Download Your Application</h3>
-
-            </div>
-
-
-            <div class="row" style="color: white">
-                <button class="btn btn-block btn-success btn-md">DOWNLOAD</button>
-
-            </div>
-        </div>
-
-
-    </div>
 </div>
+<div class="row" style="margin-top: 50px">
 
+    <table class="table table-dark">
+        <tbody>
+        <tr>
+            <td colspan="2" scope="col"></td>
 
+            <td colspan="2" scope="col" style="text-align: right">Date : {{Carbon::now()->toDateString()}}</td>
+        </tr>
 
+        <tr>
 
+            <td scope="col" colspan="4" class="bg-danger">Student Information</td>
 
+        </tr>
+        <tr>
+
+            <td colspan="2" scope="col">Full Name :</td>
+            <td colspan="2" scope="col">{{$student['salutation']}}.{{$student['first_Name']}} {{$student['middle_Name']}} {{$student['last_Name']}}</td>
+        </tr>
+        <tr>
+
+            <td colspan="2" scope="col">Date of Birth :</td>
+            <td colspan="2" scope="col">{{$student['DoB']}}</td>
+        </tr>
+        <tr>
+
+            <td colspan="2" scope="col">NIC / Postal ID :</td>
+            <td colspan="2" scope="col">{{$student['NIC']}}</td>
+        </tr>
+        <tr>
+
+            <td colspan="2" scope="col">Gender :</td>
+            <td colspan="2" scope="col">{{$student['Gender']}}</td>
+        </tr>
+        <tr>
+
+            <td colspan="2" scope="col">Religion :</td>
+            <td colspan="2" scope="col">{{$student['religion']}}</td>
+        </tr>
+        <tr>
+
+            <td colspan="2" scope="col">Religion :</td>
+            <td colspan="2" scope="col">{{$student['race']}}</td>
+        </tr>
+        <tr>
+
+            <td colspan="2" scope="col">Nationality :</td>
+            <td colspan="2" scope="col">{{$student['nationality']}}</td>
+        </tr>
+        <tr>
+
+            <td scope="col" class="bg-danger" colspan="4">Student Contact Information</td>
+
+        </tr>
+        <tr>
+
+            <td colspan="2" scope="col">Address :</td>
+            <td colspan="2" scope="col">{{$student['Address']}}</td>
+        </tr>
+        <tr>
+
+            <td colspan="2" scope="col">Telephone(Res) :</td>
+            <td colspan="2" scope="col">{{$student['Telephone_No_Res']}}</td>
+        </tr>
+        <tr>
+
+            <td colspan="2" scope="col">Telephone(Mob) :</td>
+            <td colspan="2" scope="col">{{$student['Telephone_No_Mob']}}</td>
+        </tr>
+        <tr>
+
+            <td colspan="2" scope="col">Email :</td>
+            <td colspan="2" scope="col">{{$student['Email_Address']}}</td>
+        </tr>
+        <tr>
+
+            <td scope="col" class="bg-danger" colspan="4">Student Other Information</td>
+
+        </tr>
+        <tr>
+
+            <td colspan="2" scope="col">Blood group :</td>
+            <td colspan="2" scope="col">{{$student['blood_group']}}</td>
+        </tr>
+        <tr>
+
+            <td colspan="2" scope="col">Known Illnesses :</td>
+            <td colspan="2" scope="col">{{$student['Known_Illnesses']}}</td>
+        </tr>
+        <tr>
+
+            <td colspan="2" scope="col">Known Allergies :</td>
+            <td colspan="2" scope="col">{{$student['Known_Allergies']}}</td>
+        </tr>
+        <tr>
+
+            <td scope="col" class="bg-danger" colspan="4">Parent/Guardian Information</td>
+
+        </tr>
+        <tr>
+
+            <td colspan="2" scope="col">Parent/Guardian :</td>
+            <td colspan="2" scope="col">{{$student->Parent_Guardian['role']}}</td>
+        </tr>
+        <tr>
+
+            <td colspan="2" scope="col">Parent/Guardian Full Name :</td>
+            <td colspan="2" scope="col">
+                @if($student->Parent_Guardian['role'] == 'Father')
+                    Mr.{{$student->Parent_Guardian['first_name']}} {{$student->Parent_Guardian['middle_name']}} {{$student->Parent_Guardian['last_name']}}</td>
+                @else
+                Mrs.{{$student->Parent_Guardian['first_name']}} {{$student->Parent_Guardian['middle_name']}} {{$student->Parent_Guardian['last_name']}}</td>
+                @endif
+        </tr>
+        <tr>
+
+            <td colspan="2" scope="col">Parent/Guardian Passport / NIC Number :</td>
+            <td colspan="2" scope="col">{{$student->Parent_Guardian['NIC_Passport']}}</td>
+        </tr>
+        <tr>
+
+            <td colspan="2" scope="col">Parent/Guardian Nationality :</td>
+            <td colspan="2" scope="col">{{$student->Parent_Guardian['nationality']}}</td>
+        </tr>
+        <tr>
+
+            <td colspan="2" scope="col">Parent/Guardian Race :</td>
+            <td colspan="2" scope="col">{{$student->Parent_Guardian['race']}}</td>
+        </tr>
+        <tr>
+
+            <td colspan="2" scope="col">Parent/Guardian Religion :</td>
+            <td colspan="2" scope="col">{{$student->Parent_Guardian['religion']}}</td>
+        </tr>
+        <tr>
+
+            <td scope="col" class="bg-danger" colspan="4">Parent/Guardian Work Information</td>
+
+        </tr>
+        <tr>
+
+            <td colspan="2" scope="col">Parent/Guardian Working Sector :</td>
+            <td colspan="2" scope="col">{{$student->Parent_Guardian['working_sector']}}</td>
+        </tr>
+        <tr>
+
+            <td colspan="2" scope="col">Parent/Guardian Profession :</td>
+            <td colspan="2" scope="col">{{$student->Parent_Guardian['profession']}}</td>
+        </tr>
+        <tr >
+
+            <td colspan="2" scope="col">Parent/Guardian Occupation :</td>
+            <td colspan="2" scope="col">{{$student->Parent_Guardian['occupation']}}</td>
+        </tr>
+        <tr >
+
+            <td colspan="2" scope="col">Parent/Guardian Place of Work :</td>
+            <td colspan="2" scope="col">{{$student->Parent_Guardian['work_place']}}</td>
+        </tr>
+        <tr>
+
+            <td scope="col" class="bg-danger" colspan="4">Parent/Guardian Contact Information</td>
+
+        </tr>
+        <tr>
+
+            <td colspan="2" scope="col">Parent/Guardian Email Address :</td>
+            <td colspan="2" scope="col">{{$student->Parent_Guardian['email']}}</td>
+        </tr>
+        <tr>
+
+            <td colspan="2" scope="col">Parent/Guardian Office Address :</td>
+            <td colspan="2" scope="col">{{$student->Parent_Guardian['work_address']}}</td>
+        </tr>
+        <tr>
+
+            <td colspan="2" scope="col">Parent/Guardian Office Phone :</td>
+            <td colspan="2" scope="col">{{$student->Parent_Guardian['work_telephone']}}</td>
+        </tr>
+        <tr>
+
+            <td colspan="2" scope="col">Parent/Guardian Telephone No(Mob) :</td>
+            <td colspan="2" scope="col">{{$student->Parent_Guardian['telephone_mob']}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+<div class="row">
+    <p style="margin-top: 200px">I hereby declare that the details furnished above are true and correct to the best of my knowledge and belief and I undertake to inform you of any changes therein, immediately.</p>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <p style="margin-top: 100px">..........................................<br>
+            Parent/Guardian Signature</p>
+    </div>
+    <div class="col-md-6" >
+        <p style="margin-top: 100px;float: right">.................................<br>
+            Date</p>
+    </div>
+
+</div>
 
 </body>
 </html>

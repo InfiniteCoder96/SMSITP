@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="card bg-transparent">
-                        <div class="card-header bg-transparent"">
+                        <div class="card-header bg-transparent">
                             <img style="width: 400px" src="{{asset('assets/images/frontend_images/Learning-Featured1.jpg')}}" alt="">
                         </div>
                         <div class="card-body">

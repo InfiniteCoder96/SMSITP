@@ -11,6 +11,7 @@
 |
 */
 
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -172,6 +173,28 @@ Route::get('/home',function(){
     return view('Frontend.index');
 });
 
+Route::get('/download',function(){
+    return view('Frontend.ApplicationFormDownload');
+});
+
+Route::get('/download-application','pdfController@stdApplication');
+
+Route::get('/addDemoData','StudentController@Demo_store');
+
+Route::get('/printID','pdfController@stdIDCard');
+
+// Email routes
+
+Route::get('/sendmail',function (){
+   $data = [
+       'title'=> 'hi guys',
+       'content'=> 'Hello 1 Email'
+   ];
+
+   Mail::send('Frontend.email',$data,function ($message){
+       $message -> to('pasinduvimansa96@gmail.com','Pasindu')->subject('Hello 1st Email');
+   });
+});
 //Library Manager Routes
 
 Route::get('/library/dashboard', 'LibraryMgrController@showAdminDashboard');

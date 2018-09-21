@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use Intervention\Image\Facades\Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use Milon\Barcode\DNS1D;
 
 class StudentController extends Controller
 {
@@ -155,14 +156,102 @@ class StudentController extends Controller
         $student->save();
         $parent_guardian->save();
 
+
+
         if($request->get('source') == 'admin'){
-            return redirect('students')->with('success', 'Student has been added to the System Successfully');
+            return redirect('/printID')->with('success', 'Student has been added to the System Successfully');
         }
         elseif ($request->get('source') == 'joinUs'){
-            return redirect('/joinUs')->with('success', 'Your Application has been submitted Successfully');
+            return redirect('/printID')->with('success', 'Your Application has been submitted Successfully');
         }
     }
 
+    public function Demo_store()
+    {
+
+
+        $student = new Student();
+        $parent_guardian = new Parent_Guardian();
+
+
+$class = random_int(1,13);
+        $stdID =  $this->student_id_generator($class);
+
+        $student->sid =  $stdID;
+        $student->salutation = 'Master';
+        $student->first_Name = 'Nadeesh';
+        $student->middle_Name = 'Hasaranga';
+        $student->last_Name = 'Kure';
+        $student->DoB = '2005-05-18';
+        $student->NIC = rand(962571603,999999999).'v';
+        $student->Gender = 'Male';
+        $student->Address = '127/3,Kalalgoda,Panadura';
+        $student->Email_Address = str_random(9).'@gmail.com';
+        $student->Telephone_No_Mob = '0711391848';
+        $student->Telephone_No_Res = '0112846019';
+        $student->religion = 'Buddhist';
+        $student->race = 'Sinhala';
+        $student->nationality = 'Sinhalease';
+        $student->Known_Illnesses = '-';
+        $student->Known_Allergies = '-';
+        $student->blood_group = 'A+';
+
+        $parent_guardian->role = 'Father';
+        $parent_guardian->first_name = 'Hasitha';
+        $parent_guardian->middle_name = 'Gayan';
+        $parent_guardian->last_name = 'Gunawardane';
+        $parent_guardian->NIC_Passport = rand(962571603,999999999).'v';
+        $parent_guardian->nationality = 'Sinhalease';
+        $parent_guardian->race = 'Sinhala';
+        $parent_guardian->religion = 'Buddhist';
+        $parent_guardian->working_sector = 'Government';
+        $parent_guardian->profession = 'Docter';
+        $parent_guardian->occupation = '-';
+        $parent_guardian->work_place = '-';
+        $parent_guardian->email = str_random(9).'@gmail.com';
+        $parent_guardian->work_address = '-';
+        $parent_guardian->work_telephone = '0112847519';
+        $parent_guardian->telephone_mob = '0711394878';
+        $parent_guardian->child_id = $stdID;
+
+
+
+//            $image_path = Input::file(asset('assets/images/users/1.jpg'));
+//
+//            if($image_path){
+//                $extension = $image_path->getClientOriginalExtension();
+//
+//                $filename = $stdID.'.'.$extension;
+//
+//                $large_image_path = 'storage/StudentImages/Large/'.$filename;
+//                $medium_image_path = 'storage/StudentImages/Medium/'.$filename;
+//                $small_image_path = 'storage/StudentImages/Small/'.$filename;
+//
+//                Image::make($image_path)->save($large_image_path);
+//                Image::make($image_path)->resize(600,600)->save($medium_image_path);
+//                Image::make($image_path)->resize(300,300)->save($small_image_path);
+//
+//
+//            }
+        $student->image = '1.jpg';
+
+
+        if($student->save() != true)
+            $this->Demo_store();
+        if($parent_guardian->save() != true)
+            $this->Demo_store();
+
+
+
+$success = 'Your Application has been submitted successfully';
+
+//        if($request->get('source') == 'admin'){
+//            return redirect('/students')->with('success', 'Student has been added to the System Successfully');
+//        }
+//        elseif ($request->get('source') == 'joinUs'){
+         return view('Frontend.ApplicationFormDownload',compact('stdID','success'));
+//        }
+    }
     /**
      * Display the specified resource.
      *
@@ -218,12 +307,13 @@ class StudentController extends Controller
             'blood_group'=> 'required',
             'Known_Illnesses'=> 'required',
             'Known_Allergies'=> 'required',
+            'image' => 'required',
 
             'role'=> 'required',
             'first_name'=> 'required',
             'middle_name'=> 'required',
             'last_name'=> 'required',
-            'NIC_Passport'=> 'required|min:10|max:10',
+            'Parent_NIC_Passport'=> 'required|min:10|max:10',
             'pr_nationality'=> 'required',
             'pr_race'=> 'required',
             'pr_religion'=> 'required',
@@ -259,7 +349,7 @@ class StudentController extends Controller
         $parent_guardian->first_name = $request->get('first_name');
         $parent_guardian->middle_name = $request->get('middle_name');
         $parent_guardian->last_name = $request->get('last_name');
-        $parent_guardian->NIC_Passport = $request->get('NIC_Passport');
+        $parent_guardian->NIC_Passport = $request->get('Parent_NIC_Passport');
         $parent_guardian->nationality = $request->get('pr_nationality');
         $parent_guardian->race = $request->get('pr_race');
         $parent_guardian->religion = $request->get('pr_religion');
@@ -273,14 +363,13 @@ class StudentController extends Controller
         $parent_guardian->telephone_mob = $request->get('telephone_mob');
         $parent_guardian->child_id = $sid;
 
-        if($request->hasFile('image')){
             $image_path = Input::file('image');
 
             if($image_path){
                 $extension = $image_path->getClientOriginalExtension();
 
-                $filename = $sid.'.'.$extension;
-                $exists = Storage::exists('file.jpg');
+                $filename = $sid.'_'.random_int(1,10).'.'.$extension;
+
                 $large_image_path = 'storage/StudentImages/Large/'.$filename;
                 $medium_image_path = 'storage/StudentImages/Medium/'.$filename;
                 $small_image_path = 'storage/StudentImages/Small/'.$filename;
@@ -291,22 +380,23 @@ class StudentController extends Controller
 
                 $student->image = $filename;
 
-                return $exists;
+
             }
 
-        }
+
 
         $student->save();
         $parent_guardian->save();
 
-        return redirect('students')->with('success', 'Student has been added to the System Successfully');
+        return redirect('students')->with('success', 'Student details has been updated Successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param $sid
      * @return \Illuminate\Http\Response
+     * @internal param int $id
      */
     public function destroy($sid)
     {
@@ -314,11 +404,18 @@ class StudentController extends Controller
         $student->Parent_Guardian->delete();
         $student->delete();
         return redirect('students')->with('success','Student has been deleted from the successfully');
+        DNS1D::getBarcodeHTML($student['sid'], 'C128A');
     }
 
     public function student_id_generator($class){
+
+        if($class < 10){
+            $class = '0'.$class;
+        }
+
         $students = Student::all();
         $last_ID = null;
+        $new_ID = null;
         foreach ($students as $student){
             $last_ID = $student->sid;
         }
@@ -328,35 +425,48 @@ class StudentController extends Controller
 
         $last_two_digits_year = $year_now%100;
 
+        $id_first_part = $last_two_digits_year.$class;
+
         if($last_ID == null){
 
-            $last_ID = $last_two_digits_year.$class.'0001';
+            $new_ID = $id_first_part.'0001';
 
         }
         else{
 
-            $id_first_part = $last_two_digits_year.$class;
 
-            $last_digits = str_after($last_ID, $id_first_part);
 
-            $last_digits = (int)$last_digits;
+            $last_digits_str = substr($last_ID, 4);
 
-            $last_digits++;
+            $last_digits = intval($last_digits_str);
+
+            $last_digits = $last_digits + 1;
+
+            if($last_digits%10 == 0)
+                $last_digits = $last_digits + 1;
 
             if($last_digits < 10)
                 $id_last_part = '000'.$last_digits;
-            elseif ($last_digits < 100 || $last_digits > 10)
+            elseif ($last_digits < 100 && $last_digits > 10)
                 $id_last_part = '00'.$last_digits;
-            elseif($last_digits < 1000 || $last_digits > 100)
+            elseif($last_digits < 1000 && $last_digits > 100)
                 $id_last_part = '0'.$last_digits;
             else
                 $id_last_part = $last_digits;
 
-            $last_ID = $id_first_part.$id_last_part;
+            $new_ID = $id_first_part.$id_last_part;
+
+            foreach ($students as $student){
+                if($new_ID == $student->sid){
+                    $new_ID = intval($new_ID);
+                    $new_ID = $new_ID + 1;
+                }
+
+            }
         }
 
 
-        return $last_ID;
+        return $new_ID;
     }
 
     public function showSearchView(){

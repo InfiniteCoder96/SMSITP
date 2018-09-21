@@ -27,6 +27,9 @@
                 </div>
             </div>
         </div>
+        <div class="container text-center" style="border: 1px solid #a1a1a1;padding: 15px;width: 70%;">
+
+        </div>
         <!-- ============================================================== -->
         <!-- End Bread crumb and right sidebar toggle -->
         <!-- ============================================================== -->
@@ -175,8 +178,9 @@
 
 
                                                 <td style="font-size: 12px;color: #d39e00">
-                                                    <a > <img src="{{asset('/storage/StudentImages/small/'.$student->image)}}" class="rounded-circle" style="width:50px;height: 50px;border: 2px solid black" ></a>
+                                                    <a > <img src="{{asset('/storage/StudentImages/small/'.$student['image'])}}" class="rounded-circle" style="width:50px;height: 50px;border: 2px solid black" ></a>
                                                 </td>
+
                                                 <td style="font-size: 12px;color: #d39e00">{{$student->sid}}</td>
                                                 <td style="font-size: 12px;color: #d39e00">{{$student->first_Name}}</td>
                                                 <td style="font-size: 12px;color: #d39e00">{{$student->middle_Name}}</td>
