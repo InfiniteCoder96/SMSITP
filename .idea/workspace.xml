@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75c1e791-4ade-41ba-8e33-3bc20d914aa0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/addMemberPDF.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/IssueBookController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/IssueBookController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/MemberController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/MemberController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/libraryDashboardController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/libraryDashboardController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/ReturnBook.php" afterPath="$PROJECT_DIR$/app/ReturnBook.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Library_Management/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/dashboard.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Library_Management/viewAllMembers.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/viewAllMembers.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/header.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/header.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Admin/Library_Management/libraryOverallReportPDF.blade.php" afterPath="$PROJECT_DIR$/resources/views/Admin/Library_Management/libraryOverallReportPDF.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,14 +54,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addMemberPDF.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="addMemberPDF.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/addMemberPDF.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
+            <state relative-caret-position="125">
               <caret line="13" column="3" lean-forward="false" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
               <folding>
                 <element signature="e#6#44#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="libraryOverallReportPDF.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/libraryOverallReportPDF.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="63">
+              <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -148,7 +150,6 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/editBookModal.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/addNewMemberForm.blade.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/libraryOverallReportPDF.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/viewAllBooksTable.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/returnBookConfirmation.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/editMemberForm.blade.php" />
@@ -166,6 +167,7 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/LibraryLayouts/header.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/viewAllMembers.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/addMemberPDF.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Admin/Library_Management/libraryOverallReportPDF.blade.php" />
       </list>
     </option>
   </component>
@@ -795,7 +797,7 @@
       <workItem from="1537424782367" duration="2631000" />
       <workItem from="1537498583429" duration="6053000" />
       <workItem from="1537522555495" duration="40000" />
-      <workItem from="1537522622287" duration="1223000" />
+      <workItem from="1537522622287" duration="1577000" />
     </task>
     <task id="LOCAL-00001" summary="new admin panel">
       <created>1534087175865</created>
@@ -916,16 +918,23 @@
       <option name="project" value="LOCAL" />
       <updated>1537186644980</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="library function done">
+      <created>1537524740471</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1537524740471</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="396473000" />
+    <option name="totallyTimeSpent" value="396827000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="0" width="1938" height="1058" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18333334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21145834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23235613" sideWeight="0.5052083" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1020,7 +1029,8 @@
     <MESSAGE value="retun books done" />
     <MESSAGE value="initial functions done" />
     <MESSAGE value="validations done" />
-    <option name="LAST_COMMIT_MESSAGE" value="validations done" />
+    <MESSAGE value="library function done" />
+    <option name="LAST_COMMIT_MESSAGE" value="library function done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1183,13 +1193,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="562">
           <caret line="165" column="52" lean-forward="false" selection-start-line="165" selection-start-column="52" selection-end-line="165" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/libraryOverallReportPDF.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -1387,11 +1390,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/addMemberPDF.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
+        <state relative-caret-position="125">
           <caret line="13" column="3" lean-forward="false" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
           <folding>
             <element signature="e#6#44#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Library_Management/libraryOverallReportPDF.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
