@@ -42,7 +42,7 @@
         <div class="auth-box bg-dark border-top border-secondary">
             <div>
                 <div class="text-center p-t-20 p-b-20">
-                    <span class="db"><img src="{{asset('assets/images/logo.png')}}" alt="logo" /></span>
+                    <span class="db"><img src="{{asset('assets/images/logos.png')}}" alt="logo" /></span>
                 </div>
                 @if(count($errors) > 0)
                     <div class="alert alert-danger">
@@ -52,9 +52,13 @@
                     </div>
 
                 @endif
-
-                <!-- Form -->
-                <form class="form-horizontal m-t-20" action="{{route('register')}}" method="post">
+                @if (\Session::has('Status'))
+                    <div class="alert alert-success">
+                        <p>{{ \Session::get('Status') }}</p>
+                    </div><br />
+            @endif
+            <!-- Form -->
+                <form class="form-horizontal m-t-20" action="{{url('/register_admin')}}" method="post">
                     {{csrf_field()}}
                     <div class="row p-b-30">
                         <div class="col-12">
@@ -69,7 +73,27 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text bg-danger text-white" id="basic-addon1"><i class="ti-email"></i></span>
                                 </div>
-                                <input type="text" class="form-control form-control-lg" placeholder="Email Address" aria-label="Username" aria-describedby="basic-addon1" name="email" value="{{old('email')}}">
+                                <input type="text" class="form-control form-control-lg" placeholder="Email Address" aria-label="Email" aria-describedby="basic-addon1" name="email" value="{{old('email')}}">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-dark text-white" id="basic-addon1"><i class="ti-lock"></i></span>
+                                </div>
+                                <select name="role" class="form-control">
+                                    <option selected disabled>- Select Role -</option>
+                                    <option value="Admin">Administrator</option>
+                                    <option value="HRMgr">Human Resource Manager</option>
+                                    <option value="FinanceMgr">Finance Manager</option>
+                                    <option value="TransportMgr">Transport Manager</option>
+                                    <option value="HostelMgr">Hostel Manager(Warden)</option>
+                                    <option value="LibraryMgr">Library Manager(Librarian)</option>
+                                    <option value="ExamCenterMgr">Exam Center Manager</option>
+                                    <option value="NotificationMgr">Notification Manager</option>
+                                    <option value="AcademicMgr">Academic Activities Manager</option>
+                                    <option value="NonAcademicMgr">Non Academic Activities Manager</option>
+                                    <option value="ResourceMgr">Resource Manager</option>
+
+                                </select>
                             </div>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">

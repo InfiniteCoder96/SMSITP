@@ -35,4 +35,14 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'firebase' => [
+
+        'api_key' => 'AIzaSyDRo21d4vCIcx1Cz201ls9wUpnys_4rOXE',
+        'auth_domain' => 'smsitp-4bee4.firebaseapp.com',
+        'database_url' => 'https://smsitp-4bee4.firebaseio.com',
+        'secret' => 'kBHr2o2cQTuPcaydWKpKnBka0625tZNDUDt5u2Sj',
+        'storage_bucket' => 'smsitp-4bee4.appspot.com',
+        'projectId'=> 'smsitp-4bee4',
+        'messagingSenderId'=>'163517869682'
+    ]
 ];

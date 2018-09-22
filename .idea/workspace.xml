@@ -1,8 +1,358 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="75c1e791-4ade-41ba-8e33-3bc20d914aa0" name="Default" comment="">
+    <list default="true" id="75c1e791-4ade-41ba-8e33-3bc20d914aa0" name="Default" comment="firebase connected">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/test_credentials.json.enc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/TeacherController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/smsitp-4bee4-7b7bfcdbeca7.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/testFirebase.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Teacher.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2018_09_21_153958_create_teachers_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Admin/User_Management/Admin/test.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/Admin/User_Management/Teacher/add_teacher.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bin/jp.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bin/jp.php.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fig/http-message-util/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fig/http-message-util/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fig/http-message-util/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fig/http-message-util/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fig/http-message-util/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fig/http-message-util/src/RequestMethodInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fig/http-message-util/src/StatusCodeInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/firebase/php-jwt/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/firebase/php-jwt/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/firebase/php-jwt/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/firebase/php-jwt/src/BeforeValidException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/firebase/php-jwt/src/ExpiredException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/firebase/php-jwt/src/JWT.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/firebase/php-jwt/src/SignatureInvalidException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/.editorconfig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/.php_cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/CODE_OF_CONDUCT.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/COPYING" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/autoload.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/phpunit.xml.dist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/src/ApplicationDefaultCredentials.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/src/Cache/InvalidArgumentException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/src/Cache/Item.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/src/Cache/MemoryCacheItemPool.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/src/Cache/SysVCacheItemPool.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/src/CacheTrait.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/src/Credentials/AppIdentityCredentials.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/src/Credentials/GCECredentials.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/src/Credentials/IAMCredentials.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/src/Credentials/InsecureCredentials.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/src/Credentials/ServiceAccountCredentials.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/src/Credentials/ServiceAccountJwtAccessCredentials.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/src/Credentials/UserRefreshCredentials.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/src/CredentialsLoader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/src/FetchAuthTokenCache.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/src/FetchAuthTokenInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/src/HttpHandler/Guzzle5HttpHandler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/src/HttpHandler/Guzzle6HttpHandler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/src/HttpHandler/HttpHandlerFactory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/src/Middleware/AuthTokenMiddleware.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/src/Middleware/ScopedAccessTokenMiddleware.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/src/Middleware/SimpleMiddleware.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/src/OAuth2.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/src/Subscriber/AuthTokenSubscriber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/src/Subscriber/ScopedAccessTokenSubscriber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/src/Subscriber/SimpleSubscriber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/ApplicationDefaultCredentialsTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/BaseTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/Cache/ItemTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/Cache/MemoryCacheItemPoolTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/Cache/SysVCacheItemPoolTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/Cache/sysv_cache_creator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/CacheTraitTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/Credentials/AppIndentityCredentialsTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/Credentials/GCECredentialsTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/Credentials/IAMCredentialsTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/Credentials/InsecureCredentialsTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/Credentials/ServiceAccountCredentialsTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/Credentials/UserRefreshCredentialsTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/FetchAuthTokenCacheTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/FetchAuthTokenTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/HttpHandler/Guzzle5HttpHandlerTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/HttpHandler/Guzzle6HttpHandlerTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/HttpHandler/HttpHandlerFactoryTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/Middleware/AuthTokenMiddlewareTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/Middleware/ScopedAccessTokenMiddlewareTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/Middleware/SimpleMiddlewareTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/OAuth2Test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/Subscriber/AuthTokenSubscriberTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/Subscriber/ScopedAccessTokenSubscriberTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/Subscriber/SimpleSubscriberTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/bootstrap.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/fixtures/.config/gcloud/application_default_credentials.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/fixtures/private.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/fixtures/private.pem" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/fixtures/public.pem" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/fixtures2/.config/gcloud/application_default_credentials.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/fixtures2/gcloud.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/fixtures2/private.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/fixtures2/valid_oauth_creds.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/google/auth/tests/mocks/AppIdentityService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/.github/issue_template.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/CODE_OF_CONDUCT.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Auth.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Auth/ApiClient.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Auth/UserInfo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Auth/UserMetaData.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Auth/UserRecord.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Database.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Database/ApiClient.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Database/Query.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Database/Query/Filter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Database/Query/Filter/EndAt.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Database/Query/Filter/EqualTo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Database/Query/Filter/LimitToFirst.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Database/Query/Filter/LimitToLast.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Database/Query/Filter/Shallow.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Database/Query/Filter/StartAt.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Database/Query/Modifier.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Database/Query/ModifierTrait.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Database/Query/Sorter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Database/Query/Sorter/OrderByChild.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Database/Query/Sorter/OrderByKey.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Database/Query/Sorter/OrderByValue.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Database/Reference.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Database/Reference/Validator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Database/RuleSet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Database/Snapshot.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Exception/ApiException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Exception/Auth/CredentialsMismatch.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Exception/Auth/EmailExists.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Exception/Auth/EmailNotFound.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Exception/Auth/InvalidCustomToken.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Exception/Auth/InvalidPassword.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Exception/Auth/MissingPassword.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Exception/Auth/OperationNotAllowed.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Exception/Auth/RevokedIdToken.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Exception/Auth/UserDisabled.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Exception/Auth/WeakPassword.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Exception/AuthException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Exception/FirebaseException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Exception/IndexNotDefined.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Exception/InvalidArgumentException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Exception/LogicException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Exception/OutOfRangeException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Exception/PermissionDenied.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Exception/QueryException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Exception/ServiceAccountDiscoveryFailed.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Factory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Http/Auth.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Http/Auth/CustomToken.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Http/Middleware.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/ServiceAccount.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/ServiceAccount/Discoverer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/ServiceAccount/Discovery/FromEnvironmentVariable.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/ServiceAccount/Discovery/FromGoogleWellKnownFile.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/ServiceAccount/Discovery/FromPath.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Util/JSON.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-php/src/Firebase/Util/Util.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-tokens/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-tokens/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-tokens/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-tokens/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-tokens/src/Cache/InMemoryCache.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-tokens/src/Domain/Generator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-tokens/src/Domain/KeyStore.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-tokens/src/Domain/Verifier.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-tokens/src/Exception/ExpiredToken.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-tokens/src/Exception/InvalidToken.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-tokens/src/Exception/IssuedInTheFuture.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-tokens/src/Exception/UnknownKey.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-tokens/src/Generator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-tokens/src/Handler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-tokens/src/HttpKeyStore.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/kreait/firebase-tokens/src/Verifier.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/ktamas77/firebase-php/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/ktamas77/firebase-php/.scrutinizer.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/ktamas77/firebase-php/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/ktamas77/firebase-php/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/ktamas77/firebase-php/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/ktamas77/firebase-php/phpunit.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/ktamas77/firebase-php/src/firebaseInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/ktamas77/firebase-php/src/firebaseLib.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/ktamas77/firebase-php/src/firebaseStub.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/ktamas77/firebase-php/tests/firebaseStubTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/ktamas77/firebase-php/tests/firebaseTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/ktamas77/firebase-php/tests/phpunit.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/.scrutinizer.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/composer.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/phpunit.xml.dist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Builder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Claim.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Claim/Basic.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Claim/EqualsTo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Claim/Factory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Claim/GreaterOrEqualsTo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Claim/LesserOrEqualsTo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Claim/Validatable.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Parser.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Parsing/Decoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Parsing/Encoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Signature.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Signer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Signer/BaseSigner.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Signer/Ecdsa.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Signer/Ecdsa/KeyParser.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Signer/Ecdsa/Sha256.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Signer/Ecdsa/Sha384.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Signer/Ecdsa/Sha512.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Signer/Hmac.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Signer/Hmac/Sha256.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Signer/Hmac/Sha384.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Signer/Hmac/Sha512.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Signer/Key.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Signer/Keychain.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Signer/Rsa.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Signer/Rsa/Sha256.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Signer/Rsa/Sha384.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Signer/Rsa/Sha512.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/Token.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/src/ValidationData.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/functional/EcdsaTokenTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/functional/HmacTokenTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/functional/Keys.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/functional/RsaTokenTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/functional/UnsignedTokenTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/functional/ecdsa/private.key" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/functional/ecdsa/private2.key" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/functional/ecdsa/public1.key" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/functional/ecdsa/public2.key" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/functional/ecdsa/public3.key" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/functional/rsa/encrypted-private.key" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/functional/rsa/encrypted-public.key" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/functional/rsa/private.key" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/functional/rsa/public.key" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/unit/BuilderTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/unit/Claim/BasicTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/unit/Claim/EqualsToTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/unit/Claim/FactoryTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/unit/Claim/GreaterOrEqualsToTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/unit/Claim/LesserOrEqualsToTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/unit/ParserTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/unit/Parsing/DecoderTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/unit/Parsing/EncoderTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/unit/SignatureTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/unit/Signer/BaseSignerTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/unit/Signer/Ecdsa/KeyParserTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/unit/Signer/Ecdsa/Sha256Test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/unit/Signer/Ecdsa/Sha384Test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/unit/Signer/Ecdsa/Sha512Test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/unit/Signer/EcdsaTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/unit/Signer/Hmac/Sha256Test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/unit/Signer/Hmac/Sha384Test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/unit/Signer/Hmac/Sha512Test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/unit/Signer/HmacTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/unit/Signer/KeyTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/unit/Signer/KeychainTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/unit/Signer/Rsa/Sha256Test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/unit/Signer/Rsa/Sha384Test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/unit/Signer/Rsa/Sha512Test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/unit/TokenTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/lcobucci/jwt/test/unit/ValidationDataTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mpociot/laravel-firebase-sync/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mpociot/laravel-firebase-sync/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mpociot/laravel-firebase-sync/src/Mpociot/Firebase/SyncsWithFirebase.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/README.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/bin/jp.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/bin/perf.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/phpunit.xml.dist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/src/AstRuntime.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/src/CompilerRuntime.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/src/DebugRuntime.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/src/Env.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/src/FnDispatcher.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/src/JmesPath.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/src/Lexer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/src/Parser.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/src/SyntaxErrorException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/src/TreeCompiler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/src/TreeInterpreter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/src/Utils.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/ComplianceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/EnvTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/FnDispatcherTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/LexerTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/ParserTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/SyntaxErrorExceptionTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/TreeCompilerTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/TreeInterpreterTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/UtilsTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/compliance/basic.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/compliance/boolean.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/compliance/current.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/compliance/escape.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/compliance/filters.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/compliance/functions.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/compliance/identifiers.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/compliance/indices.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/compliance/literal.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/compliance/multiselect.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/compliance/perf/basic.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/compliance/perf/deep_hierarchy.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/compliance/perf/deep_projection.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/compliance/perf/functions.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/compliance/perf/multiwildcard.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/compliance/perf/wildcardindex.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/compliance/pipe.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/compliance/slice.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/compliance/syntax.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/compliance/unicode.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/mtdowling/jmespath.php/tests/compliance/wildcard.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/psr/cache/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/psr/cache/LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/psr/cache/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/psr/cache/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/psr/cache/src/CacheException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/psr/cache/src/CacheItemInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/psr/cache/src/CacheItemPoolInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/psr/cache/src/InvalidArgumentException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/SMS.iml" afterPath="$PROJECT_DIR$/.idea/SMS.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Admin.php" afterPath="$PROJECT_DIR$/app/Admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/services.php" afterPath="$PROJECT_DIR$/config/services.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Notifications/ResetPassword.php" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Notifications/ResetPassword.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,31 +363,68 @@
   </component>
   <component name="ComposerSettings" synchronizationState="DONT_SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <executablePath>composer</executablePath>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="header.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/NonAcademicLayouts/header.blade.php">
+      <file leaf-file-name="Teacher.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Teacher.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+            <state relative-caret-position="243">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding>
+                <element signature="e#23#62#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TeacherController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TeacherController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1782">
+              <caret line="67" column="40" lean-forward="false" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="40" />
+              <folding>
+                <element signature="e#40#56#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testFirebase.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/testFirebase.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="783">
+              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding>
+                <element signature="e#40#68#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="services.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/services.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1215">
+              <caret line="45" column="43" lean-forward="false" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Admin/User_Management/dashboard.blade.php">
+      <file leaf-file-name="add_teacher.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Admin/User_Management/Teacher/add_teacher.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="23" column="26" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+            <state relative-caret-position="891">
+              <caret line="33" column="71" lean-forward="false" selection-start-line="33" selection-start-column="71" selection-end-line="33" selection-end-column="71" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StudentController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/StudentController.php">
+      <file leaf-file-name="update_staff_details.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Admin/HR_Management/update_staff_details.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -46,71 +433,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manage_sport_students.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Admin/Non_Academic_Management/manage_sport_students.blade.php">
+      <file leaf-file-name="academic_staff.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Admin/HR_Management/academic_staff.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+            <state relative-caret-position="2997">
+              <caret line="111" column="20" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="278" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sideBar.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/adminLayouts/sideBar.blade.php">
+      <file leaf-file-name="StudentController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/StudentController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+            <state relative-caret-position="469">
+              <caret line="402" column="39" lean-forward="true" selection-start-line="402" selection-start-column="39" selection-end-line="402" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view-insert_student.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Admin/User_Management/Student/view-insert_student.blade.php">
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="819">
-              <caret line="39" column="51" lean-forward="false" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
-              <folding />
+            <state relative-caret-position="5805">
+              <caret line="225" column="13" lean-forward="true" selection-start-line="225" selection-start-column="13" selection-end-line="225" selection-end-column="26" />
+              <folding>
+                <element signature="e#391#427#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/TransportHostelLayouts/header.blade.php">
+      <file leaf-file-name="test.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Admin/User_Management/Admin/test.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="staff_report.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Admin/Transport_Management/staff_report.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="15" column="99" lean-forward="false" selection-start-line="15" selection-start-column="99" selection-end-line="15" selection-end-column="99" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manage_vehicle.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Admin/Transport_Management/manage_vehicle.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="15" column="102" lean-forward="false" selection-start-line="15" selection-start-column="102" selection-end-line="15" selection-end-column="102" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/adminLayouts/header.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+            <state relative-caret-position="1674">
+              <caret line="62" column="42" lean-forward="false" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -125,11 +484,17 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>slider</find>
+      <find>bx-pager-item</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Pasindu" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <favorite-branches>
@@ -149,30 +514,70 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/layouts/TransportHostelLayouts/sideBar.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/Transport_Management/dashboard.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/Transport_Management/manage_routes.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/Transport_Management/student_report.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/AcademicLayouts/header.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/Non_Academic_Management/dashboard.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/NonAcademicLayouts/sideBar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
+        <option value="$PROJECT_DIR$/app/Parent_Guardian.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_09_14_044844_add_blood_group_column_to_students_table.php" />
+        <option value="$PROJECT_DIR$/app/student.php" />
+        <option value="$PROJECT_DIR$/resources/views/Admin/User_Management/Student/manageStudent.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Admin/User_Management/Student/student_view.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Student/dashboard.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/StudentLayouts/sideBar.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/customAuthController.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_09_14_215300_create_users_table.php" />
+        <option value="$PROJECT_DIR$/app/users.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/FrontendLayouts/navbar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/FrontendLayouts/head.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/StoreStudent.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_09_16_175355_drop_birth_certificate_no_column_in_students_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/Admin/User_Management/Student/admission.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Frontend/joinUs.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/FrontendLayouts/header.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_09_17_092845_create_temporary_students_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_09_17_112758_create_temporary__parent__guardians_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_09_17_113216_add_primary_key_temporary__parent__guardians_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/Frontend/JoinUsStudents.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Frontend/ApplicationFormDownload.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Frontend/stdApplicationDownload.blade.php" />
+        <option value="$PROJECT_DIR$/app/Temporary_Parent_Guardian.php" />
+        <option value="$PROJECT_DIR$/app/TemporaryStudent.php" />
+        <option value="$PROJECT_DIR$/resources/views/Admin/User_Management/Student/edit_student.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Admin/User_Management/Student/all_students.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Admin/User_Management/Student/search_student.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/pdfController.php" />
+        <option value="$PROJECT_DIR$/resources/views/Frontend/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Admin/User_Management/Student/studentID.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Frontend/email.blade.php" />
+        <option value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Client.php" />
+        <option value="$PROJECT_DIR$/config/mail.php" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/app/Admin.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/NonAcademicLayouts/header.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/Non_Academic_Management/manage_sport_students.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/Non_Academic_Management/manage_sports.blade.php" />
+        <option value="$PROJECT_DIR$/config/app.php" />
+        <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Notifications/ResetPassword.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_09_21_153958_create_teachers_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/Admin/User_Management/Teacher/add_teacher.blade.php" />
+        <option value="$PROJECT_DIR$/app/Teacher.php" />
+        <option value="$PROJECT_DIR$/config/services.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/TeacherController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/StudentController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/testFirebase.php" />
+        <option value="$PROJECT_DIR$/resources/views/Admin/User_Management/Admin/test.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/adminLayouts/sideBar.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/User_Management/Student/view-insert_student.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/TransportHostelLayouts/header.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/Transport_Management/staff_report.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/Admin/Transport_Management/manage_vehicle.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/adminLayouts/header.blade.php" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
     <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>false</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>false</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
@@ -181,7 +586,7 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
       <path value="$PROJECT_DIR$/vendor/symfony/translation" />
@@ -254,12 +659,36 @@
       <path value="$PROJECT_DIR$/vendor/filp/whoops" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/laravel/scout" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/milon/barcode" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/vendor/mtdowling/jmespath.php" />
+      <path value="$PROJECT_DIR$/vendor/kreait/firebase-php" />
+      <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/vendor/google/auth" />
+      <path value="$PROJECT_DIR$/vendor/kreait/firebase-tokens" />
+      <path value="$PROJECT_DIR$/vendor/fig/http-message-util" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/ktamas77/firebase-php" />
+      <path value="$PROJECT_DIR$/vendor/mpociot/laravel-firebase-sync" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="68" />
-    <option name="y" value="14" />
-    <option name="width" value="1220" />
+    <option name="x" value="952" />
+    <option name="width" value="976" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -280,132 +709,348 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="SMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SMS" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="SMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SMS" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="SMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SMS" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="SMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SMS" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="SMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SMS" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bootstrap" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="factories" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="migrations" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="seeds" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="backend_css" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="backend_css" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="icons" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="backend_css" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="icons" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="font-awesome" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="backend_css" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="icons" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="font-awesome" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="backend_css" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="icons" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themify-icons" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="storage" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="storage" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="StudentImages" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="storage" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="StudentImages" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Large" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="SMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SMS" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="SMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SMS" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="SMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SMS" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Transport_Management" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="HR_Management" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="SMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SMS" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="User_Management" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="SMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SMS" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="User_Management" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Student" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="SMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SMS" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="User_Management" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Teacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="auth" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="auth" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="passwords" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="layouts" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="SMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SMS" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="layouts" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="AcademicLayouts" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="SMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SMS" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="layouts" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="adminLayouts" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="SMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SMS" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="layouts" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="NonAcademicLayouts" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="FrontendLayouts" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="SMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SMS" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="layouts" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="TransportHostelLayouts" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Student" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="SMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SMS" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="routes" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="storage" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="storage" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="storage" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="storage" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="StudentImages" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="storage" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="StudentImages" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Large" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="storage" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="StudentImages" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Medium" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="storage" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="StudentImages" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Small" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SMSITP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SMSITP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SearchEverywhereHistoryKey" value="dompdf&#9;null&#9;null&#10;web&#9;FILE&#9;file://D:/XAMPP/htdocs/SMSITP/routes/web.php&#10;auth&#9;FILE&#9;file://D:/XAMPP/htdocs/SMSITP/config/auth.php" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\XAMPP\htdocs\SMSITP\app\Http\Controllers" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\XAMPP\htdocs\SMSITP\app\Http\Controllers" />
+      <recent name="D:\XAMPP\htdocs\SMSITP\resources\views\layouts\StudentLayouts" />
       <recent name="D:\Applications\xampp\htdocs\SMS\resources\views\layouts\adminLayouts" />
       <recent name="D:\Applications\xampp\htdocs\SMS\resources\views\layouts\AcademicLayouts" />
     </key>
@@ -422,6 +1067,22 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="dev" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+    </configuration>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
@@ -437,6 +1098,42 @@
       <updated>1534067013899</updated>
       <workItem from="1534067016284" duration="205000" />
       <workItem from="1534190961105" duration="542000" />
+      <workItem from="1536396145433" duration="863000" />
+      <workItem from="1536397227582" duration="425000" />
+      <workItem from="1536397687614" duration="1139000" />
+      <workItem from="1536401210336" duration="16629000" />
+      <workItem from="1536470398146" duration="658000" />
+      <workItem from="1536474913315" duration="7935000" />
+      <workItem from="1536516376587" duration="943000" />
+      <workItem from="1536520273224" duration="9051000" />
+      <workItem from="1536572456620" duration="4046000" />
+      <workItem from="1536673699392" duration="787000" />
+      <workItem from="1536694674885" duration="3913000" />
+      <workItem from="1536729775731" duration="2915000" />
+      <workItem from="1536749356230" duration="1279000" />
+      <workItem from="1536771947455" duration="5241000" />
+      <workItem from="1536818659381" duration="9313000" />
+      <workItem from="1536872512377" duration="1034000" />
+      <workItem from="1536899123401" duration="4301000" />
+      <workItem from="1536915532142" duration="8747000" />
+      <workItem from="1536951752755" duration="3447000" />
+      <workItem from="1537020736474" duration="9779000" />
+      <workItem from="1537112618610" duration="10104000" />
+      <workItem from="1537134552921" duration="8329000" />
+      <workItem from="1537161754630" duration="22544000" />
+      <workItem from="1537194627292" duration="9520000" />
+      <workItem from="1537210149465" duration="2995000" />
+      <workItem from="1537240834975" duration="18244000" />
+      <workItem from="1537279647900" duration="619000" />
+      <workItem from="1537288957357" duration="5359000" />
+      <workItem from="1537382514922" duration="4551000" />
+      <workItem from="1537419289303" duration="2933000" />
+      <workItem from="1537473738190" duration="1028000" />
+      <workItem from="1537497225036" duration="10517000" />
+      <workItem from="1537540726157" duration="8681000" />
+      <workItem from="1537593379820" duration="1647000" />
+      <workItem from="1537603711787" duration="1287000" />
+      <workItem from="1537620254614" duration="307000" />
     </task>
     <task id="LOCAL-00001" summary="new admin panel">
       <created>1534087175865</created>
@@ -466,24 +1163,69 @@
       <option name="project" value="LOCAL" />
       <updated>1534097667282</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Authentication System Rebuilding">
+      <created>1536521002132</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1536521002132</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Authentication System Rebuilding">
+      <created>1536521267861</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1536521267861</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Authentication System Rebuilding">
+      <created>1536922089784</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1536922089784</updated>
+    </task>
+    <task id="LOCAL-00008" summary="frontend student application done !">
+      <created>1537140023859</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1537140023859</updated>
+    </task>
+    <task id="LOCAL-00009" summary="student ID and student admission pdf done !">
+      <created>1537501762621</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1537501762622</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11578000" />
+    <option name="totallyTimeSpent" value="213763000" />
+  </component>
+  <component name="TodoView" selected-index="4">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15682063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4538131" sideWeight="0.49544418" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5021482" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.49785176" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21858217" sideWeight="0.5045558" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8302961" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -492,29 +1234,29 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5021482" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.49785176" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25725028" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.88952166" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19387755" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -561,317 +1303,381 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="new admin panel" />
-    <option name="LAST_COMMIT_MESSAGE" value="new admin panel" />
+    <MESSAGE value="Authentication System Rebuilding" />
+    <MESSAGE value="frontend student application done !" />
+    <MESSAGE value="student ID and student admission pdf done !" />
+    <MESSAGE value="firebase connected" />
+    <option name="LAST_COMMIT_MESSAGE" value="firebase connected" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Non_Academic_Management/manage_sport_events_approvals.blade.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Non_Academic_Management/manage_sport_time_tables.blade.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Non_Academic_Management/manage_events.blade.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Non_Academic_Management/manage_club_sociaties.blade.php" />
-    <entry file="file://$PROJECT_DIR$/public/assets/images/background/img4.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/images/background/img5.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/images/background/img6.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/images/big/img2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/images/big/img3.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/images/big/img4.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/images/big/img5.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/images/users/1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/images/users/d4.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/images/custom-select.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/images/big/auth-bg.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/images/big/img1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Exam_Centre_Management/publishResults.blade.php">
+    <entry file="file://$PROJECT_DIR$/vendor/dompdf/dompdf/src/Dompdf.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="27918">
+          <caret line="1050" column="5" lean-forward="false" selection-start-line="1050" selection-start-column="5" selection-end-line="1050" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/User_Management/Admin/admin_view.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-729">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/resources/views/Frontend/stdApplicationDownload.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/AcademicLayouts/updateClassTeacherDetailsModal.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="806">
-          <caret line="47" column="103" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="62" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Academic_Management/manage_subject.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="634">
-          <caret line="153" column="192" lean-forward="true" selection-start-line="153" selection-start-column="39" selection-end-line="153" selection-end-column="192" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1051">
-          <caret line="175" column="7" lean-forward="true" selection-start-line="175" selection-start-column="7" selection-end-line="175" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/TransportHostelLayouts/vehicleRegistrationModal.blade.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Transport_Management/manage_vehicles.blade.php" />
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1450">
-          <caret line="138" column="0" lean-forward="false" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Transport_Management/dashboard.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="44" lean-forward="false" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/TransportHostelLayouts/sideBar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Transport_Management/manage_routes.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="34" column="186" lean-forward="false" selection-start-line="34" selection-start-column="186" selection-end-line="34" selection-end-column="186" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Transport_Management/student_report.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="38" column="21" lean-forward="false" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Non_Academic_Management/manage_teachers_in_charge.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="11" lean-forward="false" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Non_Academic_Management/manage_achivements.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Non_Academic_Management/manage_sports_events.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/AcademicLayouts/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="62" lean-forward="false" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Non_Academic_Management/manage_coaches.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="11" lean-forward="false" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Non_Academic_Management/dashboard.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="40" lean-forward="false" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/NonAcademicLayouts/sideBar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Academic_Management/manage_class.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="86" column="38" lean-forward="true" selection-start-line="76" selection-start-column="32" selection-end-line="86" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="44" column="78" lean-forward="false" selection-start-line="44" selection-start-column="78" selection-end-line="44" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Non_Academic_Management/manage_sports.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="60" lean-forward="false" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/User_Management/Student/manageStudent.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/StudentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/User_Management/Student/edit_student.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-293">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="5778">
+          <caret line="221" column="6" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="221" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Admin/User_Management/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="23" column="26" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Frontend/ApplicationFormDownload.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/pdfController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="23" column="112" lean-forward="false" selection-start-line="23" selection-start-column="112" selection-end-line="23" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/FrontendLayouts/head.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-386">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/FrontendLayouts/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/FrontendLayouts/navbar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/images/frontend_images/logo_school2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Frontend/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/images/frontend_images/border.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/User_Management/Student/search_student.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/storage/StudentImages/Large/18130001.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/User_Management/Student/studentID.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Frontend/email.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2417">
+          <caret line="165" column="10" lean-forward="true" selection-start-line="165" selection-start-column="10" selection-end-line="165" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/mail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1934">
+          <caret line="27" column="59" lean-forward="false" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="34" column="14" lean-forward="true" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-62">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="52" column="6" lean-forward="true" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1188">
+          <caret line="44" column="79" lean-forward="false" selection-start-line="44" selection-start-column="56" selection-end-line="44" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/User_Management/Student/edit_student.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1782">
+          <caret line="66" column="44" lean-forward="false" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="99" column="61" lean-forward="false" selection-start-line="99" selection-start-column="61" selection-end-line="99" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Notifications/ResetPassword.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1701">
+          <caret line="65" column="7" lean-forward="false" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/ResetsPasswords.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/SendsPasswordResetEmails.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="837">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/adminLayouts/footer.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="89" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/smsitp-a34c6-4a4da62197a5.json" />
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="604">
+          <caret line="29" column="6" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="29" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="20" column="36" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="20" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_09_21_153958_create_teachers_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Non_Academic_Management/manage_sport_students.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/student.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        <state relative-caret-position="307">
+          <caret line="17" column="7" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="17" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/adminLayouts/sideBar.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/smsitp-4bee4-7b7bfcdbeca7.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+        <state relative-caret-position="324">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/HR_Management/non_academic_staff.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/HR_Management/update_staff_details.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/User_Management/Student/view-insert_student.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/HR_Management/academic_staff.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="819">
-          <caret line="39" column="51" lean-forward="false" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
+        <state relative-caret-position="2997">
+          <caret line="111" column="20" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="278" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/NonAcademicLayouts/header.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/User_Management/Teacher/add_teacher.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        <state relative-caret-position="891">
+          <caret line="33" column="71" lean-forward="false" selection-start-line="33" selection-start-column="71" selection-end-line="33" selection-end-column="71" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/TransportHostelLayouts/header.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Teacher.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        <state relative-caret-position="243">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#23#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/services.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1215">
+          <caret line="45" column="43" lean-forward="false" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Transport_Management/staff_report.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TeacherController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="99" lean-forward="false" selection-start-line="15" selection-start-column="99" selection-end-line="15" selection-end-column="99" />
-          <folding />
+        <state relative-caret-position="1782">
+          <caret line="67" column="40" lean-forward="false" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="40" />
+          <folding>
+            <element signature="e#40#56#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/Transport_Management/manage_vehicle.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/testFirebase.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="102" lean-forward="false" selection-start-line="15" selection-start-column="102" selection-end-line="15" selection-end-column="102" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/adminLayouts/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="783">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="673">
-          <caret line="132" column="0" lean-forward="true" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+        <state relative-caret-position="5805">
+          <caret line="225" column="13" lean-forward="true" selection-start-line="225" selection-start-column="13" selection-end-line="225" selection-end-column="26" />
+          <folding>
+            <element signature="e#391#427#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/User_Management/Admin/test.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1674">
+          <caret line="62" column="42" lean-forward="false" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/StudentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="402" column="39" lean-forward="true" selection-start-line="402" selection-start-column="39" selection-end-line="402" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>

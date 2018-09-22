@@ -42,7 +42,7 @@
         <div class="auth-box bg-dark border-top border-secondary">
             <div id="loginform">
                 <div class="text-center p-t-20 p-b-20">
-                    <span class="db"><img src="{{asset('assets/images/logoIcon.png')}}" alt="logo" /></span>
+                    <span class="db"><img src="{{asset('assets/images/logos.png')}}" alt="logo" /></span>
                 </div>
                 @if(count($errors) > 0)
                     <div class="alert alert-danger">
@@ -51,6 +51,16 @@
                         @endforeach
                     </div>
 
+                @endif
+                @if (session('status'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
+                @endif
+                @if (\Session::has('Status'))
+                    <div class="alert alert-danger">
+                        <p>{{ \Session::get('Status') }}</p>
+                    </div>
                 @endif
                 <!-- Form -->
                 <form class="form-horizontal m-t-20" id="loginform" action="{{route('login')}}" method="post">

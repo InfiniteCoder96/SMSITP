@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Admin;
 use Illuminate\Http\Request;
-use App\User;
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 
 class customAuthController extends Controller
 {
@@ -14,20 +16,31 @@ class customAuthController extends Controller
     }
 
     public function register(Request $request){
-        $this->validation($request);
-        $data = $request;
+        $this->validate($request, [
 
-        User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'name' => 'required|string||max:255',
+            'email' => 'required|string|email|max:255|unique:admins',
+            'password' => 'required|string|min:6|confirmed',
+            'role' => 'required'
+
         ]);
 
-        return redirect('/')->with('Status','You have registered successfully');
+        $registered_name = $request->get('name');
+        $registered_role = $request->get('role');
+
+        $this->create($request->all());
+
+        return redirect('/')->with('Status','You have registered '.$registered_name.' as '.$registered_role.' successfully');
     }
 
     public function showLoginForm(){
-        return view('auth.login');
+        if(Auth::guard('admin')->user()){
+            return redirect('/admin/dashboard');
+        }
+        else{
+            return view('auth.login');
+        }
+
     }
 
     public function login(Request $request){
@@ -38,11 +51,14 @@ class customAuthController extends Controller
 
         ]);
 
-        if(Auth::attempt(['email' => $request->email,'password' => $request ->password])){
-            return redirect('/dashboard')->with('Status','You have registered successfully');
+        if(Auth::guard('admin')->attempt(['email' => $request->email,'password' => $request ->password, 'role' => 'Admin'])){
+            return redirect('/admin/dashboard');
+        }
+        elseif(Auth::guard('admin')->attempt(['email' => $request->email,'password' => $request ->password, 'role' => 'LibraryMgr'])){
+            return redirect('/library/dashboard');
         }
 
-            return 'failed';
+            return back()->with('Status', 'These credentials are not in our records');
 
 
         //return redirect('/')->with('Status','You have registered successfully');
@@ -52,12 +68,34 @@ class customAuthController extends Controller
         Session::flush();
         return redirect('/')->with('Status','Logged out Successfully');
     }
-    public function validation($request){
-        return $this->validate($request, [
+    /**
+     * Get a validator for an incoming registration request.
+     *
+     * @param  array  $data
+     * @return \Illuminate\Contracts\Validation\Validator
+     */
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
             'name' => 'required|max:255',
-            'email' => 'required|string|email|unique:users|max:255',
-            'password' => 'required|string|min:6|confirmed',
+            'email' => 'required|email|max:255|unique:adminis',
+            'password' => 'required|min:6|confirmed',
+        ]);
+    }
 
+    /**
+     * Create a new user instance after a valid registration.
+     *
+     * @param  array  $data
+     * @return Admin
+     */
+    protected function create(array $data)
+    {
+        return Admin::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => bcrypt($data['password']),
+            'role' => $data['role'],
         ]);
     }
 }
