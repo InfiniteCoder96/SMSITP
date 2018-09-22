@@ -52,6 +52,11 @@
                     </div>
 
                 @endif
+                @if (session('status'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
+                @endif
                 @if (\Session::has('Status'))
                     <div class="alert alert-danger">
                         <p>{{ \Session::get('Status') }}</p>

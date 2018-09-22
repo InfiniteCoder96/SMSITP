@@ -195,6 +195,16 @@ Route::get('/sendmail',function (){
        $message -> to('pasinduvimansa96@gmail.com','Pasindu')->subject('Hello 1st Email');
    });
 });
+
+// Firebase Routes
+Route::get('/firebase-apk', 'testFirebase@index');
+
+// Teacher Routes
+Route::resource('teachers','TeacherController');
+
+Route::get('/add', 'TeacherController@add');
+
+
 //Library Manager Routes
 
 Route::get('/library/dashboard', 'LibraryMgrController@showAdminDashboard');
@@ -207,9 +217,12 @@ Route::get('/LibraryAdmin/addBookForm', function (){
     return view('Admin.Library_Management.addBookForm') ;
 });
 
-
-
 Route::get('/LibraryAdmin/nonAcademicStaff', function (){
     return view('Admin.HR_Management.non_academic_staff') ;
 });
 Route::resource('books','bookController');
+
+
+Route::get('/test-firebase', function (){
+    return view('Admin.User_Management.Admin.test') ;
+});

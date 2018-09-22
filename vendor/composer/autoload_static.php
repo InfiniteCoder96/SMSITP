@@ -11,14 +11,16 @@ class ComposerStaticInit80791e3c43de0a78c1c02a757f2f5442
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
-        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
+        'b067bc7112e384b61c701452d53a14a8' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/JmesPath.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
-        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        'f7c6080b46f9fe41a46a657439674576' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -68,6 +70,7 @@ class ComposerStaticInit80791e3c43de0a78c1c02a757f2f5442
             'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
+            'Psr\\Cache\\' => 10,
             'PhpParser\\' => 10,
         ),
         'N' => 
@@ -81,8 +84,17 @@ class ComposerStaticInit80791e3c43de0a78c1c02a757f2f5442
         'L' => 
         array (
             'League\\Flysystem\\' => 17,
+            'Lcobucci\\JWT\\' => 13,
             'Laravel\\Tinker\\' => 15,
             'Laravel\\Scout\\' => 14,
+        ),
+        'K' => 
+        array (
+            'Kreait\\Firebase\\' => 16,
+        ),
+        'J' => 
+        array (
+            'JmesPath\\' => 9,
         ),
         'I' => 
         array (
@@ -94,10 +106,14 @@ class ComposerStaticInit80791e3c43de0a78c1c02a757f2f5442
             'GuzzleHttp\\Psr7\\' => 16,
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
+            'Google\\Auth\\' => 12,
         ),
         'F' => 
         array (
             'FontLib\\' => 8,
+            'Firebase\\JWT\\' => 13,
+            'Firebase\\Auth\\Token\\' => 20,
+            'Fig\\Http\\Message\\' => 17,
             'Fideloper\\Proxy\\' => 16,
             'Faker\\' => 6,
         ),
@@ -237,6 +253,10 @@ class ComposerStaticInit80791e3c43de0a78c1c02a757f2f5442
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
         ),
+        'Psr\\Cache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/cache/src',
+        ),
         'PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
@@ -253,6 +273,10 @@ class ComposerStaticInit80791e3c43de0a78c1c02a757f2f5442
         array (
             0 => __DIR__ . '/..' . '/league/flysystem/src',
         ),
+        'Lcobucci\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/lcobucci/jwt/src',
+        ),
         'Laravel\\Tinker\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/tinker/src',
@@ -260,6 +284,14 @@ class ComposerStaticInit80791e3c43de0a78c1c02a757f2f5442
         'Laravel\\Scout\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/scout/src',
+        ),
+        'Kreait\\Firebase\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase',
+        ),
+        'JmesPath\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mtdowling/jmespath.php/src',
         ),
         'Intervention\\Image\\' => 
         array (
@@ -281,9 +313,25 @@ class ComposerStaticInit80791e3c43de0a78c1c02a757f2f5442
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
+        'Google\\Auth\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/auth/src',
+        ),
         'FontLib\\' => 
         array (
             0 => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib',
+        ),
+        'Firebase\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
+        ),
+        'Firebase\\Auth\\Token\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kreait/firebase-tokens/src',
+        ),
+        'Fig\\Http\\Message\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fig/http-message-util/src',
         ),
         'Fideloper\\Proxy\\' => 
         array (
@@ -368,6 +416,10 @@ class ComposerStaticInit80791e3c43de0a78c1c02a757f2f5442
         ),
         'M' => 
         array (
+            'Mpociot\\Firebase' => 
+            array (
+                0 => __DIR__ . '/..' . '/mpociot/laravel-firebase-sync/src',
+            ),
             'Mockery' => 
             array (
                 0 => __DIR__ . '/..' . '/mockery/mockery/library',
@@ -420,6 +472,7 @@ class ComposerStaticInit80791e3c43de0a78c1c02a757f2f5442
         'App\\Http\\Controllers\\bookController' => __DIR__ . '/../..' . '/app/Http/Controllers/bookController.php',
         'App\\Http\\Controllers\\customAuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/customAuthController.php',
         'App\\Http\\Controllers\\pdfController' => __DIR__ . '/../..' . '/app/Http/Controllers/pdfController.php',
+        'App\\Http\\Controllers\\testFirebase' => __DIR__ . '/../..' . '/app/Http/Controllers/testFirebase.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
@@ -434,6 +487,7 @@ class ComposerStaticInit80791e3c43de0a78c1c02a757f2f5442
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\Student' => __DIR__ . '/../..' . '/app/student.php',
+        'App\\Teacher' => __DIR__ . '/../..' . '/app/Teacher.php',
         'App\\TemporaryStudent' => __DIR__ . '/../..' . '/app/TemporaryStudent.php',
         'App\\Temporary_Parent_Guardian' => __DIR__ . '/../..' . '/app/Temporary_Parent_Guardian.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
@@ -1358,6 +1412,28 @@ class ComposerStaticInit80791e3c43de0a78c1c02a757f2f5442
         'Faker\\ValidGenerator' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/ValidGenerator.php',
         'Fideloper\\Proxy\\TrustProxies' => __DIR__ . '/..' . '/fideloper/proxy/src/TrustProxies.php',
         'Fideloper\\Proxy\\TrustedProxyServiceProvider' => __DIR__ . '/..' . '/fideloper/proxy/src/TrustedProxyServiceProvider.php',
+        'Fig\\Http\\Message\\RequestMethodInterface' => __DIR__ . '/..' . '/fig/http-message-util/src/RequestMethodInterface.php',
+        'Fig\\Http\\Message\\StatusCodeInterface' => __DIR__ . '/..' . '/fig/http-message-util/src/StatusCodeInterface.php',
+        'Firebase\\Auth\\Token\\Cache\\InMemoryCache' => __DIR__ . '/..' . '/kreait/firebase-tokens/src/Cache/InMemoryCache.php',
+        'Firebase\\Auth\\Token\\Domain\\Generator' => __DIR__ . '/..' . '/kreait/firebase-tokens/src/Domain/Generator.php',
+        'Firebase\\Auth\\Token\\Domain\\KeyStore' => __DIR__ . '/..' . '/kreait/firebase-tokens/src/Domain/KeyStore.php',
+        'Firebase\\Auth\\Token\\Domain\\Verifier' => __DIR__ . '/..' . '/kreait/firebase-tokens/src/Domain/Verifier.php',
+        'Firebase\\Auth\\Token\\Exception\\ExpiredToken' => __DIR__ . '/..' . '/kreait/firebase-tokens/src/Exception/ExpiredToken.php',
+        'Firebase\\Auth\\Token\\Exception\\InvalidToken' => __DIR__ . '/..' . '/kreait/firebase-tokens/src/Exception/InvalidToken.php',
+        'Firebase\\Auth\\Token\\Exception\\IssuedInTheFuture' => __DIR__ . '/..' . '/kreait/firebase-tokens/src/Exception/IssuedInTheFuture.php',
+        'Firebase\\Auth\\Token\\Exception\\UnknownKey' => __DIR__ . '/..' . '/kreait/firebase-tokens/src/Exception/UnknownKey.php',
+        'Firebase\\Auth\\Token\\Generator' => __DIR__ . '/..' . '/kreait/firebase-tokens/src/Generator.php',
+        'Firebase\\Auth\\Token\\Handler' => __DIR__ . '/..' . '/kreait/firebase-tokens/src/Handler.php',
+        'Firebase\\Auth\\Token\\HttpKeyStore' => __DIR__ . '/..' . '/kreait/firebase-tokens/src/HttpKeyStore.php',
+        'Firebase\\Auth\\Token\\Verifier' => __DIR__ . '/..' . '/kreait/firebase-tokens/src/Verifier.php',
+        'Firebase\\Error' => __DIR__ . '/..' . '/ktamas77/firebase-php/src/firebaseStub.php',
+        'Firebase\\FirebaseInterface' => __DIR__ . '/..' . '/ktamas77/firebase-php/src/firebaseInterface.php',
+        'Firebase\\FirebaseLib' => __DIR__ . '/..' . '/ktamas77/firebase-php/src/firebaseLib.php',
+        'Firebase\\FirebaseStub' => __DIR__ . '/..' . '/ktamas77/firebase-php/src/firebaseStub.php',
+        'Firebase\\JWT\\BeforeValidException' => __DIR__ . '/..' . '/firebase/php-jwt/src/BeforeValidException.php',
+        'Firebase\\JWT\\ExpiredException' => __DIR__ . '/..' . '/firebase/php-jwt/src/ExpiredException.php',
+        'Firebase\\JWT\\JWT' => __DIR__ . '/..' . '/firebase/php-jwt/src/JWT.php',
+        'Firebase\\JWT\\SignatureInvalidException' => __DIR__ . '/..' . '/firebase/php-jwt/src/SignatureInvalidException.php',
         'FontLib\\AdobeFontMetrics' => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib/AdobeFontMetrics.php',
         'FontLib\\Autoloader' => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib/Autoloader.php',
         'FontLib\\BinaryStream' => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib/BinaryStream.php',
@@ -1394,6 +1470,32 @@ class ComposerStaticInit80791e3c43de0a78c1c02a757f2f5442
         'FontLib\\WOFF\\File' => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib/WOFF/File.php',
         'FontLib\\WOFF\\Header' => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib/WOFF/Header.php',
         'FontLib\\WOFF\\TableDirectoryEntry' => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib/WOFF/TableDirectoryEntry.php',
+        'Google\\Auth\\ApplicationDefaultCredentials' => __DIR__ . '/..' . '/google/auth/src/ApplicationDefaultCredentials.php',
+        'Google\\Auth\\CacheTrait' => __DIR__ . '/..' . '/google/auth/src/CacheTrait.php',
+        'Google\\Auth\\Cache\\InvalidArgumentException' => __DIR__ . '/..' . '/google/auth/src/Cache/InvalidArgumentException.php',
+        'Google\\Auth\\Cache\\Item' => __DIR__ . '/..' . '/google/auth/src/Cache/Item.php',
+        'Google\\Auth\\Cache\\MemoryCacheItemPool' => __DIR__ . '/..' . '/google/auth/src/Cache/MemoryCacheItemPool.php',
+        'Google\\Auth\\Cache\\SysVCacheItemPool' => __DIR__ . '/..' . '/google/auth/src/Cache/SysVCacheItemPool.php',
+        'Google\\Auth\\CredentialsLoader' => __DIR__ . '/..' . '/google/auth/src/CredentialsLoader.php',
+        'Google\\Auth\\Credentials\\AppIdentityCredentials' => __DIR__ . '/..' . '/google/auth/src/Credentials/AppIdentityCredentials.php',
+        'Google\\Auth\\Credentials\\GCECredentials' => __DIR__ . '/..' . '/google/auth/src/Credentials/GCECredentials.php',
+        'Google\\Auth\\Credentials\\IAMCredentials' => __DIR__ . '/..' . '/google/auth/src/Credentials/IAMCredentials.php',
+        'Google\\Auth\\Credentials\\InsecureCredentials' => __DIR__ . '/..' . '/google/auth/src/Credentials/InsecureCredentials.php',
+        'Google\\Auth\\Credentials\\ServiceAccountCredentials' => __DIR__ . '/..' . '/google/auth/src/Credentials/ServiceAccountCredentials.php',
+        'Google\\Auth\\Credentials\\ServiceAccountJwtAccessCredentials' => __DIR__ . '/..' . '/google/auth/src/Credentials/ServiceAccountJwtAccessCredentials.php',
+        'Google\\Auth\\Credentials\\UserRefreshCredentials' => __DIR__ . '/..' . '/google/auth/src/Credentials/UserRefreshCredentials.php',
+        'Google\\Auth\\FetchAuthTokenCache' => __DIR__ . '/..' . '/google/auth/src/FetchAuthTokenCache.php',
+        'Google\\Auth\\FetchAuthTokenInterface' => __DIR__ . '/..' . '/google/auth/src/FetchAuthTokenInterface.php',
+        'Google\\Auth\\HttpHandler\\Guzzle5HttpHandler' => __DIR__ . '/..' . '/google/auth/src/HttpHandler/Guzzle5HttpHandler.php',
+        'Google\\Auth\\HttpHandler\\Guzzle6HttpHandler' => __DIR__ . '/..' . '/google/auth/src/HttpHandler/Guzzle6HttpHandler.php',
+        'Google\\Auth\\HttpHandler\\HttpHandlerFactory' => __DIR__ . '/..' . '/google/auth/src/HttpHandler/HttpHandlerFactory.php',
+        'Google\\Auth\\Middleware\\AuthTokenMiddleware' => __DIR__ . '/..' . '/google/auth/src/Middleware/AuthTokenMiddleware.php',
+        'Google\\Auth\\Middleware\\ScopedAccessTokenMiddleware' => __DIR__ . '/..' . '/google/auth/src/Middleware/ScopedAccessTokenMiddleware.php',
+        'Google\\Auth\\Middleware\\SimpleMiddleware' => __DIR__ . '/..' . '/google/auth/src/Middleware/SimpleMiddleware.php',
+        'Google\\Auth\\OAuth2' => __DIR__ . '/..' . '/google/auth/src/OAuth2.php',
+        'Google\\Auth\\Subscriber\\AuthTokenSubscriber' => __DIR__ . '/..' . '/google/auth/src/Subscriber/AuthTokenSubscriber.php',
+        'Google\\Auth\\Subscriber\\ScopedAccessTokenSubscriber' => __DIR__ . '/..' . '/google/auth/src/Subscriber/ScopedAccessTokenSubscriber.php',
+        'Google\\Auth\\Subscriber\\SimpleSubscriber' => __DIR__ . '/..' . '/google/auth/src/Subscriber/SimpleSubscriber.php',
         'GuzzleHttp\\Client' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Client.php',
         'GuzzleHttp\\ClientInterface' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/ClientInterface.php',
         'GuzzleHttp\\Cookie\\CookieJar' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Cookie/CookieJar.php',
@@ -2452,6 +2554,73 @@ class ComposerStaticInit80791e3c43de0a78c1c02a757f2f5442
         'JakubOnderka\\PhpConsoleColor\\ConsoleColor' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/JakubOnderka/PhpConsoleColor/ConsoleColor.php',
         'JakubOnderka\\PhpConsoleColor\\InvalidStyleException' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/JakubOnderka/PhpConsoleColor/InvalidStyleException.php',
         'JakubOnderka\\PhpConsoleHighlighter\\Highlighter' => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src/JakubOnderka/PhpConsoleHighlighter/Highlighter.php',
+        'JmesPath\\AstRuntime' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/AstRuntime.php',
+        'JmesPath\\CompilerRuntime' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/CompilerRuntime.php',
+        'JmesPath\\DebugRuntime' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/DebugRuntime.php',
+        'JmesPath\\Env' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/Env.php',
+        'JmesPath\\FnDispatcher' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/FnDispatcher.php',
+        'JmesPath\\Lexer' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/Lexer.php',
+        'JmesPath\\Parser' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/Parser.php',
+        'JmesPath\\SyntaxErrorException' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/SyntaxErrorException.php',
+        'JmesPath\\TreeCompiler' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/TreeCompiler.php',
+        'JmesPath\\TreeInterpreter' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/TreeInterpreter.php',
+        'JmesPath\\Utils' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/Utils.php',
+        'Kreait\\Firebase\\Auth' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Auth.php',
+        'Kreait\\Firebase\\Auth\\ApiClient' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Auth/ApiClient.php',
+        'Kreait\\Firebase\\Auth\\UserInfo' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Auth/UserInfo.php',
+        'Kreait\\Firebase\\Auth\\UserMetaData' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Auth/UserMetaData.php',
+        'Kreait\\Firebase\\Auth\\UserRecord' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Auth/UserRecord.php',
+        'Kreait\\Firebase\\Database' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Database.php',
+        'Kreait\\Firebase\\Database\\ApiClient' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Database/ApiClient.php',
+        'Kreait\\Firebase\\Database\\Query' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Database/Query.php',
+        'Kreait\\Firebase\\Database\\Query\\Filter' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Database/Query/Filter.php',
+        'Kreait\\Firebase\\Database\\Query\\Filter\\EndAt' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Database/Query/Filter/EndAt.php',
+        'Kreait\\Firebase\\Database\\Query\\Filter\\EqualTo' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Database/Query/Filter/EqualTo.php',
+        'Kreait\\Firebase\\Database\\Query\\Filter\\LimitToFirst' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Database/Query/Filter/LimitToFirst.php',
+        'Kreait\\Firebase\\Database\\Query\\Filter\\LimitToLast' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Database/Query/Filter/LimitToLast.php',
+        'Kreait\\Firebase\\Database\\Query\\Filter\\Shallow' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Database/Query/Filter/Shallow.php',
+        'Kreait\\Firebase\\Database\\Query\\Filter\\StartAt' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Database/Query/Filter/StartAt.php',
+        'Kreait\\Firebase\\Database\\Query\\Modifier' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Database/Query/Modifier.php',
+        'Kreait\\Firebase\\Database\\Query\\ModifierTrait' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Database/Query/ModifierTrait.php',
+        'Kreait\\Firebase\\Database\\Query\\Sorter' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Database/Query/Sorter.php',
+        'Kreait\\Firebase\\Database\\Query\\Sorter\\OrderByChild' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Database/Query/Sorter/OrderByChild.php',
+        'Kreait\\Firebase\\Database\\Query\\Sorter\\OrderByKey' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Database/Query/Sorter/OrderByKey.php',
+        'Kreait\\Firebase\\Database\\Query\\Sorter\\OrderByValue' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Database/Query/Sorter/OrderByValue.php',
+        'Kreait\\Firebase\\Database\\Reference' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Database/Reference.php',
+        'Kreait\\Firebase\\Database\\Reference\\Validator' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Database/Reference/Validator.php',
+        'Kreait\\Firebase\\Database\\RuleSet' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Database/RuleSet.php',
+        'Kreait\\Firebase\\Database\\Snapshot' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Database/Snapshot.php',
+        'Kreait\\Firebase\\Exception\\ApiException' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Exception/ApiException.php',
+        'Kreait\\Firebase\\Exception\\AuthException' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Exception/AuthException.php',
+        'Kreait\\Firebase\\Exception\\Auth\\CredentialsMismatch' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Exception/Auth/CredentialsMismatch.php',
+        'Kreait\\Firebase\\Exception\\Auth\\EmailExists' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Exception/Auth/EmailExists.php',
+        'Kreait\\Firebase\\Exception\\Auth\\EmailNotFound' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Exception/Auth/EmailNotFound.php',
+        'Kreait\\Firebase\\Exception\\Auth\\InvalidCustomToken' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Exception/Auth/InvalidCustomToken.php',
+        'Kreait\\Firebase\\Exception\\Auth\\InvalidPassword' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Exception/Auth/InvalidPassword.php',
+        'Kreait\\Firebase\\Exception\\Auth\\MissingPassword' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Exception/Auth/MissingPassword.php',
+        'Kreait\\Firebase\\Exception\\Auth\\OperationNotAllowed' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Exception/Auth/OperationNotAllowed.php',
+        'Kreait\\Firebase\\Exception\\Auth\\RevokedIdToken' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Exception/Auth/RevokedIdToken.php',
+        'Kreait\\Firebase\\Exception\\Auth\\UserDisabled' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Exception/Auth/UserDisabled.php',
+        'Kreait\\Firebase\\Exception\\Auth\\WeakPassword' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Exception/Auth/WeakPassword.php',
+        'Kreait\\Firebase\\Exception\\FirebaseException' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Exception/FirebaseException.php',
+        'Kreait\\Firebase\\Exception\\IndexNotDefined' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Exception/IndexNotDefined.php',
+        'Kreait\\Firebase\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Exception/InvalidArgumentException.php',
+        'Kreait\\Firebase\\Exception\\LogicException' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Exception/LogicException.php',
+        'Kreait\\Firebase\\Exception\\OutOfRangeException' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Exception/OutOfRangeException.php',
+        'Kreait\\Firebase\\Exception\\PermissionDenied' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Exception/PermissionDenied.php',
+        'Kreait\\Firebase\\Exception\\QueryException' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Exception/QueryException.php',
+        'Kreait\\Firebase\\Exception\\ServiceAccountDiscoveryFailed' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Exception/ServiceAccountDiscoveryFailed.php',
+        'Kreait\\Firebase\\Factory' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Factory.php',
+        'Kreait\\Firebase\\Http\\Auth' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Http/Auth.php',
+        'Kreait\\Firebase\\Http\\Auth\\CustomToken' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Http/Auth/CustomToken.php',
+        'Kreait\\Firebase\\Http\\Middleware' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Http/Middleware.php',
+        'Kreait\\Firebase\\ServiceAccount' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/ServiceAccount.php',
+        'Kreait\\Firebase\\ServiceAccount\\Discoverer' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/ServiceAccount/Discoverer.php',
+        'Kreait\\Firebase\\ServiceAccount\\Discovery\\FromEnvironmentVariable' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/ServiceAccount/Discovery/FromEnvironmentVariable.php',
+        'Kreait\\Firebase\\ServiceAccount\\Discovery\\FromGoogleWellKnownFile' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/ServiceAccount/Discovery/FromGoogleWellKnownFile.php',
+        'Kreait\\Firebase\\ServiceAccount\\Discovery\\FromPath' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/ServiceAccount/Discovery/FromPath.php',
+        'Kreait\\Firebase\\Util\\JSON' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Util/JSON.php',
+        'Kreait\\Firebase\\Util\\Util' => __DIR__ . '/..' . '/kreait/firebase-php/src/Firebase/Util/Util.php',
         'Laravel\\Scout\\Builder' => __DIR__ . '/..' . '/laravel/scout/src/Builder.php',
         'Laravel\\Scout\\Console\\FlushCommand' => __DIR__ . '/..' . '/laravel/scout/src/Console/FlushCommand.php',
         'Laravel\\Scout\\Console\\ImportCommand' => __DIR__ . '/..' . '/laravel/scout/src/Console/ImportCommand.php',
@@ -2470,6 +2639,37 @@ class ComposerStaticInit80791e3c43de0a78c1c02a757f2f5442
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',
         'Laravel\\Tinker\\TinkerCaster' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerCaster.php',
         'Laravel\\Tinker\\TinkerServiceProvider' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerServiceProvider.php',
+        'Lcobucci\\JWT\\Builder' => __DIR__ . '/..' . '/lcobucci/jwt/src/Builder.php',
+        'Lcobucci\\JWT\\Claim' => __DIR__ . '/..' . '/lcobucci/jwt/src/Claim.php',
+        'Lcobucci\\JWT\\Claim\\Basic' => __DIR__ . '/..' . '/lcobucci/jwt/src/Claim/Basic.php',
+        'Lcobucci\\JWT\\Claim\\EqualsTo' => __DIR__ . '/..' . '/lcobucci/jwt/src/Claim/EqualsTo.php',
+        'Lcobucci\\JWT\\Claim\\Factory' => __DIR__ . '/..' . '/lcobucci/jwt/src/Claim/Factory.php',
+        'Lcobucci\\JWT\\Claim\\GreaterOrEqualsTo' => __DIR__ . '/..' . '/lcobucci/jwt/src/Claim/GreaterOrEqualsTo.php',
+        'Lcobucci\\JWT\\Claim\\LesserOrEqualsTo' => __DIR__ . '/..' . '/lcobucci/jwt/src/Claim/LesserOrEqualsTo.php',
+        'Lcobucci\\JWT\\Claim\\Validatable' => __DIR__ . '/..' . '/lcobucci/jwt/src/Claim/Validatable.php',
+        'Lcobucci\\JWT\\Parser' => __DIR__ . '/..' . '/lcobucci/jwt/src/Parser.php',
+        'Lcobucci\\JWT\\Parsing\\Decoder' => __DIR__ . '/..' . '/lcobucci/jwt/src/Parsing/Decoder.php',
+        'Lcobucci\\JWT\\Parsing\\Encoder' => __DIR__ . '/..' . '/lcobucci/jwt/src/Parsing/Encoder.php',
+        'Lcobucci\\JWT\\Signature' => __DIR__ . '/..' . '/lcobucci/jwt/src/Signature.php',
+        'Lcobucci\\JWT\\Signer' => __DIR__ . '/..' . '/lcobucci/jwt/src/Signer.php',
+        'Lcobucci\\JWT\\Signer\\BaseSigner' => __DIR__ . '/..' . '/lcobucci/jwt/src/Signer/BaseSigner.php',
+        'Lcobucci\\JWT\\Signer\\Ecdsa' => __DIR__ . '/..' . '/lcobucci/jwt/src/Signer/Ecdsa.php',
+        'Lcobucci\\JWT\\Signer\\Ecdsa\\KeyParser' => __DIR__ . '/..' . '/lcobucci/jwt/src/Signer/Ecdsa/KeyParser.php',
+        'Lcobucci\\JWT\\Signer\\Ecdsa\\Sha256' => __DIR__ . '/..' . '/lcobucci/jwt/src/Signer/Ecdsa/Sha256.php',
+        'Lcobucci\\JWT\\Signer\\Ecdsa\\Sha384' => __DIR__ . '/..' . '/lcobucci/jwt/src/Signer/Ecdsa/Sha384.php',
+        'Lcobucci\\JWT\\Signer\\Ecdsa\\Sha512' => __DIR__ . '/..' . '/lcobucci/jwt/src/Signer/Ecdsa/Sha512.php',
+        'Lcobucci\\JWT\\Signer\\Hmac' => __DIR__ . '/..' . '/lcobucci/jwt/src/Signer/Hmac.php',
+        'Lcobucci\\JWT\\Signer\\Hmac\\Sha256' => __DIR__ . '/..' . '/lcobucci/jwt/src/Signer/Hmac/Sha256.php',
+        'Lcobucci\\JWT\\Signer\\Hmac\\Sha384' => __DIR__ . '/..' . '/lcobucci/jwt/src/Signer/Hmac/Sha384.php',
+        'Lcobucci\\JWT\\Signer\\Hmac\\Sha512' => __DIR__ . '/..' . '/lcobucci/jwt/src/Signer/Hmac/Sha512.php',
+        'Lcobucci\\JWT\\Signer\\Key' => __DIR__ . '/..' . '/lcobucci/jwt/src/Signer/Key.php',
+        'Lcobucci\\JWT\\Signer\\Keychain' => __DIR__ . '/..' . '/lcobucci/jwt/src/Signer/Keychain.php',
+        'Lcobucci\\JWT\\Signer\\Rsa' => __DIR__ . '/..' . '/lcobucci/jwt/src/Signer/Rsa.php',
+        'Lcobucci\\JWT\\Signer\\Rsa\\Sha256' => __DIR__ . '/..' . '/lcobucci/jwt/src/Signer/Rsa/Sha256.php',
+        'Lcobucci\\JWT\\Signer\\Rsa\\Sha384' => __DIR__ . '/..' . '/lcobucci/jwt/src/Signer/Rsa/Sha384.php',
+        'Lcobucci\\JWT\\Signer\\Rsa\\Sha512' => __DIR__ . '/..' . '/lcobucci/jwt/src/Signer/Rsa/Sha512.php',
+        'Lcobucci\\JWT\\Token' => __DIR__ . '/..' . '/lcobucci/jwt/src/Token.php',
+        'Lcobucci\\JWT\\ValidationData' => __DIR__ . '/..' . '/lcobucci/jwt/src/ValidationData.php',
         'League\\Flysystem\\AdapterInterface' => __DIR__ . '/..' . '/league/flysystem/src/AdapterInterface.php',
         'League\\Flysystem\\Adapter\\AbstractAdapter' => __DIR__ . '/..' . '/league/flysystem/src/Adapter/AbstractAdapter.php',
         'League\\Flysystem\\Adapter\\AbstractFtpAdapter' => __DIR__ . '/..' . '/league/flysystem/src/Adapter/AbstractFtpAdapter.php',
@@ -2692,6 +2892,7 @@ class ComposerStaticInit80791e3c43de0a78c1c02a757f2f5442
         'Monolog\\Processor\\UidProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/UidProcessor.php',
         'Monolog\\Processor\\WebProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/WebProcessor.php',
         'Monolog\\Registry' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Registry.php',
+        'Mpociot\\Firebase\\SyncsWithFirebase' => __DIR__ . '/..' . '/mpociot/laravel-firebase-sync/src/Mpociot/Firebase/SyncsWithFirebase.php',
         'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider' => __DIR__ . '/..' . '/nunomaduro/collision/src/Adapters/Laravel/CollisionServiceProvider.php',
         'NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler' => __DIR__ . '/..' . '/nunomaduro/collision/src/Adapters/Laravel/ExceptionHandler.php',
         'NunoMaduro\\Collision\\Adapters\\Laravel\\Inspector' => __DIR__ . '/..' . '/nunomaduro/collision/src/Adapters/Laravel/Inspector.php',
@@ -3441,6 +3642,10 @@ class ComposerStaticInit80791e3c43de0a78c1c02a757f2f5442
         'Prophecy\\Prophet' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Prophet.php',
         'Prophecy\\Util\\ExportUtil' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Util/ExportUtil.php',
         'Prophecy\\Util\\StringUtil' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Util/StringUtil.php',
+        'Psr\\Cache\\CacheException' => __DIR__ . '/..' . '/psr/cache/src/CacheException.php',
+        'Psr\\Cache\\CacheItemInterface' => __DIR__ . '/..' . '/psr/cache/src/CacheItemInterface.php',
+        'Psr\\Cache\\CacheItemPoolInterface' => __DIR__ . '/..' . '/psr/cache/src/CacheItemPoolInterface.php',
+        'Psr\\Cache\\InvalidArgumentException' => __DIR__ . '/..' . '/psr/cache/src/InvalidArgumentException.php',
         'Psr\\Container\\ContainerExceptionInterface' => __DIR__ . '/..' . '/psr/container/src/ContainerExceptionInterface.php',
         'Psr\\Container\\ContainerInterface' => __DIR__ . '/..' . '/psr/container/src/ContainerInterface.php',
         'Psr\\Container\\NotFoundExceptionInterface' => __DIR__ . '/..' . '/psr/container/src/NotFoundExceptionInterface.php',
