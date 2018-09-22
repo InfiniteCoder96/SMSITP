@@ -40,19 +40,19 @@ class ResultController extends Controller
             'sId' => 'required',
         ]);
 
-        $year = Input::get('grade');
+        $year = Input::get('grade');//1,2
 
         //get the class id  of the student
-        $classId = DB::table('studentclasses')->where('id', '=',$request->sId)->pluck('classId');
+        $classId = DB::table('studentclasses')->where('id', '=',$request->sId)->pluck('classId'); //CLG01ID1
 
        //get the grade of the class id
-        $Grade = DB::table('allclasses')->where('id', '=', $classId)->where('grade','=',$year)->get();
+        $Grade = DB::table('allclasses')->where('id', '=', $classId)->where('grade','=',$year)->get();//1,2
 
         //check student is registered or not
         $check = DB::table('studs')->where('id', $request->sId)->get();
 
         //get subjects for the grade*******
-        $classId1 = DB::table('studentclasses')->where('id', '=',$request->sId)->pluck('classId');
+        $classId1 = DB::table('studentclasses')->where('id', '=',$request->sId)->pluck('classId');//CLG01ID1
 
         if (strpos($classId1, "0") == true ) {
             $gradeNew = '0'.$year;
@@ -61,7 +61,7 @@ class ResultController extends Controller
             $gradeNew = $year;
         }
 
-        $subjects = DB::table('subjects')->where('subjectId','LIKE','SB'.'%'.$gradeNew.'C'.'%')->pluck('subjectName');
+        $subjects = DB::table('subjects')->where('subjectId','LIKE','SBG'.'%'.$gradeNew.'C'.'%')->pluck('subjectName');
 
         if ($check->isEmpty()){
             return back()->with('fail', 'Not a registered student. Please enter a valid student ID');

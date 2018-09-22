@@ -81,7 +81,7 @@ Route::get('/searchBySId','ResultController@searchBySId');
 
 Route::get('/pdf','ResultController@downloadPdf');
 
-Route::get('/dashboard','QBankController@dashboardController');
+Route::get('/ECadmin/dashboard','QBankController@dashboardController');
 
 //Route::get('/chartView','ResultController@chartIndex');
 //

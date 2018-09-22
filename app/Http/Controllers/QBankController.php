@@ -111,7 +111,6 @@ class QBankController extends Controller
      */
     public function destroy($id)
     {
-
         $searchResults = null;
         $status = 'successful';
         $qBank = qBank::find($id);

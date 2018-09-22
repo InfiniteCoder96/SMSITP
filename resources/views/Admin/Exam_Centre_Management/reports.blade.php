@@ -12,7 +12,7 @@
 
     <p style="font-size: 15px"><B>Student ID :  {{$sId}} </B></p>
     <p style="font-size: 15px"><B>Student Name : {{$fname[0]}}</B></p>
-    <p style="font-size: 15px"><B>Student ID :  {{$examId}} </B></p>
+    <p style="font-size: 15px"><B>Year and Term :  {{$examId}} </B></p>
 
     <div class="row">
 
