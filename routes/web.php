@@ -45,10 +45,6 @@ Route::get('/ECadmin/dashboard', function (){
     return view('Admin.Exam_Centre_Management.dashboard') ;
 });
 
-Route::get('/ECadmin/viewResults', function (){
-    return view('Admin.Exam_Centre_Management.viewResults') ;
-});
-
 Route::get('/ECadmin/publishResults', function (){
     return view('Admin.Exam_Centre_Management.publishResults') ;
 });
@@ -63,11 +59,34 @@ Route::resource('results','ResultController');
 
 Route::get('/ECadmin/viewResults','ResultController@index') ;
 
-Route::get('/ECadmin/publishResults','ResultController@index1') ;
-
-//Route::get('/ECadmin/viewResults','ResultController@destroy');
+//Route::get('/ECadmin/publishResults','ResultController@index1') ;
 
 Route::resource('qBanks','QBankController');
+
+Route::get('/ECadmin/searchResults','ResultController@create1');
+
+Route::get('/search','ResultController@search');
+
+Route::get('/QBank','QBankController@searchQBank');
+
+Route::get('/ECadmin/resultsHome', function (){
+    return view('Admin.Exam_Centre_Management.results') ;
+});
+
+Route::get('/ECadmin/studentsResults', function (){
+    return view('Admin.Exam_Centre_Management.studentsResults') ;
+});
+
+Route::get('/searchBySId','ResultController@searchBySId');
+
+Route::get('/pdf','ResultController@downloadPdf');
+
+Route::get('/dashboard','QBankController@dashboardController');
+
+//Route::get('/chartView','ResultController@chartIndex');
+//
+//Route::get('/chart','ResultController@chart');
+
 
 
 
@@ -112,11 +131,6 @@ Route::get('/NAadmin/manage-teacher-in-charge', function (){
     return view('Admin.Non_Academic_Management.manage_sports') ;
 });
 
-
-
-Route::get('/NAadmin/manage-coaches', function (){
-    return view('Admin.Exam_Centre_Management.questionBank') ;
-});
 //Transport Manager Routes
 
 Route::get('/Tadmin/dashboard', function (){

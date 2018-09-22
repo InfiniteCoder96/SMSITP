@@ -43,7 +43,6 @@
                             </div>
                             <div class="card-body">
                                 <center><h5 style="font-size:36px;vertical-align: bottom" class="card-title timer" data-from="0" data-to="5000" data-speed="2000" data-fresh-interval="20">5,000</h5></center>
-
                             </div>
                         </div>
 

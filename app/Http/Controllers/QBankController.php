@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use App\qBank;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\DB;
 
 class QBankController extends Controller
 {
@@ -15,10 +17,8 @@ class QBankController extends Controller
      */
     public function index()
     {
-        $Questions = qBank::all()->toArray();                                        //array
-        return view('Admin.Exam_Centre_Management.questionBank',compact('Questions'));
-
-        //return Storage::files('uploads');
+        $qBanks = qBank::all()->toArray();
+        return view('Admin.Exam_Centre_Management.questionBank', compact('qBanks'));
     }
 
     /**
@@ -39,25 +39,34 @@ class QBankController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate(request(),[
+            'examId' => 'required',
+            'subject' => 'required',
+            'file' => 'required'
+        ]);
+
         if($request->hasFile('file')){
 
             $fileName = $request->file->getClientOriginalName();
 
-            $request->file->storeAs('public/uploads',$fileName);//public folder in storage folder
+            $request->file->storeAs('public/uploads',$fileName);
 
             //return Storage::putFile('public/uploads',$request->file('content'));
 
             $files = new qBank;
-                    //column name
+            //column
             $files->examId = $request->examId;
             $files->subject = $request->subject;
             $files->content = $fileName;
-            $files->save();
 
-            return back()->with('success', 'File has been added');
-
+            if(qBank::where('examId','=', $request->examId)->where('subject','=',$request->subject)->where('content','=',$fileName)->exists()) {
+                return back()->with('fail', 'File exists or provide a different file name');
+            }
+            else{
+                $files->save();
+                return back()->with('success', 'File successfully added');
+            }
         }
-
     }
 
     /**
@@ -102,8 +111,28 @@ class QBankController extends Controller
      */
     public function destroy($id)
     {
+
+        $searchResults = null;
+        $status = 'successful';
         $qBank = qBank::find($id);
         $qBank->delete();
-        return redirect('qBanks')->with('success','Record has been  deleted');
+        return back()->with('searchResults','status');
     }
+
+    public function searchQBank(Request $request)
+    {
+        $serachFor = $request->key;
+
+        $searchResults =  DB::table('qbanks')->where('examID','LIKE','%'.$serachFor.'%')->orWhere('subject', 'like', '%' .$serachFor. '%')->get();
+
+        return view('Admin.Exam_Centre_Management.questionBank', compact('searchResults'));
+    }
+
+    public function dashboardController(){
+        $count = DB::table('qbanks')->count();
+        return view('Admin.Exam_Centre_Management.dashboard')->with(compact('count'));
+    }
+
+
+
 }

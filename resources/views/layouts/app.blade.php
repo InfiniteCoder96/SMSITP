@@ -219,26 +219,7 @@
 </script>
 
 
-<script>
-    $('#updateResultsModal').on('show.bs.modal', function(event){
-        var button = $(event.relatedTarget)
 
-        var id = button.data('id')
-        var sId = button.data('sId')
-        var examId = button.data('examId')
-        var subjectId = button.data('subjectId')
-        var marks = button.data('marks')
-
-        var modal = $(this)
-                                //form id=""
-        modal.find('.modal-body #id').val(id);
-        modal.find('.modal-body #sId').val(sId);
-        modal.find('.modal-body #examId').val(examId);
-        modal.find('.modal-body #subjectId').val(subjectId);
-        modal.find('.modal-body #marks').val(marks);
-    })
-
-</script>
 
 <!-- ============================================================== -->
 <!-- User Profile Modal -->

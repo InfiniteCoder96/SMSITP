@@ -2,10 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use foo\bar;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
 use App\Result;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Input;
+use PDF;
 
 
 class ResultController extends Controller
@@ -17,14 +22,9 @@ class ResultController extends Controller
      */
     public function index()
     {
-        $Results = Result::all()->toArray();                                        //$results array
-        return view('Admin.Exam_Centre_Management.viewResults',compact('Results'));
-    }
-
-    public function index1()
-    {
-        $Results1 = Result::all()->toArray();                                        //$results array
-        return view('Admin.Exam_Centre_Management.publishResults',compact('Results1'));
+//        $Results = Result::all()->toArray();
+     $Results = Result::with('studentF')->orderBy('sId', 'asc')->orderBy('examId', 'asc')->get();
+     return view('Admin.Exam_Centre_Management.viewResults',compact('Results'));
     }
 
     /**
@@ -32,11 +32,49 @@ class ResultController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        return view('Admin.Exam_Centre_Management.publishResults');
-    }
 
+    public function create(Request $request)
+    {
+        $grade = $this->validate(request(),[
+           'grade' => 'required',
+            'sId' => 'required',
+        ]);
+
+        $year = Input::get('grade');
+
+        //get the class id  of the student
+        $classId = DB::table('studentclasses')->where('id', '=',$request->sId)->pluck('classId');
+
+       //get the grade of the class id
+        $Grade = DB::table('allclasses')->where('id', '=', $classId)->where('grade','=',$year)->get();
+
+        //check student is registered or not
+        $check = DB::table('studs')->where('id', $request->sId)->get();
+
+        //get subjects for the grade*******
+        $classId1 = DB::table('studentclasses')->where('id', '=',$request->sId)->pluck('classId');
+
+        if (strpos($classId1, "0") == true ) {
+            $gradeNew = '0'.$year;
+        }
+        else{
+            $gradeNew = $year;
+        }
+
+        $subjects = DB::table('subjects')->where('subjectId','LIKE','SB'.'%'.$gradeNew.'C'.'%')->pluck('subjectName');
+
+        if ($check->isEmpty()){
+            return back()->with('fail', 'Not a registered student. Please enter a valid student ID');
+        }
+        //checking grade
+        elseif (($Grade->isEmpty())){
+                return back()->with('fail', 'Student is not in this grade');
+        }
+        else {
+            $searchResults = DB::table('results')->where('sId', $request->sId)->orderBy('examId', 'asc')->get();
+            return view('Admin.Exam_Centre_Management.publishResults', compact('grade'))->with(compact('searchResults'))->with(compact('subjects'));
+        }
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -46,15 +84,26 @@ class ResultController extends Controller
     public function store(Request $request)
     {
         $result = $this->validate(request(),[
-           'sId' => 'required',
-            'marks' => 'required|numeric',
+            'sId' => 'required',
+            'marks' => 'required|numeric|between:0,100',
             'examId' => 'required',
             'subject' => 'required'
         ]);
 
-        Result::create($result);//constructor
+        $sId = $request->get('sId');
+        $examId = $request->get('examId');
+        $subject = $request->get('subject');
 
-        return back()->with('success', 'Results have been added');
+        if(Result::where('sId','=', $sId)->where('examId','=',$examId)->where('subject','=',$subject)->exists()) {
+            return back()->with('fail', 'Results are already in the system');
+        }
+        else{
+            Result::create($result);
+            return back()->with('success', 'Results have been added');
+        }
+
+//        $result = new Result();
+//        $result->save();
     }
 
     /**
@@ -77,7 +126,7 @@ class ResultController extends Controller
     public function edit($id)
     {
         $result = Result::find($id);
-        return view('layouts.ExamCentreLayouts.updateResultsmodal',compact('result','id'));
+        return view('Admin.Exam_Centre_Management.updateResults',compact('result'));
     }
 
     /**
@@ -89,12 +138,11 @@ class ResultController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $result = Result::find($request->get('id'));
-
         $result = Result::find($id);
+
         $this->validate(request(),[
             'sId' => 'required',
-            'marks' => 'required|numeric',
+            'marks' => 'required|numeric|between:0,100',
             'examId' => 'required',
             'subject' => 'required'
         ]);
@@ -104,7 +152,7 @@ class ResultController extends Controller
         $result->subject = $request->get('subject');
         $result->marks = $request->get('marks');
         $result->save();
-        return redirect('results')->with('success', 'Results has been updated');
+        return redirect('search')->with('success', 'Results have been updated');
     }
 
     /**
@@ -119,4 +167,73 @@ class ResultController extends Controller
         $result->delete();
         return redirect('results')->with('success','Record has been  deleted');
     }
+
+    public function search(Request $request)
+    {
+        $serachFor = $request->key;
+
+        $Results = Result::with('studentF')
+            ->where('examID',$serachFor)
+            ->orWhere('sId',$serachFor)
+            ->orWhere('subject','LIKE','%'.$serachFor.'%')
+            ->orderBy('examId', 'asc')->get();
+
+        if($request->has('key')){
+            return view('Admin.Exam_Centre_Management.viewResults', compact('Results'));
+        }
+        else{
+            return  view('Admin.Exam_Centre_Management.viewResults',compact('Results'))->with('fail', 'No results were found');
+        }
+    }
+
+    public function searchBySId(Request $request)
+    {
+        $sId = $request->sId;
+        $examId = $request->examId;
+
+//        return view('Admin.Exam_Centre_Management.studentsResults');
+
+        if($request->has('sId','examId')) {
+            $Results1 = Result::with('studentF')->where('sId', $request->sId)->where('examId', $request->examId)->get();
+            return view('Admin.Exam_Centre_Management.studentsResults')->with(compact('Results1','sId','examId'));
+        }else{
+            $Results1 = null;
+            return view('Admin.Exam_Centre_Management.studentsResults', compact('Results1'));
+        }
+    }
+
+    public function downloadPdf(Request $request)
+    {
+        $this->validate(request(),[
+            'examId' => 'required',
+        ]);
+
+        $sId = $request->sId;
+        $examId = $request->examId;
+        $fname = DB::table('studs')->where('id',$sId)->pluck('name');
+
+        $Datas = DB::table('results')->where('sId',$sId)->where('examId',$examId)->orderBy('examId','asc')->get();
+        $total = DB::table('results')->where('sId', $request->sId)->where('examId', $request->examId)->sum('marks');
+
+        $count=0;
+        $avg = 0;
+
+        $a = str_after($examId,"G");
+        $b = str_before($a,"T");
+
+            $count = DB::table('subjects')->where('subjectId','LIKE','SB'.'%'.$b.'C'.'%')->count();
+
+            if($count != 0 ){
+                $avg = $total/$count;
+            }
+
+        if($request->has('sId','examId') and $total != 0) {
+            $pdf = PDF::loadView('Admin.Exam_Centre_Management.reports', compact('Datas', 'total', 'avg', 'sId', 'examId', 'fname','count'));
+            return $pdf->download('reports.pdf');
+        }
+       else
+           return back()->with('fail','No results were found');
+
+    }
+
 }

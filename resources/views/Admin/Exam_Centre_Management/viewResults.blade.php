@@ -21,116 +21,97 @@
                         <p>{{ \Session::get('success') }}</p>
                     </div><br />
                 @endif
-                <div class="card-body card text-white bg-success mb-3">
-                    <div class="row">
+                    @if (\Session::has('fail'))
+                        <div class="alert alert-warning">
+                            <p>{{ \Session::get('fail') }}</p>
+                        </div><br />
+                    @endif
 
-                        <div class="col-sm-8">
-                            <h5 class="card-title m-b-0">Results Overview</h5>
+
+                    <div class="card-body card bg-info text-white mb-3">
+                        <div class="row">
+
+                            <h5 class="card-title m-b-0">Results</h5>
                         </div>
-                        <div class="col-sm-2">
-                            <div class="form-group">
 
+                        <form class="form-horizontal" action="{{url('search')}}" method="get">
 
-                                    <select class="select2 form-control custom-select" style="width: 100%; height:36px;" required>
-                                        <option selected disabled>Select a Grade</option>
-
-                                        <option value="WA">Grade 01</option>
-                                        <option value="NV">Grade 02</option>
-                                        <option value="CA">Grade 03</option>
-                                        <option value="WA">Grade 04</option>
-                                        <option value="WA">Grade 05</option>
-                                        <option value="OR">Grade 06</option>
-
-
-                                    </select>
-
+                            <div class="input-group custom-search-form">
+                                <input type="text" name="key" class="form-control" id="key" placeholder="search" required>
+                                <span class="input-group-btn">
+                                        <button class="btn btn-default-sm" type="submit">
+                                               <i class="fa fa-search"></i>
+                                        </button>
+                                    </span>
                             </div>
-                        </div>
-                        <div class="col-sm-2">
-                            <div class="form-group">
-
-
-                                <select class="select2 form-control custom-select" style="width: 100%; height:36px;" required>
-                                    <option selected disabled>Select a Class</option>
-
-                                    <option value="WA">A</option>
-                                    <option value="NV">B</option>
-                                    <option value="CA">C</option>
-                                    <option value="WA">D</option>
-                                    <option value="WA">E</option>
-
-
-                                </select>
-
-                            </div>
-                        </div>
-
+                        </form>
                     </div>
 
-                </div>
                 <div class="table-responsive">
                     <table class="table">
                         <thead class="thead-dark">
                         <tr>
-
                             <th scope="col" style="font-size: 12px">ID</th>
                             <th scope="col" style="font-size: 12px">First Name</th>
-                            <th scope="col" style="font-size: 12px">Last Name</th>
+                            {{--<th scope="col" style="font-size: 12px">Last Name</th>--}}
                             <th scope="col" style="font-size: 12px">Exam ID</th>
                             <th scope="col" style="font-size: 12px">Subjects</th>
                             <th scope="col" style="font-size: 12px">Total</th>
+                            <th scope="col" style="font-size: 12px">Remark</th>
                             <th scope="col" style="font-size: 12px">Action</th>
-
                         </tr>
                         </thead>
                         <tbody class="customtable">
 
+                        @if($Results != null)
                         @foreach($Results as $result)
-
                         <tr>
+                            <td style="font-size: 12px">{{$result->sId}}</td>
+                            <td style="font-size: 12px">{{$result->studentF['name']}}</td>
+                            {{--<td style="font-size: 12px">null</td>--}}
+                            <td style="font-size: 12px">{{$result->examId}}</td>
+                            <td style="font-size: 12px">{{$result->subject}}</td>
+                            <td style="font-size: 12px">{{$result->marks}}</td>
 
-                            <td style="font-size: 12px">{{$result['sId']}}</td>
-                            <td style="font-size: 12px">null</td>
-                            <td style="font-size: 12px">null</td>
-                            <td style="font-size: 12px">{{$result['examId']}}</td>
-                            <td style="font-size: 12px">{{$result['subject']}}</td>
-                            <td style="font-size: 12px">{{$result['marks']}}</td>
+                            @if($result->marks <= 100 && $result->marks >= 85 )
+                             <td style="font-size: 15px" class="text-primary">Excellent</td>
+                            @elseif($result->marks < 84 && $result->marks >= 75)
+                                <td style="font-size: 15px" class="text-success">good</td>
+                            @elseif($result->marks < 74 && $result->marks >= 50 )
+                                <td style="font-size: 15px" class="text-success">Average</td>
+                            @elseif($result->marks < 49 && $result->marks >= 30 )
+                                <td style="font-size: 15px" class="text-warning">Poor</td>
+                            @elseif($result->marks < 30)
+                                <td style="font-size: 15px" class="text-danger">Very poor</td>
+                            @endif
 
                             <td style="font-size: 12px">
-                            <a><button class="btn btn-warning btn-xs" data-toggle="modal" data-target="#updateResultsModal"
-                                         {{--data-id="{{$result['id']}}"--}}
-                                         data-sId="{{$result['sId']}}"
-                                         data-examId="{{$result['examId']}}"
-                                         data-subject="{{$result['subject']}}"
-                                         data-marks="{{$result['marks']}}"
+                                <div class="row">
 
-                                         type="button">Edit</button></a>
+                                    <a class="waves-effect waves-dark" href="{{action('ResultController@edit', $result['id'])}}"><i class="mdi mdi-pencil font-20"></i></a>
 
-                                     <form action="{{action('ResultController@destroy', $result['id'] )}}" method="post">
+                                     <form action="{{action('ResultController@destroy', $result->id)}}" method="post">
                                          {{csrf_field()}}
                                          <input name="_method" type="hidden" value="DELETE">
 
-                                         <button class="btn btn-danger btn-xs" type="submit">Delete</button>
+                                         <button class="btn btn-danger btn-xs" type="submit"onclick="return confirm('Do you really want to delete?')")>Delete</button>
                                      </form>
-                                @include('layouts.ExamCentreLayouts.updateResultsmodal')
+
+                                </div>
                             </td>
-
                          </tr>
-
                         @endforeach
+                        @endif
 
                         </tbody>
                     </table>
+
+{{--                    {{$Results->links()}}--}}
+
                 </div>
             </div>
-            <!-- ============================================================== -->
-            <!-- Start Page Content -->
-            <!-- ============================================================== -->
-
         </div>
     </div>
-
-
 
     @include('layouts.adminLayouts.footer')
 
