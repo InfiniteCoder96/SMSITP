@@ -16,7 +16,7 @@
                             <form  action="{{action('bookController@update',$book['id'])}}" method="post">
                                 {{method_field('patch')}}
                                 {{csrf_field()}}
-
+                                <input type="hidden" id="book_id" name="book_id" >
                                 <div class="card-body bg-dark">
                                     <h4 class="card-title">Book Details</h4>
                                     <div class="form-group row">

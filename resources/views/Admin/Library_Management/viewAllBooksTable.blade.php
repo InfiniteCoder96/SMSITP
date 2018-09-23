@@ -94,6 +94,7 @@
 
                                                          type="button">Edit</button></a>
 
+
                                         <button type="button" class="btn btn-danger btn-xs">Delete</button>
                                     </td>
                                 </tr>
@@ -143,9 +144,9 @@
 
     @include('layouts.adminLayouts.footer')
 
-    @if($books == null)
+    {{--@if($books == null)--}}
         @include('layouts.LibraryLayouts.editBookModal')
-    @endif
+    {{--@endif--}}
 
 
 

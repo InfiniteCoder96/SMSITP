@@ -52,6 +52,16 @@
                     </div>
 
                 @endif
+                @if (session('status'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
+                @endif
+                @if (\Session::has('Status'))
+                    <div class="alert alert-danger">
+                        <p>{{ \Session::get('Status') }}</p>
+                    </div>
+                @endif
                 <!-- Form -->
                 <form class="form-horizontal m-t-20" id="loginform" action="{{route('login')}}" method="post">
                     {{ csrf_field() }}

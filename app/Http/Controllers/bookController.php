@@ -82,33 +82,20 @@ class bookController extends Controller
      */
     public function update(Request $request,$id)
     {
-//        $books = books::find($id);
-//
-//        $this->validate(request(),[
-//            'bookname' => 'required',
-//            'isbn' => 'required',
-//            'authorname' => 'required',
-//            'barcode' => 'required'
-//        ]);
-//        $books->bookname = $request->get('bookname');
-//        $books->isbn = $request->get('isbn');
-//        $books->authorname = $request->get('authorname');
-//        $books->barcode = $request->get('barcode');
-//        $books->save();
+        $book = books::find($request->get('book_id'));
 
-        $books = books::find($id);
         $this->validate(request(),[
             'bookname' => 'required',
             'isbn' => 'required',
             'authorname' => 'required',
             'barcode' => 'required'
         ]);
-        $books->bookname = $request->get('bookname');
-        $books->isbn = $request->get('isbn');
-        $books->authorname = $request->get('authorname');
-        $books->barcode = $request->get('barcode');
-        $books->save();
-        return redirect('books')->with('success','ISBN No:'.$books->isbn.' Book has been updated');
+        $book->bookname = $request->get('bookname');
+        $book->isbn = $request->get('isbn');
+        $book->authorname = $request->get('authorname');
+        $book->barcode = $request->get('barcode');
+        $book->save();
+        return redirect('books')->with('success','ISBN No:'.$book->isbn.' Book has been updated');
 
 
 
