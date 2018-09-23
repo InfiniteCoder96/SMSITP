@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class RenameTableNameInUsersTable extends Migration
+class AddPrIdColumnToStudentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class RenameTableNameInUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            Schema::rename('users', 'admins');
+        Schema::table('students', function (Blueprint $table) {
+            $table->string('parent_Id');
         });
     }
 
@@ -25,10 +25,8 @@ class RenameTableNameInUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            Schema::drop('users');
-
-            Schema::dropIfExists('users');
+        Schema::table('students', function (Blueprint $table) {
+            //
         });
     }
 }

@@ -6,10 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Parent_Guardian extends Model
 {
-    protected $primaryKey = 'child_id';
+    public $incrementing = false;
+    protected $primaryKey = 'prId';
 
     protected $fillable = [
-        'role','first_name','middle_name',
+        'prId','role','first_name','middle_name',
         'last_name','NIC_Passport','nationality',
         'race','religion','working_sector','profession',
         'occupation','work_place','email','work_address',
@@ -19,6 +20,6 @@ class Parent_Guardian extends Model
 
     public function student()
     {
-        return $this->hasMany('App\student','sid','child_id');
+        return $this->hasMany(student::class,'sid','child_id');
     }
 }

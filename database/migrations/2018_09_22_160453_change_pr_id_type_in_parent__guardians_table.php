@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddAdminRoleColumnInAdminsTable extends Migration
+class ChangePrIdTypeInParentGuardiansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddAdminRoleColumnInAdminsTable extends Migration
      */
     public function up()
     {
-        Schema::table('admins', function (Blueprint $table) {
-            $table->string('role')->nullable();
+        Schema::table('parent__guardians', function (Blueprint $table) {
+            $table->string('prId')->change();
         });
     }
 
@@ -25,8 +25,8 @@ class AddAdminRoleColumnInAdminsTable extends Migration
      */
     public function down()
     {
-        Schema::table('admins', function (Blueprint $table) {
-
+        Schema::table('parent__guardians', function (Blueprint $table) {
+            //
         });
     }
 }

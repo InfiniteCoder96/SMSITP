@@ -153,8 +153,21 @@ Route::get('/admin/dashboard', 'AdminController@showAdminDashboard');
 Route::get('search_student', 'StudentController@search')->name('search');
 Route::get('search','StudentController@showSearchView')->name('showSearchView');
 
+// Teacher Routes
+Route::resource('teachers','TeacherController');
+
+Route::get('/add', 'TeacherController@add');
+
 // students routes
 Route::get('/student/dashboard', 'StudentController@showStudentDashboard');
+
+Route::get('/id', 'StudentController@student_id_generator');
+// parent routes
+Route::resource('parent_guardians','parentController');
+
+Route::get('/parent/dashboard', 'parentController@showParentDashboard');
+
+Route::get('/pr', 'parentController@index');
 
 // front end Routes
 Route::get('/events',function(){
@@ -198,11 +211,6 @@ Route::get('/sendmail',function (){
 
 // Firebase Routes
 Route::get('/firebase-apk', 'testFirebase@index');
-
-// Teacher Routes
-Route::resource('teachers','TeacherController');
-
-Route::get('/add', 'TeacherController@add');
 
 
 //Library Manager Routes

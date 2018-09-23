@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class UpdateDatatypeOfIdInParentGuardiansTable extends Migration
+class ChangePrimaryKeyParentGuardiansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,8 @@ class UpdateDatatypeOfIdInParentGuardiansTable extends Migration
     public function up()
     {
         Schema::table('parent__guardians', function (Blueprint $table) {
-            $table->dropColumn('id');
+            $table->dropPrimary('child_id');
+
         });
     }
 
@@ -25,8 +26,6 @@ class UpdateDatatypeOfIdInParentGuardiansTable extends Migration
      */
     public function down()
     {
-        Schema::table('parent__guardians', function (Blueprint $table) {
-            $table->increments('id')->change();
-        });
+        //
     }
 }

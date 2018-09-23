@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Parent_Guardian;
 use App\Student;
 use Carbon\Carbon;
+use function GuzzleHttp\Psr7\str;
 use Intervention\Image\Facades\Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
@@ -113,6 +114,8 @@ class StudentController extends Controller
         $student->Known_Allergies = $request->get('Known_Allergies');
         $student->blood_group = $request->get('blood_group');
 
+        $parent_guardian->prId = $this->parent_id_generator();
+
         $parent_guardian->role = $request->get('role');
         $parent_guardian->first_name = $request->get('first_name');
         $parent_guardian->middle_name = $request->get('middle_name');
@@ -168,14 +171,40 @@ class StudentController extends Controller
 
     public function Demo_store()
     {
+        $parents = Parent_Guardian::all();
 
+        $prId = null;
+
+        $prId = $this->parent_id_generator();
 
         $student = new Student();
+
         $parent_guardian = new Parent_Guardian();
+        $parent_ID = true;
 
 
-$class = random_int(1,13);
+            foreach ($parents as $parent){
+                $NIC_Passport = $parent->NIC_Passport;
+
+                if($NIC_Passport=="962571603v"){
+                    $student->parent_Id = $parent->prId;
+                    $parent_ID = false;
+
+                }
+
+
+            }
+
+
+
+
+        if($parent_ID){
+            $student->parent_Id = (string)$prId;
+        }
+
+        $class = random_int(1,13);
         $stdID =  $this->student_id_generator($class);
+
 
         $student->sid =  $stdID;
         $student->salutation = 'Master';
@@ -183,7 +212,7 @@ $class = random_int(1,13);
         $student->middle_Name = 'Hasaranga';
         $student->last_Name = 'Kure';
         $student->DoB = '2005-05-18';
-        $student->NIC = rand(962571603,999999999).'v';
+        $student->NIC = '962571603v';
         $student->Gender = 'Male';
         $student->Address = '127/3,Kalalgoda,Panadura';
         $student->Email_Address = str_random(9).'@gmail.com';
@@ -196,11 +225,13 @@ $class = random_int(1,13);
         $student->Known_Allergies = '-';
         $student->blood_group = 'A+';
 
+
+        $parent_guardian->prId = strval($prId);
         $parent_guardian->role = 'Father';
         $parent_guardian->first_name = 'Hasitha';
         $parent_guardian->middle_name = 'Gayan';
         $parent_guardian->last_name = 'Gunawardane';
-        $parent_guardian->NIC_Passport = rand(962571603,999999999).'v';
+        $parent_guardian->NIC_Passport = '962571603v';
         $parent_guardian->nationality = 'Sinhalease';
         $parent_guardian->race = 'Sinhala';
         $parent_guardian->religion = 'Buddhist';
@@ -236,10 +267,10 @@ $class = random_int(1,13);
         $student->image = '1.jpg';
 
 
-        if($student->save() != true)
-            $this->Demo_store();
-        if($parent_guardian->save() != true)
-            $this->Demo_store();
+        $student->save();
+
+        $parent_guardian->save();
+
 
 
 
@@ -249,7 +280,8 @@ $success = 'Your Application has been submitted successfully';
 //            return redirect('/students')->with('success', 'Student has been added to the System Successfully');
 //        }
 //        elseif ($request->get('source') == 'joinUs'){
-         return view('Frontend.ApplicationFormDownload',compact('stdID','success'));
+         //return view('Frontend.ApplicationFormDownload',compact('stdID','success'));
+return $prId;
 //        }
     }
     /**
@@ -407,25 +439,30 @@ $success = 'Your Application has been submitted successfully';
         DNS1D::getBarcodeHTML($student['sid'], 'C128A');
     }
 
-    public function student_id_generator($class){
+    public function parent_id_generator(){
 
-        if($class < 10){
-            $class = '0'.$class;
-        }
-
-        $students = Student::all();
         $last_ID = null;
         $new_ID = null;
-        foreach ($students as $student){
-            $last_ID = $student->sid;
-        }
+
+        $IdCount = 0;
+
+        $parents = Parent_Guardian::all();
 
         $date_now = Carbon::now();
         $year_now = $date_now->year;
 
         $last_two_digits_year = $year_now%100;
 
-        $id_first_part = $last_two_digits_year.$class;
+        $id_first_part = $last_two_digits_year.'PR';
+
+        foreach ($parents as $parent){
+            $last_ID = $parent->prId;
+
+            $IdCount = $IdCount + 1;
+
+        }
+
+
 
         if($last_ID == null){
 
@@ -434,16 +471,7 @@ $success = 'Your Application has been submitted successfully';
         }
         else{
 
-
-
-            $last_digits_str = substr($last_ID, 4);
-
-            $last_digits = intval($last_digits_str);
-
-            $last_digits = $last_digits + 1;
-
-            if($last_digits%10 == 0)
-                $last_digits = $last_digits + 1;
+            $last_digits = intval($IdCount) + 1;
 
             if($last_digits < 10)
                 $id_last_part = '000'.$last_digits;
@@ -456,13 +484,62 @@ $success = 'Your Application has been submitted successfully';
 
             $new_ID = $id_first_part.$id_last_part;
 
-            foreach ($students as $student){
-                if($new_ID == $student->sid){
-                    $new_ID = intval($new_ID);
-                    $new_ID = $new_ID + 1;
-                }
 
+        }
+
+
+        return $new_ID;
+    }
+
+    public function student_id_generator($class){
+        //$class = 1;
+        if($class < 10){
+            $class = '0'.$class;
+        }
+        $last_ID = null;
+        $new_ID = null;
+        $IdCount = 0;
+        $students = Student::all();
+
+        $date_now = Carbon::now();
+        $year_now = $date_now->year;
+
+        $last_two_digits_year = $year_now%100;
+
+        $id_first_part = $last_two_digits_year.$class;
+
+        foreach ($students as $student){
+            $last_ID = $student->sid;
+
+            $sub = substr($last_ID,0,4);
+            if(strcmp($sub,$id_first_part) == 0){
+                $IdCount = $IdCount + 1;
             }
+        }
+
+
+
+        if($last_ID == null){
+
+            $new_ID = $id_first_part.'0001';
+
+        }
+        else{
+
+            $last_digits = intval($IdCount + 1);
+
+            if($last_digits < 10)
+                $id_last_part = '000'.$last_digits;
+            elseif ($last_digits < 100 && $last_digits > 10)
+                $id_last_part = '00'.$last_digits;
+            elseif($last_digits < 1000 && $last_digits > 100)
+                $id_last_part = '0'.$last_digits;
+            else
+                $id_last_part = $last_digits;
+
+            $new_ID = $id_first_part.$id_last_part;
+
+
         }
 
 

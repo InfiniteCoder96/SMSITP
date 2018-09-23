@@ -51,6 +51,7 @@ class customAuthController extends Controller
 
         ]);
 
+        $request->session()->put('key', 'value');
         if(Auth::guard('admin')->attempt(['email' => $request->email,'password' => $request ->password, 'role' => 'Admin'])){
             return redirect('/admin/dashboard');
         }
