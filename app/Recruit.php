@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Recruit extends Model
 {
-
-    protected $fillable =['rid','name','contact_number','category'];
+//    public $incrementing='false';
+//    protected $primaryKey = 'tid';
+    protected $fillable =['id','tid','name','nic','address','dob','email','gender','status','category','contact_number'];
 }

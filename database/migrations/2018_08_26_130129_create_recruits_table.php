@@ -15,10 +15,17 @@ class CreateRecruitsTable extends Migration
     {
         Schema::create('recruits', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('rid');
+            $table->string('tid');
             $table->string('name');
-            $table->string('contact_number');
+            $table->string('nic');
+            $table->string('address');
+            $table->string('dob');
+            $table->string('email');
+            $table->string('gender');
+            $table->string('status');
             $table->string('category');
+            $table->string('contact_number');
+            $table->string('documents');
             $table->timestamps();
         });
     }
