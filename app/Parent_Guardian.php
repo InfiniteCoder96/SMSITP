@@ -20,6 +20,6 @@ class Parent_Guardian extends Model
 
     public function student()
     {
-        return $this->hasMany(student::class,'sid','child_id');
+        return $this->hasMany(student::class,'parent_Id');
     }
 }
