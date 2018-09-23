@@ -60,9 +60,11 @@ Route::get('/ECadmin/questionBank', function (){
 
 //Academic Manager Routes
 
-Route::get('/Aadmin/dashboard', function (){
-    return view('Admin.Academic_Management.dashboard') ;
-});
+//Route::get('/Aadmin/dashboard', function (){
+//    return view('Admin.Academic_Management.dashboard') ;
+//});
+
+
 
 Route::get('/Aadmin/subjects', function (){
     return view('Admin.Academic_Management.manage_subject') ;
@@ -75,6 +77,71 @@ Route::get('/Aadmin/classes', function (){
 Route::get('/Aadmin/sections', function (){
     return view('Admin.Academic_Management.manage_section') ;
 });
+
+
+Route::get('/Aadmin/searchV', function (){
+    $Results=null;
+    return view('Admin.Academic_Management.search',compact('Results')) ;
+});
+
+Route::get('Aadmin/search', 'SearchController@search');
+
+Route::get('/Aadmin/searchAllV', function (){
+    $ClassResults=null;
+    $ClassTResults=null;
+    $SubjectResults=null;
+    $SubjectTResults=null;
+    $SectionResults=null;
+    $SectionHResults=null;
+    return view('Admin.Academic_Management.searchAll',compact('ClassResults','ClassTResults','SubjectResults','SubjectTResults','SectionResults','SectionHResults')) ;
+});
+
+Route::get('Aadmin/searchAll', 'SearchController@searchAll');
+
+Route::get('/Aadmin/searchTeacherS', function (){
+    $Results=null;
+    return view('Admin.Academic_Management.searchTeachers',compact('Results')) ;
+});
+
+Route::get('Aadmin/searchTeacherS', 'SearchController@searchTeacherS');
+
+
+Route::get('/Aadmin/invoice', function (){
+    return view('Admin.Academic_Management.invoice') ;
+});
+
+Route::get('/Aadmin/invoiceD', function (){
+    return view('Admin.Academic_Management.invoice') ;
+});
+
+Route::get('/ID', 'SubjectSController@SubjectIDGenerator');
+
+Route::get('/Aadmin/pdf','ReportController@pdfS');
+
+Route::get('/Aadmin/pdf/index','ReportController@index');
+
+Route::get('/Aadmin/pdf/download','ReportController@download');
+
+//Route::get('/id','SubjectSController@SubjectIDGenerator');
+Route::resource('Aadmin/ClassS','ClassController');
+
+Route::resource('Aadmin/ClassTeacherS','ClassTeacherSController');
+
+Route::resource('Aadmin/SubjectS','SubjectSController');
+
+Route::resource('Aadmin/SubjectTeacherS','SubjectTeacherSController');
+
+Route::resource('Aadmin/SectionS','SectionSController');
+
+Route::resource('Aadmin/SectionalHeadS','SectionalHeadSController');
+
+Route::resource('Aadmin/Dashboard','DashboardController');
+
+
+
+//Route::get('Aadmin/dashboard/search',SearchController@search);
+
+Route::get('Aadmin/dashboard/events', 'EventController@calendar');
 
 
 //Non Academic Manager Routes

@@ -8,12 +8,12 @@
         <div class="page-breadcrumb">
             <div class="row">
                 <div class="col-12 d-flex no-block align-items-center">
-                    <h4 class="page-title">Dashboard</h4>
+                    <h4 class="page-title">Section Management</h4>
                     <div class="ml-auto text-right">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Manage Sections</li>
+                                <li class="breadcrumb-item active" aria-current="Page">Add New Section</li>
                             </ol>
                         </nav>
                     </div>
@@ -22,111 +22,121 @@
         </div>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-4">
-                    <div class="card text-white bg-success mb-3" >
-                        <div class="card-header bg-dark">Class Teachers</div>
-                        <div class="card-body">
-                            <h5 class="card-title">Everything Fine</h5>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card text-white bg-danger mb-3" >
-                        <div class="card-header bg-dark">Class Students Amount</div>
-                        <div class="card-body">
-                            <h5 class="card-title">Something Wrong in Class 8A</h5>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card text-white bg-warning mb-3" >
-                        <div class="card-header bg-dark">Absent Teachers</div>
-                        <div class="card-body">
-                            <h5 class="card-title">5 class teachers absent</h5>
-
-                        </div>
-                    </div>
-                </div>
 
             </div>
+
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div><br />
+            @endif
+            @if (\Session::has('success'))
+                <div class="alert alert-success">
+                    <p>{{ \Session::get('success') }}</p>
+                </div><br />
+            @endif
+            @if (\Session::has('fail'))
+                <div class="alert alert-success">
+                    <p>{{ \Session::get('fail') }}</p>
+                </div><br />
+            @endif
             <div class="row">
+
                 <div class="col-md-4">
-                    <form class="form-horizontal" action="#" method="get">
 
 
+
+                    <form class="form-horizontal" method="post" action="{{url('/Aadmin/SectionS')}}" >
+
+                        {{csrf_field()}}
 
                         <div class="card bg-dark text-white">
-                            <div class="card-header bg-cyan text-white">
-                                <h5 class="card-title m-b-0">Assign Class Techers</h5>
+                            <div class="card-header bg-info">
+                                <h5 class="card-title m-b-0">Add New Section</h5>
                             </div>
                             <div class="card-body">
+                                {{--<div class="form-group row">--}}
+                                    {{--<label for="SectionID" class="col-sm-3 text-right control-label col-form-label">Section ID</label>--}}
+                                    {{--<div class="col-sm-9">--}}
+                                        {{--<input type="Text" class="form-control" id="SectionID" name="SectionID" placeholder="Section Here" required>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+
                                 <div class="form-group row">
-                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">CID</label>
+                                    <label for="Grade" class="col-sm-3 text-right control-label col-form-label">Grade</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="fname" placeholder="Clss ID Name Here" required>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">Teacher ID</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="fname" placeholder="Class Teacher ID Here" required>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">Subject</label>
-                                    <div class="col-sm-9">
-                                        <select class="select2 form-control custom-select" style="width: 100%; height:36px;" required>
-                                            <option selected disabled>Select Exam ID</option>
-                                            <option value="AK">G1T1</option>
-                                            <option value="AK">G1T2</option>
-                                            <option value="WA">G1T3</option>
+                                        <select class="select2 form-control custom-select" id="Grade" name="Grade" style="width: 100%; height:36px;" required>
+                                            <option selected disabled>Select Grade</option>
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
                                         </select>
                                     </div>
                                 </div>
 
+                                <div class="form-group row">
+                                    <label for="SectionName" class="col-sm-3 text-right control-label col-form-label">Section Name</label>
+                                    <div class="col-sm-9">
+                                        <input type="Text" class="form-control" id="SectionName" name="SectionName" placeholder="Section Name Here" required>
+                                    </div>
+                                </div>
 
+                                <div class="form-group row">
+                                    <label for="NoOfClasses" class="col-sm-3 text-right control-label col-form-label">Number of Classes</label>
+                                    <div class="col-sm-9">
+                                        <input type="Text" class="form-control" id="NoOfClasses" name="NoOfClasses" placeholder="Number of Classes Here" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="NoOfStudents" class="col-sm-3 text-right control-label col-form-label">Number of Students</label>
+                                    <div class="col-sm-9">
+                                        <input type="Text" class="form-control" id="NoOfStudents" name="NoOfStudents" placeholder="Number of Students Here" required>
+                                    </div>
+                                </div>
 
                             </div>
                             <div class="border-top">
                                 <div class="card-body">
-                                    <button type="submit" class="btn btn-outline-success">Submit</button>
+                                    <button type="Submit" class="btn btn-outline-success">Add</button>
                                     <button type="reset" class="btn btn-outline-warning">Reset</button>
                                 </div>
                             </div>
 
                         </div>
 
-
-
-
-
-
-
-
-
                     </form>
                 </div>
                 <div class="col-md-8">
                     <div class="card bg-secondary text-white">
-                        <div class="card-header bg-cyan text-white">
-                            <h5 class="card-title m-b-0">Class Teachers</h5>
+                        <div class="card-header bg-info">
+                            <h5 class="card-title m-b-0">Sections</h5>
                         </div>
+
                         <div class="table-responsive">
                             <table class="table">
                                 <thead class="thead-dark">
                                 <tr>
-                                    <th>
-                                        <label class="customcheckbox m-b-20">
-                                            <input type="checkbox" id="mainCheckbox" />
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </th>
-                                    <th scope="col" style="font-size: 12px">CID</th>
-                                    <th scope="col" style="font-size: 12px">Section</th>
-                                    <th scope="col" style="font-size: 12px">TID</th>
-                                    <th scope="col" style="font-size: 12px">Class Teacher Name</th>
+                                    <th scope="col" style="font-size: 12px">Section ID</th>
+                                    <th scope="col" style="font-size: 12px">Section Name</th>
+                                    <th scope="col" style="font-size: 12px">Grade</th>
+                                    <th scope="col" style="font-size: 12px">SectionalHeadID</th>
+                                    <th scope="col" style="font-size: 12px">SectionalHeadName</th>
+                                    <th scope="col" style="font-size: 12px">Number of Classes</th>
+                                    <th scope="col" style="font-size: 12px">Number of Students</th>
                                     <th scope="col" style="font-size: 12px">Action</th>
 
                                 </tr>
@@ -137,42 +147,38 @@
 
                                 {{--@foreach($students as $student)--}}
 
-                                <tr>
-                                    <th>
-                                        <label class="customcheckbox">
-                                            <input type="checkbox" class="listCheckbox" />
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </th>
+                                    @foreach($SectionSes as $sectionS)
+                                        <tr>
+                                    {{--<th>--}}
+                                        {{--<label class="customcheckbox">--}}
+                                            {{--<input type="checkbox" class="listCheckbox" />--}}
+                                            {{--<span class="checkmark"></span>--}}
+                                        {{--</label>--}}
+                                    {{--</th>--}}
 
 
-                                    <td style="font-size: 12px">G1A</td>
-                                    <td style="font-size: 12px">G1</td>
-                                    <td style="font-size: 12px">G51248</td>
-                                    <td style="font-size: 12px">Karunadasa D.A.</td>
-                                    <td style="font-size: 12px">
-                                        <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
-                                            <a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
-                                    </td>
+                                    <td style="font-size: 12px">{{$sectionS['SectionID']}}</td>
+                                    <td style="font-size: 12px">{{$sectionS['SectionName']}}</td>
+                                    <td style="font-size: 12px">{{$sectionS['Grade']}}</td>
+                                            <td style="font-size: 12px">{{$sectionS['SectionTeacherID']}}</td>
+                                            <td style="font-size: 12px">{{$sectionS['SectionTeacherName']}}</td>
+                                    <td style="font-size: 12px">{{$sectionS['NoOfClasses']}}</td>
+                                    <td style="font-size: 12px">{{$sectionS['NoOfStudents']}}</td>
+                                            <td style="font-size: 12px">
+                                                <a href="{{action('SectionSController@edit', $sectionS['SectionID'])}}" class="btn btn-dark">Edit</a>
+                                                {{--<button class="btn btn-dark" href="{{action('ClassController@edit', $classS['ClassID'])}}" type="Submit">Edit</button>--}}
+                                                {{--<a class="waves-effect waves-dark" href="{{action('ClassController@edit', $classS['ClassID'])}}"><i class="mdi mdi-pencil font-20" ></i></a>--}}
+                                                {{--<a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i></a>--}}
+                                                <form action="{{action('SectionSController@destroy', $sectionS['SectionID'])}}" method="post">
+                                                    {{csrf_field()}}
+                                                    <input name="_method" type="hidden" value="DELETE">
+                                                    <button class="btn btn-dark" type="Submit">Delete</button>
+                                                </form>
+                                     </td>
+
                                 </tr>
-                                <tr>
-                                    <th>
-                                        <label class="customcheckbox">
-                                            <input type="checkbox" class="listCheckbox" />
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </th>
 
-
-                                    <td style="font-size: 12px">G1A</td>
-                                    <td style="font-size: 12px">G1</td>
-                                    <td style="font-size: 12px">G51248</td>
-                                    <td style="font-size: 12px">Karunadasa D.A.</td>
-                                    <td style="font-size: 12px">
-                                        <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
-                                            <a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
-                                    </td>
-                                </tr>
+                                @endforeach
                                 {{--@endforeach--}}
 
                                 </tbody>
@@ -191,6 +197,7 @@
 
 
 
+    </div>
     @include('layouts.adminLayouts.footer')
 
 @endsection
