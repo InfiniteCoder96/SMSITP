@@ -174,12 +174,10 @@ Route::get('/access_denied',function (){
 Route::match(['get','post'],'/admin/manage-students', 'StudentController@addStudent');
 
 Route::get('/admin/dashboard', 'AdminController@showAdminDashboard');
-Route::get('/admin/dashboard', function (){
- return view('Admin.User_Management.Admin.admin_view');
-});
+
 
 Route::get('search_student', 'StudentController@search')->name('search');
-Route::get('search','StudentController@showSearchView')->name('showSearchView');
+Route::get('student_search','StudentController@showSearchView')->name('showSearchView');
 
 // students routes
 Route::get('/student/dashboard', 'StudentController@showStudentDashboard');
@@ -251,8 +249,9 @@ Route::get('/LibraryAdmin/nonAcademicStaff', function (){
 Route::resource('books','bookController');
 
 
-Route::get('/test-firebase', function (){
-    return view('Admin.User_Management.Admin.test') ;
+Route::get('/test-firebase', function () {
+    return view('Admin.User_Management.Admin.test');
+});
 Route::resource('students','StudentController');
 
 //Library Manager Routes
@@ -271,7 +270,3 @@ Route::get('/LibraryAdmin/addBookForm', function (){
 
 
 
-Route::get('/LibraryAdmin/nonAcademicStaff', function (){
-    return view('Admin.HR_Management.non_academic_staff') ;
-});
-Route::resource('books','bookController');
