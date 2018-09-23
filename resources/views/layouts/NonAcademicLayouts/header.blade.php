@@ -164,7 +164,7 @@
 
                     {{--</div>--}}
 
-                    <a class="nav-link"><button class="btn btn-outline-purple" data-toggle="modal" data-target="#loginModal">{{Auth::user()->name}}</button></a>
+
 
                 </li>
 

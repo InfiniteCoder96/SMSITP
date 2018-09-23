@@ -89,7 +89,7 @@
 </div>
 <div class="col-md-12  " style="opacity: 0.9">
 
-    <form enctype="multipart/form-data"  id="regForm" action="{{url('students')}}" novalidate method="post" class="bg-dark text-white">
+    <form enctype="multipart/form-data"  id="regForm" action="{{url('temporary_students')}}" novalidate method="post" class="bg-dark text-white">
         {{csrf_field()}}
         <input type="hidden" value="joinUs" name="source">
         <h3>Online Application to Join St.John College</h3>

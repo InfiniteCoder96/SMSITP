@@ -211,6 +211,27 @@
         modal.find('.modal-body #book_id').val(bookId);
     })
 
+    $('#deleteConfirmationModal').on('show.bs.modal', function(event){
+        var button = $(event.relatedTarget)
+
+        var sid = button.data('id')
+
+        var modal = $(this)
+
+        modal.find('.modal-footer #temp_sid').val(sid);
+
+    })
+
+    $('#acceptConfirmationModal').on('show.bs.modal', function(event){
+        var button = $(event.relatedTarget)
+
+        var sid = button.data('id')
+
+        var modal = $(this)
+
+        modal.find('.modal-footer #temp_sid').val(sid);
+
+    })
 
     $(document).ready(function(){
         var sid = $("#sid input").val();

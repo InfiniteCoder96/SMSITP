@@ -10,18 +10,19 @@ class TemporaryStudent extends Model
 
     use Searchable;
 
-    protected $primaryKey = 'tempsid';
+    public $incrementing = false;
+    protected $primaryKey = 'temp_sid';
 
     protected $fillable = [
-        'tempsid','salutation','first_Name',
+        'temp_sid','parent_Id','salutation','first_Name',
         'middle_Name','last_Name','DoB','NIC','Gender','Address','Email_Address',
-        'Telephone_No_Mob','Telephone_No_Res','birth_certificate_no','religion','race',
-        'country','nationality','blood_group','Known_Illnesses','Known_Allergies','blood_group'
+        'Telephone_No_Mob','Telephone_No_Res','religion','race',
+        'country','nationality','blood_group','Known_Illnesses','Known_Allergies','blood_group','image','reference_num'
     ];
 
     public function Temporary_Parent_Guardian()
     {
-        return $this->hasOne(Temporary_Parent_Guardian::class,'child_id','tempsid');
+        return $this->hasOne(Temporary_Parent_Guardian::class,'temp_prId','parent_Id');
     }
 
     public function Clasz()

@@ -20,7 +20,7 @@ class Student extends Model
 
     public function Parent_Guardian()
     {
-        return $this->hasOne(Parent_Guardian::class,'child_id');
+        return $this->hasOne(Parent_Guardian::class,'prId','parent_Id');
     }
 
     public function Clasz()

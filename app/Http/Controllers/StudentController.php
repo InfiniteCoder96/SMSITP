@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Parent_Guardian;
 use App\Student;
+use App\TemporaryStudent;
 use Carbon\Carbon;
-use function GuzzleHttp\Psr7\str;
 use Intervention\Image\Facades\Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
@@ -48,125 +48,95 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
+        $temp_sid = $request->get('temp_sid');
 
+        $temporary_student = TemporaryStudent::with('Temporary_Parent_Guardian')->find($temp_sid);
+        $temporary_parent = $temporary_student->Temporary_Parent_Guardian;
+
+        $registered_parents = Parent_Guardian::all();
+
+        $parent_status = true;
+        $parent_id = null;
+
+        foreach ($registered_parents as $registered_parent){
+            $registered_parent_nic = $registered_parent->NIC_Passport;
+            $temporary_parent_nic = $temporary_parent->NIC_Passport;
+
+            if($registered_parent_nic == $temporary_parent_nic){
+                $parent_status = false;
+                $parent_id = $registered_parent->prId;
+            }
+        }
 
         $student = new Student();
         $parent_guardian = new Parent_Guardian();
 
-        $this->validate(request(), [
+        $prId = $this->parent_id_generator();
+        $sid = $this->student_id_generator(random_int(1,13));
 
-            'salutation'=> 'required',
-            'first_Name'=> 'required',
-            'middle_Name'=> 'required',
-            'last_Name'=> 'required',
-            'DoB'=> 'required|before:-18 years',
-            'NIC'=> 'required|min:10|max:10|unique:students',
-            'Gender'=> 'required',
-            'Address'=> 'required',
-            'Email_Address'=> 'required|email|unique:students',
-            'Telephone_No_Mob'=> 'required',
-            'Telephone_No_Res'=> 'required',
-            'religion'=> 'required',
-            'race'=> 'required',
-            'nationality'=> 'required',
-            'blood_group'=> 'required',
-            'Known_Illnesses'=> 'required',
-            'Known_Allergies'=> 'required',
-            'image' => 'required',
+        $student->sid =  $sid;
 
-            'role'=> 'required',
-            'first_name'=> 'required',
-            'middle_name'=> 'required',
-            'last_name'=> 'required',
-            'Parent_NIC_Passport'=> 'required|min:10|max:10',
-            'pr_nationality'=> 'required',
-            'pr_race'=> 'required',
-            'pr_religion'=> 'required',
-            'working_sector'=> 'required',
-            'profession'=> 'required',
-            'occupation'=> 'required',
-            'work_place'=> 'required',
-            'email'=> 'required',
-            'work_address'=> 'required',
-            'work_telephone'=> 'required',
-            'telephone_mob'=> 'required',
+        if($parent_status){
+            $student->parent_Id =  $prId;
+        }
+        else{
+            $student->parent_Id =  $parent_id;
+        }
 
-        ]);
 
-        $stdID =  $this->student_id_generator(13);
+        $student->salutation = $temporary_student->salutation;
+        $student->first_Name = $temporary_student->first_Name;
+        $student->middle_Name = $temporary_student->middle_Name;
+        $student->last_Name = $temporary_student->last_Name;
+        $student->DoB = $temporary_student->DoB;
+        $student->NIC = $temporary_student->NIC;
+        $student->Gender = $temporary_student->Gender;
+        $student->Address = $temporary_student->Address;
+        $student->Email_Address = $temporary_student->Email_Address;
+        $student->Telephone_No_Mob = $temporary_student->Telephone_No_Mob;
+        $student->Telephone_No_Res = $temporary_student->Telephone_No_Res;
+        $student->religion = $temporary_student->religion;
+        $student->race = $temporary_student->race;
+        $student->nationality = $temporary_student->nationality;
+        $student->Known_Illnesses = $temporary_student->Known_Illnesses;
+        $student->Known_Allergies = $temporary_student->Known_Allergies;
+        $student->blood_group = $temporary_student->blood_group;
+        $student->image = $temporary_student->image;
 
-        $student->sid =  $stdID;
-        $student->salutation = $request->get('salutation');
-        $student->first_Name = $request->get('first_Name');
-        $student->middle_Name = $request->get('middle_Name');
-        $student->last_Name = $request->get('last_Name');
-        $student->DoB = $request->get('DoB');
-        $student->NIC = $request->get('NIC');
-        $student->Gender = $request->get('Gender');
-        $student->Address = $request->get('Address');
-        $student->Email_Address = $request->get('Email_Address');
-        $student->Telephone_No_Mob = $request->get('Telephone_No_Mob');
-        $student->Telephone_No_Res = $request->get('Telephone_No_Res');
-        $student->religion = $request->get('religion');
-        $student->race = $request->get('race');
-        $student->nationality = $request->get('nationality');
-        $student->Known_Illnesses = $request->get('Known_Illnesses');
-        $student->Known_Allergies = $request->get('Known_Allergies');
-        $student->blood_group = $request->get('blood_group');
+        if($parent_status){
 
-        $parent_guardian->prId = $this->parent_id_generator();
+            $parent_guardian->prId = $prId;
+            $parent_guardian->role = $temporary_parent->role;
+            $parent_guardian->first_name = $temporary_parent->first_name;
+            $parent_guardian->middle_name = $temporary_parent->middle_name;
+            $parent_guardian->last_name = $temporary_parent->last_name;
+            $parent_guardian->NIC_Passport = $temporary_parent->NIC_Passport;
+            $parent_guardian->nationality = $temporary_parent->nationality;
+            $parent_guardian->race = $temporary_parent->race;
+            $parent_guardian->religion = $temporary_parent->religion;
+            $parent_guardian->working_sector = $temporary_parent->working_sector;
+            $parent_guardian->profession = $temporary_parent->profession;
+            $parent_guardian->occupation = $temporary_parent->occupation;
+            $parent_guardian->work_place = $temporary_parent->work_place;
+            $parent_guardian->email = $temporary_parent->email;
+            $parent_guardian->work_address = $temporary_parent->work_address;
+            $parent_guardian->work_telephone = $temporary_parent->work_telephone;
+            $parent_guardian->telephone_mob = $temporary_parent->telephone_mob;
+            $parent_guardian->child_id = $sid;
 
-        $parent_guardian->role = $request->get('role');
-        $parent_guardian->first_name = $request->get('first_name');
-        $parent_guardian->middle_name = $request->get('middle_name');
-        $parent_guardian->last_name = $request->get('last_name');
-        $parent_guardian->NIC_Passport = $request->get('Parent_NIC_Passport');
-        $parent_guardian->nationality = $request->get('pr_nationality');
-        $parent_guardian->race = $request->get('pr_race');
-        $parent_guardian->religion = $request->get('pr_religion');
-        $parent_guardian->working_sector = $request->get('working_sector');
-        $parent_guardian->profession = $request->get('profession');
-        $parent_guardian->occupation = $request->get('occupation');
-        $parent_guardian->work_place = $request->get('work_place');
-        $parent_guardian->email = $request->get('email');
-        $parent_guardian->work_address = $request->get('work_address');
-        $parent_guardian->work_telephone = $request->get('work_telephone');
-        $parent_guardian->telephone_mob = $request->get('telephone_mob');
-        $parent_guardian->child_id = $stdID;
-
-        if($request->hasFile('image')){
-
-            $image_path = Input::file('image');
-
-            if($image_path){
-                $extension = $image_path->getClientOriginalExtension();
-
-                $filename = $stdID.'.'.$extension;
-
-                $large_image_path = 'storage/StudentImages/Large/'.$filename;
-                $medium_image_path = 'storage/StudentImages/Medium/'.$filename;
-                $small_image_path = 'storage/StudentImages/Small/'.$filename;
-
-                Image::make($image_path)->save($large_image_path);
-                Image::make($image_path)->resize(600,600)->save($medium_image_path);
-                Image::make($image_path)->resize(300,300)->save($small_image_path);
-
-                $student->image = $filename;
-            }
-
+            $parent_guardian->save();
         }
 
         $student->save();
-        $parent_guardian->save();
 
-
-
-        if($request->get('source') == 'admin'){
-            return redirect('/printID')->with('success', 'Student has been added to the System Successfully');
+        if($temporary_parent->temporary_student->count() < 2){
+            $temporary_parent->delete();
         }
-        elseif ($request->get('source') == 'joinUs'){
-            return redirect('/printID')->with('success', 'Your Application has been submitted Successfully');
-        }
+
+        $temporary_student->delete();
+
+        return redirect('/printID/'.$sid);
+
     }
 
     public function Demo_store()
@@ -196,14 +166,36 @@ class StudentController extends Controller
             }
 
 
-
+        $class = random_int(1,13);
+        $stdID =  $this->student_id_generator($class);
 
         if($parent_ID){
             $student->parent_Id = (string)$prId;
+
+            $parent_guardian->prId = strval($prId);
+            $parent_guardian->role = 'Father';
+            $parent_guardian->first_name = 'Hasitha';
+            $parent_guardian->middle_name = 'Gayan';
+            $parent_guardian->last_name = 'Gunawardane';
+            $parent_guardian->NIC_Passport = '962573603v';
+            $parent_guardian->nationality = 'Sinhalease';
+            $parent_guardian->race = 'Sinhala';
+            $parent_guardian->religion = 'Buddhist';
+            $parent_guardian->working_sector = 'Government';
+            $parent_guardian->profession = 'Docter';
+            $parent_guardian->occupation = '-';
+            $parent_guardian->work_place = '-';
+            $parent_guardian->email = str_random(9).'@gmail.com';
+            $parent_guardian->work_address = '-';
+            $parent_guardian->work_telephone = '0112847519';
+            $parent_guardian->telephone_mob = '0711394878';
+            $parent_guardian->child_id = $stdID;
+
+
+            $parent_guardian->save();
         }
 
-        $class = random_int(1,13);
-        $stdID =  $this->student_id_generator($class);
+
 
 
         $student->sid =  $stdID;
@@ -226,24 +218,7 @@ class StudentController extends Controller
         $student->blood_group = 'A+';
 
 
-        $parent_guardian->prId = strval($prId);
-        $parent_guardian->role = 'Father';
-        $parent_guardian->first_name = 'Hasitha';
-        $parent_guardian->middle_name = 'Gayan';
-        $parent_guardian->last_name = 'Gunawardane';
-        $parent_guardian->NIC_Passport = '962571603v';
-        $parent_guardian->nationality = 'Sinhalease';
-        $parent_guardian->race = 'Sinhala';
-        $parent_guardian->religion = 'Buddhist';
-        $parent_guardian->working_sector = 'Government';
-        $parent_guardian->profession = 'Docter';
-        $parent_guardian->occupation = '-';
-        $parent_guardian->work_place = '-';
-        $parent_guardian->email = str_random(9).'@gmail.com';
-        $parent_guardian->work_address = '-';
-        $parent_guardian->work_telephone = '0112847519';
-        $parent_guardian->telephone_mob = '0711394878';
-        $parent_guardian->child_id = $stdID;
+
 
 
 
@@ -269,7 +244,6 @@ class StudentController extends Controller
 
         $student->save();
 
-        $parent_guardian->save();
 
 
 
@@ -319,8 +293,44 @@ return $prId;
     public function update(Request $request, $sid)
     {
         $student = Student::find($sid);
-        $parent_guardian = Parent_Guardian::find($sid);
 
+        $parent_guardian = Parent_Guardian::find($student->parent_Id);
+
+//        $parent_students = $parent_guardian->student;
+//
+//        $student_count = $parent_students->count();
+//
+//        if($student_count > 1){
+//
+//            foreach ($parent_students as $parent_student){
+//
+//                $parent = $parent_student->Parent_Guardian;
+//
+//                $parent->role = $request->get('role');
+//                $parent->first_name = $request->get('first_name');
+//                $parent->middle_name = $request->get('middle_name');
+//                $parent->last_name = $request->get('last_name');
+//                $parent->NIC_Passport = $request->get('Parent_NIC_Passport');
+//                $parent->nationality = $request->get('pr_nationality');
+//                $parent->race = $request->get('pr_race');
+//                $parent->religion = $request->get('pr_religion');
+//                $parent->working_sector = $request->get('working_sector');
+//                $parent->profession = $request->get('profession');
+//                $parent->occupation = $request->get('occupation');
+//                $parent->work_place = $request->get('work_place');
+//                $parent->email = $request->get('email');
+//                $parent->work_address = $request->get('work_address');
+//                $parent->work_telephone = $request->get('work_telephone');
+//                $parent->telephone_mob = $request->get('telephone_mob');
+//                $parent->child_id = $sid;
+//
+//                $parent->save();
+//            }
+//
+//        }
+//        else{
+
+ //       }
         $this->validate(request(), [
             'salutation'=> 'required',
             'first_Name'=> 'required',
@@ -395,12 +405,14 @@ return $prId;
         $parent_guardian->telephone_mob = $request->get('telephone_mob');
         $parent_guardian->child_id = $sid;
 
+
+
             $image_path = Input::file('image');
 
             if($image_path){
                 $extension = $image_path->getClientOriginalExtension();
 
-                $filename = $sid.'_'.random_int(1,10).'.'.$extension;
+                $filename = $sid.'.'.$extension;
 
                 $large_image_path = 'storage/StudentImages/Large/'.$filename;
                 $medium_image_path = 'storage/StudentImages/Medium/'.$filename;
@@ -475,9 +487,9 @@ return $prId;
 
             if($last_digits < 10)
                 $id_last_part = '000'.$last_digits;
-            elseif ($last_digits < 100 && $last_digits > 10)
+            elseif ($last_digits < 100 && $last_digits >= 10)
                 $id_last_part = '00'.$last_digits;
-            elseif($last_digits < 1000 && $last_digits > 100)
+            elseif($last_digits < 1000 && $last_digits >= 100)
                 $id_last_part = '0'.$last_digits;
             else
                 $id_last_part = $last_digits;
@@ -530,9 +542,9 @@ return $prId;
 
             if($last_digits < 10)
                 $id_last_part = '000'.$last_digits;
-            elseif ($last_digits < 100 && $last_digits > 10)
+            elseif ($last_digits < 100 && $last_digits >= 10)
                 $id_last_part = '00'.$last_digits;
-            elseif($last_digits < 1000 && $last_digits > 100)
+            elseif($last_digits < 1000 && $last_digits >= 100)
                 $id_last_part = '0'.$last_digits;
             else
                 $id_last_part = $last_digits;
@@ -553,6 +565,7 @@ return $prId;
         $queryunsuccess =null;
         return view('Admin.User_Management.Student.search_student',compact('students','parents','querysuccess','queryunsuccess'));
     }
+
     public function search(Request $request){
 
         $this->validate(request(), [

@@ -139,7 +139,7 @@ Route::get('/register_admin','customAuthController@showRegisterForm')->name('sho
 Route::post('/register_admin','customAuthController@register')->name('register');
 
 Route::post('/logout_user','customAuthController@logout')->name('logout');
-Route::resource('students','StudentController');
+
 
 Route::get('/access_denied',function (){
     return view('auth.access_denied');
@@ -152,6 +152,7 @@ Route::get('/admin/dashboard', 'AdminController@showAdminDashboard');
 
 Route::get('search_student', 'StudentController@search')->name('search');
 Route::get('search','StudentController@showSearchView')->name('showSearchView');
+Route::get('new-admissions','TemporaryStudentsController@showNewAdmissions')->name('showNewAdmissions');
 
 // Teacher Routes
 Route::resource('teachers','TeacherController');
@@ -162,6 +163,11 @@ Route::get('/add', 'TeacherController@add');
 Route::get('/student/dashboard', 'StudentController@showStudentDashboard');
 
 Route::get('/id', 'StudentController@student_id_generator');
+
+Route::resource('students','StudentController');
+
+Route::resource('temporary_students','TemporaryStudentsController');
+
 // parent routes
 Route::resource('parent_guardians','parentController');
 
@@ -192,9 +198,9 @@ Route::get('/download',function(){
 
 Route::get('/download-application','pdfController@stdApplication');
 
-Route::get('/addDemoData','StudentController@Demo_store');
+Route::get('/addDemoData','TemporaryStudentsController@Demo_store');
 
-Route::get('/printID','pdfController@stdIDCard');
+Route::get('/printID/{id}','pdfController@stdIDCard');
 
 // Email routes
 

@@ -31,7 +31,7 @@
     </div>
 
 </div>
-<div class="row" style="margin-top: 50px">
+<div class="row" style="margin-top: 30px">
 
     <table class="table table-dark">
         <tbody>
@@ -45,6 +45,11 @@
 
             <td scope="col" colspan="4" class="bg-danger">Student Information</td>
 
+        </tr>
+        <tr>
+
+
+            <td colspan="4" scope="col" align="center"><img src="{{asset('storage/StudentImages/Large/'.$student['image'])}}" class="rounded-circle" style="width:210px;height: 230px;border: 2px solid crimson" ></td>
         </tr>
         <tr>
 
@@ -134,37 +139,37 @@
         <tr>
 
             <td colspan="2" scope="col">Parent/Guardian :</td>
-            <td colspan="2" scope="col">{{$student->Parent_Guardian['role']}}</td>
+            <td colspan="2" scope="col">{{$student->Temporary_Parent_Guardian['role']}}</td>
         </tr>
         <tr>
 
             <td colspan="2" scope="col">Parent/Guardian Full Name :</td>
             <td colspan="2" scope="col">
                 @if($student->Parent_Guardian['role'] == 'Father')
-                    Mr.{{$student->Parent_Guardian['first_name']}} {{$student->Parent_Guardian['middle_name']}} {{$student->Parent_Guardian['last_name']}}</td>
+                    Mr.{{$student->Parent_Guardian['first_name']}} {{$student->Temporary_Parent_Guardian['middle_name']}} {{$student->Temporary_Parent_Guardian['last_name']}}</td>
                 @else
-                Mrs.{{$student->Parent_Guardian['first_name']}} {{$student->Parent_Guardian['middle_name']}} {{$student->Parent_Guardian['last_name']}}</td>
+                Mrs.{{$student->Temporary_Parent_Guardian['first_name']}} {{$student->Temporary_Parent_Guardian['middle_name']}} {{$student->Temporary_Parent_Guardian['last_name']}}</td>
                 @endif
         </tr>
         <tr>
 
             <td colspan="2" scope="col">Parent/Guardian Passport / NIC Number :</td>
-            <td colspan="2" scope="col">{{$student->Parent_Guardian['NIC_Passport']}}</td>
+            <td colspan="2" scope="col">{{$student->Temporary_Parent_Guardian['NIC_Passport']}}</td>
         </tr>
         <tr>
 
             <td colspan="2" scope="col">Parent/Guardian Nationality :</td>
-            <td colspan="2" scope="col">{{$student->Parent_Guardian['nationality']}}</td>
+            <td colspan="2" scope="col">{{$student->Temporary_Parent_Guardian['nationality']}}</td>
         </tr>
         <tr>
 
             <td colspan="2" scope="col">Parent/Guardian Race :</td>
-            <td colspan="2" scope="col">{{$student->Parent_Guardian['race']}}</td>
+            <td colspan="2" scope="col">{{$student->Temporary_Parent_Guardian['race']}}</td>
         </tr>
         <tr>
 
             <td colspan="2" scope="col">Parent/Guardian Religion :</td>
-            <td colspan="2" scope="col">{{$student->Parent_Guardian['religion']}}</td>
+            <td colspan="2" scope="col">{{$student->Temporary_Parent_Guardian['religion']}}</td>
         </tr>
         <tr>
 
@@ -174,22 +179,22 @@
         <tr>
 
             <td colspan="2" scope="col">Parent/Guardian Working Sector :</td>
-            <td colspan="2" scope="col">{{$student->Parent_Guardian['working_sector']}}</td>
+            <td colspan="2" scope="col">{{$student->Temporary_Parent_Guardian['working_sector']}}</td>
         </tr>
         <tr>
 
             <td colspan="2" scope="col">Parent/Guardian Profession :</td>
-            <td colspan="2" scope="col">{{$student->Parent_Guardian['profession']}}</td>
+            <td colspan="2" scope="col">{{$student->Temporary_Parent_Guardian['profession']}}</td>
         </tr>
         <tr >
 
             <td colspan="2" scope="col">Parent/Guardian Occupation :</td>
-            <td colspan="2" scope="col">{{$student->Parent_Guardian['occupation']}}</td>
+            <td colspan="2" scope="col">{{$student->Temporary_Parent_Guardian['occupation']}}</td>
         </tr>
         <tr >
 
             <td colspan="2" scope="col">Parent/Guardian Place of Work :</td>
-            <td colspan="2" scope="col">{{$student->Parent_Guardian['work_place']}}</td>
+            <td colspan="2" scope="col">{{$student->Temporary_Parent_Guardian['work_place']}}</td>
         </tr>
         <tr>
 
@@ -199,22 +204,22 @@
         <tr>
 
             <td colspan="2" scope="col">Parent/Guardian Email Address :</td>
-            <td colspan="2" scope="col">{{$student->Parent_Guardian['email']}}</td>
+            <td colspan="2" scope="col">{{$student->Temporary_Parent_Guardian['email']}}</td>
         </tr>
         <tr>
 
             <td colspan="2" scope="col">Parent/Guardian Office Address :</td>
-            <td colspan="2" scope="col">{{$student->Parent_Guardian['work_address']}}</td>
+            <td colspan="2" scope="col">{{$student->Temporary_Parent_Guardian['work_address']}}</td>
         </tr>
         <tr>
 
             <td colspan="2" scope="col">Parent/Guardian Office Phone :</td>
-            <td colspan="2" scope="col">{{$student->Parent_Guardian['work_telephone']}}</td>
+            <td colspan="2" scope="col">{{$student->Temporary_Parent_Guardian['work_telephone']}}</td>
         </tr>
         <tr>
 
             <td colspan="2" scope="col">Parent/Guardian Telephone No(Mob) :</td>
-            <td colspan="2" scope="col">{{$student->Parent_Guardian['telephone_mob']}}</td>
+            <td colspan="2" scope="col">{{$student->Temporary_Parent_Guardian['telephone_mob']}}</td>
         </tr>
         </tbody>
     </table>
