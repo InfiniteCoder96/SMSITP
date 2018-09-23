@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddPrimarykeyToParentGuardiansTable extends Migration
+class AddPrimarykeyToResultsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddPrimarykeyToParentGuardiansTable extends Migration
      */
     public function up()
     {
-        Schema::table('parent__guardians', function (Blueprint $table) {
-            $table->primary('id');
+        Schema::table('results', function (Blueprint $table) {
+            $table->increments('id');
         });
     }
 
@@ -25,7 +25,7 @@ class AddPrimarykeyToParentGuardiansTable extends Migration
      */
     public function down()
     {
-        Schema::table('parent__guardians', function (Blueprint $table) {
+        Schema::table('results', function (Blueprint $table) {
             //
         });
     }

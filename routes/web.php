@@ -48,10 +48,6 @@ Route::get('/ECadmin/dashboard', function (){
     return view('Admin.Exam_Centre_Management.dashboard') ;
 });
 
-Route::get('/ECadmin/viewResults', function (){
-    return view('Admin.Exam_Centre_Management.viewResults') ;
-});
-
 Route::get('/ECadmin/publishResults', function (){
     return view('Admin.Exam_Centre_Management.publishResults') ;
 });
@@ -59,6 +55,42 @@ Route::get('/ECadmin/publishResults', function (){
 Route::get('/ECadmin/questionBank', function (){
     return view('Admin.Exam_Centre_Management.questionBank') ;
 });
+
+//new routes
+
+Route::resource('results','ResultController');
+
+Route::get('/ECadmin/viewResults','ResultController@index') ;
+
+//Route::get('/ECadmin/publishResults','ResultController@index1') ;
+
+Route::resource('qBanks','QBankController');
+
+Route::get('/ECadmin/searchResults','ResultController@create1');
+
+Route::get('/search','ResultController@search');
+
+Route::get('/QBank','QBankController@searchQBank');
+
+Route::get('/ECadmin/resultsHome', function (){
+    return view('Admin.Exam_Centre_Management.results') ;
+});
+
+Route::get('/ECadmin/studentsResults', function (){
+    return view('Admin.Exam_Centre_Management.studentsResults') ;
+});
+
+Route::get('/searchBySId','ResultController@searchBySId');
+
+Route::get('/pdf','ResultController@downloadPdf');
+
+Route::get('/ECadmin/dashboard','QBankController@dashboardController');
+
+//Route::get('/chartView','ResultController@chartIndex');
+//
+//Route::get('/chart','ResultController@chart');
+
+
 
 
 //Academic Manager Routes
@@ -102,13 +134,6 @@ Route::get('/NAadmin/manage-teacher-in-charge', function (){
     return view('Admin.Non_Academic_Management.manage_sports') ;
 });
 
-Route::get('/NAadmin/manage-achievements', function (){
-    return view('Admin.Exam_Centre_Management.publishResults') ;
-});
-
-Route::get('/NAadmin/manage-coaches', function (){
-    return view('Admin.Exam_Centre_Management.questionBank') ;
-});
 //Transport Manager Routes
 
 Route::get('/Tadmin/dashboard', function (){
@@ -150,8 +175,9 @@ Route::match(['get','post'],'/admin/manage-students', 'StudentController@addStud
 
 Route::get('/admin/dashboard', 'AdminController@showAdminDashboard');
 
+
 Route::get('search_student', 'StudentController@search')->name('search');
-Route::get('search','StudentController@showSearchView')->name('showSearchView');
+Route::get('student_search','StudentController@showSearchView')->name('showSearchView');
 
 // students routes
 Route::get('/student/dashboard', 'StudentController@showStudentDashboard');
@@ -223,6 +249,24 @@ Route::get('/LibraryAdmin/nonAcademicStaff', function (){
 Route::resource('books','bookController');
 
 
-Route::get('/test-firebase', function (){
-    return view('Admin.User_Management.Admin.test') ;
+Route::get('/test-firebase', function () {
+    return view('Admin.User_Management.Admin.test');
 });
+Route::resource('students','StudentController');
+
+//Library Manager Routes
+
+Route::get('/library/dashboard', function (){
+    return view('Admin.Library_Management.dashboard') ;
+});
+
+Route::get('/Library/viewAllMembers', function (){
+    return view('Admin.Library_Management.viewAllMembers') ;
+});
+
+Route::get('/LibraryAdmin/addBookForm', function (){
+    return view('Admin.Library_Management.addBookForm') ;
+});
+
+
+
