@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddPrimarykeyToSalaryTable extends Migration
+class CreateLibrarySettingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class AddPrimarykeyToSalaryTable extends Migration
      */
     public function up()
     {
-        Schema::table('salary', function (Blueprint $table) {
-            $table->primary('sid');
+        Schema::create('library_settings', function (Blueprint $table) {
+           // $table->increments('id');
+            $table->string('noofdays');
+            $table->string('defaultfine');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +28,6 @@ class AddPrimarykeyToSalaryTable extends Migration
      */
     public function down()
     {
-        Schema::table('salary', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('library_settings');
     }
 }
