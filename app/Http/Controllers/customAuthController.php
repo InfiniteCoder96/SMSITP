@@ -58,6 +58,10 @@ class customAuthController extends Controller
         elseif(Auth::guard('admin')->attempt(['email' => $request->email,'password' => $request ->password, 'role' => 'LibraryMgr'])){
             return redirect('/library/dashboard');
         }
+        elseif(Auth::attempt(['email' => $request->email,'password' => $request ->password])){
+            \session()->get();
+            return redirect('/parent/dashboard');
+        }
 
             return back()->with('Status', 'These credentials are not in our records');
 

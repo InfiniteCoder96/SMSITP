@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Parent_Guardian;
 use App\Student;
 use App\TemporaryStudent;
+use App\User;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Hash;
 use Intervention\Image\Facades\Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
@@ -124,8 +126,27 @@ class StudentController extends Controller
             $parent_guardian->telephone_mob = $temporary_parent->telephone_mob;
             $parent_guardian->child_id = $sid;
 
+            User::create([
+                'id' => $prId,
+                'email' => $temporary_parent->email,
+                'password' => Hash::make($prId),
+            ]);
+
             $parent_guardian->save();
         }
+
+
+        User::create([
+            'id' => $parent_id,
+            'email' => $temporary_parent->email,
+            'password' => Hash::make($parent_id),
+        ]);
+
+        User::create([
+            'id' => $sid,
+            'email' => $temporary_student->Email_Address,
+            'password' => Hash::make($sid),
+        ]);
 
         $student->save();
 
@@ -134,6 +155,8 @@ class StudentController extends Controller
         }
 
         $temporary_student->delete();
+
+
 
         return redirect('/printID/'.$sid);
 
