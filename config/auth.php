@@ -55,17 +55,6 @@ return [
             'driver' => 'token',
             'provider' => 'admins',
         ],
-
-        'parent' => [
-            'driver' => 'session',
-            'provider' => 'parents',
-        ],
-
-        'parent-api' => [
-            'driver' => 'token',
-            'provider' => 'parents',
-        ],
-
     ],
 
     /*
@@ -88,17 +77,12 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\User::class,
+            'model' => App\Admin::class,
 
         ],
         'admins' => [
             'driver' => 'eloquent',
             'model' => App\Admin::class,
-
-        ],
-        'parents' => [
-            'driver' => 'eloquent',
-            'model' => App\Parent_Guardian::class,
 
         ],
 
@@ -133,11 +117,6 @@ return [
             'provider' => 'admins',
             'table' => 'password_resets',
             'expire' => 15,
-        ],
-        'parents' => [
-            'provider' => 'parents',
-            'table' => 'password_resets',
-            'expire' => 60,
         ],
     ],
 

@@ -7,18 +7,18 @@
             <!-- Logo -->
             <!-- ============================================================== -->
             <a class="navbar-brand" href="{{url('/')}}">
-                <!-- Logo icon -->
-                <b class="logo-icon p-l-10">
-                    <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
-                    <!-- Dark Logo icon -->
-                    <img src="{{asset('assets/images/logo-icon.png')}}" alt="homepage" class="light-logo" />
+            {{--<!-- Logo icon -->--}}
+            {{--<b class="logo-icon p-l-10">--}}
+            {{--<!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->--}}
+            {{--<!-- Dark Logo icon -->--}}
+            {{--<img src="{{asset('assets/images/logo-icon.png')}}" alt="homepage" class="light-logo" />--}}
 
-                </b>
-                <!--End Logo icon -->
+            {{--</b>--}}
+            <!--End Logo icon -->
                 <!-- Logo text -->
                 <span class="logo-text">
                              <!-- dark Logo text -->
-                             <img src="{{asset('assets/images/logo-text.png')}}" alt="homepage" class="light-logo" />
+                             <img src="{{asset('assets/images/NewImage.png')}}" alt="homepage" class="light-logo" />
 
                         </span>
                 <!-- Logo icon -->
@@ -164,6 +164,7 @@
 
                     </div>
 
+                    <a class="nav-link"><button class="btn btn-outline-purple" data-toggle="modal" data-target="#loginModal"></button></a>
 
                 </li>
 

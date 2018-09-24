@@ -211,27 +211,6 @@
         modal.find('.modal-body #book_id').val(bookId);
     })
 
-    $('#deleteConfirmationModal').on('show.bs.modal', function(event){
-        var button = $(event.relatedTarget)
-
-        var sid = button.data('id')
-
-        var modal = $(this)
-
-        modal.find('.modal-footer #temp_sid').val(sid);
-
-    })
-
-    $('#acceptConfirmationModal').on('show.bs.modal', function(event){
-        var button = $(event.relatedTarget)
-
-        var sid = button.data('id')
-
-        var modal = $(this)
-
-        modal.find('.modal-footer #temp_sid').val(sid);
-
-    })
 
     $(document).ready(function(){
         var sid = $("#sid input").val();
@@ -241,31 +220,6 @@
     })
 </script>
 
-<script>
-    $('#updateAcademicStaffDetailsModal').on('show.bs.modal', function(event){
-        var button = $(event.relatedTarget)
-
-
-        var id = button.data('id')
-        var rid = button.data('rid')
-        var name = button.data('name')
-        var category = button.data('category')
-        var contact_number = button.data('contact_number')
-
-        var modal = $(this)
-
-
-        modal.find('.modal-body #id').val(id);
-        modal.find('.modal-body #rid').val(rid);
-        modal.find('.modal-body #name').val(name);
-        modal.find('.modal-body #category').val(category);
-        modal.find('.modal-body #contact_number').val(contact_number);
-    })
-
-</script>
-
-
-
 <!-- ============================================================== -->
 <!-- User Profile Modal -->
 <!-- ============================================================== -->
@@ -273,9 +227,6 @@
 @include('layouts.AcademicLayouts.updateClassTeacherDetailsModal')
 @include('layouts.LibraryLayouts.addNewBookModal')
 
-@include('layouts.HRLayouts.updatePlayrollDetailsModal')
-
-@include('layouts.HRLayouts.updateNonAcademicStaffDetailsModal')
 <!-- ============================================================== -->
 <!-- End User Profile Modal -->
 <!-- ============================================================== -->
