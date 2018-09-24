@@ -232,3 +232,4 @@ Route::get('/totalmembers','libraryDashboardController@countofmembers');
 //    return view('Admin.Library_Management.viewAllReturnBooks');
 //});
 Route::get('/library/dashboard','libraryDashboardController@create');
+Route::get('/dashboard','libraryDashboardController@create');
