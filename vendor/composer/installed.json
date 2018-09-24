@@ -1617,15 +1617,20 @@
     },
     {
         "name": "laravel/framework",
+        "version": "v5.6.34",
+        "version_normalized": "5.6.34.0",
         "version": "v5.6.38",
         "version_normalized": "5.6.38.0",
         "source": {
             "type": "git",
             "url": "https://github.com/laravel/framework.git",
+            "reference": "66c9cf8119b422b71273271db1f12e20d74ad49b"
             "reference": "38d838bab9434af79e8ab274ae63f52f7ed45d6e"
         },
         "dist": {
             "type": "zip",
+            "url": "https://api.github.com/repos/laravel/framework/zipball/66c9cf8119b422b71273271db1f12e20d74ad49b",
+            "reference": "66c9cf8119b422b71273271db1f12e20d74ad49b",
             "url": "https://api.github.com/repos/laravel/framework/zipball/38d838bab9434af79e8ab274ae63f52f7ed45d6e",
             "reference": "38d838bab9434af79e8ab274ae63f52f7ed45d6e",
             "shasum": ""
@@ -1723,6 +1728,7 @@
             "symfony/psr-http-message-bridge": "Required to psr7 bridging features (~1.0)."
         },
         "time": "2018-09-04T13:15:09+00:00",
+        "time": "2018-08-21T13:44:37+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -3282,17 +3288,22 @@
     },
     {
         "name": "phpunit/phpunit",
+        "version": "7.3.2",
+        "version_normalized": "7.3.2.0",
         "version": "7.3.4",
         "version_normalized": "7.3.4.0",
         "source": {
             "type": "git",
             "url": "https://github.com/sebastianbergmann/phpunit.git",
             "reference": "0356331bf62896dc56e3a15030b23b73f38b2935"
+            "reference": "34705f81bddc3f505b9599a2ef96e2b4315ba9b8"
         },
         "dist": {
             "type": "zip",
             "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/0356331bf62896dc56e3a15030b23b73f38b2935",
             "reference": "0356331bf62896dc56e3a15030b23b73f38b2935",
+            "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/34705f81bddc3f505b9599a2ef96e2b4315ba9b8",
+            "reference": "34705f81bddc3f505b9599a2ef96e2b4315ba9b8",
             "shasum": ""
         },
         "require": {
@@ -3332,6 +3343,7 @@
             "phpunit/php-invoker": "^2.0"
         },
         "time": "2018-09-05T09:58:53+00:00",
+        "time": "2018-08-22T06:39:21+00:00",
         "bin": [
             "phpunit"
         ],
@@ -3620,15 +3632,20 @@
         "name": "psy/psysh",
         "version": "v0.9.8",
         "version_normalized": "0.9.8.0",
+        "version": "v0.9.7",
+        "version_normalized": "0.9.7.0",
         "source": {
             "type": "git",
             "url": "https://github.com/bobthecow/psysh.git",
             "reference": "ed3c32c4304e1a678a6e0f9dc11dd2d927d89555"
+            "reference": "4f5b6c090948773a8bfeea6a0f07ab7d0b24e932"
         },
         "dist": {
             "type": "zip",
             "url": "https://api.github.com/repos/bobthecow/psysh/zipball/ed3c32c4304e1a678a6e0f9dc11dd2d927d89555",
             "reference": "ed3c32c4304e1a678a6e0f9dc11dd2d927d89555",
+            "url": "https://api.github.com/repos/bobthecow/psysh/zipball/4f5b6c090948773a8bfeea6a0f07ab7d0b24e932",
+            "reference": "4f5b6c090948773a8bfeea6a0f07ab7d0b24e932",
             "shasum": ""
         },
         "require": {
@@ -3654,6 +3671,7 @@
             "hoa/console": "A pure PHP readline implementation. You'll want this if your PHP install doesn't already support readline or libedit."
         },
         "time": "2018-09-05T11:40:09+00:00",
+        "time": "2018-08-11T15:54:43+00:00",
         "bin": [
             "bin/psysh"
         ],

@@ -41,6 +41,33 @@ Route::get('/HRadmin/payroll', function (){
     return view('Admin.HR_Management.payroll') ;
 });
 
+Route::resource('recruits','recruitController');
+
+Route::resource('nonacademic','nonacademicController');
+
+Route::get('/search','recruitController@search');
+
+Route::get('/searchNon','nonacademicController@search');
+
+
+
+Route::resource('salary','salaryController');
+
+Route::get('/', function () {
+    return view('form');
+});
+
+Route::post('salary','salaryController@store');
+
+Route::get('/downloadPDF/{sid}','salaryController@downloadPDF');
+
+
+
+
+
+//Route::get('/abc','recruitController@idGenarator');
+
+
 
 //Exam Centre Manager Routes
 

@@ -260,6 +260,7 @@ class ValidClassNamePass extends NamespaceAwarePass
     {
         if (!$this->classExists($name) && !$this->traitExists($name)) {
             throw $this->createError(\sprintf('Class \'%s\' not found', $name), $stmt);
+            throw $this->createError(\sprintf('Class \'%s\' not found', $name), $stmt);
         }
     }
 
