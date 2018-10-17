@@ -1,14 +1,18 @@
 @extends('layouts.app')
+use App\books;
 
 @section('content')
     @include('layouts.LibraryLayouts.header')
     @include('layouts.LibraryLayouts.sideBar')
+    $books = books::all()->toArray();
+    dd($books);
+
 
 <div class="container-fluid">
     <!-- ============================================================== -->
     <!-- Start Page Content -->
     <!-- ============================================================== -->
-    <div class="row">a
+    <div class="row">
         <div class="col-md-12">
             <div class="card">
                 <form class="form-horizontal">
@@ -43,7 +47,7 @@
                     </div>
                     <div class="border-top">
                         <div class="card-body">
-                            <button type="button" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
                     </div>
                 </form>
@@ -67,3 +71,4 @@
     <!-- End Right sidebar -->
     <!-- ============================================================== -->
 </div>
+    @endsection

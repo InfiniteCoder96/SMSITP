@@ -26,4 +26,5 @@ class pdfController extends Controller
         return $pdf->stream('St.John College Student Identity Card.pdf');
 
     }
+
 }

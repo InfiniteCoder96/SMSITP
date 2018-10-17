@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\books;
+use Barryvdh\DomPDF\Facade;
 
 
 
@@ -17,6 +18,7 @@ class bookController extends Controller
     public function index()
     {
         $boooks = books::all()->toArray();
+        $boooks = array_reverse($boooks, true);
         return view('Admin.Library_Management.viewAllBooksTable', compact('boooks'));
     }
 
@@ -46,9 +48,10 @@ class bookController extends Controller
         ]);
 
         books::create($newAddBook);
-
-        return back() ->with('success','New book is added');
+        return redirect('books')->with('success','New book is added');
+        //return back() ->with('success','New book is added.');
     }
+
 
     /**
      * Display the specified resource.
@@ -82,20 +85,33 @@ class bookController extends Controller
      */
     public function update(Request $request,$id)
     {
-        $book = books::find($request->get('book_id'));
+//        $books = books::find($id);
+//
+//        $this->validate(request(),[
+//            'bookname' => 'required',
+//            'isbn' => 'required',
+//            'authorname' => 'required',
+//            'barcode' => 'required'
+//        ]);
+//        $books->bookname = $request->get('bookname');
+//        $books->isbn = $request->get('isbn');
+//        $books->authorname = $request->get('authorname');
+//        $books->barcode = $request->get('barcode');
+//        $books->save();
 
+        $books = books::find($request->get('bookID'));
         $this->validate(request(),[
             'bookname' => 'required',
             'isbn' => 'required',
             'authorname' => 'required',
             'barcode' => 'required'
         ]);
-        $book->bookname = $request->get('bookname');
-        $book->isbn = $request->get('isbn');
-        $book->authorname = $request->get('authorname');
-        $book->barcode = $request->get('barcode');
-        $book->save();
-        return redirect('books')->with('success','ISBN No:'.$book->isbn.' Book has been updated');
+        $books->bookname = $request->get('bookname');
+        $books->isbn = $request->get('isbn');
+        $books->authorname = $request->get('authorname');
+        $books->barcode = $request->get('barcode');
+        $books->save();
+        return redirect('books')->with('success','Book Name :'.$books->bookname.' Book has been updated');
 
 
 
@@ -110,6 +126,20 @@ class bookController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $books = books::find($id);
+        $books->delete();
+        return redirect('books')->with('success','Book has been  deleted');
     }
+
+    public function downloadPDF(Request $request, $id)
+    {
+
+        $newAddBook = books::find($id);
+        $barcode = $newAddBook->barcode;
+        $pdf = Facade::loadView('Admin.Library_Management.addBookPDF', compact('newAddBook'));
+        return $pdf->download('barcode-'.$barcode.'.pdf');
+        //return redirect('books')->with('success','Book has been  deleted');
+    }
+
+
 }

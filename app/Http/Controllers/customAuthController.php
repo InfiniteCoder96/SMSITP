@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Admin;
+use App\Parent_Guardian;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
@@ -35,7 +36,7 @@ class customAuthController extends Controller
 
     public function showLoginForm(){
         if(Auth::guard('admin')->user()){
-            return redirect('/admin/dashboard');
+            return redirect('/');
         }
         else{
             return view('auth.login');
@@ -59,10 +60,28 @@ class customAuthController extends Controller
             return redirect('/library/dashboard');
         }
         elseif(Auth::attempt(['email' => $request->email,'password' => $request ->password])){
-            \session()->get();
+
+            $request->session()->put('prId', Auth::user()->name);
             return redirect('/parent/dashboard');
         }
-
+        elseif(Auth::guard('admin')->attempt(['email' => $request->email,'password' => $request ->password, 'role' => 'AcademicMgr'])){
+            return redirect('/Aadmin/Dashboard');
+        }
+        elseif(Auth::guard('admin')->attempt(['email' => $request->email,'password' => $request ->password, 'role' => 'FinanceMgr'])){
+            return redirect('/FMadmin/dashboard');
+        }
+        elseif(Auth::guard('admin')->attempt(['email' => $request->email,'password' => $request ->password, 'role' => 'TransportMgr'])){
+            return redirect('/Tadmin/dashboard');
+        }
+        elseif(Auth::guard('admin')->attempt(['email' => $request->email,'password' => $request ->password, 'role' => 'HRMgr'])){
+            return redirect('/HRadmin/dashboard');
+        }
+        elseif(Auth::guard('admin')->attempt(['email' => $request->email,'password' => $request ->password, 'role' => 'ExamCenterMgr'])){
+            return redirect('/ECadmin/dashboard');
+        }
+        elseif(Auth::guard('admin')->attempt(['email' => $request->email,'password' => $request ->password, 'role' => 'NonAcademicMgr'])){
+            return redirect('/NAadmin/dashboard');
+        }
             return back()->with('Status', 'These credentials are not in our records');
 
 

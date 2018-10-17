@@ -1,147 +1,229 @@
 @extends('layouts.app')
 
 @section('content')
+
     @include('layouts.NonAcademicLayouts.header')
     @include('layouts.NonAcademicLayouts.sideBar')
 
-    <!-- ============================================================== -->
-    <!-- Page wrapper  -->
-    <!-- ============================================================== -->
-    <div class="page-wrapper">
+    <div class="page-wrapper" style="background-image: url('/public/assets/images/big/auth-bg.jpg')">
         <!-- ============================================================== -->
         <!-- Bread crumb and right sidebar toggle -->
         <!-- ============================================================== -->
         <div class="page-breadcrumb">
             <div class="row">
                 <div class="col-12 d-flex no-block align-items-center">
-                    <h4 class="page-title">Dashboard</h4>
+
                     <div class="ml-auto text-right">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">NON Academic management</li>
                                 <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+
                             </ol>
                         </nav>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="col-md-3 col-lg-12 col-xlg-6">
+            <div class="card card-hover">
+                <div class="box bg-dark text-center">
+
+                    <h2 class="text-white">SPORTS MANAGEMENT </h2>
+                </div>
+            </div>
+        </div>
+
         <!-- ============================================================== -->
         <!-- End Bread crumb and right sidebar toggle -->
         <!-- ============================================================== -->
         <!-- ============================================================== -->
         <!-- Container fluid  -->
         <!-- ============================================================== -->
-        <div class="container-fluid">
-            <!-- ============================================================== -->
-            <!-- Sales Cards  -->
-            <!-- ============================================================== -->
-            <div class="row">
-                <!-- Column -->
-                <div class="col-md-6 col-lg-2 col-xlg-3">
-                    <div class="card card-hover">
-                        <div class="box bg-cyan text-center">
-                            <h1 class="font-light text-white"><i class="mdi mdi-view-dashboard"></i></h1>
-                            <h6 class="text-white">Dashboard</h6>
-                        </div>
-                    </div>
-                </div>
-                <!-- Column -->
-                <div class="col-md-6 col-lg-4 col-xlg-3">
-                    <div class="card card-hover">
-                        <div class="box bg-success text-center">
-                            <h1 class="font-light text-white"><i class="mdi mdi-chart-areaspline"></i></h1>
-                            <h6 class="text-white">Charts</h6>
-                        </div>
-                    </div>
-                </div>
-                <!-- Column -->
-                <div class="col-md-6 col-lg-2 col-xlg-3">
-                    <div class="card card-hover">
-                        <div class="box bg-warning text-center">
-                            <h1 class="font-light text-white"><i class="mdi mdi-collage"></i></h1>
-                            <h6 class="text-white">Widgets</h6>
-                        </div>
-                    </div>
-                </div>
-                <!-- Column -->
-                <div class="col-md-6 col-lg-2 col-xlg-3">
-                    <div class="card card-hover">
-                        <div class="box bg-danger text-center">
-                            <h1 class="font-light text-white"><i class="mdi mdi-border-outside"></i></h1>
-                            <h6 class="text-white">Tables</h6>
-                        </div>
-                    </div>
-                </div>
-                <!-- Column -->
-                <div class="col-md-6 col-lg-2 col-xlg-3">
-                    <div class="card card-hover">
-                        <div class="box bg-info text-center">
-                            <h1 class="font-light text-white"><i class="mdi mdi-arrow-all"></i></h1>
-                            <h6 class="text-white">Full Width</h6>
-                        </div>
-                    </div>
-                </div>
-                <!-- Column -->
-                <!-- Column -->
-                <div class="col-md-6 col-lg-4 col-xlg-3">
-                    <div class="card card-hover">
-                        <div class="box bg-danger text-center">
-                            <h1 class="font-light text-white"><i class="mdi mdi-receipt"></i></h1>
-                            <h6 class="text-white">Forms</h6>
-                        </div>
-                    </div>
-                </div>
-                <!-- Column -->
-                <div class="col-md-6 col-lg-2 col-xlg-3">
-                    <div class="card card-hover">
-                        <div class="box bg-info text-center">
-                            <h1 class="font-light text-white"><i class="mdi mdi-relative-scale"></i></h1>
-                            <h6 class="text-white">Buttons</h6>
-                        </div>
-                    </div>
-                </div>
-                <!-- Column -->
-                <div class="col-md-6 col-lg-2 col-xlg-3">
-                    <div class="card card-hover">
-                        <div class="box bg-cyan text-center">
-                            <h1 class="font-light text-white"><i class="mdi mdi-pencil"></i></h1>
-                            <h6 class="text-white">Elements</h6>
-                        </div>
-                    </div>
-                </div>
-                <!-- Column -->
-                <div class="col-md-6 col-lg-2 col-xlg-3">
-                    <div class="card card-hover">
-                        <div class="box bg-success text-center">
-                            <h1 class="font-light text-white"><i class="mdi mdi-calendar-check"></i></h1>
-                            <h6 class="text-white">Calnedar</h6>
-                        </div>
-                    </div>
-                </div>
-                <!-- Column -->
-                <div class="col-md-6 col-lg-2 col-xlg-3">
-                    <div class="card card-hover">
-                        <div class="box bg-warning text-center">
-                            <h1 class="font-light text-white"><i class="mdi mdi-alert"></i></h1>
-                            <h6 class="text-white">Errors</h6>
-                        </div>
-                    </div>
-                </div>
-                <!-- Column -->
-            </div>
-            <!-- ============================================================== -->
-            <!-- Sales chart -->
-            <!-- ============================================================== -->
 
-            <!-- ============================================================== -->
-            <!-- Recent comment and chats -->
-            <!-- ============================================================== -->
+        <div class="container-fluid">
+            <div class="row">
+            <div class="col-lg-4 col-lg-4">
+                <div class="card card-hover">
+                    <div class="box bg-orange text-center">
+                        <a href="{{url('/s_students')}}"> <h1 class="font-light text-white"><i class="fa-2x fas fa-users"></i></h1>
+                            <h6 class="text-white">Student </h6></a>
+
+                    </div>
+                </div>
+            </div>
+
+                <!-- Column -->
+            <div class="col-lg-4 col-lg-4">
+                <div class="card card-hover">
+                    <div class="box bg-secondary text-center">
+                        <a href="{{url('/t_incharges')}}"> <h1 class="font-light text-white"><i class="fa-2x fas fa-users"></i></h1>
+                        <h6 class="text-white">Teachers-IN-Charge</h6>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Column -->
+                <div class="col-lg-4 col-lg-4" style="height: 40px">
+                <div class="card card-hover">
+                    <div class="box bg-info text-center">
+                        <a href="{{url('/coaches')}}"><h1 class="font-light text-white"><i class="fa-2x fas fa-users"></i></h1>
+                            <h6 class="text-white">Coaches</h6></a>
+                    </div>
+                </div>
+                </div>
+
+
+            <!-- Column -->
+            <div class="col-lg-4 col-lg-4">
+                <div class="card card-hover">
+                    <div class="box bg-success text-center">
+                        <a href="{{url('/sport_categories')}}"><h1 class="font-light text-white"><i class="fa-2x fas fa-baseball-ball"></i></h1>
+                            <h6 class="text-white">Sports Categories</h6></a>
+                    </div>
+                </div>
+            </div>
+
+                <div class="col-lg-4 col-lg-34">
+                    <div class="card card-hover">
+                        <div class="box bg-purple text-center">
+                            <a href="{{url('/achivements')}}"><h1 class="font-light text-white"><i class="fa-2x fas fa-baseball-ball"></i></h1>
+                                <h6 class="text-white">Achievements</h6></a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="container-fluid">
+                <div class="row" >
+
+
+                    <div class="col-md-3 col-lg-12 col-xlg-6">
+                        <div class="card card-hover">
+                            <div class="box bg-dark text-center">
+
+                                <h2 class="text-white">EVENT MANAGEMENT </h2>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="container-fluid">
+
+                            <div class="col-lg-4 col-lg-4">
+                                <div class="card card-hover">
+                                    <div class="box bg-orange text-center">
+                                        <a href="{{url('/events')}}"> <h1 class="font-light text-white"><i class="fa-2x fas fa-users"></i></h1>
+                                            <h6 class="text-white">Event </h6></a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                    <div class="col-lg-4 col-lg-4">
+                        <div class="card card-hover">
+                            <div class="box bg-orange text-center">
+                                <a href="{{url('/events')}}"> <h1 class="font-light text-white"><i class="fa-2x fas fa-users"></i></h1>
+                                    <h6 class="text-white">Event Gallery </h6></a>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+            <div class="row">
+                <div class="col-lg-4 col-lg-4">
+                    <div class="span12">
+                        <table class="table-condensed table-bordered table-striped">
+                            <thead>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+
+                            <tr>
+                                <th colspan="7">
+                        <span class="btn-group">
+                            <a class="btn"><i class="icon-chevron-left"></i></a>
+                        	<a class="btn active">February 2012</a>
+                        	<a class="btn"><i class="icon-chevron-right"></i></a>
+                        </span>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>Su</th>
+                                        <th>Mo</th>
+                                        <th>Tu</th>
+                                        <th>We</th>
+                                        <th>Th</th>
+                                        <th>Fr</th>
+                                        <th>Sa</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="muted">29</td>
+                                        <td class="muted">30</td>
+                                        <td class="muted">31</td>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>13</td>
+                                        <td>14</td>
+                                        <td>15</td>
+                                        <td>16</td>
+                                        <td>17</td>
+                                        <td>18</td>
+                                    </tr>
+                                    <tr>
+                                        <td>19</td>
+                                        <td class="btn-primary"><strong>20</strong></td>
+                                        <td>21</td>
+                                        <td>22</td>
+                                        <td>23</td>
+                                        <td>24</td>
+                                        <td>25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>26</td>
+                                        <td>27</td>
+                                        <td>28</td>
+                                        <td>29</td>
+                                        <td class="muted">1</td>
+                                        <td class="muted">2</td>
+                                        <td class="muted">3</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+            </div>
+            </div>
         </div>
-        <!-- ============================================================== -->
-        <!-- End Container fluid  -->
-        <!-- ============================================================== -->
+            </div>
+
     </div>
 
+
     @include('layouts.adminLayouts.footer')
+
 @endsection

@@ -1,3 +1,14 @@
+<?php
+use App\books;
+//use PDF;
+use Barryvdh\DomPDF\Facade;
+
+$all_books = books::all()->toArray();
+$last_book = end($all_books);
+
+//dd($last_book["barcode"] + 3);
+?>
+
 <div class="modal" id="addNewBookModal">
     <div class="modal-dialog modal-lg">
         <div class="modal-content bg-dark text-white">
@@ -26,9 +37,9 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="isbn" class="col-sm-3 text-right control-label col-form-label">ISBN </label>
+                                        <label for="isbn" class="col-sm-3 text-right control-label col-form-label">Category </label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="isbn" name="isbn" placeholder="ISBN Here">
+                                            <input type="text" class="form-control" id="isbn" name="isbn" placeholder="Category Here">
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -40,7 +51,7 @@
                                     <div class="form-group row">
                                         <label for="barcode" class="col-sm-3 text-right control-label col-form-label">Barcode</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="barcode" name="barcode" placeholder="Barcode Here">
+                                            <input type="text" value="<?php echo($last_book["barcode"]+1); ?>" class="form-control" id="barcode" name="barcode" placeholder="Barcode Here" readonly>
                                         </div>
                                     </div>
 

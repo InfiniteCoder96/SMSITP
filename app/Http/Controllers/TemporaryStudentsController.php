@@ -260,7 +260,7 @@ class TemporaryStudentsController extends Controller
 //
 //
 //            }
-        $student->image = '18010001_3.jpg';
+        $student->image = '18130001.jpg';
 
 
         $student->save();

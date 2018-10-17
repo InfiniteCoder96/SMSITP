@@ -1,11 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('layouts.ExamCentreLayouts.header')
+    @include('layouts.adminLayouts.header')
     @include('layouts.ExamCentreLayouts.sideBar')
     <!-- ============================================================== -->
     <!-- Page wrapper  -->
     <!-- ============================================================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <div class="page-wrapper">
         <!-- ============================================================== -->
         <!-- Bread crumb and right sidebar toggle -->
@@ -37,98 +39,65 @@
             <!-- ============================================================== -->
             <div class="row">
                 <!-- Column -->
-                <div class="col-md-6 col-lg-2 col-xlg-3">
+                <div class="col-md-1 col-lg-3 col-xlg-3">
                     <div class="card card-hover">
+                        <button type="button" class="btn btn-cyan" onclick="location.href='{{ url('QBank') }}'" >
                         <div class="box bg-cyan text-center">
-                            <h1 class="font-light text-white"><i class="mdi mdi-view-dashboard"></i></h1>
-                            <h6 class="text-white">Dashboard</h6>
-                        </div>
-                    </div>
-                </div>
-                <!-- Column -->
-                <div class="col-md-6 col-lg-4 col-xlg-3">
-                    <div class="card card-hover">
-                        <div class="box bg-success text-center">
-                            <h1 class="font-light text-white"><i class="mdi mdi-chart-areaspline"></i></h1>
-                            <h6 class="text-white">Charts</h6>
-                        </div>
-                    </div>
-                </div>
-                <!-- Column -->
-                <div class="col-md-6 col-lg-2 col-xlg-3">
-                    <div class="card card-hover">
-                        <div class="box bg-warning text-center">
-                            <h1 class="font-light text-white"><i class="mdi mdi-collage"></i></h1>
-                            <h6 class="text-white">Widgets</h6>
-                        </div>
-                    </div>
-                </div>
-                <!-- Column -->
-                <div class="col-md-6 col-lg-2 col-xlg-3">
-                    <div class="card card-hover">
-                        <div class="box bg-danger text-center">
-                            <h1 class="font-light text-white"><i class="mdi mdi-border-outside"></i></h1>
-                            <h6 class="text-white">Tables</h6>
-                        </div>
-                    </div>
-                </div>
-                <!-- Column -->
-                <div class="col-md-6 col-lg-2 col-xlg-3">
-                    <div class="card card-hover">
-                        <div class="box bg-info text-center">
-                            <h1 class="font-light text-white"><i class="mdi mdi-arrow-all"></i></h1>
-                            <h6 class="text-white">Full Width</h6>
-                        </div>
-                    </div>
-                </div>
-                <!-- Column -->
-                <!-- Column -->
-                <div class="col-md-6 col-lg-4 col-xlg-3">
-                    <div class="card card-hover">
-                        <div class="box bg-danger text-center">
                             <h1 class="font-light text-white"><i class="mdi mdi-receipt"></i></h1>
-                            <h6 class="text-white">Forms</h6>
+                            <h6 class="text-white">Question Bank</h6>
                         </div>
+                        </button>
                     </div>
                 </div>
+
                 <!-- Column -->
-                <div class="col-md-6 col-lg-2 col-xlg-3">
+                <div class="col-md-4 col-lg-3 col-xlg-3">
                     <div class="card card-hover">
+                        <button type="button" class="btn btn-danger" onclick="location.href='{{ url('/ECadmin/resultsHome') }}'" >
+                            <div class="box bg-danger text-center">
+                                <h1 class="font-light text-white"><i class="mdi mdi-pencil"></i></h1>
+                                <h6 class="text-white">Add Results</h6>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xlg-3">
+                    <div class="card card-hover">
+                        <button type="button" class="btn btn-success" onclick="location.href='{{ url('/search') }}'" >
+                            <div class="box bg-success text-center">
+                                <h1 class="font-light text-white"><i class="fa fa-trophy"></i></h1>
+                                <h6 class="text-white">Results</h6>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xlg-3">
+                    <div class="card card-hover">
+                        <button type="button" class="btn btn-info" onclick="location.href='{{ url('/searchBySId') }}'" >
                         <div class="box bg-info text-center">
-                            <h1 class="font-light text-white"><i class="mdi mdi-relative-scale"></i></h1>
-                            <h6 class="text-white">Buttons</h6>
+                            <h1 class="font-light text-white"><i class="fa fa-file-text-o"></i></h1>
+                            <h6 class="text-white">Reports</h6>
                         </div>
+                        </button>
                     </div>
                 </div>
-                <!-- Column -->
-                <div class="col-md-6 col-lg-2 col-xlg-3">
-                    <div class="card card-hover">
-                        <div class="box bg-cyan text-center">
-                            <h1 class="font-light text-white"><i class="mdi mdi-pencil"></i></h1>
-                            <h6 class="text-white">Elements</h6>
-                        </div>
-                    </div>
-                </div>
-                <!-- Column -->
-                <div class="col-md-6 col-lg-2 col-xlg-3">
-                    <div class="card card-hover">
-                        <div class="box bg-success text-center">
-                            <h1 class="font-light text-white"><i class="mdi mdi-calendar-check"></i></h1>
-                            <h6 class="text-white">Calnedar</h6>
-                        </div>
-                    </div>
-                </div>
-                <!-- Column -->
-                <div class="col-md-6 col-lg-2 col-xlg-3">
-                    <div class="card card-hover">
-                        <div class="box bg-warning text-center">
-                            <h1 class="font-light text-white"><i class="mdi mdi-alert"></i></h1>
-                            <h6 class="text-white">Errors</h6>
-                        </div>
-                    </div>
-                </div>
-                <!-- Column -->
             </div>
+
+            <div class="col-md-4 col-lg-2 col-xlg-3">
+                <div class="card card-hover">
+                        <div class="box bg-success text-center">
+                            <h1 class="font-light text-white"><i class="mdi mdi-file"></i></h1>
+                            <h6 class="text-white">Sample question papers</h6>
+                            <div class="card-body">
+                                <center><h5 style="font-size:36px;vertical-align: bottom" class="card-title timer" data-from="0" data-to="{{$count}}" data-speed="2000" data-fresh-interval="20"></h5></center>
+
+                            </div>
+                        </div>
+                </div>
+            </div>
+
             <!-- ============================================================== -->
             <!-- Sales chart -->
             <!-- ============================================================== -->

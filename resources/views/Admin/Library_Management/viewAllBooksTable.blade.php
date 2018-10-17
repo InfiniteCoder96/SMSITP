@@ -40,6 +40,21 @@
             <!-- ============================================================== -->
             <!-- Start Page Content -->
             <!-- ============================================================== -->
+            <form action="{{url('searchBooks')}}" method="post" role="search">
+                {{csrf_field()}}
+                <div class="input-group">
+                    <input type="text" class="form-control" name="q" placeholder="Search books">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                </div>
+            </form>
+            <br>
+            <br>
+
+
             <div class="row">
 
 
@@ -66,24 +81,26 @@
                             <table class="table">
                                 <thead class="thead-light">
                                 <tr>
-                                    <th scope="col" style="font-size: 12px">Book ID</th>
-                                    <th scope="col" style="font-size: 12px">ISBN</th>
+                                    {{--<th scope="col" style="font-size: 12px">Book ID</th>--}}
+                                    <th scope="col" style="font-size: 12px">Category</th>
                                     <th scope="col" style="font-size: 12px">Book Name</th>
                                     <th scope="col" style="font-size: 12px">Author</th>
                                     <th scope="col" style="font-size: 12px">Barcode</th>
+                                    <th scope="col" style="font-size: 12px"></th>
                                     <th scope="col" style="font-size: 12px">Action</th>
+                                    <th scope="col" style="font-size: 12px">Print</th>
                                 </tr>
                                 </thead>
                                 <tbody class="customtable">
                                 @foreach($boooks as $book)
                                     <tr>
-                                        <td>{{$book['id']}}</td>
+                                        {{--<td>{{$book['id']}}</td>--}}
                                         <td>{{$book['isbn']}}</td>
                                         <td>{{$book['bookname']}}</td>
                                         <td>{{$book['authorname']}}</td>
                                         <td>{{$book['barcode']}}</td>
 
-                                        <td style="font-size: 12px">
+                                        <td>
                                             <a  ><button class="btn btn-warning btn-xs" data-toggle="modal" data-target="#editBookModal"
 
                                                          data-id="{{$book['id']}}"
@@ -93,12 +110,22 @@
                                                          data-barcode="{{$book['barcode']}}"
 
                                                          type="button">Edit</button></a>
+                                        </td>
+                                        <td>
+                                            <form action="{{action('bookController@destroy', $book['id'])}}" method="post">
+                                                {{csrf_field()}}
+                                                <input name="_method" type="hidden" value="DELETE">
+                                                <button class="btn btn-danger" type="submit">Delete</button>
+                                            </form>
+                                        </td>
+                                        <td>
+                                            <form action="{{url('downloadPDF', $book['id'])}}" method="post">
+                                                {{csrf_field()}}
 
-
-                                        <button type="button" class="btn btn-danger btn-xs">Delete</button>
-                                    </td>
+                                                <button class="btn btn-orange" type="submit">Barcode</button>
+                                            </form>
+                                        </td>
                                 </tr>
-
                                 @endforeach
                                 </tbody>
                             </table>
@@ -144,9 +171,9 @@
 
     @include('layouts.adminLayouts.footer')
 
-    {{--@if($books == null)--}}
+    @if($books == null)
         @include('layouts.LibraryLayouts.editBookModal')
-    {{--@endif--}}
+    @endif
 
 
 

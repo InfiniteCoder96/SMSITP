@@ -13,10 +13,10 @@
                         <div class="card">
 
 
-                            <form  action="{{action('bookController@update',$book['id'])}}" method="post">
+                            <form  action="{{action('bookController@update','test')}}" method="post">
                                 {{method_field('patch')}}
                                 {{csrf_field()}}
-                                <input type="hidden" id="book_id" name="book_id" >
+                                <input type="hidden" id="book_id" name="bookID">
                                 <div class="card-body bg-dark">
                                     <h4 class="card-title">Book Details</h4>
                                     <div class="form-group row">
@@ -26,7 +26,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="isbn" class="col-sm-3 text-right control-label col-form-label">ISBN </label>
+                                        <label for="isbn" class="col-sm-3 text-right control-label col-form-label">Category </label>
                                         <div class="col-sm-9">
                                             <input type="text" class="form-control" id="isbn" name="isbn" value="">
                                         </div>
@@ -40,7 +40,7 @@
                                     <div class="form-group row">
                                         <label for="barcode" class="col-sm-3 text-right control-label col-form-label">Barcode</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="barcode" name="barcode" >
+                                            <input type="text" class="form-control" id="barcode" name="barcode" readonly>
                                         </div>
                                     </div>
 

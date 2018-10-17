@@ -22,40 +22,27 @@
             </div>
         </div>
         <div class="container-fluid">
-            {{--<div class="row">--}}
-                {{--<div class="col-md-4">--}}
-                    {{--<div class="card text-white bg-success mb-3" >--}}
-                        {{--<div class="card-header bg-dark">Class Teachers</div>--}}
-                        {{--<div class="card-body">--}}
-                            {{--<h5 class="card-title">Everything Fine</h5>--}}
-
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="col-md-4">--}}
-                    {{--<div class="card text-white bg-danger mb-3" >--}}
-                        {{--<div class="card-header bg-dark">Class Students Amount</div>--}}
-                        {{--<div class="card-body">--}}
-                            {{--<h5 class="card-title">Something Wrong in Class 8A</h5>--}}
-
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="col-md-4">--}}
-                    {{--<div class="card text-white bg-warning mb-3" >--}}
-                        {{--<div class="card-header bg-dark">Absent Teachers</div>--}}
-                        {{--<div class="card-body">--}}
-                            {{--<h5 class="card-title">5 class teachers absent</h5>--}}
-
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
+            <h2></h2><br  />
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div><br />
+            @endif
+            @if (\Session::has('success'))
+                <div class="alert alert-success">
+                    <p>{{ \Session::get('success') }}</p>
+                </div><br />
+            @endif
 
 
             <div class="row">
                 <div class="col-md-4">
-                    <form class="form-horizontal" action="#" method="get">
-
+                    <form class="form-horizontal" action="{{url('sport_categories')}}" method="post">
+                        {{csrf_field()}}
 
 
                         <div class="card bg-dark text-white">
@@ -63,28 +50,23 @@
                                 <h5 class="card-title m-b-0">Add New Sport</h5>
                             </div>
                             <div class="card-body">
+
                                 <div class="form-group row">
-                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">Sport ID</label>
+                                    <label for="sports_name" class="col-sm-3 text-right control-label col-form-label">Sport Name</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="fname" placeholder="Sport ID Name Here" required>
+                                        <input type="text" class="form-control" id="sports_name" name="sports_name" placeholder="Sport Name Here" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">Sport Name</label>
+                                    <label for="coach_id" class="col-sm-3 text-right control-label col-form-label">Coach ID</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="fname" placeholder="Sport Name Here" required>
+                                        <input type="text" class="form-control" id="coach_id" name="coach_id" placeholder="Coach ID Here" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">Coach</label>
+                                    <label for="teacher_in_charge_id" class="col-sm-3 text-right control-label col-form-label">Teacher-in-charge ID</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="fname" placeholder="Coach Name Here" required>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">Teacher-in-charge</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="fname" placeholder="Teacher-in-charge name Here" required>
+                                        <input type="text" class="form-control" id="teacher_in_charge_id" name="teacher_in_charge_id" placeholder="Teacher-in-charge ID Here" required>
                                     </div>
                                 </div>
 
@@ -126,15 +108,17 @@
                                             <span class="checkmark"></span>
                                         </label>
                                     </th>
-                                    <th scope="col" style="font-size: 12px">Sport</th>
-                                    <th scope="col" style="font-size: 12px">Sport Id</th>
-                                    <th scope="col" style="font-size: 12px">Coach</th>
-                                    <th scope="col" style="font-size: 12px">Teacher-in-charge</th>
+                                    <th scope="col" style="font-size: 12px">Sport ID</th>
+                                    <th scope="col" style="font-size: 12px">Sport name</th>
+                                    <th scope="col" style="font-size: 12px">Coach ID</th>
+                                    <th scope="col" style="font-size: 12px">Teacher-in-charge ID</th>
                                     <th scope="col" style="font-size: 12px">Action</th>
 
                                 </tr>
                                 </thead>
                                 <tbody class="customtable">
+
+                                @foreach($categories as $category)
 
                                 {{--code for view data from databse--}}
 
@@ -149,34 +133,23 @@
                                     </th>
 
 
-                                    <td style="font-size: 12px">Foot Ball</td>
-                                    <td style="font-size: 12px">FA</td>
-                                    <td style="font-size: 12px">Karunadasa D.A.</td>
-                                    <td style="font-size: 12px">Karunadasa D.A.</td>
+                                    <td style="font-size: 12px">{{$category['sports_id']}}</td>
+                                    <td style="font-size: 12px">{{$category['sports_name']}}</td>
+                                    <td style="font-size: 12px">{{$category['coach_id']}}</td>
+                                    <td style="font-size: 12px">{{$category['teacher_in_charge_id']}}</td>
                                     <td style="font-size: 12px">
-                                        <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
-                                            <a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
+                                        <a class="waves-effect waves-dark" href="{{action('sports_categoriesController@edit', $category['sports_id'])}}"><i class="mdi mdi-pencil font-20"></i></a>
+
+                                            <form action="{{action('sports_categoriesController@destroy', $category['sports_id'])}}" method="post">
+
+                                            {{csrf_field()}}
+                                            <input name="_method" type="hidden" value="DELETE">
+                                            <button class="btn btn-danger" type="submit">Delete</button>
+                                        </form>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <th>
-                                        <label class="customcheckbox">
-                                            <input type="checkbox" class="listCheckbox" />
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </th>
 
-
-                                    <td style="font-size: 12px">Foot Ball</td>
-                                    <td style="font-size: 12px">FA</td>
-                                    <td style="font-size: 12px">Karunadasa D.A.</td>
-                                    <td style="font-size: 12px">Karunadasa D.A.</td>
-                                    <td style="font-size: 12px">
-                                        <a class="waves-effect waves-dark" href=""><i class="mdi mdi-pencil font-20"></i>
-                                            <a class="waves-effect waves-dark" href=""><i class="mdi mdi-delete font-20"></i>
-                                    </td>
-                                </tr>
-                                {{--@endforeach--}}
+                                @endforeach
 
                                 </tbody>
                             </table>
@@ -193,7 +166,7 @@
         </div>
 
 
-
+</div>
     @include('layouts.AcademicLayouts.footer')
 
 @endsection

@@ -135,7 +135,6 @@ class StudentController extends Controller
             $parent_guardian->save();
         }
 
-
         User::create([
             'id' => $parent_id,
             'email' => $temporary_parent->email,
@@ -155,8 +154,6 @@ class StudentController extends Controller
         }
 
         $temporary_student->delete();
-
-
 
         return redirect('/printID/'.$sid);
 
