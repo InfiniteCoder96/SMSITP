@@ -36,7 +36,7 @@
         </div>
         <div class="col-md-12" style="margin-left: 250px;margin-top: 100px">
             <div class="row">
-                <h5 style="color: white">Your reference number is <strong><Text style="color: black">{{$reference_num}}</Text></strong><br>We'll contact you soon...Thank You</h5>
+                <h5 style="color: white">We'll contact you soon...Thank You</h5>
 
             </div>
             <div class="row">
