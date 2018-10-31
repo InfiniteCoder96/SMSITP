@@ -3,6 +3,8 @@
         <div class="modal-content">
             <div class="modal-header">
 
+
+                <h6></h6>
                 <button class="close" data-dismiss="modal">X</button>
             </div>
             <div class="modal-body">
