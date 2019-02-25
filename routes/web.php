@@ -53,9 +53,9 @@ Route::get('/searchNon','nonacademicController@search');
 
 Route::resource('salary','salaryController');
 
-Route::get('/', function () {
-    return view('form');
-});
+// Route::get('/', function () {
+//     return view('form');
+// });
 
 Route::post('salary','salaryController@store');
 
